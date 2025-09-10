@@ -129,6 +129,20 @@ framework: "Vanilla HTML/CSS/JavaScript"
             margin-right: 25px;
             color: white;
             font-weight: bold;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .expert-icon.has-image {
+            font-size: 0; /* Hide text when image is present */
+            background: none !important; /* Remove gradient background to show image */
+        }
+        
+        .expert-icon.has-image[style*="background-image"] {
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
         }
         
         .expert-info h2 {
@@ -229,6 +243,20 @@ framework: "Vanilla HTML/CSS/JavaScript"
             color: white;
             font-weight: bold;
             font-size: 0.9em;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .member-icon.has-image {
+            font-size: 0; /* Hide text when image is present */
+            background: none !important; /* Remove gradient background to show image */
+        }
+        
+        .member-icon.has-image[style*="background-image"] {
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
         }
         
         .conductor { background: linear-gradient(135deg, #667eea, #764ba2); }
@@ -279,17 +307,18 @@ framework: "Vanilla HTML/CSS/JavaScript"
         
         <div class="tabs">
             <button class="tab active" onclick="showExpert('overview')">Overview</button>
-            <button class="tab" onclick="showExpert('conductor')">Conductor</button>
+            <button class="tab" onclick="showExpert('brick')">Brick</button>
+            <button class="tab" onclick="showExpert('kanchi')">Kanchi</button>
             <button class="tab" onclick="showExpert('atlas')">Atlas</button>
             <button class="tab" onclick="showExpert('frost')">Frost</button>
             <button class="tab" onclick="showExpert('sage')">Sage</button>
             <button class="tab" onclick="showExpert('forge')">Forge</button>
             <button class="tab" onclick="showExpert('river')">River</button>
-            <button class="tab" onclick="showExpert('catalyst')">Catalyst</button>
-            <button class="tab" onclick="showExpert('sherlock')">Sherlock</button>
-            <button class="tab" onclick="showExpert('scribe')">Scribe</button>
-            <button class="tab" onclick="showExpert('face')">Face</button>
-            <button class="tab" onclick="showExpert('compass')">Compass</button>
+            <button class="tab" onclick="showExpert('cat')">Cat</button>
+            <button class="tab" onclick="showExpert('holmes')">Holmes</button>
+            <button class="tab" onclick="showExpert('quinn')">Quinn</button>
+            <button class="tab" onclick="showExpert('grace')">Grace</button>
+            <button class="tab" onclick="showExpert('rose')">Rose</button>
             <button class="tab" onclick="showExpert('tempo')">Tempo</button>
         </div>
         
@@ -306,11 +335,22 @@ framework: "Vanilla HTML/CSS/JavaScript"
                 
                 <div class="overview-grid">
                     <div class="team-layer">
-                        <h3>🎼 Team Leadership</h3>
+                        <h3>🏗️ Human Leadership</h3>
                         <div class="team-member">
-                            <div class="member-icon conductor">CD</div>
+                            <div class="member-icon conductor has-image" style="background-image: url('assets/images/team-headshots/dan-brick-brickey.png')">DB</div>
                             <div>
-                                <strong>Conductor</strong><br>
+                                <strong>Dan "Brick" Brickey</strong><br>
+                                <small>Human Functional Architect & Real-World Implementation Lead</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-layer">
+                        <h3>🎼 AI Team Leadership</h3>
+                        <div class="team-member">
+                            <div class="member-icon conductor has-image" style="background-image: url('assets/images/team-headshots/kanchana-talaivar.png')">KT</div>
+                            <div>
+                                <strong>Kanchana "Kanchi" Talaivar</strong><br>
                                 <small>AI Team Manager & Orchestration Specialist</small>
                             </div>
                         </div>
@@ -319,31 +359,31 @@ framework: "Vanilla HTML/CSS/JavaScript"
                     <div class="team-layer">
                         <h3>🏗️ Technical Architecture</h3>
                         <div class="team-member">
-                            <div class="member-icon atlas">AT</div>
+                            <div class="member-icon atlas has-image" style="background-image: url('assets/images/team-headshots/atlas.png')">AT</div>
                             <div>
-                                <strong>Atlas</strong><br>
+                                <strong>Atlas Banna</strong><br>
                                 <small>Functional Architecture Lead</small>
                             </div>
                         </div>
                         <div class="team-member">
-                            <div class="member-icon frost">FR</div>
+                            <div class="member-icon frost has-image" style="background-image: url('assets/images/team-headshots/frost-seol.png')">FR</div>
                             <div>
-                                <strong>Frost</strong><br>
+                                <strong>Frost Seol</strong><br>
                                 <small>Snowflake Platform Architect</small>
                             </div>
                         </div>
                         <div class="team-member">
-                            <div class="member-icon sage">SG</div>
+                            <div class="member-icon sage has-image" style="background-image: url('assets/images/team-headshots/sage.png')">SG</div>
                             <div>
-                                <strong>Sage</strong><br>
+                                <strong>Sage Tadesse</strong><br>
                                 <small>Data Vault & Modeling Specialist</small>
                             </div>
                         </div>
                         <div class="team-member">
-                            <div class="member-icon forge">FG</div>
+                            <div class="member-icon forge has-image" style="background-image: url('assets/images/team-headshots/forge.png')">FG</div>
                             <div>
-                                <strong>Forge</strong><br>
-                                <small>dbt & automate_dv Engineering Specialist</small>
+                                <strong>Forge Schmeid</strong><br>
+                                <small>dbt & automate_dv Engineering Master</small>
                             </div>
                         </div>
                     </div>
@@ -351,23 +391,23 @@ framework: "Vanilla HTML/CSS/JavaScript"
                     <div class="team-layer">
                         <h3>⚡ Implementation & Acceleration</h3>
                         <div class="team-member">
-                            <div class="member-icon river">RV</div>
+                            <div class="member-icon river has-image" style="background-image: url('assets/images/team-headshots/river.png')">RV</div>
                             <div>
-                                <strong>River</strong><br>
-                                <small>Data Engineering & Pipeline Operations</small>
+                                <strong>River Gatherer</strong><br>
+                                <small>Data Engineering & Platform Operations</small>
                             </div>
                         </div>
                         <div class="team-member">
-                            <div class="member-icon catalyst">CT</div>
+                            <div class="member-icon catalyst has-image" style="background-image: url('assets/images/team-headshots/cat.png')">CT</div>
                             <div>
-                                <strong>Catalyst</strong><br>
+                                <strong>Catalina "Cat" Artista</strong><br>
                                 <small>Streamlit AI Acceleration & Operations</small>
                             </div>
                         </div>
                         <div class="team-member">
-                            <div class="member-icon sherlock">SH</div>
+                            <div class="member-icon sherlock has-image" style="background-image: url('assets/images/team-headshots/holmes.png')">SH</div>
                             <div>
-                                <strong>Sherlock</strong><br>
+                                <strong>Sterling "Holmes" Tester</strong><br>
                                 <small>Quality Assurance & Testing Specialist</small>
                             </div>
                         </div>
@@ -376,23 +416,23 @@ framework: "Vanilla HTML/CSS/JavaScript"
                     <div class="team-layer">
                         <h3>💼 Communication & Strategy</h3>
                         <div class="team-member">
-                            <div class="member-icon scribe">SC</div>
+                            <div class="member-icon scribe has-image" style="background-image: url('assets/images/team-headshots/quinn.png')">SC</div>
                             <div>
-                                <strong>Scribe</strong><br>
+                                <strong>Quinn Schriber</strong><br>
                                 <small>Documentation & Knowledge Specialist</small>
                             </div>
                         </div>
                         <div class="team-member">
-                            <div class="member-icon face">FC</div>
+                            <div class="member-icon face has-image" style="background-image: url('assets/images/team-headshots/grace.png')">FC</div>
                             <div>
-                                <strong>Face</strong><br>
+                                <strong>Grace Sellers</strong><br>
                                 <small>Stakeholder Communication Expert</small>
                             </div>
                         </div>
                         <div class="team-member">
-                            <div class="member-icon compass">CP</div>
+                            <div class="member-icon compass has-image" style="background-image: url('assets/images/team-headshots/rose-strategia.png')">CP</div>
                             <div>
-                                <strong>Compass</strong><br>
+                                <strong>Rose Strategia</strong><br>
                                 <small>Product Strategy & Planning Specialist</small>
                             </div>
                         </div>
@@ -401,9 +441,9 @@ framework: "Vanilla HTML/CSS/JavaScript"
                     <div class="team-layer">
                         <h3>🎯 Personal Effectiveness</h3>
                         <div class="team-member">
-                            <div class="member-icon tempo">TP</div>
+                            <div class="member-icon tempo has-image" style="background-image: url('assets/images/team-headshots/tempo-odeyakana.png')">TP</div>
                             <div>
-                                <strong>Tempo</strong><br>
+                                <strong>Tempo Odeyakana</strong><br>
                                 <small>Time Management Assistant</small>
                             </div>
                         </div>
@@ -416,12 +456,50 @@ framework: "Vanilla HTML/CSS/JavaScript"
                 </div>
             </div>
             
-            <!-- Conductor -->
-            <div id="conductor" class="expert-card">
+            <!-- Dan Brick Brickey -->
+            <div id="brick" class="expert-card">
                 <div class="expert-header">
-                    <div class="expert-icon conductor">🎼</div>
+                    <div class="expert-icon conductor has-image" style="background-image: url('assets/images/team-headshots/dan-brick-brickey.png')">🏗️</div>
                     <div class="expert-info">
-                        <h2>Conductor</h2>
+                        <h2>Dan "Brick" Brickey</h2>
+                        <div class="role">Human Functional Architect & Real-World Implementation Lead</div>
+                    </div>
+                </div>
+                
+                <div class="expertise-section">
+                    <div class="section-title">Core Expertise</div>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <h4>🏗️ Multi-Platform Data Architecture</h4>
+                            <p>Oracle, SQL Server, and Snowflake experience with Kimball, Inmon, and Data Vault 2.0 methodologies</p>
+                        </div>
+                        <div class="skill-item">
+                            <h4>🔄 Implementation Leadership</h4>
+                            <p>Translating high-level designs into implementable solutions, building robust foundations that grow capabilities over time</p>
+                        </div>
+                        <div class="skill-item">
+                            <h4>🤝 Collaborative Facilitation</h4>
+                            <p>Leading brainstorming sessions, bridging AI consultation with real-world project constraints</p>
+                        </div>
+                        <div class="skill-item">
+                            <h4>📊 Practical Architecture</h4>
+                            <p>Ensuring architectural elegance translates into practical delivery with systematic, methodical approach</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="collaboration-box">
+                    <h4>🤝 Team Collaboration</h4>
+                    <p>Serves as the crucial bridge between AI Expert Team consultation and physical project reality. Provides real-world context while remaining open to learning from specialized expertise, believing the best teams leverage every member's unique strengths.</p>
+                </div>
+            </div>
+            
+            <!-- Kanchana Kanchi Talaivar -->
+            <div id="kanchi" class="expert-card">
+                <div class="expert-header">
+                    <div class="expert-icon conductor has-image" style="background-image: url('assets/images/team-headshots/kanchana-talaivar.png')">🎼</div>
+                    <div class="expert-info">
+                        <h2>Kanchana "Kanchi" Talaivar</h2>
                         <div class="role">AI Team Manager & Orchestration Specialist</div>
                     </div>
                 </div>
@@ -454,12 +532,12 @@ framework: "Vanilla HTML/CSS/JavaScript"
                 </div>
             </div>
             
-            <!-- Atlas -->
+            <!-- Atlas Banna -->
             <div id="atlas" class="expert-card">
                 <div class="expert-header">
-                    <div class="expert-icon atlas">🏛️</div>
+                    <div class="expert-icon atlas has-image" style="background-image: url('assets/images/team-headshots/atlas.png')">🏛️</div>
                     <div class="expert-info">
-                        <h2>Atlas</h2>
+                        <h2>Atlas Banna</h2>
                         <div class="role">Functional Architecture Lead</div>
                     </div>
                 </div>
@@ -492,12 +570,12 @@ framework: "Vanilla HTML/CSS/JavaScript"
                 </div>
             </div>
             
-            <!-- Frost -->
+            <!-- Frost Seol -->
             <div id="frost" class="expert-card">
                 <div class="expert-header">
-                    <div class="expert-icon frost">❄️</div>
+                    <div class="expert-icon frost has-image" style="background-image: url('assets/images/team-headshots/frost-seol.png')">❄️</div>
                     <div class="expert-info">
-                        <h2>Frost</h2>
+                        <h2>Frost Seol</h2>
                         <div class="role">Snowflake Platform Architect</div>
                     </div>
                 </div>
@@ -530,12 +608,12 @@ framework: "Vanilla HTML/CSS/JavaScript"
                 </div>
             </div>
             
-            <!-- Sage -->
+            <!-- Sage Tadesse -->
             <div id="sage" class="expert-card">
                 <div class="expert-header">
-                    <div class="expert-icon sage">🧙‍♂️</div>
+                    <div class="expert-icon sage has-image" style="background-image: url('assets/images/team-headshots/sage.png')">🧙‍♂️</div>
                     <div class="expert-info">
-                        <h2>Sage</h2>
+                        <h2>Sage Tadesse</h2>
                         <div class="role">Data Vault & Modeling Specialist</div>
                     </div>
                 </div>
@@ -568,13 +646,13 @@ framework: "Vanilla HTML/CSS/JavaScript"
                 </div>
             </div>
             
-            <!-- Forge -->
+            <!-- Forge Schmeid -->
             <div id="forge" class="expert-card">
                 <div class="expert-header">
-                    <div class="expert-icon forge">🔨</div>
+                    <div class="expert-icon forge has-image" style="background-image: url('assets/images/team-headshots/forge.png')">🔨</div>
                     <div class="expert-info">
-                        <h2>Forge</h2>
-                        <div class="role">dbt & automate_dv Engineering Specialist</div>
+                        <h2>Forge Schmeid</h2>
+                        <div class="role">dbt & automate_dv Engineering Master</div>
                     </div>
                 </div>
                 
@@ -594,25 +672,25 @@ framework: "Vanilla HTML/CSS/JavaScript"
                             <p>Incremental strategies, materialization selection, model dependencies, parallel execution</p>
                         </div>
                         <div class="skill-item">
-                            <h4>🔄 CI/CD Integration</h4>
-                            <p>Deployment strategies, environment management, testing automation, version control</p>
+                            <h4>🎯 Code Quality Excellence</h4>
+                            <p>Advanced testing strategies, code organization, best practices, performance tuning</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="collaboration-box">
                     <h4>🤝 Team Collaboration</h4>
-                    <p>Implements Sage's data models using automate_dv, optimizes based on Frost's Snowflake recommendations, and works with Catalyst on AI-assisted code generation tools.</p>
+                    <p>Implements Sage's data models using automate_dv with engineering excellence, optimizes based on Frost's Snowflake recommendations, and works with Cat on AI-assisted code generation tools. Now focused purely on perfecting dbt craft and Data Vault implementation mastery while River handles all deployment operations.</p>
                 </div>
             </div>
             
-            <!-- River -->
+            <!-- River Gatherer -->
             <div id="river" class="expert-card">
                 <div class="expert-header">
-                    <div class="expert-icon river">🌊</div>
+                    <div class="expert-icon river has-image" style="background-image: url('assets/images/team-headshots/river.png')">🌊</div>
                     <div class="expert-info">
-                        <h2>River</h2>
-                        <div class="role">Data Engineering & Pipeline Operations Specialist</div>
+                        <h2>River Gatherer</h2>
+                        <div class="role">Data Engineering & Platform Operations Specialist</div>
                     </div>
                 </div>
                 
@@ -624,32 +702,32 @@ framework: "Vanilla HTML/CSS/JavaScript"
                             <p>CDC implementation, file processing, API integration, streaming data, batch processing</p>
                         </div>
                         <div class="skill-item">
-                            <h4>🔄 Wherescape Migration</h4>
-                            <p>Legacy pipeline analysis, job conversion, dependency mapping, orchestration modernization</p>
+                            <h4>🚀 CI/CD Pipeline Management</h4>
+                            <p>GitLab CI/CD integration, deployment automation, environment coordination, release management</p>
                         </div>
                         <div class="skill-item">
-                            <h4>🏗️ Raw Layer Design</h4>
-                            <p>Data lake patterns, file organization, metadata management, schema evolution</p>
+                            <h4>🏗️ Infrastructure Operations</h4>
+                            <p>Infrastructure as Code, deployment strategies, environment management, platform reliability</p>
                         </div>
                         <div class="skill-item">
-                            <h4>⚙️ Pipeline Operations</h4>
-                            <p>Production monitoring, incident response, error handling, performance optimization</p>
+                            <h4>⚙️ Platform Operations</h4>
+                            <p>Production monitoring, incident response, deployment monitoring, end-to-end reliability</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="collaboration-box">
                     <h4>🤝 Team Collaboration</h4>
-                    <p>Feeds clean data to Forge's dbt models, implements Frost's ingestion recommendations, and provides source system analysis to support Sage's modeling decisions. Maintains operational excellence for data pipeline reliability.</p>
+                    <p>Feeds clean data to Forge's dbt models, implements Frost's ingestion recommendations, and provides source system analysis to support Sage's modeling decisions. Now also owns all CI/CD and deployment operations, ensuring reliable platform deployments and infrastructure management across the entire data platform lifecycle.</p>
                 </div>
             </div>
             
-            <!-- Catalyst -->
-            <div id="catalyst" class="expert-card">
+            <!-- Catalina Cat Artista -->
+            <div id="cat" class="expert-card">
                 <div class="expert-header">
-                    <div class="expert-icon catalyst">⚡</div>
+                    <div class="expert-icon catalyst has-image" style="background-image: url('assets/images/team-headshots/cat.png')">⚡</div>
                     <div class="expert-info">
-                        <h2>Catalyst</h2>
+                        <h2>Catalina "Cat" Artista</h2>
                         <div class="role">Streamlit AI Acceleration & Operations Specialist</div>
                     </div>
                 </div>
@@ -682,12 +760,12 @@ framework: "Vanilla HTML/CSS/JavaScript"
                 </div>
             </div>
             
-            <!-- Sherlock -->
-            <div id="sherlock" class="expert-card">
+            <!-- Sterling Holmes Tester -->
+            <div id="holmes" class="expert-card">
                 <div class="expert-header">
-                    <div class="expert-icon sherlock">🔍</div>
+                    <div class="expert-icon sherlock has-image" style="background-image: url('assets/images/team-headshots/holmes.png')">🔍</div>
                     <div class="expert-info">
-                        <h2>Sherlock</h2>
+                        <h2>Sterling "Holmes" Tester</h2>
                         <div class="role">Quality Assurance & Testing Specialist</div>
                     </div>
                 </div>
@@ -720,12 +798,12 @@ framework: "Vanilla HTML/CSS/JavaScript"
                 </div>
             </div>
             
-            <!-- Scribe -->
-            <div id="scribe" class="expert-card">
+            <!-- Quinn Schriber -->
+            <div id="quinn" class="expert-card">
                 <div class="expert-header">
-                    <div class="expert-icon scribe">📝</div>
+                    <div class="expert-icon scribe has-image" style="background-image: url('assets/images/team-headshots/quinn.png')">📝</div>
                     <div class="expert-info">
-                        <h2>Scribe</h2>
+                        <h2>Quinn Schriber</h2>
                         <div class="role">Documentation & Knowledge Specialist</div>
                     </div>
                 </div>
@@ -758,12 +836,12 @@ framework: "Vanilla HTML/CSS/JavaScript"
                 </div>
             </div>
             
-            <!-- Face -->
-            <div id="face" class="expert-card">
+            <!-- Grace Sellers -->
+            <div id="grace" class="expert-card">
                 <div class="expert-header">
-                    <div class="expert-icon face">👤</div>
+                    <div class="expert-icon face has-image" style="background-image: url('assets/images/team-headshots/grace.png')">👤</div>
                     <div class="expert-info">
-                        <h2>Face</h2>
+                        <h2>Grace Sellers</h2>
                         <div class="role">Stakeholder Communication Expert</div>
                     </div>
                 </div>
@@ -796,13 +874,13 @@ framework: "Vanilla HTML/CSS/JavaScript"
                 </div>
             </div>
             
-            <!-- Compass -->
-            <div id="compass" class="expert-card">
+            <!-- Rose Strategia -->
+            <div id="rose" class="expert-card">
                 <div class="expert-header">
-                    <div class="expert-icon compass">🧭</div>
+                    <div class="expert-icon compass has-image" style="background-image: url('assets/images/team-headshots/rose-strategia.png')">🧭</div>
                     <div class="expert-info">
-                        <h2>Compass (Rose)</h2>
-                        <div class="role">Product Strategy & Planning Specialist • She/Her • 40s</div>
+                        <h2>Rose Strategia</h2>
+                        <div class="role">Product Strategy & Planning Specialist</div>
                     </div>
                 </div>
                 
@@ -841,12 +919,12 @@ framework: "Vanilla HTML/CSS/JavaScript"
                 </div>
             </div>
             
-            <!-- Tempo -->
+            <!-- Tempo Odeyakana -->
             <div id="tempo" class="expert-card">
                 <div class="expert-header">
-                    <div class="expert-icon tempo">🎵</div>
+                    <div class="expert-icon tempo has-image" style="background-image: url('assets/images/team-headshots/tempo-odeyakana.png')">🎵</div>
                     <div class="expert-info">
-                        <h2>Tempo</h2>
+                        <h2>Tempo Odeyakana</h2>
                         <div class="role">Time Management Assistant</div>
                     </div>
                 </div>
