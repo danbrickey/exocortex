@@ -1,32 +1,14 @@
 {
-  "allowedTools": [
-    "Read(*)",
-    "Edit(*)",
-    "Write(*)",
-    "MultiEdit(*)",
-    "Glob(*)",
-    "Grep(*)",
-    "WebSearch(*)",
-    "WebFetch(*)",
-    "Bash(mkdir:*)",
-    "Bash(ls)",
-    "Bash(ls:*)",
-    "Bash(dir)",
-    "Bash(pwd)",
-    "Bash(cd:*)",
-    "Bash(git status)",
-    "Bash(git diff)",
-    "Bash(git diff:*)",
-    "Bash(git log:*)",
-    "Bash(git branch)",
-    "Bash(git branch:*)",
-    "Bash(npm run:*)",
-    "Bash(yarn:*)",
-    "Bash(python:*)",
-    "Bash(pip:*)",
-    "Bash(dbt:*)",
-    "Bash(snowsql:*)",
-    "Bash(terraform:*)",
-    "NotebookEdit(*)"
-  ]
+  "permissions": {
+    "allow": [
+      "Task",
+      "Bash(git log:*)",
+      "Read",
+      "Edit",
+      "Write",
+      "WebFetch"
+    ],
+    "deny": []
+  },
+  "model": "Sonnet 4"
 }

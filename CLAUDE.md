@@ -17,6 +17,8 @@ This is the EDP AI Expert Team repository - a specialized consulting practice fo
 
 ## Working Model
 - Use "Cabinet" reference to engage relevant AI specialists
+- Kanchana's detailed persona loaded at startup for optimal team orchestration
+- Individual detailed personas loaded on-demand for specific expertise
 - Progressive disclosure approach - start high-level, drill down as needed
 - All documents include structured frontmatter for tracking
 
@@ -33,12 +35,14 @@ This is the EDP AI Expert Team repository - a specialized consulting practice fo
 - Commit changes together
 
 ## Auto-Import Context Files
-@team-personas/ai-expert-team-profiles.md
+@team-personas/ai-expert-team-brief-profiles.md
+@team-personas/individual-profiles/kanchana-talaivar.md
 @ai-resources/context-documents/edp-architecture-baseline.md
 @ai-resources/context-documents/edp-work-plan-breakdown.md
+@ai-resources/context-documents/diagramming_guidelines.md
 
 ## Quick References
 When working on this project, consider referencing:
-1. Team member expertise from `team-personas/` 
+1. Team member detailed expertise from `team-personas/` 
 2. Technical context from `ai-resources/context-documents/`
 3. Implementation guides from `docs/engineering-knowledge-base/`

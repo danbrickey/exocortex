@@ -2,7 +2,13 @@
   "permissions": {
     "allow": [
       "Bash(mkdir:*)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(dir)",
+      "Bash(dir:*)",
+      "Bash(findstr:*)",
+      "Bash(npx http-server:*)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "Bash(claude --version)"
     ],
     "deny": [],
     "ask": []

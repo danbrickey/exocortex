@@ -1,0 +1,92 @@
+flowchart TD
+    %% On-Premises Source Systems
+    subgraph OnPrem["On-Premises Environment"]
+        FACETS_LGC["Legacy FACETS<br/>HCDM: FACETS_LGC<br/>Tenant: BCI"]
+        FACETS_GMS["Gemstone FACETS<br/>HCDM: FACETS_GMS<br/>Tenant: BCI"]
+        VALENZ["VALENZ System<br/>System Code: VALENZ"]
+        WhereScape["WhereScape<br/>SQL Server"]
+    end
+
+    %% AWS Cloud Infrastructure
+    subgraph AWS["AWS Cloud Environment"]
+        CDC["CDC Pipelines"]
+        MSK["MSK Streaming<br/>(Real-time Customer Service)"]
+        S3["S3 Data Lake<br/>(Raw Files)"]
+    end
+
+    %% Snowflake Data Platform
+    subgraph Snowflake["Snowflake Data Platform"]
+        subgraph Raw["Raw Layer (Bronze)"]
+            RawData["Raw CDC Data<br/>Snowflake Shares<br/>Ingested Files"]
+        end
+        
+        subgraph Integration["Integration Layer (Silver)"]
+            CurrentNF["Current: 3NF Models<br/>(Active Business Use)"]
+            DataVault["Target: Data Vault 2.0<br/>Raw Vault (Hubs/Links/Satellites)"]
+        end
+        
+        subgraph Curation["Curation Layer (Gold)"]
+            BusinessVault["Business Vault<br/>(Data Vault 2.0)"]
+            Kimball["Kimball Dimensional<br/>Models"]
+            ML["ML/AI Datasets"]
+            Operational["Operational 3NF<br/>Models"]
+        end
+        
+        subgraph Consumption["Consumption Layer"]
+            DataMarts["Data Vault<br/>Information Marts"]
+            Extracts["Purpose-built<br/>Extracts"]
+            APIs["Secure Data APIs"]
+        end
+    end
+
+    %% External Consumers
+    subgraph Consumers["Data Consumers"]
+        Tableau["Tableau Cloud<br/>(Analytics)"]
+        Healthcare["Healthcare Economics<br/>(Advanced Analytics)"]
+        Portal["Customer Portals"]
+        Reporting["Regulatory Reporting"]
+    end
+
+    %% Data Flow Connections
+    FACETS_LGC --> CDC
+    FACETS_GMS --> CDC
+    VALENZ --> CDC
+    WhereScape --> CDC
+    
+    FACETS_LGC --> MSK
+    FACETS_GMS --> MSK
+    
+    CDC --> RawData
+    MSK --> RawData
+    S3 --> RawData
+    
+    RawData --> CurrentNF
+    RawData --> DataVault
+    
+    CurrentNF --> BusinessVault
+    DataVault --> BusinessVault
+    DataVault --> Kimball
+    DataVault --> ML
+    DataVault --> Operational
+    
+    BusinessVault --> DataMarts
+    Kimball --> DataMarts
+    ML --> Extracts
+    Operational --> APIs
+    
+    DataMarts --> Tableau
+    DataMarts --> Healthcare
+    Extracts --> Portal
+    APIs --> Reporting
+
+    %% Styling
+    classDef onprem fill:#ffeb3b,stroke:#f57f17,stroke-width:2px
+    classDef aws fill:#ff9800,stroke:#e65100,stroke-width:2px
+    classDef snowflake fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef layer fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    classDef consumer fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    
+    class FACETS_LGC,FACETS_GMS,VALENZ,WhereScape onprem
+    class CDC,MSK,S3 aws
+    class RawData,CurrentNF,DataVault,BusinessVault,Kimball,ML,Operational,DataMarts,Extracts,APIs snowflake
+    class Tableau,Healthcare,Portal,Reporting consumer
