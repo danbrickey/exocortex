@@ -1,0 +1,129 @@
+﻿source_schema,source_table,source_column,table_description,column_description,column_data_type
+dbo,cmc_mecb_cob,meme_ck,Member COB Information Data,Member Contrived Key,int
+dbo,cmc_mecb_cob,mecb_insur_type,Member COB Information Data,Insurance Type,char
+dbo,cmc_mecb_cob,mecb_insur_order,Member COB Information Data,Insurance Order,char
+dbo,cmc_mecb_cob,mecb_mctr_styp,Member COB Information Data, Supplemental Drug Type,char
+dbo,cmc_mecb_cob,mecb_eff_dt,Member COB Information Data,Coordination of Benefits Effective Date,datetime
+dbo,cmc_mecb_cob,mecb_term_dt,Member COB Information Data,Termination Date,datetime
+dbo,cmc_mecb_cob,mecb_mctr_trsn,Member COB Information Data,Termination Reason,char
+dbo,cmc_mecb_cob,grgr_ck,Member COB Information Data,Group Contrived Key,int
+dbo,cmc_mecb_cob,mcre_id,Member COB Information Data,Coordination of Benefits Carrier Identifier,char
+dbo,cmc_mecb_cob,mecb_policy_id,Member COB Information Data,Policy Identifier,varchar
+dbo,cmc_mecb_cob,mecb_mctr_msp,Member COB Information Data,Medicare Secondary Payer Type,char
+dbo,cmc_mecb_cob,mecb_mctr_ptyp,Member COB Information Data,Prescription Drug Coverage Type,char
+dbo,cmc_mecb_cob,mecb_rxbin,Member COB Information Data,Prescription Drug Bin Number,char
+dbo,cmc_mecb_cob,mecb_rxpcn,Member COB Information Data,Prescription Drug PCN Number,varchar
+dbo,cmc_mecb_cob,mecb_rx_group,Member COB Information Data,Prescription Drug Group Number,varchar
+dbo,cmc_mecb_cob,mecb_rx_id,Member COB Information Data,Prescription Drug ID Number,varchar
+dbo,cmc_mecb_cob,mecb_last_ver_dt,Member COB Information Data,Last Verification Date,datetime
+dbo,cmc_mecb_cob,mecb_last_ver_name,Member COB Information Data,Last Verification Name,varchar
+dbo,cmc_mecb_cob,mecb_mctr_vmth,Member COB Information Data,Last Verification Method,char
+dbo,cmc_mecb_cob,mecb_loi_start_dt,Member COB Information Data,Claim LOI Start Date,datetime
+dbo,cmc_mecb_cob,mecb_prim_last_nm,Member COB Information Data,Last Name of Primary COB holder,varchar
+dbo,cmc_mecb_cob,mecb_prim_first_nm,Member COB Information Data,First Name of Primary COB holder,varchar
+dbo,cmc_mecb_cob,mecb_prim_id,Member COB Information Data,ID of Primary COB holder,varchar
+dbo,cmc_mecb_cob,mecb_lock_token,Member COB Information Data,Lock Token,smallint
+dbo,cmc_mecb_cob,atxr_source_id,Member COB Information Data,Attachment Source Id,datetime
+dbo,cmc_mecb_cob,sys_last_upd_dtm,Member COB Information Data,Last Update Datetime,datetime
+dbo,cmc_mecb_cob,sys_usus_id,Member COB Information Data,Last Update User ID,varchar
+dbo,cmc_mecb_cob,sys_dbuser_id,Member COB Information Data,Last Update DBMS User ID,varchar
+dbo,cmc_mees_exchange,meme_ck,Member Enrollment Source,Member Contrived Key,int
+dbo,cmc_mees_exchange,cspd_cat,Member Enrollment Source, Class Product Category,char
+dbo,cmc_mees_exchange,mees_eff_dt,Member Enrollment Source,Effective Date,datetime
+dbo,cmc_mees_exchange,mees_term_dt,Member Enrollment Source,Termination Date,datetime
+dbo,cmc_mees_exchange,grgr_ck,Member Enrollment Source,Group Contrived Key,int
+dbo,cmc_mees_exchange,mees_channel,Member Enrollment Source,Channel ID,varchar
+dbo,cmc_mees_exchange,mees_exchange,Member Enrollment Source,Exchange ID,varchar
+dbo,cmc_mees_exchange,mees_mctr_meth,Member Enrollment Source,Enrollment Method,char
+dbo,cmc_mees_exchange,mees_aptc_ind,Member Enrollment Source,APTC Indicator,char
+dbo,cmc_mees_exchange,mees_lock_token,Member Enrollment Source,Lock Token,smallint
+dbo,cmc_mees_exchange,atxr_source_id,Member Enrollment Source,Attachment Source Id,datetime
+dbo,cmc_mees_exchange,sys_last_upd_dtm,Member Enrollment Source,Last Update Datetime,datetime
+dbo,cmc_mees_exchange,sys_usus_id,Member Enrollment Source,Last Update User ID,varchar
+dbo,cmc_mees_exchange,sys_dbuser_id,Member Enrollment Source,Last Update DBMS User ID,varchar
+dbo,cmc_mees_exchange,mees_qhp_id_nvl,Member Enrollment Source,Qualified Health Plan ID,varchar
+dbo,cmc_mees_exchange,mees_mem_id_nvl,Member Enrollment Source, Exchange Assigned Member Id,varchar
+dbo,cmc_mees_exchange,mees_policy_id_nvl,Member Enrollment Source, Exchange Policy ID,varchar
+dbo,cmc_meme_member,meme_ck,Member Specific Indicative Data,Member Contrived Key,int
+dbo,cmc_meme_member,grgr_ck,Member Specific Indicative Data,Group Contrived Key,int
+dbo,cmc_meme_member,sbsb_ck,Member Specific Indicative Data,Subscriber Contrived Key,int
+dbo,cmc_meme_member,meme_sfx,Member Specific Indicative Data,Member Suffix,smallint
+dbo,cmc_meme_member,meme_rel,Member Specific Indicative Data,Relationship,char
+dbo,cmc_meme_member,meme_id_name,Member Specific Indicative Data,Short Name,char
+dbo,cmc_meme_member,meme_last_name,Member Specific Indicative Data,Last Name,char
+dbo,cmc_meme_member,meme_first_name,Member Specific Indicative Data,First Name,char
+dbo,cmc_meme_member,meme_mid_init,Member Specific Indicative Data,Middle Initial,char
+dbo,cmc_meme_member,meme_title,Member Specific Indicative Data,Title,char
+dbo,cmc_meme_member,meme_orig_eff_dt,Member Specific Indicative Data,Original Effective Date,datetime
+dbo,cmc_meme_member,meme_ssn,Member Specific Indicative Data,Social Security Number,char
+dbo,cmc_meme_member,meme_sex,Member Specific Indicative Data,Gender,char
+dbo,cmc_meme_member,meme_birth_dt,Member Specific Indicative Data,Birth Date,datetime
+dbo,cmc_meme_member,meme_wrk_phone,Member Specific Indicative Data,Work Phone Number,char
+dbo,cmc_meme_member,meme_wrk_phone_ext,Member Specific Indicative Data,Work Phone Number,char
+dbo,cmc_meme_member,meme_mctr_sts,Member Specific Indicative Data,Status,char
+dbo,cmc_meme_member,meme_mctr_lang,Member Specific Indicative Data,Language,char
+dbo,cmc_meme_member,meme_record_no,Member Specific Indicative Data,Member Record Number,char
+dbo,cmc_meme_member,meme_late_enr_ind,Member Specific Indicative Data,N/A,char
+dbo,cmc_meme_member,meme_marital_status,Member Specific Indicative Data,Marital Status,char
+dbo,cmc_meme_member,meme_hicn,Member Specific Indicative Data,Medicare Number,char
+dbo,cmc_meme_member,meme_medcd_no,Member Specific Indicative Data,Medicaid Number,char
+dbo,cmc_meme_member,meme_fam_link_id,Member Specific Indicative Data,Family Link ID,char
+dbo,cmc_meme_member,sbad_type_home,Member Specific Indicative Data,Subscriber Home Address,char
+dbo,cmc_meme_member,sbad_type_mail,Member Specific Indicative Data,Subscriber Mailing Address,char
+dbo,cmc_meme_member,sbad_type_work,Member Specific Indicative Data, Member Work Address,char
+dbo,cmc_meme_member,meme_last_name_xlow,Member Specific Indicative Data,Name Search case insensitive,char
+dbo,cmc_meme_member,meme_ccc_start_dt,Member Specific Indicative Data,Certificate of Creditable Coverage Start Date,datetime
+dbo,cmc_meme_member,meme_ccc_end_dt,Member Specific Indicative Data,Certificate of Creditable Coverage End Date,datetime
+dbo,cmc_meme_member,meme_prex_eff_dt,Member Specific Indicative Data,Pre-Existing Effective Date,datetime
+dbo,cmc_meme_member,meme_prx_cred_days,Member Specific Indicative Data,Pre-Existing Credit Days,smallint
+dbo,cmc_meme_member,meme_exc_cred_days,Member Specific Indicative Data,Exclusionary Period Credit Days,smallint
+dbo,cmc_meme_member,meme_mctr_atyp,Member Specific Indicative Data, Applicant Type,char
+dbo,cmc_meme_member,meme_elig_dt,Member Specific Indicative Data, Eligibility Date,datetime
+dbo,cmc_meme_member,meme_qualify_dt,Member Specific Indicative Data, Qualifying Event Date,datetime
+dbo,cmc_meme_member,meme_new_sig_dt,Member Specific Indicative Data,New Signature Date,datetime
+dbo,cmc_meme_member,meme_prbl_ind,Member Specific Indicative Data,Prior Billing Indicator,char
+dbo,cmc_meme_member,meme_prbl_eff_dt,Member Specific Indicative Data, Prior Billing Effective Date,datetime
+dbo,cmc_meme_member,meme_eoi_term_dt,Member Specific Indicative Data, Evidence Of Insurability Termination Date,datetime
+dbo,cmc_meme_member,meme_prex_term_dt,Member Specific Indicative Data, Pre-Existing End Date,datetime
+dbo,cmc_meme_member,meme_prex_limit1,Member Specific Indicative Data,Pre-Existing Limits1,smallint
+dbo,cmc_meme_member,meme_prex_limit2,Member Specific Indicative Data,Pre-existing Limits 2,smallint
+dbo,cmc_meme_member,meme_prex_limit3,Member Specific Indicative Data,Pre-existing Limits 3,smallint
+dbo,cmc_meme_member,mcrl_meme_crel_cd,Member Specific Indicative Data,Relationship,char
+dbo,cmc_meme_member,meme_hist_link_id,Member Specific Indicative Data, History Link ID,char
+dbo,cmc_meme_member,meme_cell_phone,Member Specific Indicative Data,Cell Phone Number,varchar
+dbo,cmc_meme_member,meme_health_id,Member Specific Indicative Data,Standard Unique Health ID,varchar
+dbo,cmc_meme_member,meme_lock_token,Member Specific Indicative Data,Lock Token,smallint
+dbo,cmc_meme_member,atxr_source_id,Member Specific Indicative Data,Attachment Source Id,datetime
+dbo,cmc_meme_member,sys_last_upd_dtm,Member Specific Indicative Data,Last Update Datetime,datetime
+dbo,cmc_meme_member,sys_usus_id,Member Specific Indicative Data,Last Update User ID,varchar
+dbo,cmc_meme_member,sys_dbuser_id,Member Specific Indicative Data,Last Update DBMS User ID,varchar
+dbo,cmc_meme_member,memm_row_id,Member Specific Indicative Data,Master Member Unique ID,numeric
+dbo,cmc_meme_member,meme_mctr_race_nvl,Member Specific Indicative Data, Member Race,char
+dbo,cmc_meme_member,meme_mctr_ethn_nvl,Member Specific Indicative Data, Member Ethnicity,char
+dbo,cmc_meme_member,meme_edi_re_code_nvl,Member Specific Indicative Data, Member EDI Race and Ethnicity Code,varchar
+dbo,cmc_meme_member,meme_edi_re_source_nvl,Member Specific Indicative Data, Member EDI Race and Ethnicity Source,varchar
+dbo,cmc_meme_member,meme_mctr_genp_nvl,Member Specific Indicative Data,Gender Preference,char
+dbo,cmc_meme_member,meme_mctr_ctzn_nvl,Member Specific Indicative Data,Citizenship Code,char
+dbo,cmc_mepe_prcs_elig,meme_ck,Comprehensive Member Eligibility Status Table,Member Contrived Key,int
+dbo,cmc_mepe_prcs_elig,cspd_cat,Comprehensive Member Eligibility Status Table,Class Product Category,char
+dbo,cmc_mepe_prcs_elig,mepe_eff_dt,Comprehensive Member Eligibility Status Table,Effective Date,datetime
+dbo,cmc_mepe_prcs_elig,mepe_term_dt,Comprehensive Member Eligibility Status Table,Termination Date,datetime
+dbo,cmc_mepe_prcs_elig,mepe_create_dtm,Comprehensive Member Eligibility Status Table,Process Eligibility Create Date/Time Stamp,datetime
+dbo,cmc_mepe_prcs_elig,cscs_id,Comprehensive Member Eligibility Status Table,Class Identifier,char
+dbo,cmc_mepe_prcs_elig,grgr_ck,Comprehensive Member Eligibility Status Table,Group Contrived Key,int
+dbo,cmc_mepe_prcs_elig,sgsg_ck,Comprehensive Member Eligibility Status Table,Subgroup Contrived Key,int
+dbo,cmc_mepe_prcs_elig,cspi_id,Comprehensive Member Eligibility Status Table,Class Plan Identifier,char
+dbo,cmc_mepe_prcs_elig,pdpd_id,Comprehensive Member Eligibility Status Table,Product Identifier,char
+dbo,cmc_mepe_prcs_elig,mepe_elig_ind,Comprehensive Member Eligibility Status Table,Eligibility Indicator,char
+dbo,cmc_mepe_prcs_elig,excd_id,Comprehensive Member Eligibility Status Table,Explanation Code,char
+dbo,cmc_mepe_prcs_elig,mepe_mctr_rsn,Comprehensive Member Eligibility Status Table,Member Eligibility Reason,char
+dbo,cmc_mepe_prcs_elig,mepe_sys_inel_cd,Comprehensive Member Eligibility Status Table,System Defined Ineligibility Explanation Code,char
+dbo,cmc_mepe_prcs_elig,mepe_fi,Comprehensive Member Eligibility Status Table,Family Indicator,char
+dbo,cmc_mepe_prcs_elig,mepe_elig_ovr_ind,Comprehensive Member Eligibility Status Table,Eligibility Override Indicator,char
+dbo,cmc_mepe_prcs_elig,mepe_has_medx_ind,Comprehensive Member Eligibility Status Table,Pre-Existing Condition Indicator,char
+dbo,cmc_mepe_prcs_elig,mepe_has_warn_cd,Comprehensive Member Eligibility Status Table,Member Level Delinquency of Premium Warning Code,char
+dbo,cmc_mepe_prcs_elig,mepe_prcs_sts,Comprehensive Member Eligibility Status Table,Member Status,char
+dbo,cmc_mepe_prcs_elig,mepe_source,Comprehensive Member Eligibility Status Table,Eligibility Source,char
+dbo,cmc_mepe_prcs_elig,mepe_plan_entry_dt,Comprehensive Member Eligibility Status Table,Plan Entry Date,datetime
+dbo,cmc_mepe_prcs_elig,mepe_lock_token,Comprehensive Member Eligibility Status Table,Lock Token,smallint
+dbo,cmc_mepe_prcs_elig,mepe_bl_elig_ind_nvl,Comprehensive Member Eligibility Status Table, Billing Eligible,char
