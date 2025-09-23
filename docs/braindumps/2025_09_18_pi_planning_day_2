@@ -1,0 +1,22 @@
+Brain dump, September 18th, 2025 
+
+# Management review and problem-solving meeting
+We discussed moving our development environment from Dev in Rising Sun to Frank and environment in North Star. 
+Decision which everyone agreed on was to move our Dev environment to Franken prior to creating a new Dev environment in North Star. 
+It was also agreed that now is a good time to do this over the next part of planning week and the first sprint in the next PI. 
+So I and the other data engineering leads will start working on the plan to move our dev activities to North Star in the Franken environment. 
+
+# Meeting with Lokendra about more raw_vault work. 
+Discuss the fact that most of the raw_vault work for provider is done. We talked about the potential for doing more work in the membership domain. I'm going to build out a couple of stories in the membership domain for Lokendra and Shweta to work on. Next week, we need to talk with Shay Harding at Hakoda to make sure that this is a good direction to have Lokendra and Shweta work in. 
+
+# Edp Team One Daily Stand Up. 
+Discussed creating the Jira stories for the Hakoda data engineering team, and I'm going to do that in the Hakoda team backlog. Also discussed the environment hardening efforts and the switch to a single Snowflake account. I'm going to discuss the timing and effort of the switch with the data engineering team in a data engineering forum today. And then I'll provide feedback to the architects. 
+
+# Snowflake Environment Hardening Planning Meeting. 
+Discuss the details around how Lakshmi's team deploys code and what their deployment pipeline looks like. They do have some ingestion work that they have done that is in the raw layer. And they have a deployment pipeline in GitLab that contains most of their code. Didn't sound like they had an enormous preference between renaming Franken or creating a brand new dev environment. Their preference was to get the work done early so it would be less disruptive to their development workflow later in the quarter. That makes me want to lean toward renaming the environment. That happens within a couple of days of the start of the PI, and then work with the admins to get the RBAC and PBAC cleaned up. 
+
+# Planning round 3 for EDP_team_1. 
+
+# Northstar environment transition meeting for dbt data engineers. 
+- We're going to talk today in the 1 o'clock meeting about the account migration. But we'll have a good quorum there to discuss merging dev code upward. 
+
