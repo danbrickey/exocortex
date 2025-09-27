@@ -53,10 +53,8 @@ For each satellite:
 - **Source Systems**: [Confirm which systems: legacy_facets, gemstone_facets, valenz]
 - **Data Dictionary Available**: [Do you have source column definitions and descriptions?]
 
-### 6. Current Views & Backward Compatibility
-- **Current View Needed**: [Do you need cv_[entity].sql for current state view?]
-- **Backward Compatible View**: [Do you need bwd_[entity].sql to match existing model?]
-- **Column Mapping**: [Any specific column name changes needed for compatibility?]
+### 6. Current Views
+- **Current View Needed**: [Do you need current_[entity].sql for current state view?]
 
 ## Generated Prompt Template
 
@@ -72,6 +70,7 @@ I expect that the Raw Vault artifacts generated will include:
 - Data Dictionary source_table Name
   - [source_schema].[source_table]
 - Rename Views (1 per source)
+  - Naming convention: stg_[entity_name]_[source]_rename.sql
   [List based on identified source systems]
 - Staging Views (1 per source) 
   [List based on identified source systems]
@@ -90,9 +89,7 @@ I expect that the Raw Vault artifacts generated will include:
     - src_end_date: [source_column] from source
   - [list effectivity satellites]
 - Current View
-  - cv_[entity_name].sql
-- Backward Compatible View
-  - bwd_[entity_name].sql
+  - current_[entity_name].sql
 
 ### Data Dictionary
 
@@ -143,4 +140,105 @@ The final output will be a complete, ready-to-use refactoring prompt that includ
 - Source system specific configurations
 - Backward compatibility requirements
 
+**Post-Generation Instructions:**
+After generating the prompt through the interview process, create the final prompt as a separate file in:
+`docs/use_cases/uc01_dv_refactor/refactor_prompts/[entity_name]_refactor_prompt.md`
+
 Begin the interview process by asking about the entity name and business description.
+
+---
+
+## Example Generated Prompt: group_plan_eligibility
+
+```markdown
+# Data Vault Refactor Prompt: group_plan_eligibility
+
+Please follow the project guidelines and generate the refactored code for the **group_plan_eligibility** entity.
+
+## Expected Output Summary
+
+I expect that the Raw Vault artifacts generated will include:
+
+- **Data Dictionary source_table Name**
+  - dbo.cmc_cspi_cs_plan
+
+- **Rename Views (2 per source)**
+  - `stg_group_plan_eligibility_legacy_facets_rename.sql`
+  - `stg_group_plan_eligibility_gemstone_facets_rename.sql`
+
+- **Staging Views (2 per source)**
+  - `stg_group_plan_eligibility_legacy_facets.sql`
+  - `stg_group_plan_eligibility_gemstone_facets.sql`
+
+- **Links**
+  - `l_group_product_category_class_plan.sql`
+    - business Keys: 
+      - group_hk from grgr_ck
+      - product_category_hk from cspd_cat
+      - class_hk from cscs_id
+      - plan_hk from cspi_id
+
+- **Effectivity Satellites (2 per source)**
+  - For each satellite:
+    - src_eff: cspi_eff_dt from source
+    - src_start_date: cspi_eff_dt from source
+    - src_end_date: cspi_term_dt from source
+  - `s_group_plan_eligibility_legacy_facets.sql`
+  - `s_group_plan_eligibility_gemstone_facets.sql`
+
+- **Current View**
+  - `current_group_plan_eligibility.sql`
+
+## Data Dictionary
+
+Use this information to map source view references in the prior model code back to the source columns, and rename columns in the rename views:
+
+```csv
+source_schema,source_table,source_column,table_description,column_description,column_data_type
+dbo,cmc_cspi_cs_plan,grgr_ck,Plan/Product Linking Data Table,Class/Plan Group Contrived Key,int
+dbo,cmc_cspi_cs_plan,cscs_id,Plan/Product Linking Data Table,Class ID,char
+dbo,cmc_cspi_cs_plan,cspd_cat,Plan/Product Linking Data Table,Class/Plan Product Category,char
+dbo,cmc_cspi_cs_plan,cspi_id,Plan/Product Linking Data Table,Plan ID,char
+dbo,cmc_cspi_cs_plan,cspi_eff_dt,Plan/Product Linking Data Table,Class/Plan Effective Date,datetime
+dbo,cmc_cspi_cs_plan,cspi_term_dt,Plan/Product Linking Data Table,Class/Plan Termination Date,datetime
+dbo,cmc_cspi_cs_plan,pdpd_id,Plan/Product Linking Data Table,Product ID,char
+dbo,cmc_cspi_cs_plan,cspi_sel_ind,Plan/Product Linking Data Table,Class/Plan Selectable Indicator,char
+dbo,cmc_cspi_cs_plan,cspi_fi,Plan/Product Linking Data Table,Class/Plan Family Indicator,char
+dbo,cmc_cspi_cs_plan,cspi_guar_dt,Plan/Product Linking Data Table,Class/Plan Rate Guarantee Date,datetime
+dbo,cmc_cspi_cs_plan,cspi_guar_per_mos,Plan/Product Linking Data Table,Class/Plan Rate Guarantee Period Months,smallint
+dbo,cmc_cspi_cs_plan,cspi_guar_ind,Plan/Product Linking Data Table,Class/Plan Rate Guarantee Indicator,char
+dbo,cmc_cspi_cs_plan,pmar_pfx,Plan/Product Linking Data Table,Class/Plan Age Volume Reduction Table Prefix,char
+dbo,cmc_cspi_cs_plan,wmds_seq_no,Plan/Product Linking Data Table,Class/Plan User Warning Message,smallint
+dbo,cmc_cspi_cs_plan,cspi_open_beg_mmdd,Plan/Product Linking Data Table,Class/Plan Open Enrollment Begin Period,smallint
+dbo,cmc_cspi_cs_plan,cspi_open_end_mmdd,Plan/Product Linking Data Table,Class/Plan Open Enrollment End Period,smallint
+dbo,cmc_cspi_cs_plan,gpai_id,Plan/Product Linking Data Table,Class/Plan Group Administration Rules ID,char
+dbo,cmc_cspi_cs_plan,cspi_its_prefix,Plan/Product Linking Data Table,ITS Prefix,char
+dbo,cmc_cspi_cs_plan,cspi_age_calc_meth,Plan/Product Linking Data Table,Premium Age Calculation Method,char
+dbo,cmc_cspi_cs_plan,cspi_card_stock,Plan/Product Linking Data Table,Member ID Card Stock,char
+dbo,cmc_cspi_cs_plan,cspi_mctr_ctyp,Plan/Product Linking Data Table,Product Member ID Card Type,char
+dbo,cmc_cspi_cs_plan,cspi_hedis_cebreak,Plan/Product Linking Data Table,HEDIS Continuous Enrollment Break,char
+dbo,cmc_cspi_cs_plan,cspi_hedis_days,Plan/Product Linking Data Table,HEDIS Continuous Enrollment Days,smallint
+dbo,cmc_cspi_cs_plan,cspi_pdpd_beg_mmdd,Plan/Product Linking Data Table,Plan Year Begin Date,smallint
+dbo,cmc_cspi_cs_plan,nwst_pfx,Plan/Product Linking Data Table,Network Set Prefix,char
+dbo,cmc_cspi_cs_plan,cspi_pdpd_co_mnth,Plan/Product Linking Data Table,,smallint
+dbo,cmc_cspi_cs_plan,cvst_pfx,Plan/Product Linking Data Table,Covering Provider Set Prefix,char
+dbo,cmc_cspi_cs_plan,hsai_id,Plan/Product Linking Data Table,HRA Administrative Information ID,char
+dbo,cmc_cspi_cs_plan,cspi_postpone_ind,Plan/Product Linking Data Table,Postponement Indicator,char
+dbo,cmc_cspi_cs_plan,grdc_pfx,Plan/Product Linking Data Table,Debit Card/Bank Relationship Prefix,char
+dbo,cmc_cspi_cs_plan,uted_pfx,Plan/Product Linking Data Table,Dental Utilization Edits Prefix,char
+dbo,cmc_cspi_cs_plan,vbbr_id,Plan/Product Linking Data Table,Value Based Benefits Parms ID,char
+dbo,cmc_cspi_cs_plan,svbl_id,Plan/Product Linking Data Table,Billing Strategy (Vision Only),char
+dbo,cmc_cspi_cs_plan,cspi_lock_token,Plan/Product Linking Data Table,Lock Token,smallint
+dbo,cmc_cspi_cs_plan,atxr_source_id,Plan/Product Linking Data Table,Attachment Source Id,datetime
+dbo,cmc_cspi_cs_plan,sys_last_upd_dtm,Plan/Product Linking Data Table,Last Update Datetime,datetime
+dbo,cmc_cspi_cs_plan,sys_usus_id,Plan/Product Linking Data Table,Last Update User ID,varchar
+dbo,cmc_cspi_cs_plan,sys_dbuser_id,Plan/Product Linking Data Table,Last Update DBMS User ID,varchar
+dbo,cmc_cspi_cs_plan,cspi_sec_plan_cd_nvl,Plan/Product Linking Data Table,Secondary Plan Processing code,char
+dbo,cmc_cspi_cs_plan,mcre_id_nvl,Plan/Product Linking Data Table,Authorization/Certification Related Entity ID,char
+dbo,cmc_cspi_cs_plan,cspi_its_acct_excp_nvl,Plan/Product Linking Data Table,ITS Account Exception,char
+dbo,cmc_cspi_cs_plan,cspi_ren_beg_mmdd_nvl,Plan/Product Linking Data Table,Policy Issuance or Renewal Begins Date,smallint
+dbo,cmc_cspi_cs_plan,cspi_hios_id_nvl,Plan/Product Linking Data Table,Health Insurance Oversight System Identifier,varchar
+dbo,cmc_cspi_cs_plan,cspi_itspfx_acctid_nvl,Plan/Product Linking Data Table,ITS Prefix Account ID,varchar
+dbo,cmc_cspi_cs_plan,pgps_pfx,Plan/Product Linking Data Table,Patient Care Program Set,varchar
+```
+```
