@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDP Director Summary | September 17-26, 2025</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/black.css">
+    <style>
+        :root {
+            --dark-blue: #003366;
+            --accent-blue: #0070C0;
+            --light-blue: #4472C4;
+            --green: #70AD47;
+            --orange: #FF7C80;
+            --gray: #595959;
+            --light-gray: #D9D9D9;
+        }
+
+        .reveal {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .reveal .slides {
+            text-align: left;
+        }
+
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-transform: none;
+            font-weight: 600;
+        }
+
+        .reveal h1 {
+            color: #ffffff;
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .reveal h2 {
+            color: var(--accent-blue);
+            font-size: 1.8em;
+            margin-bottom: 0.8em;
+            border-bottom: 3px solid var(--accent-blue);
+            padding-bottom: 0.3em;
+        }
+
+        .reveal h3 {
+            color: var(--light-blue);
+            font-size: 1.3em;
+            margin-top: 1em;
+            margin-bottom: 0.5em;
+        }
+
+        .reveal ul {
+            margin-top: 0.5em;
+        }
+
+        .reveal li {
+            margin-bottom: 0.5em;
+            font-size: 0.85em;
+            line-height: 1.4;
+        }
+
+        .reveal strong {
+            color: var(--accent-blue);
+        }
+
+        /* Title slide */
+        .title-slide {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--accent-blue) 100%);
+            text-align: center;
+            padding: 2em;
+        }
+
+        .title-slide h1 {
+            font-size: 3em;
+            margin-bottom: 0.3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .title-slide p {
+            font-size: 1.3em;
+            color: #ffffff;
+            opacity: 0.9;
+        }
+
+        /* Status badges */
+        .status-complete { color: var(--green); }
+        .status-warning { color: var(--orange); }
+        .status-inprogress { color: var(--light-blue); }
+        .status-pending { color: var(--light-gray); }
+
+        /* Highlight boxes */
+        .highlight-box {
+            background: rgba(0, 112, 192, 0.1);
+            border-left: 4px solid var(--accent-blue);
+            padding: 1em;
+            margin: 1em 0;
+        }
+
+        .warning-box {
+            background: rgba(255, 124, 128, 0.1);
+            border-left: 4px solid var(--orange);
+            padding: 1em;
+            margin: 1em 0;
+        }
+
+        .success-box {
+            background: rgba(112, 173, 71, 0.1);
+            border-left: 4px solid var(--green);
+            padding: 1em;
+            margin: 1em 0;
+        }
+
+        /* Two column layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2em;
+        }
+
+        /* Timeline */
+        .timeline-item {
+            margin: 1em 0;
+            padding-left: 2em;
+            border-left: 3px solid var(--accent-blue);
+        }
+
+        .timeline-current { border-left-color: var(--orange); }
+        .timeline-progress { border-left-color: var(--light-blue); }
+        .timeline-target { border-left-color: var(--green); }
+
+        /* Small text */
+        .small { font-size: 0.7em; }
+        .smaller { font-size: 0.6em; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Slide 1: Title -->
+            <section class="title-slide">
+                <h1>EDP Director Summary</h1>
+                <p>September 17-26, 2025</p>
+                <p class="small">PI 3.2 Planning & Infrastructure Migration</p>
+            </section>
+
+            <!-- Slide 2: Executive Summary -->
+            <section>
+                <h2>Executive Summary</h2>
+                <ul>
+                    <li class="status-complete">✓ Successfully completed PI 3.2 planning with full team alignment</li>
+                    <li class="status-complete">✓ Initiated critical infrastructure consolidation to NorthStar Snowflake account</li>
+                    <li class="status-complete">✓ Established business alignment strategy with Data Domain Councils</li>
+                    <li class="status-complete">✓ Secured Abacus partnership for CMS interoperability requirements</li>
+                    <li class="status-warning">⚠ Navigated repository security incident with minimal disruption</li>
+                </ul>
+                <div class="highlight-box">
+                    <strong>Key Focus:</strong> Single Snowflake account, real-time data capability, business-driven roadmap
+                </div>
+                <aside class="notes">
+                    This was a highly productive period covering PI planning and major infrastructure decisions. Repository incident was handled well with quick recovery.
+                </aside>
+            </section>
+
+            <!-- Slide 3: Critical Decisions - Infrastructure -->
+            <section>
+                <h2>Critical Decisions: Infrastructure Consolidation</h2>
+
+                <h3 class="status-complete">Environment Migration Strategy</h3>
+                <ul class="small">
+                    <li>Migrate dev from Rising Sun to NorthStar immediately</li>
+                    <li>Rename 'Franken' environment to 'Dev' (fast approach)</li>
+                    <li>Rising Sun repurposed for POC/training with synthetic data</li>
+                </ul>
+
+                <h3 class="status-complete">Database Architecture</h3>
+                <ul class="small">
+                    <li>Separate raw databases: <code>dev_raw_DB</code> (ingestion) + <code>dev_eng_raw_DB</code> (engineering)</li>
+                    <li>Zero-copy clone approach for fresh production-like data</li>
+                    <li>Enables independent team workflows</li>
+                </ul>
+
+                <div class="success-box">
+                    <strong>Timeline:</strong> End of Sprint 1 (mid-October)
+                </div>
+                <aside class="notes">
+                    Decision to rename rather than clone reduces implementation time. Teams preferred upfront disruption over prolonged migration.
+                </aside>
+            </section>
+
+            <!-- Slide 4: Critical Decisions - Real-Time Data -->
+            <section>
+                <h2>Critical Decisions: Real-Time Data Architecture</h2>
+
+                <h3 class="status-complete">Deferred Merge View Pattern (Selected)</h3>
+                <ul class="small">
+                    <li>Batch loading remains at 4-6 hour cycle</li>
+                    <li>Real-time views provide seconds-level latency for critical tables</li>
+                    <li>Existing working pattern repurposed from Kafka development</li>
+                    <li><strong>Target: &lt;5 minute latency</strong> for customer service use cases</li>
+                </ul>
+
+                <h3 class="status-complete">Ingestion Simplification</h3>
+                <ul class="small">
+                    <li>Move from Kafka/MSK to S3 CSV file ingestion</li>
+                    <li>Significant cost reduction with adequate performance</li>
+                    <li>MSK retained only for true real-time requirements</li>
+                </ul>
+
+                <p class="small" style="margin-top: 1em;">OneView app pipelines refactored for CSV-based streaming</p>
+                <aside class="notes">
+                    Three options were evaluated. Option 1 (deferred merge view) selected for existing working pattern and lower implementation effort.
+                </aside>
+            </section>
+
+            <!-- Slide 5: Critical Decisions - Repository Strategy -->
+            <section>
+                <h2>Critical Decisions: Code Repository Split</h2>
+
+                <div class="warning-box">
+                    <h3 class="status-warning">Current State: Monolithic Repository</h3>
+                    <ul class="small">
+                        <li>Single repository causes release schedule conflicts</li>
+                        <li>Cross-team dependencies slow delivery</li>
+                    </ul>
+                </div>
+
+                <div class="success-box">
+                    <h3 class="status-complete">Target State: Three Independent Projects</h3>
+                    <ul class="small">
+                        <li><strong>EDP_Streaming:</strong> Real-time OneView pipelines</li>
+                        <li><strong>EDP_Data_Integrations:</strong> Extract projects</li>
+                        <li><strong>EDP_Data_Domains:</strong> Analytical platform transformations</li>
+                    </ul>
+                </div>
+
+                <h3>Benefits</h3>
+                <ul class="small">
+                    <li>Autonomous team delivery with independent release schedules</li>
+                    <li>Reduced cross-team dependencies</li>
+                    <li>OneView can iterate rapidly without impacting analytics</li>
+                </ul>
+                <aside class="notes">
+                    Repository split planned for mid-PI. Each repository will have independent job orchestration matching use case needs.
+                </aside>
+            </section>
+
+            <!-- Slide 6: Key Accomplishments -->
+            <section>
+                <h2>Key Accomplishments</h2>
+
+                <div class="success-box">
+                    <h3 class="status-complete">✓ PI 3.2 Planning Execution</h3>
+                    <p class="small">All teams aligned on features, stories, dependencies for 10-week roadmap</p>
+                </div>
+
+                <div class="success-box">
+                    <h3 class="status-complete">✓ Infrastructure Migration Progress</h3>
+                    <p class="small">EDP_source_data migrated; EDP_Data_Domains 90% complete<br>
+                    Single Snowflake account reduces complexity and cost</p>
+                </div>
+
+                <div class="success-box">
+                    <h3 class="status-complete">✓ Abacus Partnership Launch</h3>
+                    <p class="small">CMS compliance (9115, 0057) - SOW signed, work begins October<br>
+                    Snowflake share for raw + silver foundational data marts</p>
+                </div>
+
+                <div class="success-box">
+                    <h3 class="status-complete">✓ C4-DDD Architecture Framework</h3>
+                    <p class="small">Executive diagrams (ECC), technical diagrams (ARB), detailed specs (Engineering)<br>
+                    Enables multi-level stakeholder communication</p>
+                </div>
+                <aside class="notes">
+                    Major wins across planning, infrastructure, partnerships, and architecture frameworks. C4-DDD framework particularly valuable for business alignment.
+                </aside>
+            </section>
+
+            <!-- Slide 7: Escalation Items -->
+            <section>
+                <h2>Escalation Items & Resolution</h2>
+
+                <div class="warning-box">
+                    <h3 class="status-warning">⚠ Repository Security Incident - RESOLVED</h3>
+                    <p class="small"><strong>Issue:</strong> Repository flagged for PHI (PHI-like test data) and deleted without notification</p>
+                    <p class="small"><strong>Impact:</strong> Lost all branches except develop, all merge history</p>
+                    <p class="small"><strong>Resolution:</strong> Restored from backup within 24 hours, all environments operational</p>
+                    <p class="small" style="color: var(--orange);"><strong>Note:</strong> Would have been production-down event if prod were live</p>
+                </div>
+
+                <h3>Recommendations</h3>
+                <ul class="small">
+                    <li>Implement notification process before repository deletion</li>
+                    <li>Improve test data generation standards to avoid PHI-like patterns</li>
+                    <li>Establish clearer backup/restore procedures</li>
+                </ul>
+
+                <div class="warning-box" style="margin-top: 1em;">
+                    <h3 class="status-warning">⚠ Snowflake AI Cortex Cost Spike</h3>
+                    <p class="small">Unexpected budget consumption detected<br>
+                    <strong>Action:</strong> Engage Snowflake AI expert for cost-effective POC guidance</p>
+                </div>
+                <aside class="notes">
+                    Repository incident handled well but exposed gaps in processes. AI cost spike requires better tracking and expert consultation.
+                </aside>
+            </section>
+
+            <!-- Slide 8: Action Items - High Priority -->
+            <section>
+                <h2>Action Items: High Priority</h2>
+
+                <div class="highlight-box">
+                    <h3>Dan Brickey</h3>
+                    <ul class="small">
+                        <li>Complete dbt testing in NorthStar Dev</li>
+                        <li>Finalize Rising Sun decommissioning plan</li>
+                        <li><strong>Due:</strong> End of Sprint 1 (mid-October)</li>
+                    </ul>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>Dan / Lindsay / Data Governance</h3>
+                    <ul class="small">
+                        <li>Launch Membership and Product Data Domain Councils</li>
+                        <li><strong>Due:</strong> Early Q4 2025</li>
+                    </ul>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>Data Engineering Teams</h3>
+                    <ul class="small">
+                        <li>Split repositories: Streaming, Integrations, Domains</li>
+                        <li>Enable independent release schedules</li>
+                        <li><strong>Due:</strong> Mid-PI 3.2</li>
+                    </ul>
+                </div>
+                <aside class="notes">
+                    All high priority items have clear owners and due dates. NorthStar migration is critical path for other work.
+                </aside>
+            </section>
+
+            <!-- Slide 9: Action Items - Medium Priority -->
+            <section>
+                <h2>Action Items: Medium Priority</h2>
+
+                <div class="two-column">
+                    <div>
+                        <div class="highlight-box">
+                            <h3 class="smaller">Provider 360 Modeling</h3>
+                            <p class="small"><strong>Owner:</strong> Dan / Nicole Bowen / Tina Day</p>
+                            <ul class="smaller">
+                                <li>Complete business modeling</li>
+                                <li>Metric naming alignment</li>
+                            </ul>
+                            <p class="small"><strong>Due:</strong> October 2025</p>
+                        </div>
+
+                        <div class="highlight-box">
+                            <h3 class="smaller">OneView AI POC</h3>
+                            <p class="small"><strong>Owner:</strong> Dan Brickey</p>
+                            <ul class="smaller">
+                                <li>Contract document harvesting design meetings</li>
+                                <li>Q1 2026 POC target</li>
+                            </ul>
+                            <p class="small"><strong>Due:</strong> Design by end Q4 2025</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="highlight-box">
+                            <h3 class="smaller">Dev Environment DB Structure</h3>
+                            <p class="small"><strong>Owner:</strong> Engineering Admins</p>
+                            <ul class="smaller">
+                                <li>Create dual raw DB setup</li>
+                                <li>Zero-copy clone for engineering</li>
+                            </ul>
+                            <p class="small"><strong>Due:</strong> Sprint 1</p>
+                        </div>
+                    </div>
+                </div>
+                <aside class="notes">
+                    Medium priority items support business alignment and operational improvements. Provider 360 is key deliverable for stakeholder engagement.
+                </aside>
+            </section>
+
+            <!-- Slide 10: Strategic Progress - Environment -->
+            <section>
+                <h2>Strategic Progress: Environment Consolidation</h2>
+
+                <div class="timeline-item timeline-current">
+                    <h3 class="status-warning">Current State</h3>
+                    <ul class="small">
+                        <li>Development split across Rising Sun and NorthStar accounts</li>
+                        <li>Franken environment in NorthStar used for testing</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item timeline-progress">
+                    <h3 class="status-inprogress">🔄 In Progress</h3>
+                    <ul class="small">
+                        <li>Migration to NorthStar (Franken→Dev) in final testing</li>
+                        <li>Rising Sun decommissioning plan in development</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item timeline-target">
+                    <h3 class="status-complete">Target State (End of PI)</h3>
+                    <ul class="small">
+                        <li>All dev, test, and production in single NorthStar account</li>
+                        <li>Rising Sun repurposed for POC with synthetic data</li>
+                        <li>Clean slate architecture without legacy technical debt</li>
+                    </ul>
+                </div>
+                <aside class="notes">
+                    Timeline on track for end of PI completion. Clean slate approach eliminates two years of accumulated technical debt.
+                </aside>
+            </section>
+
+            <!-- Slide 11: Strategic Progress - Real-Time Data -->
+            <section>
+                <h2>Strategic Progress: Real-Time Data Capability</h2>
+
+                <div class="timeline-item timeline-current">
+                    <h3 class="status-warning">Current State</h3>
+                    <ul class="small">
+                        <li>Batch loading twice daily (4-6 hour cycles)</li>
+                        <li>MSK streaming partially implemented but expensive</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item timeline-progress">
+                    <h3 class="status-inprogress">🔄 In Progress</h3>
+                    <ul class="small">
+                        <li>Deferred merge view pattern implementation</li>
+                        <li>CSV-based ingestion architecture development</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item timeline-target">
+                    <h3 class="status-complete">Target State</h3>
+                    <ul class="small">
+                        <li>&lt;5 minute latency for customer service critical tables</li>
+                        <li>Cost-effective S3 CSV ingestion</li>
+                        <li>MSK retired except for true real-time needs</li>
+                        <li>Dynamic table layers for business rule application</li>
+                    </ul>
+                </div>
+                <aside class="notes">
+                    Real-time capability balances performance needs with cost management. Deferred merge view elegant solution for customer service requirements.
+                </aside>
+            </section>
+
+            <!-- Slide 12: Strategic Progress - Business Alignment -->
+            <section>
+                <h2>Strategic Progress: Business Alignment</h2>
+
+                <div class="timeline-item timeline-current">
+                    <h3 class="status-warning">Current State</h3>
+                    <ul class="small">
+                        <li>Provider Data Council established and active</li>
+                        <li>Ad-hoc business engagement for other domains</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item timeline-progress">
+                    <h3 class="status-inprogress">🔄 In Progress</h3>
+                    <ul class="small">
+                        <li>Membership and Product Council formation</li>
+                        <li>Provider 360 modeling alignment</li>
+                        <li>C4-DDD framework development for stakeholder communication</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item timeline-target">
+                    <h3 class="status-complete">Target State</h3>
+                    <ul class="small">
+                        <li>All major domains have active Data Councils</li>
+                        <li>Business-driven roadmap prioritization</li>
+                        <li>MDM solution proposal from Hakoda partner</li>
+                        <li>Shared vocabulary through domain-driven design</li>
+                    </ul>
+                </div>
+                <aside class="notes">
+                    Business alignment maturing well. Provider Council successful model for Membership and Product. DDD framework bridges business-IT communication gap.
+                </aside>
+            </section>
+
+            <!-- Slide 13: Team Structure Evolution -->
+            <section>
+                <h2>Team Structure & Responsibilities</h2>
+
+                <div class="highlight-box">
+                    <h3>New Team Assignment: Business Alignment</h3>
+                    <ul class="small">
+                        <li>Moved from individual contributor to solution architecture team</li>
+                        <li>Focus on business domain alignment and data council leadership</li>
+                    </ul>
+                </div>
+
+                <h3>Key Responsibilities</h3>
+                <ul class="small">
+                    <li>Solution architecture oversight for environment and repository changes</li>
+                    <li>Business domain modeling: Member, Product, Provider</li>
+                    <li>Hakoda offshore team coordination and work assignment</li>
+                    <li>Data Domain Council facilitation with business stakeholders</li>
+                </ul>
+
+                <div class="success-box">
+                    <h3>Delegation Strategy</h3>
+                    <ul class="small">
+                        <li>Distribute tangible technical work to team members</li>
+                        <li>Spread guidance across multiple teams</li>
+                        <li>Reserve capacity for business alignment activities</li>
+                    </ul>
+                </div>
+                <aside class="notes">
+                    Role shift to more strategic focus. Delegation approach allows broader team impact while maintaining technical oversight.
+                </aside>
+            </section>
+
+            <!-- Slide 14: Risk & Dependency Management -->
+            <section>
+                <h2>Risk & Dependency Management</h2>
+
+                <h3 class="status-warning">Resource Allocation Risks</h3>
+                <ul class="small">
+                    <li>Architecture team capacity stretched across multiple initiatives</li>
+                    <li>Balance needed between delegation and hands-on technical leadership</li>
+                </ul>
+
+                <h3 class="status-warning">Cross-Team Dependencies</h3>
+                <ul class="small">
+                    <li>OneView real-time depends on CSV ingestion architecture completion</li>
+                    <li>Repository splitting depends on successful NorthStar migration</li>
+                    <li>Data Council success requires C4-DDD framework adoption</li>
+                </ul>
+
+                <h3 class="status-warning">Vendor & Partner Coordination</h3>
+                <ul class="small">
+                    <li>Abacus timeline extends to summer 2026 (must align data model maturity)</li>
+                    <li>Hakoda MDM proposal Q1 must align with Data Council outputs</li>
+                    <li>Snowflake consultant availability critical for architecture validation</li>
+                </ul>
+                <aside class="notes">
+                    Dependencies well understood and being actively managed. Critical path through NorthStar migration for most other work.
+                </aside>
+            </section>
+
+            <!-- Slide 15: Next Steps & Milestones -->
+            <section>
+                <h2>Next Steps & Key Milestones</h2>
+
+                <div class="highlight-box">
+                    <h3>Sprint 1 Focus (Next 2 Weeks)</h3>
+                    <ul class="small">
+                        <li class="status-complete">✓ Complete NorthStar Dev environment testing</li>
+                        <li class="status-complete">✓ Finalize Test and Prod configuration migration</li>
+                        <li class="status-complete">✓ Begin repository split planning for OneView/Streaming</li>
+                        <li class="status-complete">✓ Schedule Membership/Product Data Council kickoffs</li>
+                    </ul>
+                </div>
+
+                <div class="success-box">
+                    <h3>Mid-PI Milestones</h3>
+                    <ul class="small">
+                        <li class="status-pending">📋 Rising Sun fully decommissioned</li>
+                        <li class="status-pending">📋 Repository split completed with independent release schedules</li>
+                        <li class="status-pending">📋 Real-time deferred merge view pattern implemented and tested</li>
+                        <li class="status-pending">📋 First Membership/Product Council meetings held</li>
+                    </ul>
+                </div>
+
+                <div class="highlight-box" style="text-align: center; margin-top: 1em;">
+                    <p><strong>Next Director Summary:</strong> October 7, 2025</p>
+                </div>
+                <aside class="notes">
+                    Clear milestones established for Sprint 1 and mid-PI checkpoints. Next summary will cover Sprint 1 execution and progress.
+                </aside>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: 'c/t',
+            transition: 'slide',
+            backgroundTransition: 'fade',
+            controls: true,
+            progress: true,
+            center: false,
+            width: 1280,
+            height: 720,
+            margin: 0.1,
+            plugins: [ RevealNotes ]
+        });
+    </script>
+</body>
+</html>

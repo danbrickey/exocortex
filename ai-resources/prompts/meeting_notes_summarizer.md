@@ -57,9 +57,71 @@ You are a meeting notes summarizer for an enterprise data platform architect. An
 Professional, concise, action-oriented. Emphasize business impact and strategic implications over technical implementation details.
 
 ## Output Method
-After generating the summary, create a markdown file in the `docs/meeting_prep/` directory with the filename format: `director_summary_[START_DATE]-[END_DATE].md`
+
+### 1. Create Markdown Summary
+Create a markdown file in the `docs/meeting_prep/` directory with the filename format: `director_summary_[START_DATE]-[END_DATE].md`
 
 The file should include:
 - Proper frontmatter with title, author, date range, created date, category, tags, and source
 - Complete summary content in the format specified above
 - Clear section headers for easy navigation
+
+### 2. Create Reveal.js Presentation
+Create a professional HTML presentation using Reveal.js framework in the `docs/presentations/` directory with the filename format: `director_summary_[START_DATE]-[END_DATE].html`
+
+**Reveal.js Presentation Requirements:**
+- Self-contained single HTML file with embedded Reveal.js from CDN
+- Professional color scheme: Dark blue (#003366), Accent blue (#0070C0), Green (#70AD47), Orange (#FF7C80)
+- 15-20 slides organized as follows:
+  1. Title slide with date range
+  2. Executive summary (3-5 key points)
+  3-5. Critical decisions (one per slide or grouped by theme)
+  6-8. Key accomplishments with visual indicators (✓)
+  9-10. Escalation items with status/resolution
+  11-12. Action items (high priority and medium priority separate)
+  13-14. Strategic progress timelines (current → in-progress → target)
+  15. Next steps and key milestones
+- Use visual indicators: ✓ (complete), ⚠ (warning), 🔄 (in-progress), 📋 (pending)
+- Include presenter notes with additional context
+- Smooth transitions and professional typography
+- Color-code by status: Green (completed), Orange (risks/warnings), Blue (strategic)
+
+**Reveal.js Template Structure:**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Director Summary [Date Range]</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/black.css">
+    <style>
+        /* Custom styling here */
+        :root {
+            --dark-blue: #003366;
+            --accent-blue: #0070C0;
+            --green: #70AD47;
+            --orange: #FF7C80;
+        }
+        .reveal { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .reveal h1, .reveal h2 { color: var(--accent-blue); }
+        /* Additional custom styles */
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Slides here -->
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: true,
+            transition: 'slide'
+        });
+    </script>
+</body>
+</html>
+```
