@@ -12,7 +12,15 @@
       "Bash(tree:*)",
       "Bash(for file in \"C:\\Users\\danbr\\github-danbrickey\\edp-ai-expert-team\\code\\target\\gemstone\"/*.csv)",
       "Bash(done)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(claude update)",
+      "Bash(claude config get auto-update)",
+      "Bash(claude config set auto-update true)",
+      "Bash(python:*)",
+      "Bash(where python)",
+      "Bash(py --version)",
+      "Bash(C:UsersdanbrAppDataLocalMicrosoftWindowsAppspython.exe --version)",
+      "Bash(powershell:*)"
     ],
     "deny": [],
     "ask": []
