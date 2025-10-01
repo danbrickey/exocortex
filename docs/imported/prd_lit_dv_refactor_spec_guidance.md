@@ -112,14 +112,21 @@ Generate this output with the following format:
 
 - **Entity Type**: Hub / Satellite / Current View
 - **Source Table**: Name of source table
-- **Hub Name**: `h_<entity>`
-- **Satellite(s)**:
-  - `s_<entity>_legacy_facets`
-  - `s_<entity>_gemstone_facets`
-- **Current View**: `v_<entity>_current`
+- **Rename Model(s)**:
+  - `stg_<entity>_legacy_facets_rename`
+  - `stg_<entity>_gemstone_facets_rename`
 - **Staging Model(s)**:
   - `stg_<entity>_legacy_facets`
   - `stg_<entity>_gemstone_facets`
+- **Hub Name**: `h_<entity>`
+- **Link Name**: `l_<entity1>_<entity2>`
+- **Satellite(s)**:
+  - `s_<entity>_legacy_facets`
+  - `s_<entity>_gemstone_facets`
+- **Effectivity Satellite(s)**:
+  - `s_<entity>_legacy_facets`
+  - `s_<entity>_gemstone_facets`
+- **Current View**: `current_<entity>`
 - **Source System(s)**: `legacy_facets`, `gemstone_facets`
 
 ### Rename Views

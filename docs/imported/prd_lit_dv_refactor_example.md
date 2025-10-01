@@ -1,6 +1,7 @@
 # Example Code Refactor - class entity
 
-## Input Model
+## Input
+
 
 
 
