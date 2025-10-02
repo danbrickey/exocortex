@@ -1,6 +1,6 @@
 ---
 title: "EDP AI Expert Team Repository"
-author: "AI Expert Team Cabinet"
+author: "Dan Brickey"
 last_updated: "2024-12-09T17:30:00Z"
 version: "1.0.0"
 category: "repository-index"
@@ -10,30 +10,6 @@ audience: ["all-stakeholders", "team-members", "contributors", "visitors"]
 repository_type: "knowledge-base"
 ---
 
-# 🚀 EDP AI Expert Team Repository
-
-> *Cloud Data Platform Migration & Modernization Specialists*
-
-## About the AI Expert Team
-
-The AI Expert Team (aka "The Cabinet") is a specialized consulting practice designed to support Enterprise Data Platform (EDP) migration and modernization work. We combine human expertise with AI-powered collaboration to deliver exceptional data architecture solutions.
-
-### 👤 Human Team Lead
-- **Dan "Brick" Brickey** - Functional Architect & Real-World Implementation Lead
-
-### 🤖 AI Specialists
-- **Kanchana "Kanchi" Talaivar** - Team Manager & Orchestration Specialist
-- **Atlas Banna** - Functional Architecture Lead  
-- **Frost Seol** - Snowflake Platform Architect
-- **Sage Tadesse** - Data Vault & Modeling Specialist
-- **Forge Schmeid** - dbt & Platform Engineering Specialist
-- **River Gatherer** - Data Engineering & Pipeline Operations
-- **Catalina "Cat" Artista** - Streamlit AI Acceleration & Operations
-- **Sterling "Holmes" Tester** - Quality Assurance & Testing
-- **Quinn Schriber** - Documentation & Knowledge Specialist
-- **Grace Sellers** - Stakeholder Communication Expert
-- **Rose Strategia** - Product Strategy & Planning Specialist
-- **Tempo Odeyakana** - Time Management Assistant
 
 ## 🗂️ Repository Structure
 📁 docs/                    # Documentation & Knowledge Base

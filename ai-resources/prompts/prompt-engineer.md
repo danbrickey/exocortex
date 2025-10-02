@@ -1,6 +1,6 @@
 ---
 title: "EDP AI Sub-Agent Prompt Engineer"
-author: "AI Expert Team Cabinet"
+author: "Dan Brickey"
 last_updated: "2024-12-09T17:30:00Z"
 version: "1.0.0"
 category: "ai-tools"

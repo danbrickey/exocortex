@@ -5,29 +5,47 @@ This is the EDP AI Expert Team repository - a specialized consulting practice fo
 
 ## Key Project Files for Context
 - **README.md** - Main project overview and structure
-- **team-personas/ai-expert-team-profiles.md** - Complete AI team member profiles
 - **ai-resources/context-documents/edp-architecture-baseline.md** - Technical architecture context
 - **ai-resources/context-documents/edp-work-plan-breakdown.md** - Project work breakdown
 - **docs/engineering-knowledge-base/data-vault-2.0-guide.md** - Technical implementation guide
 
 ## Team Structure
-- **Human Lead**: Dan "Brick" Brickey - Functional Architect
-- **AI Team Manager**: Kanchana "Kanchi" Talaivar
-- **11 AI Specialists** covering: Architecture, Snowflake, Data Vault, dbt, Data Engineering, Streamlit, QA, Documentation, Communication, Strategy, and Time Management
+- **Data and Solution Architect**: Dan Brickey, (AKA me)
+- **Product Owner**: Sam Schrader
+- **Scrum Coach**: Emmanuel Obaze
+- **Architect**: Emily Sowder (contractor from Hakkoda)
+- **Snowflake Admin**: Ian Truslow
+- **Snowflake/AWS Admin**: Mike Bills
 
-## Working Model
-- Use "Cabinet" reference to engage relevant AI specialists
-- Kanchana's detailed persona loaded at startup for optimal team orchestration
-- Individual detailed personas loaded on-demand for specific expertise
-- Progressive disclosure approach - start high-level, drill down as needed
-- All documents include structured frontmatter for tracking
+## Others I collaborate with regularly
+- **CIO**: David Yoo
+- **Director of Data and Analytics**: Ram Garimella
+- **EDP Program Manager**: Linsey Smith
+- **Enterprise Architect**: Sani Messenger
+- **Enterprise Architect**: Dom Desimini
+- **Delivery Team Manager - Ingestion**: Kelly Good Clark 
+- **Manager - HDS**: Rob Hopper
+- **Data Engineer - HDS**: Cameron Gilbert
+- **Data Engineer - HDS**: Brian Dix
+- **Data Engineer - Ingestion**: James Hicks
+- **Data Engineer - Ingestion**: Pei-Chi Liu
+- **Data Engineer - OneView**: Shreya Thacker
+- **Data Engineer - OneView**: Jason Seger
+- **Enterprise Architect**: Rich Tallon
+
+
+Hawk Yi – Milliman data workflows and WhereScape job coordination. [HDS Core Team]
+
+ – ServiceNow task coordination and data table issues. [ServiceNow...d to Group]
+
+ – PDE data output table issues and ServiceNow comments. [ServiceNow...tput table]
+
+Alexander Opiyo – Historical ticket resolution and PDE table support. [ServiceNow...tput table
 
 ## Repository Structure
-- `docs/` - Documentation & Knowledge Base
 - `ai-resources/` - AI Tools, Context & Prompts  
-- `team-personas/` - AI Expert Team profiles
-- `presentations/` - Stakeholder materials
-- `assets/` - Images, templates, resources
+- `code/` - code repo structures echoed from sources and/or targets as needed
+- `docs/` - Documentation & Knowledge Base
 
 ## Document Standards
 - Frontmatter with timestamps, versions, authors, audience
@@ -41,6 +59,7 @@ This is the EDP AI Expert Team repository - a specialized consulting practice fo
 
 ## Quick References
 When working on this project, consider referencing:
-1. Team member detailed expertise from `team-personas/` 
+1. Expertise prompts from `ai-resources/prompts` 
 2. Technical context from `ai-resources/context-documents/`
 3. Implementation guides from `docs/engineering-knowledge-base/`
+3. Project Architecture `docs/architecture`
