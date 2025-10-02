@@ -4,6 +4,12 @@
 
 **Objective**: Refactor existing 3NF models in the Integration layer to Data Vault 2.0 methodology while maintaining business continuity through current views.
 
+## Auto-Import Context Files
+@docs\architecture\edp_platform_architecture.md
+@docs\use_cases\uc01_dv_refactor\dv_refactor_project_context.md
+@docs\use_cases\uc01_dv_refactor\examples\combined_member_cob_refactoring_example.md
+@docs\engineering-knowledge-base\data-vault-2.0-guide.md
+
 ## Background Context
 
 ### Current State Challenge
@@ -14,7 +20,7 @@
 
 ### Strategic Approach
 1. **Parallel Implementation**: Build Data Vault structures alongside existing 3NF models
-2. **Current Views**: Create backward-compatible interfaces that mirror 3NF table structures
+2. **Current Views**: Create interfaces that can be used by the business vault
 3. **Phased Migration**: Gradually transition downstream dependencies to Data Vault patterns
 4. **Quality Assurance**: Validate data consistency between old and new models
 
@@ -24,13 +30,12 @@
 - **3NF Model Analysis**: Document existing table structures, relationships, and business logic
 - **Entity Mapping**: Map 3NF entities to Data Vault hubs, links, and satellites
 - **Business Key Strategy**: Identify stable business keys from existing primary/foreign key patterns
-- **Current View Design**: Plan backward compatibility interfaces
 
 ### Phase 2: Data Vault Implementation
 - **Hub Creation**: Implement core business entities (members, providers, claims)
 - **Link Development**: Model relationships between business entities
 - **Satellite Design**: Store all descriptive attributes with full historization
-- **Current Views**: Create interfaces that match existing 3NF table structures
+- **Current Views**: Create interfaces that show all satellite columns
 
 ### Phase 3: Migration and Validation
 - **Data Comparison**: Validate consistency between 3NF and Data Vault models

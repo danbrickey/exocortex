@@ -1,10 +1,12 @@
-# Data Vault 2.0 Model Generation Request
+w# Data Vault 2.0 Model Generation Request
 
 ## 📘 Prompt
 
 We are refactoring from a 3NF integration layer to a Data Vault 2.0 architecture using the `automate_dv` package on Snowflake (AWS). The source data resides in the Raw layer as raw CDC feeds. The target is the Integration Layer as the Raw Vault (hubs, links, satellites), with backward-compatible and current views. Please take the Prior dbt Model below and refactor it into dbt sql for the appropriate Data Vault objects as specified in this prompt.
 
-Please analyze the information in the provided context and generate refactored code for the specified entity. Generate output for all artifacts at once without prompt user for input.
+Please analyze the information in the provided context and generate refactored code for the specified entity (referred to as <entity_name> in this doc). Generate output for all artifacts at once without prompting user for input.
+
+Create the folder if necessary and write the generated files to the following path: `docs\use_cases\uc01_dv_refactor\output\<entity_name>`
 
 Provide complete code for at least one of every artifact type to save typing on the engineer's part.
 
@@ -36,6 +38,14 @@ columns: - "tenant_id" - "claim_bk" - "claim_line_bk" - "member_bk" - "provider_
 ---
 
 ## 🔧 Generation Requirements
+
+### 0. Engineering Spec
+
+- **Purpose**: Create a specification for engineers to follow if they want to write their own code.
+- **Naming**: `engineering_spec_<entity>.md`
+- **Logic**:
+  - Describe the files that should be created and generate snippets of code for egineering to copy and paste, but only the parts of the code that would be unique to this entity, such as keys, hash expressions, etc.
+  - This output should serve as a guide for an engineer to follow rather than a specific line-by-line set of code. Since many engineers prefer to use their own template and then have a document to copy and paste unique things like column lists and renaming and so on.  
 
 ### 1. Rename Views
 
@@ -86,25 +96,14 @@ columns: - "tenant_id" - "claim_bk" - "claim_line_bk" - "member_bk" - "provider_
 
 ### 6. Current Views
 
-- **Naming**: `cv_<entity>.sql`
+- **Naming**: `current_<entity>.sql`
 - **Purpose**: Show current record for a hub/link key with all satellite columns from all satellite for that entity.
 - **Logic**:
   - Join hub, link, and satellite models.
   - Resolve column conflicts across sources.
   - Filter to current/active records only.
   - **Union across all source systems** for the entity.
-  - include all columns from satellites even if they are not part of the prior dbt model code.
-
-### 7. Backward Compatible Views
-
-- **Naming**: `bwd_<entity>.sql`
-- **Purpose**: Reconstruct original 3NF structure.
-- **Logic**:
-  - Join hub, link, and satellite models.
-  - Resolve column conflicts across sources.
-  - Filter to current/active records only.
-  - **Union across all source systems** for the entity.
-  - only include columns if they are not of the prior dbt model code and alias the columns with the names from the prior model.
+  - include all columns from satellites.
 
 ---
 

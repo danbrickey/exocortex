@@ -35,11 +35,9 @@ This is the EDP AI Expert Team repository - a specialized consulting practice fo
 - Commit changes together
 
 ## Auto-Import Context Files
-@team-personas/ai-expert-team-brief-profiles.md
-@team-personas/individual-profiles/kanchana-talaivar.md
-@ai-resources/context-documents/edp-architecture-baseline.md
-@ai-resources/context-documents/edp-work-plan-breakdown.md
-@ai-resources/context-documents/diagramming_guidelines.md
+@docs\architecture\edp_platform_architecture.md
+@docs\architecture\edp-layer-architecture-detailed.md
+@docs\engineering-knowledge-base\environment-database-configuration.md
 
 ## Quick References
 When working on this project, consider referencing:
