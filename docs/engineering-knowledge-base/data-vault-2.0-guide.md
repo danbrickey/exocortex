@@ -1,6 +1,6 @@
 ---
 title: "Data Vault 2.0 & Architecture Modeling Guide"
-author: "AI Expert Team Cabinet"
+document_type: "methodology"
 last_updated: "2024-12-09T17:30:00Z"
 version: "1.0.0"
 category: "engineering-guide"
