@@ -13,7 +13,7 @@ This is the EDP AI Expert Team repository - a specialized consulting practice fo
 - **Data and Solution Architect**: Dan Brickey, (AKA me)
 - **Product Owner**: Sam Schrader
 - **Scrum Coach**: Emmanuel Obaze
-- **Architect**: Emily Sowder (contractor from Hakkoda)
+- **Hakkoda - Architect**: Emily Sowder
 - **Snowflake Admin**: Ian Truslow
 - **Snowflake/AWS Admin**: Mike Bills
 
@@ -32,6 +32,16 @@ This is the EDP AI Expert Team repository - a specialized consulting practice fo
 - **Data Engineer - OneView**: Shreya Thacker
 - **Data Engineer - OneView**: Jason Seger
 - **Enterprise Architect**: Rich Tallon
+
+## Business Partners I collaborate with
+- **Hakkoda**: Architecture and implementation guidance for the EDP
+- **Abacus**: Interop partner for cloud data, EDP and some CMS feeds for now
+
+## Other Contractors I collaborate with regularly
+- **Hakkoda - Architect**: Martin Rivera
+- **Hakkoda - Architect**: Odell Ordonez
+- **Abacus - Architect**: Lorraine Maldonado
+- **Abacus - Architect**: Satish Dhanasekar
 
 
 Hawk Yi – Milliman data workflows and WhereScape job coordination. [HDS Core Team]

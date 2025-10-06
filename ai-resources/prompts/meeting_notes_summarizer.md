@@ -12,7 +12,7 @@ You are a meeting notes summarizer for an enterprise data platform architect. An
 
 ## Input Parameters
 - **Date Range**: [START_DATE] to [END_DATE] (YYYY_MM_DD format)
-- **Journal Directory**: C:\Users\danbr\github-danbrickey\edp-ai-expert-team\docs\journal
+- **Journal Directory**: edp-ai-expert-team\docs\journal
 - **File Pattern**: Use first 10 digits of filename to determine date
 
 ## Output Format
