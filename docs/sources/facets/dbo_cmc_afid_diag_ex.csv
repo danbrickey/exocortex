@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_afid_diag_ex","pdbc_pfx","Alternate Funding Excluded Diagnosis","Alternate Funding Rules Benefit Component Prefix","char"
+"dbo","cmc_afid_diag_ex","idcd_id","Alternate Funding Excluded Diagnosis","Alternate Funding Rules Excluded Diagnosis Code","varchar"
+"dbo","cmc_afid_diag_ex","idcd_type","Alternate Funding Excluded Diagnosis","ICD Version","char"
+"dbo","cmc_afid_diag_ex","afid_lock_token","Alternate Funding Excluded Diagnosis","Lock Token","smallint"
+"dbo","cmc_afid_diag_ex","atxr_source_id","Alternate Funding Excluded Diagnosis","Attachment Source Id","datetime"

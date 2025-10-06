@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_sbsp_splt_prem","sbsb_ck","Subscriber Expanded Split Premium","Subscriber Contrived Key","int"
+"dbo","cmc_sbsp_splt_prem","sbsp_eff_dt","Subscriber Expanded Split Premium","Effective Date","datetime"
+"dbo","cmc_sbsp_splt_prem","cspd_cat","Subscriber Expanded Split Premium","Product Category","char"
+"dbo","cmc_sbsp_splt_prem","sbsp_term_dt","Subscriber Expanded Split Premium","Termination Date","datetime"
+"dbo","cmc_sbsp_splt_prem","grgr_ck","Subscriber Expanded Split Premium","Group Contrived Key","int"
+"dbo","cmc_sbsp_splt_prem","sbsp_lock_token","Subscriber Expanded Split Premium","Lock Token","smallint"
+"dbo","cmc_sbsp_splt_prem","atxr_source_id","Subscriber Expanded Split Premium","Attachment Source Id","datetime"

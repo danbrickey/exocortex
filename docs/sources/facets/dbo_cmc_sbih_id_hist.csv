@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_sbih_id_hist","sbsb_ck","ID Conversion History Table","Subscriber Contrived Key","int"
+"dbo","cmc_sbih_id_hist","grgr_ck","ID Conversion History Table","Group Contrived Key","int"
+"dbo","cmc_sbih_id_hist","sbih_sbsb_id_orig","ID Conversion History Table","Orig Sub ID","char"
+"dbo","cmc_sbih_id_hist","sbih_sbsb_id_new","ID Conversion History Table","Subscriber ID","char"
+"dbo","cmc_sbih_id_hist","sbbd_batch_id","ID Conversion History Table","Batch ID","char"
+"dbo","cmc_sbih_id_hist","sbih_prcs_dtm","ID Conversion History Table","Process Date","datetime"
+"dbo","cmc_sbih_id_hist","sbih_lock_token","ID Conversion History Table","Lock Token","smallint"

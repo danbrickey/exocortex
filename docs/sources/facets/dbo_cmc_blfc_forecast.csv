@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_blfc_forecast","blei_ck","Billing Forecast","Billing Entity contrived key","int"
+"dbo","cmc_blfc_forecast","blfc_due_dt","Billing Forecast","Due date","datetime"
+"dbo","cmc_blfc_forecast","blfc_mode","Billing Forecast","Bill Mode","smallint"
+"dbo","cmc_blfc_forecast","blfc_lst_due_dt","Billing Forecast","Last due date","datetime"
+"dbo","cmc_blfc_forecast","blfc_create_dtm","Billing Forecast","Create date and time","datetime"
+"dbo","cmc_blfc_forecast","blfc_lock_token","Billing Forecast","Lock Token","smallint"
+"dbo","cmc_blfc_forecast","atxr_source_id","Billing Forecast","Attachment Source Id","datetime"

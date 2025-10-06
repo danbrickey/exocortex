@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_clsa_supp_accd","clcl_id","Claim Supplemental Accident Information Table","Claim Identifier","char"
+"dbo","cmc_clsa_supp_accd","meme_ck","Claim Supplemental Accident Information Table","Member Contrived Key","int"
+"dbo","cmc_clsa_supp_accd","clcl_acd_dt","Claim Supplemental Accident Information Table","Accident Date","datetime"
+"dbo","cmc_clsa_supp_accd","clcl_cl_type","Claim Supplemental Accident Information Table","Claim Type","char"
+"dbo","cmc_clsa_supp_accd","clsa_paid_amt","Claim Supplemental Accident Information Table","Supplemental Accident Benefit Paid Amount","money"
+"dbo","cmc_clsa_supp_accd","clsa_lock_token","Claim Supplemental Accident Information Table","Lock Token","smallint"
+"dbo","cmc_clsa_supp_accd","atxr_source_id","Claim Supplemental Accident Information Table","Attachment Source Id","datetime"

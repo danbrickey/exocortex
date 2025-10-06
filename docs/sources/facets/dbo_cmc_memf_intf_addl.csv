@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_memf_intf_addl","meme_ck","Medicare Interface Additional Data","Member Contrived Key","int"
+"dbo","cmc_memf_intf_addl","memi_seq_no","Medicare Interface Additional Data","Sequence Number","smallint"
+"dbo","cmc_memf_intf_addl","grgr_ck","Medicare Interface Additional Data","Group Contrived Key","int"
+"dbo","cmc_memf_intf_addl","memf_addl_data","Medicare Interface Additional Data","N/A","char"
+"dbo","cmc_memf_intf_addl","memf_lock_token","Medicare Interface Additional Data","Lock Token","smallint"
+"dbo","cmc_memf_intf_addl","atxr_source_id","Medicare Interface Additional Data","Attachment Source Id","datetime"

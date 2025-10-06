@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_clxd_interim_data","clxh_row_id","Claim Processing Web Interim Data Table","Unique Row ID","numeric"
+"dbo","cmc_clxd_interim_data","clxd_type","Claim Processing Web Interim Data Table","Interim Data Type","varchar"
+"dbo","cmc_clxd_interim_data","clxd_seq_no","Claim Processing Web Interim Data Table","Line Sequence No","int"
+"dbo","cmc_clxd_interim_data","clxd_data","Claim Processing Web Interim Data Table","Interim Data content","varbinary"
+"dbo","cmc_clxd_interim_data","sys_last_upd_dtm","Claim Processing Web Interim Data Table","Last Update Datetime","datetime"
+"dbo","cmc_clxd_interim_data","sys_usus_id","Claim Processing Web Interim Data Table","Last Update User ID","varchar"
+"dbo","cmc_clxd_interim_data","sys_dbuser_id","Claim Processing Web Interim Data Table","Last Update DBMS User ID","varchar"

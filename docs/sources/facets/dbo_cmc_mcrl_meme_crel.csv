@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mcrl_meme_crel","mcrl_meme_crel_cd","Member Comprehensive Relationship Code","Comprehensive Relationship Code","char"
+"dbo","cmc_mcrl_meme_crel","mcrl_crel_desc","Member Comprehensive Relationship Code","Description","varchar"
+"dbo","cmc_mcrl_meme_crel","mcrl_crel_sel_ind","Member Comprehensive Relationship Code","Selectivity Indicator","char"
+"dbo","cmc_mcrl_meme_crel","mcrl_sub_dep_cd","Member Comprehensive Relationship Code","Subscriber/Dependent Code","char"
+"dbo","cmc_mcrl_meme_crel","mcrl_sys_ind","Member Comprehensive Relationship Code","N/A","char"
+"dbo","cmc_mcrl_meme_crel","mcrl_lock_token","Member Comprehensive Relationship Code","Lock Token","smallint"

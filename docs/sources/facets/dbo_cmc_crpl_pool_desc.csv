@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_crpl_pool_desc","crpl_pool_id","Text Description for Pool_ID","Pool ID","char"
+"dbo","cmc_crpl_pool_desc","crpl_desc","Text Description for Pool_ID","Pool Description","char"
+"dbo","cmc_crpl_pool_desc","crpl_lock_token","Text Description for Pool_ID","Lock Token","smallint"
+"dbo","cmc_crpl_pool_desc","atxr_source_id","Text Description for Pool_ID","Attachment Source Id","datetime"

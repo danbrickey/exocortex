@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_cles_extr_sts","clcl_id","Claim Extract Status","Claim Identifier","char"
+"dbo","cmc_cles_extr_sts","cles_sts_dtm","Claim Extract Status","Claim Extract Status Date and Time","datetime"
+"dbo","cmc_cles_extr_sts","cles_sts","Claim Extract Status","Claim Extract Status","char"
+"dbo","cmc_cles_extr_sts","usus_id","Claim Extract Status","User Identifier","char"
+"dbo","cmc_cles_extr_sts","cles_trad_partner","Claim Extract Status","EDI Claim Trading Partner","char"
+"dbo","cmc_cles_extr_sts","syin_inst","Claim Extract Status","Instance ID","bigint"
+"dbo","cmc_cles_extr_sts","cles_lock_token","Claim Extract Status","Lock Token","smallint"

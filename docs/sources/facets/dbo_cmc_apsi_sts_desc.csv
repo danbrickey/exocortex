@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_apsi_sts_desc","apsi_sts_ind","Ambulatory Payment Classification Status Indicator Table","Ambulatory Payment Classification Status Indicator","char"
+"dbo","cmc_apsi_sts_desc","apsi_sts_desc","Ambulatory Payment Classification Status Indicator Table","Ambulatory Payment Classification Status Indicator Description","char"
+"dbo","cmc_apsi_sts_desc","apsi_lock_token","Ambulatory Payment Classification Status Indicator Table","Lock Token","smallint"
+"dbo","cmc_apsi_sts_desc","atxr_source_id","Ambulatory Payment Classification Status Indicator Table","Attachment Source Id","datetime"

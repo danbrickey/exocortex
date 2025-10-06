@@ -1,0 +1,2 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_blfk_ident_rec","blft_row_id","Billing Fee/Discount Identification Record","Row ID","numeric"

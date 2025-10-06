@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_pmvl_vol_tbl","pmvl_ref_dtm","Volume Determination by Subscriber Salary Factors Table","Layered Salary Reference ID","datetime"
+"dbo","cmc_pmvl_vol_tbl","pmvl_sal_from","Volume Determination by Subscriber Salary Factors Table","Salary From","money"
+"dbo","cmc_pmvl_vol_tbl","pmvl_sal_thru","Volume Determination by Subscriber Salary Factors Table","Salary Through","money"
+"dbo","cmc_pmvl_vol_tbl","pmvl_sal_fctr","Volume Determination by Subscriber Salary Factors Table","Salary Factor","int"
+"dbo","cmc_pmvl_vol_tbl","pmvl_base_vol","Volume Determination by Subscriber Salary Factors Table","Base Volume","money"
+"dbo","cmc_pmvl_vol_tbl","pmvl_lock_token","Volume Determination by Subscriber Salary Factors Table","Lock Token","smallint"

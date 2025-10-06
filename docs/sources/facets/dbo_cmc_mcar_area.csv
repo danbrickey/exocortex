@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mcar_area","mcar_area_id","Area ID Geographical Description","Area ID","char"
+"dbo","cmc_mcar_area","mcar_name","Area ID Geographical Description","Area Name","char"
+"dbo","cmc_mcar_area","mcar_name_xlow","Area ID Geographical Description","Name XLOW","char"
+"dbo","cmc_mcar_area","mcar_lock_token","Area ID Geographical Description","Lock Token","smallint"
+"dbo","cmc_mcar_area","atxr_source_id","Area ID Geographical Description","Attachment Source Id","datetime"

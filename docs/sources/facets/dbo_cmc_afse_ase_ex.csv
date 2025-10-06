@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_afse_ase_ex","pdbc_pfx","Alternate Funding Excluded Services","Alternate Funding Rules Benefit Component Prefix","char"
+"dbo","cmc_afse_ase_ex","sese_id","Alternate Funding Excluded Services","Alternate Funding Rules Excluded Service Code","char"
+"dbo","cmc_afse_ase_ex","afse_lock_token","Alternate Funding Excluded Services","Lock Token","smallint"
+"dbo","cmc_afse_ase_ex","atxr_source_id","Alternate Funding Excluded Services","Attachment Source Id","datetime"

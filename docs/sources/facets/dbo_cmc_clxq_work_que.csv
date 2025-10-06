@@ -1,0 +1,3 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_clxq_work_que","clxq_row_id","Electronic adjudication work table","Xlaims Xten Work Queue Row Identifier","numeric"
+"dbo","cmc_clxq_work_que","clcl_id","Electronic adjudication work table","Claim Identifier","char"

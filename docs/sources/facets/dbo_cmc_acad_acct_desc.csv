@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_acad_acct_desc","acad_gen_ldgr_no","General Ledger Account Descriptions","Account Number","char"
+"dbo","cmc_acad_acct_desc","acad_acct_desc","General Ledger Account Descriptions","Account Description","char"
+"dbo","cmc_acad_acct_desc","acad_lock_token","General Ledger Account Descriptions","Lock Token","smallint"
+"dbo","cmc_acad_acct_desc","atxr_source_id","General Ledger Account Descriptions","Attachment Source Id","datetime"

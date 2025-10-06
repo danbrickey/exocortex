@@ -1,0 +1,4 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_sbun_unused_sbsb_ck","row_num","Unused Subscriber Contrived Keys","Row ID","numeric"
+"dbo","cmc_sbun_unused_sbsb_ck","sbsb_ck","Unused Subscriber Contrived Keys","Subscriber Contrived Key","int"
+"dbo","cmc_sbun_unused_sbsb_ck","sbun_create_dt","Unused Subscriber Contrived Keys","Create Date","datetime"

@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_cbse_cob_ix","pdbc_pfx","Benefit Prefix Service to COB Link Table","COB Rules Benefit Component Prefix","char"
+"dbo","cmc_cbse_cob_ix","cbcb_cob_type","Benefit Prefix Service to COB Link Table","COB Rules Type","char"
+"dbo","cmc_cbse_cob_ix","cbse_ix_secg","Benefit Prefix Service to COB Link Table","COB Rules Include/Exclude Service ID","char"
+"dbo","cmc_cbse_cob_ix","cbse_lock_token","Benefit Prefix Service to COB Link Table","Lock Token","smallint"
+"dbo","cmc_cbse_cob_ix","atxr_source_id","Benefit Prefix Service to COB Link Table","Attachment Source Id","datetime"

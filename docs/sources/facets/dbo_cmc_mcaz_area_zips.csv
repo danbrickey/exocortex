@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mcaz_area_zips","mcar_area_id","Area ID Zip Code Para meters","Area ID","char"
+"dbo","cmc_mcaz_area_zips","mcaz_zip_from","Area ID Zip Code Para meters","From ZIP Code","char"
+"dbo","cmc_mcaz_area_zips","mcaz_zip_to","Area ID Zip Code Para meters","To ZIP Code","char"
+"dbo","cmc_mcaz_area_zips","mcaz_lock_token","Area ID Zip Code Para meters","Lock Token","smallint"
+"dbo","cmc_mcaz_area_zips","atxr_source_id","Area ID Zip Code Para meters","Attachment Source Id","datetime"

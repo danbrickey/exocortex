@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_crbc_bat_cat","crbd_bat_id","Product Category Capitation Batch Definition","Batch ID","char"
+"dbo","cmc_crbc_bat_cat","crbd_eff_dt","Product Category Capitation Batch Definition","From Pay Date","datetime"
+"dbo","cmc_crbc_bat_cat","cspd_cat","Product Category Capitation Batch Definition","Batch Product Category","char"
+"dbo","cmc_crbc_bat_cat","crbc_lock_token","Product Category Capitation Batch Definition","Lock Token","smallint"
+"dbo","cmc_crbc_bat_cat","atxr_source_id","Product Category Capitation Batch Definition","Attachment Source Id","datetime"

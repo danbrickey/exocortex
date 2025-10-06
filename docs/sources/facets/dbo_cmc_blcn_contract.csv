@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_blcn_contract","blei_ck","User-Defined Contract and Description Table","Billing Entity Contrived Key","int"
+"dbo","cmc_blcn_contract","blcn_id","User-Defined Contract and Description Table","Contract ID","char"
+"dbo","cmc_blcn_contract","blcn_desc","User-Defined Contract and Description Table","Contract Description","char"
+"dbo","cmc_blcn_contract","blcn_lock_token","User-Defined Contract and Description Table","Lock Token","smallint"
+"dbo","cmc_blcn_contract","atxr_source_id","User-Defined Contract and Description Table","Attachment Source Id","datetime"

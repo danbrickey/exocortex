@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_pmcs_chld_schd","pmcs_ref_dtm","Age-Dependent Child Plan Volume Amounts Table","Child Schedule Reference ID","datetime"
+"dbo","cmc_pmcs_chld_schd","pmcs_age","Age-Dependent Child Plan Volume Amounts Table","Age","smallint"
+"dbo","cmc_pmcs_chld_schd","pmcs_vol_amt","Age-Dependent Child Plan Volume Amounts Table","Volume Amount","money"
+"dbo","cmc_pmcs_chld_schd","pmcs_lock_token","Age-Dependent Child Plan Volume Amounts Table","Lock Token","smallint"

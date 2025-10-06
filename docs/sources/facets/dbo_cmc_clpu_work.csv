@@ -1,0 +1,4 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_clpu_work","clpu_row_id","Archive work table","Row ID","numeric"
+"dbo","cmc_clpu_work","clcl_id","Archive work table","Claim Identifier","char"
+"dbo","cmc_clpu_work","purh_row_id","Archive work table","Purge Row ID","numeric"

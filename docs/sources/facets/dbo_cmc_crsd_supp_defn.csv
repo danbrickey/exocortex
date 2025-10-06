@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_crsd_supp_defn","crsd_id","SUPPLEMENTAL CAPITATION RATE DESCRIPTION","Supplemental Capitation Rate","char"
+"dbo","cmc_crsd_supp_defn","crsd_desc","SUPPLEMENTAL CAPITATION RATE DESCRIPTION","Supplemental Capitation Rate Description","char"
+"dbo","cmc_crsd_supp_defn","crsd_key_mod_ind","SUPPLEMENTAL CAPITATION RATE DESCRIPTION","Capitation Indicator","char"
+"dbo","cmc_crsd_supp_defn","crsd_lock_token","SUPPLEMENTAL CAPITATION RATE DESCRIPTION","Lock Token","smallint"
+"dbo","cmc_crsd_supp_defn","atxr_source_id","SUPPLEMENTAL CAPITATION RATE DESCRIPTION","Attachment Source Id","datetime"

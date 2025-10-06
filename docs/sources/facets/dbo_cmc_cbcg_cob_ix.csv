@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_cbcg_cob_ix","pdbc_pfx","Dental Categories COB Exclusion Table","COB Rules Benefit Component Prefix","char"
+"dbo","cmc_cbcg_cob_ix","cbcb_cob_type","Dental Categories COB Exclusion Table","COB Rules Type","char"
+"dbo","cmc_cbcg_cob_ix","cgcg_id","Dental Categories COB Exclusion Table","COB Rules Include/Exclude Dental Category  ID","char"
+"dbo","cmc_cbcg_cob_ix","cbcg_lock_token","Dental Categories COB Exclusion Table","Lock Token","smallint"
+"dbo","cmc_cbcg_cob_ix","atxr_source_id","Dental Categories COB Exclusion Table","Attachment Source Id","datetime"

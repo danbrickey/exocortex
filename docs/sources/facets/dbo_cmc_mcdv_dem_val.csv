@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mcdv_dem_val","mcdd_type","Demographic Detail Value","Demographic Type","varchar"
+"dbo","cmc_mcdv_dem_val","mcdv_value","Demographic Detail Value","Demographic Value","varchar"
+"dbo","cmc_mcdv_dem_val","mcdv_desc","Demographic Detail Value","Demographic Value Description","varchar"
+"dbo","cmc_mcdv_dem_val","mcdv_sort","Demographic Detail Value","Sort Order","smallint"
+"dbo","cmc_mcdv_dem_val","mcdv_lock_token","Demographic Detail Value","Lock Token","smallint"
+"dbo","cmc_mcdv_dem_val","atxr_source_id","Demographic Detail Value","Attachment Source Id","datetime"

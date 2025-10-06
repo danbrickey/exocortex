@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_accv_temp_sbsb","accv_sbsb_row_id","Accumulator Batch Table","Row ID","numeric"
+"dbo","cmc_accv_temp_sbsb","sbsb_ck","Accumulator Batch Table","Subscriber Contrived Key","int"
+"dbo","cmc_accv_temp_sbsb","grgr_ck","Accumulator Batch Table","Group Contrived Key","int"
+"dbo","cmc_accv_temp_sbsb","sbsb_id","Accumulator Batch Table","Subscriber ID","char"

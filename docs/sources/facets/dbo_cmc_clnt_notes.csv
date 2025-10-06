@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_clnt_notes","clcl_id","Claim Level Notes Table","Claim Identifier","char"
+"dbo","cmc_clnt_notes","clnt_seq_no","Claim Level Notes Table","Sequence Number","smallint"
+"dbo","cmc_clnt_notes","clnt_note_desc","Claim Level Notes Table","Note Description","char"
+"dbo","cmc_clnt_notes","clnt_note","Claim Level Notes Table","Notes","varchar"
+"dbo","cmc_clnt_notes","clnt_lock_token","Claim Level Notes Table","Lock Token","smallint"

@@ -1,0 +1,3 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_csah_archive_hist","cssc_id","Customer Service Archive History Table","Inquiry ID","char"
+"dbo","cmc_csah_archive_hist","csah_archive_dtm","Customer Service Archive History Table","Archive Date Time","datetime"

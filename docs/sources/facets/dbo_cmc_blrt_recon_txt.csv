@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_blrt_recon_txt","blrm_orig_bliv_id","Reconciliation Billing Message Text","Original Invoice ID","varchar"
+"dbo","cmc_blrt_recon_txt","blrt_seq_no","Reconciliation Billing Message Text","Sequence Number","smallint"
+"dbo","cmc_blrt_recon_txt","blrt_recon_txt","Reconciliation Billing Message Text","User defined message text","char"
+"dbo","cmc_blrt_recon_txt","blrt_lock_token","Reconciliation Billing Message Text","Lock Token","smallint"
+"dbo","cmc_blrt_recon_txt","atxr_source_id","Reconciliation Billing Message Text","Attachment Source Id","datetime"

@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mccr_mrl_conv","mcrl_meme_crel_cd","Member Relationship Conversion","Comprehensive Relationship Code","char"
+"dbo","cmc_mccr_mrl_conv","meme_sex","Member Relationship Conversion","Gender","char"
+"dbo","cmc_mccr_mrl_conv","meme_rel","Member Relationship Conversion","Basic Relationship Code","char"
+"dbo","cmc_mccr_mrl_conv","mccr_sys_ind","Member Relationship Conversion","N/A","char"
+"dbo","cmc_mccr_mrl_conv","mccr_lock_token","Member Relationship Conversion","Lock Token","smallint"

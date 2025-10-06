@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_csfg_subcat_cg","pzap_app_id","Customer Service Subject and Category Default Configuration","Application ID","char"
+"dbo","cmc_csfg_subcat_cg","csfg_page_type","Customer Service Subject and Category Default Configuration","Page Type (Tab)","char"
+"dbo","cmc_csfg_subcat_cg","cstk_mctr_subj","Customer Service Subject and Category Default Configuration","Subject","char"
+"dbo","cmc_csfg_subcat_cg","cstk_mctr_catg","Customer Service Subject and Category Default Configuration","Category","char"
+"dbo","cmc_csfg_subcat_cg","cstk_summary","Customer Service Subject and Category Default Configuration","Freeform Summary Text","varchar"
+"dbo","cmc_csfg_subcat_cg","csfg_lock_token","Customer Service Subject and Category Default Configuration","Lock Token","smallint"
+"dbo","cmc_csfg_subcat_cg","atxr_source_id","Customer Service Subject and Category Default Configuration","Attachment Source Id","datetime"

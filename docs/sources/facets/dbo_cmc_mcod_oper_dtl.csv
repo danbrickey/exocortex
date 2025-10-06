@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mcod_oper_dtl","mcop_oper_id","Medicare Transaction Reply Code Operations Details","Operation ID","varchar"
+"dbo","cmc_mcod_oper_dtl","mcod_seq_no","Medicare Transaction Reply Code Operations Details","Sequence Number","smallint"
+"dbo","cmc_mcod_oper_dtl","mcod_field","Medicare Transaction Reply Code Operations Details","Field","varchar"
+"dbo","cmc_mcod_oper_dtl","mcod_field_type","Medicare Transaction Reply Code Operations Details","Field Type","char"
+"dbo","cmc_mcod_oper_dtl","mcod_field_len","Medicare Transaction Reply Code Operations Details","Field Length","smallint"
+"dbo","cmc_mcod_oper_dtl","mcod_lock_token","Medicare Transaction Reply Code Operations Details","Lock Token","smallint"
+"dbo","cmc_mcod_oper_dtl","atxr_source_id","Medicare Transaction Reply Code Operations Details","Attachment Source Id","datetime"

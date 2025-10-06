@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mceq_work_que","mceq_row_id","Elements Extract work table","Queue Row Identifier","numeric"
+"dbo","cmc_mceq_work_que","bgbg_id","Elements Extract work table","Billing Group ID","char"
+"dbo","cmc_mceq_work_que","bgbg_ck","Elements Extract work table","Billing Group Contrived Key","int"
+"dbo","cmc_mceq_work_que","meme_ck","Elements Extract work table","Member Contrived Key","int"
+"dbo","cmc_mceq_work_que","clcl_id","Elements Extract work table","Claim Identifier","char"
+"dbo","cmc_mceq_work_que","mceq_cdml_line_ctr","Elements Extract work table","Claim Work Queue Table CDML Line Item Counter","int"

@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_crit_cbf_supp","crfd_fund_id","ITS CBF SUPPLEMENTAL PERCENT","Fund ID","char"
+"dbo","cmc_crit_cbf_supp","crit_eff_dt","ITS CBF SUPPLEMENTAL PERCENT","Effective Date","datetime"
+"dbo","cmc_crit_cbf_supp","crit_term_dt","ITS CBF SUPPLEMENTAL PERCENT","Termination Date","datetime"
+"dbo","cmc_crit_cbf_supp","crit_cbf_supp_pct","ITS CBF SUPPLEMENTAL PERCENT","Supplemental Percent","int"
+"dbo","cmc_crit_cbf_supp","crit_lock_token","ITS CBF SUPPLEMENTAL PERCENT","Lock Token","smallint"
+"dbo","cmc_crit_cbf_supp","atxr_source_id","ITS CBF SUPPLEMENTAL PERCENT","Attachment Source Id","datetime"

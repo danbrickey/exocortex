@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mcto_trr_oper","metr_tr_reply","Transaction Reply Report Operations","Transaction Reply Code","char"
+"dbo","cmc_mcto_trr_oper","metr_tr_type","Transaction Reply Report Operations","Transaction Type","char"
+"dbo","cmc_mcto_trr_oper","mcto_proc_order","Transaction Reply Report Operations","Processing Order","smallint"
+"dbo","cmc_mcto_trr_oper","mcop_oper_id","Transaction Reply Report Operations","Operation ID","varchar"
+"dbo","cmc_mcto_trr_oper","mcto_lock_token","Transaction Reply Report Operations","Lock Token","smallint"
+"dbo","cmc_mcto_trr_oper","atxr_source_id","Transaction Reply Report Operations","Attachment Source Id","datetime"

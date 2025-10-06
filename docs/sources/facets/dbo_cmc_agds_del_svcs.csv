@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_agds_del_svcs","agds_pfx","Delegated Services Table","Provider Agreement Delegated Services Prefix","char"
+"dbo","cmc_agds_del_svcs","sese_id","Delegated Services Table","Provider Agreement Delegated Services ID","char"
+"dbo","cmc_agds_del_svcs","excd_id","Delegated Services Table","Provider Agreement Delegated Services Claim Explanation ID","char"
+"dbo","cmc_agds_del_svcs","agds_lock_token","Delegated Services Table","Lock Token","smallint"
+"dbo","cmc_agds_del_svcs","atxr_source_id","Delegated Services Table","Attachment Source Id","datetime"

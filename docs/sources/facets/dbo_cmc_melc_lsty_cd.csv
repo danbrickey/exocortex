@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_melc_lsty_cd","meme_ck","Life Style Code","Member Contrived Key","int"
+"dbo","cmc_melc_lsty_cd","melc_eff_dt","Life Style Code","Effective Date","datetime"
+"dbo","cmc_melc_lsty_cd","melc_term_dt","Life Style Code","Termination Date","datetime"
+"dbo","cmc_melc_lsty_cd","crft_mctr_lsty","Life Style Code","LifeStyle Code","char"
+"dbo","cmc_melc_lsty_cd","melc_lock_token","Life Style Code","Lock Token","smallint"
+"dbo","cmc_melc_lsty_cd","atxr_source_id","Life Style Code","Attachment Source Id","datetime"

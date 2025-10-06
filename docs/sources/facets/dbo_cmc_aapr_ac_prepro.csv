@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_aapr_ac_prepro","grgr_ck","Automatic Actions Pre-processing Data","Group Contrived Key","int"
+"dbo","cmc_aapr_ac_prepro","sbsb_ck","Automatic Actions Pre-processing Data","Subscriber Contrived Key","int"
+"dbo","cmc_aapr_ac_prepro","aapr_weight","Automatic Actions Pre-processing Data","Weight","int"
+"dbo","cmc_aapr_ac_prepro","aapr_row_id","Automatic Actions Pre-processing Data","Row ID","numeric"
+"dbo","cmc_aapr_ac_prepro","aapr_source_ind","Automatic Actions Pre-processing Data","Source Indicator","char"
+"dbo","cmc_aapr_ac_prepro","aapr_lock_token","Automatic Actions Pre-processing Data","Lock Token","smallint"
+"dbo","cmc_aapr_ac_prepro","atxr_source_id","Automatic Actions Pre-processing Data","Attachment Source Id","datetime"

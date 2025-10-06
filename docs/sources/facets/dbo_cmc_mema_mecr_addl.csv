@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mema_mecr_addl","meme_ck","Medicare Event Additional Data","Member Contrived Key","int"
+"dbo","cmc_mema_mecr_addl","memd_event_cd","Medicare Event Additional Data","Event Code","char"
+"dbo","cmc_mema_mecr_addl","memd_hcfa_eff_dt","Medicare Event Additional Data","Effective Date","datetime"
+"dbo","cmc_mema_mecr_addl","grgr_ck","Medicare Event Additional Data","Group Contrived Key","int"
+"dbo","cmc_mema_mecr_addl","mema_addl_data","Medicare Event Additional Data","N/A","varchar"
+"dbo","cmc_mema_mecr_addl","mema_lock_token","Medicare Event Additional Data","Lock Token","smallint"
+"dbo","cmc_mema_mecr_addl","atxr_source_id","Medicare Event Additional Data","Attachment Source Id","datetime"

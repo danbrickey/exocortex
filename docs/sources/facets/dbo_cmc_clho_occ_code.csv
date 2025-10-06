@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_clho_occ_code","clcl_id","UB04 Occurrence Code Data","Claim Identifier","char"
+"dbo","cmc_clho_occ_code","clho_seq_no","UB04 Occurrence Code Data","Line-Item Sequence Number","smallint"
+"dbo","cmc_clho_occ_code","meme_ck","UB04 Occurrence Code Data","Member Contrived Key","int"
+"dbo","cmc_clho_occ_code","clho_occ_code","UB04 Occurrence Code Data","Occurrence Code","char"
+"dbo","cmc_clho_occ_code","clho_occ_from_dt","UB04 Occurrence Code Data","Occurrence Code From (Starting) Date","datetime"
+"dbo","cmc_clho_occ_code","clho_occ_to_dt","UB04 Occurrence Code Data","Occurrence Code To (Ending) Date","datetime"
+"dbo","cmc_clho_occ_code","clho_lock_token","UB04 Occurrence Code Data","Lock Token","smallint"

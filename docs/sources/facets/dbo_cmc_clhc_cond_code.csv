@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_clhc_cond_code","clcl_id","Hospital Specific Condition Code Data","Claim Identifier","char"
+"dbo","cmc_clhc_cond_code","clhc_seq_no","Hospital Specific Condition Code Data","Specific Sequence Number","smallint"
+"dbo","cmc_clhc_cond_code","meme_ck","Hospital Specific Condition Code Data","Member Contrived Key","int"
+"dbo","cmc_clhc_cond_code","clhc_cond_cd","Hospital Specific Condition Code Data","Specific Condition Code","char"
+"dbo","cmc_clhc_cond_code","clhc_lock_token","Hospital Specific Condition Code Data","Lock Token","smallint"

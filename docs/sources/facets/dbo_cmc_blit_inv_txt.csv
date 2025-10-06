@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_blit_inv_txt","bliv_id","Invoice Text","Invoice Number","varchar"
+"dbo","cmc_blit_inv_txt","blrm_orig_bliv_id","Invoice Text","Original Invoice ID","varchar"
+"dbo","cmc_blit_inv_txt","blit_print_seq","Invoice Text","Print sequence","smallint"
+"dbo","cmc_blit_inv_txt","blmd_id","Invoice Text","Message ID","char"
+"dbo","cmc_blit_inv_txt","blit_lock_token","Invoice Text","Lock Token","smallint"

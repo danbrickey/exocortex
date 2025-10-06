@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_blmg_bill_msg","bliv_id","Invoice User-Defined Billing Message Table","Invoice Number","varchar"
+"dbo","cmc_blmg_bill_msg","blmd_id","Invoice User-Defined Billing Message Table","Message ID","char"
+"dbo","cmc_blmg_bill_msg","blmr_print_seq","Invoice User-Defined Billing Message Table","Print Sequence Number","smallint"
+"dbo","cmc_blmg_bill_msg","blmg_lock_token","Invoice User-Defined Billing Message Table","Lock Token","smallint"

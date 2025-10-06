@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_acpe_per_dts","acpe_id","Accounting Begin/End Date Information","Accounting Period Table ID","char"
+"dbo","cmc_acpe_per_dts","acpe_begin_dt","Accounting Begin/End Date Information","Period Begin Date","datetime"
+"dbo","cmc_acpe_per_dts","acpe_end_dt","Accounting Begin/End Date Information","Period End Date","datetime"
+"dbo","cmc_acpe_per_dts","acpe_lock_token","Accounting Begin/End Date Information","Lock Token","smallint"
+"dbo","cmc_acpe_per_dts","atxr_source_id","Accounting Begin/End Date Information","Attachment Source Id","datetime"

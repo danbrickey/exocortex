@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_bpst_status","syin_inst","Check Print Status","SYIN Instance Number","bigint"
+"dbo","cmc_bpst_status","bpid_stock_id","Check Print Status","Stock ID","char"
+"dbo","cmc_bpst_status","bpid_type","Check Print Status","Check Type","char"
+"dbo","cmc_bpst_status","bpid_seq_no","Check Print Status","Sequence Number","int"
+"dbo","cmc_bpst_status","ckpy_ref_id","Check Print Status","Payment Refence ID","char"
+"dbo","cmc_bpst_status","bpst_sts","Check Print Status","Printed Status","char"
+"dbo","cmc_bpst_status","bpst_sts_dt","Check Print Status","Last Update Status Date","datetime"

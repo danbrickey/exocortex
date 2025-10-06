@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_crcy_cycle_def","crcy_id","Selective Batch Cycle Definition Table","Capitation Cycle ID","char"
+"dbo","cmc_crcy_cycle_def","crcy_desc","Selective Batch Cycle Definition Table","Capitation Cycle Definition","char"
+"dbo","cmc_crcy_cycle_def","crcy_lock_token","Selective Batch Cycle Definition Table","Lock Token","smallint"
+"dbo","cmc_crcy_cycle_def","atxr_source_id","Selective Batch Cycle Definition Table","Attachment Source Id","datetime"
+"dbo","cmc_crcy_cycle_def","crcy_cycle_type_nvl","Selective Batch Cycle Definition Table","Capitatiion Type","char"

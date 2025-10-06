@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_blmr_msg_rel","blei_ck","Billing Message Relation","Billing Entity Contrived Key","int"
+"dbo","cmc_blmr_msg_rel","blmd_id","Billing Message Relation","Available Message IDs","char"
+"dbo","cmc_blmr_msg_rel","blmr_print_seq","Billing Message Relation","Print Sequence Number","smallint"
+"dbo","cmc_blmr_msg_rel","blmr_lock_token","Billing Message Relation","Lock Token","smallint"
+"dbo","cmc_blmr_msg_rel","atxr_source_id","Billing Message Relation","Attachment Source Id","datetime"

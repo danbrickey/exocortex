@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_crft_fctr","crft_id","Lifestyle Rate Factor table","Rate Factor ID","char"
+"dbo","cmc_crft_fctr","crft_mctr_lsty","Lifestyle Rate Factor table","Lifestyle Code","char"
+"dbo","cmc_crft_fctr","crft_eff_dt","Lifestyle Rate Factor table","Lifestyle Code Effective Date","datetime"
+"dbo","cmc_crft_fctr","crft_term_dt","Lifestyle Rate Factor table","Lifestyle Code Termination Date","datetime"
+"dbo","cmc_crft_fctr","crft_fctr","Lifestyle Rate Factor table","Lifestyle Rating Factor","int"
+"dbo","cmc_crft_fctr","crft_lock_token","Lifestyle Rate Factor table","Lock Token","smallint"
+"dbo","cmc_crft_fctr","atxr_source_id","Lifestyle Rate Factor table","Attachment Source Id","datetime"

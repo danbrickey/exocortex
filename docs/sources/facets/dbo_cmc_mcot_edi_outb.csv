@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mcot_edi_outb","mcot_edi_ver_rel","Outbound ANSI Mapping","ANSI Version","char"
+"dbo","cmc_mcot_edi_outb","mcot_edi_trns_type","Outbound ANSI Mapping","EDI Transaction Type","char"
+"dbo","cmc_mcot_edi_outb","mcrl_meme_crel_cd","Outbound ANSI Mapping","Comprehensive Member Relationship Code","char"
+"dbo","cmc_mcot_edi_outb","meme_sex","Outbound ANSI Mapping","Gender","char"
+"dbo","cmc_mcot_edi_outb","mcan_ptrl_ansi_cd","Outbound ANSI Mapping","ANSI  X12 EDI Standard Patient Relationship Code Values","char"
+"dbo","cmc_mcot_edi_outb","mcot_lock_token","Outbound ANSI Mapping","Lock Token","smallint"

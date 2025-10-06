@@ -1,0 +1,4 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mehr_hra_prepr","grgr_ck","HRA Preprocessor","Group Contrived Key","int"
+"dbo","cmc_mehr_hra_prepr","grhq_weight","HRA Preprocessor","GRHQ Weight","int"
+"dbo","cmc_mehr_hra_prepr","grhq_sts","HRA Preprocessor","GRHQ Request Status","char"

@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_afgp_accum_pdpd","grgr_ck","Group and Product Identifier Accumulator Filter","Group contrived key","int"
+"dbo","cmc_afgp_accum_pdpd","pdpd_id","Group and Product Identifier Accumulator Filter","Product ID","char"
+"dbo","cmc_afgp_accum_pdpd","afgp_lock_token","Group and Product Identifier Accumulator Filter","Lock Token","smallint"
+"dbo","cmc_afgp_accum_pdpd","sys_last_upd_dtm","Group and Product Identifier Accumulator Filter","Last Update Datetime","datetime"
+"dbo","cmc_afgp_accum_pdpd","sys_usus_id","Group and Product Identifier Accumulator Filter","Last Update User ID","varchar"
+"dbo","cmc_afgp_accum_pdpd","sys_dbuser_id","Group and Product Identifier Accumulator Filter","Last Update DBMS User ID","varchar"

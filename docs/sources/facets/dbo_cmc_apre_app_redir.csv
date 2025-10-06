@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_apre_app_redir","apre_src_pzap_id","Application Redirect Parameters","Application Redirect Parameters Source Application","char"
+"dbo","cmc_apre_app_redir","clcl_cl_sub_type","Application Redirect Parameters","Application Redirect Parameters Claim Subtype","char"
+"dbo","cmc_apre_app_redir","apre_dest_pzap_id","Application Redirect Parameters","Application Redirect Parameters Destination Application","char"
+"dbo","cmc_apre_app_redir","apre_lock_token","Application Redirect Parameters","Lock Token","smallint"
+"dbo","cmc_apre_app_redir","atxr_source_id","Application Redirect Parameters","Attachment Source Id","datetime"

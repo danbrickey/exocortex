@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_cscf_conf","cssc_id","Customer Service Confirmation Notes Data","Customer Service Inquiry ID","char"
+"dbo","cmc_cscf_conf","cstk_seq_no","Customer Service Confirmation Notes Data","CS Task Sequence Number","smallint"
+"dbo","cmc_cscf_conf","cscf_type","Customer Service Confirmation Notes Data","Configuration Type","char"
+"dbo","cmc_cscf_conf","cscf_seq_no","Customer Service Confirmation Notes Data","Configuration Sequence #","smallint"
+"dbo","cmc_cscf_conf","cscf_text","Customer Service Confirmation Notes Data","Field/Value","varbinary"
+"dbo","cmc_cscf_conf","cscf_lock_token","Customer Service Confirmation Notes Data","Lock Token","smallint"
+"dbo","cmc_cscf_conf","atxr_source_id","Customer Service Confirmation Notes Data","Attachment Source Id","datetime"

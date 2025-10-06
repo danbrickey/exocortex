@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_sbpr_id_prepro","grgr_ck","Subscriber ID Preprocessing table","group contrived key","int"
+"dbo","cmc_sbpr_id_prepro","sbpr_weight","Subscriber ID Preprocessing table","Number of Subscribers in the Group","int"
+"dbo","cmc_sbpr_id_prepro","sbpr_row_id","Subscriber ID Preprocessing table","Row ID","numeric"
+"dbo","cmc_sbpr_id_prepro","sbpr_sts","Subscriber ID Preprocessing table","Status of job","int"
+"dbo","cmc_sbpr_id_prepro","sbpr_lock_token","Subscriber ID Preprocessing table","Lock Token","smallint"
+"dbo","cmc_sbpr_id_prepro","atxr_source_id","Subscriber ID Preprocessing table","Attachment Source Id","datetime"

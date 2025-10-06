@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_crcd_cls_crit","pdbc_pfx","Severity  Complexity  and Discharge Criteria Table","Common Criteria Benefit Component Prefix","char"
+"dbo","cmc_crcd_cls_crit","crcd_type","Severity  Complexity  and Discharge Criteria Table","Common Criteria Type","char"
+"dbo","cmc_crcd_cls_crit","crcd_cls","Severity  Complexity  and Discharge Criteria Table","Common Criteria Classification","char"
+"dbo","cmc_crcd_cls_crit","crcd_desc","Severity  Complexity  and Discharge Criteria Table","Common Criteria Classification Description","char"
+"dbo","cmc_crcd_cls_crit","crcd_text","Severity  Complexity  and Discharge Criteria Table","Common Criteria Text","char"
+"dbo","cmc_crcd_cls_crit","crcd_lock_token","Severity  Complexity  and Discharge Criteria Table","Lock Token","smallint"
+"dbo","cmc_crcd_cls_crit","atxr_source_id","Severity  Complexity  and Discharge Criteria Table","Attachment Source Id","datetime"

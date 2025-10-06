@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_agil_inlier","agil_pfx","Agreement Inlier Table","Provider Agreement Inlier Prefix","char"
+"dbo","cmc_agil_inlier","agil_pos_ind","Agreement Inlier Table","Provider Agreement Inlier Place of Service Indicator","char"
+"dbo","cmc_agil_inlier","agil_type","Agreement Inlier Table","Provider Agreement Inlier Type","char"
+"dbo","cmc_agil_inlier","agil_rule_pct","Agreement Inlier Table","Provider Agreement Inlier Rule Percent","money"
+"dbo","cmc_agil_inlier","excd_id","Agreement Inlier Table","Provider Agreement Inlier Explanation ID","char"
+"dbo","cmc_agil_inlier","agil_lock_token","Agreement Inlier Table","Lock Token","smallint"
+"dbo","cmc_agil_inlier","atxr_source_id","Agreement Inlier Table","Attachment Source Id","datetime"

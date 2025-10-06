@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mcsg_cd_group","mctr_entity","Managed Care Specialty Grouping Table","Entity","char"
+"dbo","cmc_mcsg_cd_group","mctr_type","Managed Care Specialty Grouping Table","Type","char"
+"dbo","cmc_mcsg_cd_group","mctr_value","Managed Care Specialty Grouping Table","Code","char"
+"dbo","cmc_mcsg_cd_group","mcsg_group","Managed Care Specialty Grouping Table","Grouping","char"
+"dbo","cmc_mcsg_cd_group","mcsg_lock_token","Managed Care Specialty Grouping Table","Lock Token","smallint"
+"dbo","cmc_mcsg_cd_group","atxr_source_id","Managed Care Specialty Grouping Table","Attachment Source Id","datetime"

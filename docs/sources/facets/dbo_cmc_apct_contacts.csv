@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_apct_contacts","apap_id","Appeal Contacts","Appeal ID","char"
+"dbo","cmc_apct_contacts","apct_seq_no","Appeal Contacts","Contact sequence number","smallint"
+"dbo","cmc_apct_contacts","mcre_id","Appeal Contacts","Contact ID","char"
+"dbo","cmc_apct_contacts","apct_mctr_cat","Appeal Contacts","Contact category","char"
+"dbo","cmc_apct_contacts","apct_lock_token","Appeal Contacts","Lock Token","smallint"
+"dbo","cmc_apct_contacts","atxr_source_id","Appeal Contacts","Attachment Source Id","datetime"

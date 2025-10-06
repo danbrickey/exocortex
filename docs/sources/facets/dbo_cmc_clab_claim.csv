@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_clab_claim","clcl_id","Claim Archive Restore table","Claim Identifier","char"
+"dbo","cmc_clab_claim","meme_ck","Claim Archive Restore table","Member Contrived Key","int"
+"dbo","cmc_clab_claim","clst_mctr_reas","Claim Archive Restore table","Pended Claim Status Reason Code","char"
+"dbo","cmc_clab_claim","clab_status","Claim Archive Restore table","Status","char"
+"dbo","cmc_clab_claim","clab_lock_token","Claim Archive Restore table","Lock Token","smallint"

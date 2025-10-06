@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_crpa_cap_prepr","grgr_ck","Capitation Pre-Processing Table","Group Contrived Key","int"
+"dbo","cmc_crpa_cap_prepr","crpa_weight","Capitation Pre-Processing Table","Weight","int"
+"dbo","cmc_crpa_cap_prepr","crpa_row_id","Capitation Pre-Processing Table","Row ID","numeric"
+"dbo","cmc_crpa_cap_prepr","crpa_sts","Capitation Pre-Processing Table","Status","int"
+"dbo","cmc_crpa_cap_prepr","crpa_lock_token","Capitation Pre-Processing Table","Lock Token","smallint"
+"dbo","cmc_crpa_cap_prepr","atxr_source_id","Capitation Pre-Processing Table","Attachment Source Id","datetime"

@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_meda_me_data","meme_ck","Member Additional Data","Member Contrived Key","int"
+"dbo","cmc_meda_me_data","meda_confid_ind","Member Additional Data","Confidential Comm Indicator","char"
+"dbo","cmc_meda_me_data","meda_addl_data","Member Additional Data","N/A","varchar"
+"dbo","cmc_meda_me_data","meda_lock_token","Member Additional Data","Lock Token","smallint"
+"dbo","cmc_meda_me_data","atxr_source_id","Member Additional Data","Attachment Source Id","datetime"

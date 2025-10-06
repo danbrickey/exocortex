@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_abex_extract_status","abex_job_name","Accumulator Extract work table for ABEX","Job Name","varchar"
+"dbo","cmc_abex_extract_status","syin_inst","Accumulator Extract work table for ABEX","Job Instance","bigint"
+"dbo","cmc_abex_extract_status","abex_earliest_create_dtm","Accumulator Extract work table for ABEX","Earliest Create Date","datetime"
+"dbo","cmc_abex_extract_status","abex_latest_create_dtm","Accumulator Extract work table for ABEX","Latest Create Date","datetime"

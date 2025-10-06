@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_aprs_app_redir_svc","aprs_src_pzap_id","Claim Web Application Redirect table","Source PZAP application","char"
+"dbo","cmc_aprs_app_redir_svc","clcl_cl_type","Claim Web Application Redirect table","Claim Type","char"
+"dbo","cmc_aprs_app_redir_svc","aprs_dest_pzap_id","Claim Web Application Redirect table","Destination PZAP ID","char"
+"dbo","cmc_aprs_app_redir_svc","aprs_lock_token","Claim Web Application Redirect table","Lock Token","smallint"
+"dbo","cmc_aprs_app_redir_svc","sys_last_upd_dtm","Claim Web Application Redirect table","Last Update Datetime","datetime"
+"dbo","cmc_aprs_app_redir_svc","sys_usus_id","Claim Web Application Redirect table","Last Update User ID","varchar"
+"dbo","cmc_aprs_app_redir_svc","sys_dbuser_id","Claim Web Application Redirect table","Last Update DBMS User ID","varchar"

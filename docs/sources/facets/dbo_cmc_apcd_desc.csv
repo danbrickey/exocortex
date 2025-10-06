@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_apcd_desc","apcd_id","Ambulatory Payment Classification Codes Table","Ambulatory Payment Classification ID","varchar"
+"dbo","cmc_apcd_desc","apcd_desc","Ambulatory Payment Classification Codes Table","Ambulatory Payment Classification Description","char"
+"dbo","cmc_apcd_desc","apsi_sts_ind","Ambulatory Payment Classification Codes Table","Ambulatory Payment Classification Grouper Status Indicator","char"
+"dbo","cmc_apcd_desc","apcd_lock_token","Ambulatory Payment Classification Codes Table","Lock Token","smallint"
+"dbo","cmc_apcd_desc","atxr_source_id","Ambulatory Payment Classification Codes Table","Attachment Source Id","datetime"

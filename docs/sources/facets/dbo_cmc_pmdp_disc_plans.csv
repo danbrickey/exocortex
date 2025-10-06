@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_pmdp_disc_plans","pmds_pfx","User-defined Plans/Products Associated With a Discount","Discount Table Prefix","char"
+"dbo","cmc_pmdp_disc_plans","pmfa_id","User-defined Plans/Products Associated With a Discount","Discount Code","char"
+"dbo","cmc_pmdp_disc_plans","pmds_eff_dt","User-defined Plans/Products Associated With a Discount","Effective Date","datetime"
+"dbo","cmc_pmdp_disc_plans","cspi_id","User-defined Plans/Products Associated With a Discount","Plan ID","char"
+"dbo","cmc_pmdp_disc_plans","pdpd_id","User-defined Plans/Products Associated With a Discount","Product ID","char"
+"dbo","cmc_pmdp_disc_plans","pdbl_id","User-defined Plans/Products Associated With a Discount","Product Component ID","char"
+"dbo","cmc_pmdp_disc_plans","pmdp_lock_token","User-defined Plans/Products Associated With a Discount","Lock Token","smallint"

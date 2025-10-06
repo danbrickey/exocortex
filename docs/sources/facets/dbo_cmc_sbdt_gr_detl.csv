@@ -1,0 +1,4 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_sbdt_gr_detl","sbbd_batch_id","Group Conversion ID","Batch ID","char"
+"dbo","cmc_sbdt_gr_detl","grgr_ck","Group Conversion ID","Group Contrived Key","int"
+"dbo","cmc_sbdt_gr_detl","sbdt_lock_token","Group Conversion ID","Lock Token","smallint"

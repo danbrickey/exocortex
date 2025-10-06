@@ -1,0 +1,4 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_memm_mstr_mbr","memm_row_id","Master Member Table","Master Member Unique ID","numeric"
+"dbo","cmc_memm_mstr_mbr","memm_create_dtm","Master Member Table","Creation Date","datetime"
+"dbo","cmc_memm_mstr_mbr","exid_id","Master Member Table","External Identifier","varchar"

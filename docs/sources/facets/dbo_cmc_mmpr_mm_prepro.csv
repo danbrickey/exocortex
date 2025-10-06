@@ -1,0 +1,4 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mmpr_mm_prepro","mmpr_row_id","Master Member Pre-process data","Row ID","numeric"
+"dbo","cmc_mmpr_mm_prepro","meme_ck","Master Member Pre-process data","Member Contrived Key","int"
+"dbo","cmc_mmpr_mm_prepro","mmpr_sts","Master Member Pre-process data","Status","int"

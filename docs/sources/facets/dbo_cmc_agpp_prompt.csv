@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_agpp_prompt","agpp_pfx","Agreement Prompt Payment Discount Data","Provider Agreement Prompt Payment Prefix","char"
+"dbo","cmc_agpp_prompt","agpp_low_day","Agreement Prompt Payment Discount Data","Provider Agreement Prompt Payment Low Day","smallint"
+"dbo","cmc_agpp_prompt","agpp_high_day","Agreement Prompt Payment Discount Data","Provider Agreement Prompt Payment High Day","smallint"
+"dbo","cmc_agpp_prompt","agpp_disc_pct","Agreement Prompt Payment Discount Data","Provider Agreement Prompt Payment Discount Percent","money"
+"dbo","cmc_agpp_prompt","excd_id","Agreement Prompt Payment Discount Data","Provider Agreement Prompt Payment Explanation Code ID","char"
+"dbo","cmc_agpp_prompt","agpp_lock_token","Agreement Prompt Payment Discount Data","Lock Token","smallint"
+"dbo","cmc_agpp_prompt","atxr_source_id","Agreement Prompt Payment Discount Data","Attachment Source Id","datetime"

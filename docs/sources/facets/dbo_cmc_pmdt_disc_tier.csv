@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_pmdt_disc_tier","pmdt_ref_dtm","Discount Structure Table","Tier table reference datetime ID","datetime"
+"dbo","cmc_pmdt_disc_tier","pmdt_tier_from","Discount Structure Table","Tier From Value","int"
+"dbo","cmc_pmdt_disc_tier","pmdt_tier_thru","Discount Structure Table","Tier Through","int"
+"dbo","cmc_pmdt_disc_tier","pmdt_disc_pct","Discount Structure Table","Discount Percent","int"
+"dbo","cmc_pmdt_disc_tier","pmdt_lock_token","Discount Structure Table","Lock Token","smallint"

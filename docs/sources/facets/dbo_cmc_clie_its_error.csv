@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_clie_its_error","clcl_id","ITS Error Table","Claim Identifier","char"
+"dbo","cmc_clie_its_error","ited_its_err_cd","ITS Error Table","SF Error Message","char"
+"dbo","cmc_clie_its_error","meme_ck","ITS Error Table","Member Contrived Key","int"
+"dbo","cmc_clie_its_error","clie_lock_token","ITS Error Table","Lock Token","smallint"

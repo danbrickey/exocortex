@@ -1,0 +1,4 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_acw1_work_que","acw1_row_id","Final work table for Accum Archive batch","Identify Column","numeric"
+"dbo","cmc_acw1_work_que","sbsb_ck","Final work table for Accum Archive batch","Subscriber Contrived Key","int"
+"dbo","cmc_acw1_work_que","acw1_lock_token","Final work table for Accum Archive batch","Lock Token","smallint"

@@ -1,0 +1,4 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_meun_unused_meme_ck","row_num","Unused Member Contrived Keys","Row ID","numeric"
+"dbo","cmc_meun_unused_meme_ck","meme_ck","Unused Member Contrived Keys","Member Contrived Key","int"
+"dbo","cmc_meun_unused_meme_ck","meun_create_dt","Unused Member Contrived Keys","Create Date","datetime"

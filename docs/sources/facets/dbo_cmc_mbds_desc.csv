@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mbds_desc","mbdr_id","Maximum Benefit Duration Description Table","Maximum Benefit Duration ID","char"
+"dbo","cmc_mbds_desc","mbds_desc","Maximum Benefit Duration Description Table","Maximum Benefit Duration ID Description","varchar"
+"dbo","cmc_mbds_desc","mbds_lock_token","Maximum Benefit Duration Description Table","Lock Token","smallint"
+"dbo","cmc_mbds_desc","atxr_source_id","Maximum Benefit Duration Description Table","Attachment Source Id","datetime"
+"dbo","cmc_mbds_desc","sys_last_upd_dtm","Maximum Benefit Duration Description Table","Last Update Datetime","datetime"
+"dbo","cmc_mbds_desc","sys_usus_id","Maximum Benefit Duration Description Table","Last Update User ID","varchar"
+"dbo","cmc_mbds_desc","sys_dbuser_id","Maximum Benefit Duration Description Table","Last Update DBMS User ID","varchar"

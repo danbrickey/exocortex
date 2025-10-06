@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mcop_oper","mcop_oper_id","Medicare Transaction Reply Code Operations","Operation ID","varchar"
+"dbo","cmc_mcop_oper","mcop_oper_desc","Medicare Transaction Reply Code Operations","Description","varchar"
+"dbo","cmc_mcop_oper","mcop_lock_token","Medicare Transaction Reply Code Operations","Lock Token","smallint"
+"dbo","cmc_mcop_oper","atxr_source_id","Medicare Transaction Reply Code Operations","Attachment Source Id","datetime"

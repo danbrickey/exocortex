@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mcpl_list_id","mcpl_id","Parameter Freeform list ID","Parameter list ID","varchar"
+"dbo","cmc_mcpl_list_id","mcpf_name","Parameter Freeform list ID","Parameter Name","varchar"
+"dbo","cmc_mcpl_list_id","mcpl_list_detail","Parameter Freeform list ID","Parameter list detail","varchar"
+"dbo","cmc_mcpl_list_id","mcpl_lock_token","Parameter Freeform list ID","Lock Token","smallint"
+"dbo","cmc_mcpl_list_id","mcpl_last_upd_usid","Parameter Freeform list ID","Last update user","varchar"
+"dbo","cmc_mcpl_list_id","mcpl_last_upd_dtm","Parameter Freeform list ID","Last Update Datetime","datetime"

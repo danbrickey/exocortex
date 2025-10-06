@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_clcq_work_que","clcq_row_id","Shadow Adjudication Work Table","Work Queue Row Identifier","numeric"
+"dbo","cmc_clcq_work_que","sbsb_ck","Shadow Adjudication Work Table","Subscriber Contrived Key","int"
+"dbo","cmc_clcq_work_que","clcl_id","Shadow Adjudication Work Table","Claim Identifier","char"
+"dbo","cmc_clcq_work_que","clcs_create_dtm","Shadow Adjudication Work Table","Create Date/Time","datetime"
+"dbo","cmc_clcq_work_que","clcq_lock_token","Shadow Adjudication Work Table","Lock Token","smallint"

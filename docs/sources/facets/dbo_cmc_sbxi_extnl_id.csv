@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_sbxi_extnl_id","sbsb_ck","External Subscriber ID table","Subscriber Contrived Key","int"
+"dbo","cmc_sbxi_extnl_id","sbxi_extnl_sbsb_id","External Subscriber ID table","N/A","varchar"
+"dbo","cmc_sbxi_extnl_id","sbxi_lst_updt_dtm","External Subscriber ID table","N/A","datetime"
+"dbo","cmc_sbxi_extnl_id","sbxi_lock_token","External Subscriber ID table","Lock Token","smallint"
+"dbo","cmc_sbxi_extnl_id","atxr_source_id","External Subscriber ID table","Attachment Source Id","datetime"

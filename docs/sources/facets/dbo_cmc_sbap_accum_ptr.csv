@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_sbap_accum_ptr","sbsb_ck","Subscriber Accumulator Pointer Table","Subscriber Contrived Key","int"
+"dbo","cmc_sbap_accum_ptr","sbap_eff_dt","Subscriber Accumulator Pointer Table","Subscriber Family Accumulator Pointer Effective Date","datetime"
+"dbo","cmc_sbap_accum_ptr","sbap_term_dt","Subscriber Accumulator Pointer Table","Subscriber Family Accumulator Pointer Termination Date","datetime"
+"dbo","cmc_sbap_accum_ptr","sbsb_ck_to","Subscriber Accumulator Pointer Table","Subscriber Family Accumulator Contrived Key Pointer","int"
+"dbo","cmc_sbap_accum_ptr","sbap_lock_token","Subscriber Accumulator Pointer Table","Lock Token","int"
+"dbo","cmc_sbap_accum_ptr","atxr_source_id","Subscriber Accumulator Pointer Table","Attachment Source Id","datetime"

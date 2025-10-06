@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_medd_dem_data","meme_ck","Member Demographic Data","Member Contrived Key","int"
+"dbo","cmc_medd_dem_data","mcdd_type","Member Demographic Data","Demographic Type","varchar"
+"dbo","cmc_medd_dem_data","medd_seq_no","Member Demographic Data","Sequence Number","smallint"
+"dbo","cmc_medd_dem_data","medd_value","Member Demographic Data","Demographic Value","varchar"
+"dbo","cmc_medd_dem_data","medd_lock_token","Member Demographic Data","Lock Token","smallint"
+"dbo","cmc_medd_dem_data","atxr_source_id","Member Demographic Data","Attachment Source Id","datetime"

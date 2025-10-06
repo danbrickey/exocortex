@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_afsl_stoploss","afai_ck","Alternate Funding Laser Specific Stoploss","AFAI Contrived Key","int"
+"dbo","cmc_afsl_stoploss","afcp_per_no","Alternate Funding Laser Specific Stoploss","Period Number","int"
+"dbo","cmc_afsl_stoploss","afsl_tier_no","Alternate Funding Laser Specific Stoploss","Tier","int"
+"dbo","cmc_afsl_stoploss","afsl_ssl_amt","Alternate Funding Laser Specific Stoploss","Amount","money"
+"dbo","cmc_afsl_stoploss","afsl_lock_token","Alternate Funding Laser Specific Stoploss","Lock Token","smallint"
+"dbo","cmc_afsl_stoploss","atxr_source_id","Alternate Funding Laser Specific Stoploss","Attachment Source Id","datetime"

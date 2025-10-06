@@ -1,0 +1,3 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_cswq_work","cswq_row_id","Customer Service Work Table","Work item row ID","numeric"
+"dbo","cmc_cswq_work","cssc_id","Customer Service Work Table","Inquiry ID","char"

@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_blmt_msg_text","blmd_id","Billing Message Text","Message ID","char"
+"dbo","cmc_blmt_msg_text","blmt_seq_no","Billing Message Text","Message Sequence Number","smallint"
+"dbo","cmc_blmt_msg_text","blmt_msg_text","Billing Message Text","Message Text","varbinary"
+"dbo","cmc_blmt_msg_text","blmt_lock_token","Billing Message Text","Lock Token","smallint"
+"dbo","cmc_blmt_msg_text","atxr_source_id","Billing Message Text","Attachment Source Id","datetime"

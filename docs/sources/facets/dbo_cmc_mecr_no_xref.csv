@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mecr_no_xref","meme_ck","Medicare Number Cross Reference Table","Member Contrived Key","int"
+"dbo","cmc_mecr_no_xref","mecr_no_orig","Medicare Number Cross Reference Table","Original Medicare Number","char"
+"dbo","cmc_mecr_no_xref","mecr_lock_token","Medicare Number Cross Reference Table","Lock Token","smallint"
+"dbo","cmc_mecr_no_xref","sys_last_upd_dtm","Medicare Number Cross Reference Table","Last Update Datetime","datetime"
+"dbo","cmc_mecr_no_xref","sys_usus_id","Medicare Number Cross Reference Table","Last Update User ID","varchar"
+"dbo","cmc_mecr_no_xref","sys_dbuser_id","Medicare Number Cross Reference Table","Last Update DBMS User ID","varchar"

@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_blpa_bl_prepro","blei_ck","Billing Archive Batch Pre-process Table","Billing Entity Contrived Key","int"
+"dbo","cmc_blpa_bl_prepro","blpa_weight","Billing Archive Batch Pre-process Table","Weight","int"
+"dbo","cmc_blpa_bl_prepro","blpa_row_id","Billing Archive Batch Pre-process Table","Row ID","numeric"
+"dbo","cmc_blpa_bl_prepro","blpa_sts","Billing Archive Batch Pre-process Table","Row Status","int"
+"dbo","cmc_blpa_bl_prepro","blpa_lock_token","Billing Archive Batch Pre-process Table","Lock Token","smallint"
+"dbo","cmc_blpa_bl_prepro","atxr_source_id","Billing Archive Batch Pre-process Table","Attachment Source Id","datetime"

@@ -1,0 +1,4 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_csar_archive_work","csar_row_id","Customer Service Archive Work Table","Archive Row ID","numeric"
+"dbo","cmc_csar_archive_work","cssc_id","Customer Service Archive Work Table","Inquiry ID","char"
+"dbo","cmc_csar_archive_work","cstk_last_upd_dtm","Customer Service Archive Work Table","Last Update Date Time","datetime"

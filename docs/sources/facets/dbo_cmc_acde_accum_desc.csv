@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_acde_accum_desc","acde_acc_type","Accumulator Descriptions Table","Accumulator Description Type","char"
+"dbo","cmc_acde_accum_desc","acac_acc_no","Accumulator Descriptions Table","Accumulator Description Number","smallint"
+"dbo","cmc_acde_accum_desc","acde_desc","Accumulator Descriptions Table","Accumulator Description","char"
+"dbo","cmc_acde_accum_desc","acde_lock_token","Accumulator Descriptions Table","Lock Token","smallint"
+"dbo","cmc_acde_accum_desc","atxr_source_id","Accumulator Descriptions Table","Attachment Source Id","datetime"
