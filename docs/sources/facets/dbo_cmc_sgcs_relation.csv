@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_sgcs_relation","sgsg_ck","Subgroup/Class Relationship table","Subgroup Contrived Key","int"
+"dbo","cmc_sgcs_relation","cscs_id","Subgroup/Class Relationship table","Class","char"
+"dbo","cmc_sgcs_relation","sgcs_eff_dt","Subgroup/Class Relationship table","Subgroup/Class Effective Date","datetime"
+"dbo","cmc_sgcs_relation","grgr_ck","Subgroup/Class Relationship table","Group Contrived Key","int"
+"dbo","cmc_sgcs_relation","sgcs_term_dt","Subgroup/Class Relationship table","Subgroup/Class Termination Date","datetime"
+"dbo","cmc_sgcs_relation","sgcs_lock_token","Subgroup/Class Relationship table","Lock Token","smallint"
+"dbo","cmc_sgcs_relation","atxr_source_id","Subgroup/Class Relationship table","Attachment Source Id","datetime"

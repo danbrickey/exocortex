@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mrrs_rscl_stat","mrrs_type","HCFA Re-scaling Factors State Table","Re-scaling Type","char"
+"dbo","cmc_mrrs_rscl_stat","mrrs_mctr_mcst","HCFA Re-scaling Factors State Table","Re-scaling State","char"
+"dbo","cmc_mrrs_rscl_stat","mrrs_eff_dt","HCFA Re-scaling Factors State Table","Re-scaling Effective Date","datetime"
+"dbo","cmc_mrrs_rscl_stat","mrrs_term_dt","HCFA Re-scaling Factors State Table","Re-scaling Termination Date","datetime"
+"dbo","cmc_mrrs_rscl_stat","mrrs_lock_token","HCFA Re-scaling Factors State Table","Lock Token","smallint"
+"dbo","cmc_mrrs_rscl_stat","atxr_source_id","HCFA Re-scaling Factors State Table","Attachment Source Id","datetime"

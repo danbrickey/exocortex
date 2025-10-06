@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_cgds_desc","cgcg_id","Dental Category Description Table","Dental Category ID","char"
+"dbo","cmc_cgds_desc","cgds_desc","Dental Category Description Table","Dental Category Description","char"
+"dbo","cmc_cgds_desc","wmds_seq_no","Dental Category Description Table","Dental Category Description User Defined Warning Message","smallint"
+"dbo","cmc_cgds_desc","cgds_lock_token","Dental Category Description Table","Lock Token","smallint"
+"dbo","cmc_cgds_desc","atxr_source_id","Dental Category Description Table","Attachment Source Id","datetime"

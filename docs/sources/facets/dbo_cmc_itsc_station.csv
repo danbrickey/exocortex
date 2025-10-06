@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_itsc_station","itsc_plan_cd","ITS Station Code Table","Plan Code","char"
+"dbo","cmc_itsc_station","itsc_claim_type","ITS Station Code Table","Claim Type","char"
+"dbo","cmc_itsc_station","itsc_station_cd","ITS Station Code Table","Station Code","char"
+"dbo","cmc_itsc_station","itsc_addl_data","ITS Station Code Table","Additional Data","varchar"
+"dbo","cmc_itsc_station","itsc_lock_token","ITS Station Code Table","Lock Token","smallint"
+"dbo","cmc_itsc_station","atxr_source_id","ITS Station Code Table","Attachment Source Id","datetime"

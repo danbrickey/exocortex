@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_etou_option_u","etbc_ck","EDI 270/271 Option Usage","Comfiguration Contrived key","int"
+"dbo","cmc_etou_option_u","etod_option","EDI 270/271 Option Usage","Configuration Option","varchar"
+"dbo","cmc_etou_option_u","etou_ind","EDI 270/271 Option Usage","Option Value","char"
+"dbo","cmc_etou_option_u","etou_last_usus_id","EDI 270/271 Option Usage","Last  Update User ID","char"
+"dbo","cmc_etou_option_u","etou_last_upd_dtm","EDI 270/271 Option Usage","The Date and Time of last Update","datetime"
+"dbo","cmc_etou_option_u","etou_lock_token","EDI 270/271 Option Usage","Lock Token","smallint"
+"dbo","cmc_etou_option_u","atxr_source_id","EDI 270/271 Option Usage","Attachment Source Id","datetime"

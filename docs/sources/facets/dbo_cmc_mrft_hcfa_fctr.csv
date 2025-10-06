@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mrft_hcfa_fctr","mrfd_pfx","Medicare Factor Table","HCFA Rate Factor Benefit Component Prefix","char"
+"dbo","cmc_mrft_hcfa_fctr","mrft_gender","Medicare Factor Table","Gender Indicator","char"
+"dbo","cmc_mrft_hcfa_fctr","mrft_eff_dt","Medicare Factor Table","HCFA Rate Factors Effective Date","datetime"
+"dbo","cmc_mrft_hcfa_fctr","mrft_term_dt","Medicare Factor Table","HCFA Rate Factors Termination Date","datetime"
+"dbo","cmc_mrft_hcfa_fctr","mrft_lock_token","Medicare Factor Table","Lock Token","smallint"
+"dbo","cmc_mrft_hcfa_fctr","atxr_source_id","Medicare Factor Table","Attachment Source Id","datetime"

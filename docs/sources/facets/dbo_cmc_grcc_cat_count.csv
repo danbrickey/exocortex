@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_grcc_cat_count","grgr_ck","Group Category Count","Group Contrived Key","int"
+"dbo","cmc_grcc_cat_count","cspd_cat","Group Category Count","Category","char"
+"dbo","cmc_grcc_cat_count","grcc_count","Group Category Count","Count","int"
+"dbo","cmc_grcc_cat_count","grcc_lock_token","Group Category Count","Lock Token","smallint"
+"dbo","cmc_grcc_cat_count","atxr_source_id","Group Category Count","Attachment Source Id","datetime"

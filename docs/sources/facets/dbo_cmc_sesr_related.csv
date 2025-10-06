@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_sesr_related","serl_rel_id","Service Related Parameters Weight Table","Related Services ID","char"
+"dbo","cmc_sesr_related","sese_id","Service Related Parameters Weight Table","Service Relation Service ID","char"
+"dbo","cmc_sesr_related","sesr_wt_ctr","Service Related Parameters Weight Table","Service Relation Weighted Counter","smallint"
+"dbo","cmc_sesr_related","sesr_opts","Service Related Parameters Weight Table","Service Relation Options","char"
+"dbo","cmc_sesr_related","sesr_lock_token","Service Related Parameters Weight Table","Lock Token","smallint"
+"dbo","cmc_sesr_related","atxr_source_id","Service Related Parameters Weight Table","Attachment Source Id","datetime"

@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_rptc_desc","rptc_rpt_cat","Report Category Description Table","Report Category","char"
+"dbo","cmc_rptc_desc","rptc_desc","Report Category Description Table","Report Category Description","char"
+"dbo","cmc_rptc_desc","rptc_mctr_catg","Report Category Description Table","Report Category Type","char"
+"dbo","cmc_rptc_desc","rptc_rpt_cat_xlow","Report Category Description Table","Report Category-Case Insensitive","char"
+"dbo","cmc_rptc_desc","rptc_desc_xlow","Report Category Description Table","Report Category Description-Case Insensitive","char"
+"dbo","cmc_rptc_desc","rptc_lock_token","Report Category Description Table","Lock Token","smallint"
+"dbo","cmc_rptc_desc","atxr_source_id","Report Category Description Table","Attachment Source Id","datetime"

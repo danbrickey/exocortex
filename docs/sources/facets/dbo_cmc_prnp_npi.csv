@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_prnp_npi","prpr_id","NPI History","Provider ID","char"
+"dbo","cmc_prnp_npi","prcp_id","NPI History","Common Practitioner ID","char"
+"dbo","cmc_prnp_npi","prpr_npi","NPI History","NPI","char"
+"dbo","cmc_prnp_npi","prnp_term_dt","NPI History","Term Date","datetime"
+"dbo","cmc_prnp_npi","prnp_mctr_trsn","NPI History","Term Reason","char"
+"dbo","cmc_prnp_npi","prnp_lock_token","NPI History","Lock Token","smallint"
+"dbo","cmc_prnp_npi","atxr_source_id","NPI History","Attachment Source Id","datetime"

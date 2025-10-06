@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mrfd_fctr_def","mrfd_pfx","Medicare Factor Definition Table","HCFA Rate Factors Benefit Component Prefix","char"
+"dbo","cmc_mrfd_fctr_def","mrfd_desc","Medicare Factor Definition Table","HCFA Rate Factor Description","char"
+"dbo","cmc_mrfd_fctr_def","mrfd_lock_token","Medicare Factor Definition Table","Lock Token","smallint"
+"dbo","cmc_mrfd_fctr_def","atxr_source_id","Medicare Factor Definition Table","Attachment Source Id","datetime"

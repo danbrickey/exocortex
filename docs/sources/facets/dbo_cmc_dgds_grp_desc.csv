@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_dgds_grp_desc","dgds_group","Dental Clinical Grouping Descriptions","Dental Clinical Grouping","char"
+"dbo","cmc_dgds_grp_desc","dgds_desc","Dental Clinical Grouping Descriptions","Dental Clinical Grouping Description","varchar"
+"dbo","cmc_dgds_grp_desc","dgds_lock_token","Dental Clinical Grouping Descriptions","Lock Token","smallint"
+"dbo","cmc_dgds_grp_desc","atxr_source_id","Dental Clinical Grouping Descriptions","Attachment Source Id","datetime"

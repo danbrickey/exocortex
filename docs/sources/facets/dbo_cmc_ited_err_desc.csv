@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_ited_err_desc","ited_its_err_cd","ITS Error Description","ITS Error Code","char"
+"dbo","cmc_ited_err_desc","ited_desc","ITS Error Description","Error Description","char"
+"dbo","cmc_ited_err_desc","ited_lock_token","ITS Error Description","Lock Token","smallint"
+"dbo","cmc_ited_err_desc","atxr_source_id","ITS Error Description","Attachment Source Id","datetime"

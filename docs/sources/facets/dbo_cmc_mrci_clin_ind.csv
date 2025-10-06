@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mrci_clin_ind","mrmr_pfx","Surgical (Clinical) Indications Table","M&R Criteria Prefix","char"
+"dbo","cmc_mrci_clin_ind","mrci_ipcd_id","Surgical (Clinical) Indications Table","M&R Surgical Indication Key","char"
+"dbo","cmc_mrci_clin_ind","mrci_desc","Surgical (Clinical) Indications Table","M&R Surgical Indication Description","char"
+"dbo","cmc_mrci_clin_ind","mrci_lock_token","Surgical (Clinical) Indications Table","Lock Token","smallint"
+"dbo","cmc_mrci_clin_ind","atxr_source_id","Surgical (Clinical) Indications Table","Attachment Source Id","datetime"

@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_umea_edi_addl_data","umum_ref_id","Referral and Preauthorization EDI Transaction Additional Data","Reference ID","char"
+"dbo","cmc_umea_edi_addl_data","umei_seq_no","Referral and Preauthorization EDI Transaction Additional Data","UM EDI Sequence Number","smallint"
+"dbo","cmc_umea_edi_addl_data","umea_gtgt_ckn","Referral and Preauthorization EDI Transaction Additional Data","GWID","numeric"
+"dbo","cmc_umea_edi_addl_data","umea_hier_level_no","Referral and Preauthorization EDI Transaction Additional Data","EDI 278 HL01 Value","char"
+"dbo","cmc_umea_edi_addl_data","umea_addl_data","Referral and Preauthorization EDI Transaction Additional Data","EDI 278 Additional Data","varchar"

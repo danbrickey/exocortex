@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_cmab_asmt_base","cmcm_id","Assessment Type (Base)","Case Management ID","char"
+"dbo","cmc_cmab_asmt_base","cmab_assess_ind","Assessment Type (Base)","Assessment/Evaluation Indicator","char"
+"dbo","cmc_cmab_asmt_base","cmab_mctr_type","Assessment Type (Base)","Assessment/Evaluation Type","char"
+"dbo","cmc_cmab_asmt_base","cmab_seq_no","Assessment Type (Base)","Assessment/Evaluation Sequence Number","smallint"
+"dbo","cmc_cmab_asmt_base","cmab_assess_dtm","Assessment Type (Base)","Assessment/Evaluation Date and Time","datetime"
+"dbo","cmc_cmab_asmt_base","cmab_lock_token","Assessment Type (Base)","Lock Token","smallint"
+"dbo","cmc_cmab_asmt_base","atxr_source_id","Assessment Type (Base)","Attachment Source Id","datetime"

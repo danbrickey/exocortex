@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_sgcc_cat_count","sgsg_ck","Subgroup Category Count","Subgroup Contrived Key","int"
+"dbo","cmc_sgcc_cat_count","cspd_cat","Subgroup Category Count","Category","char"
+"dbo","cmc_sgcc_cat_count","sgcc_count","Subgroup Category Count","Count","int"
+"dbo","cmc_sgcc_cat_count","sgcc_lock_token","Subgroup Category Count","Lock Token","smallint"
+"dbo","cmc_sgcc_cat_count","atxr_source_id","Subgroup Category Count","Attachment Source Id","datetime"

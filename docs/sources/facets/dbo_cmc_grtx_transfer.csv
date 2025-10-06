@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_grtx_transfer","grgr_ck","Group Accumulator Transfer Acceptance Table","Group Contrived Key","int"
+"dbo","cmc_grtx_transfer","grtx_acc_type","Group Accumulator Transfer Acceptance Table","Accumulator Type","char"
+"dbo","cmc_grtx_transfer","acac_acc_no","Group Accumulator Transfer Acceptance Table","Accumulator Number","smallint"
+"dbo","cmc_grtx_transfer","grtx_lock_token","Group Accumulator Transfer Acceptance Table","Lock Token","smallint"
+"dbo","cmc_grtx_transfer","atxr_source_id","Group Accumulator Transfer Acceptance Table","Attachment Source Id","datetime"

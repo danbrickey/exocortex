@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_lcsv_cat_svcs","lcat_id","Service Category included services","Service Category ID","char"
+"dbo","cmc_lcsv_cat_svcs","lcsv_sese_id","Service Category included services","Service ID","char"
+"dbo","cmc_lcsv_cat_svcs","lcsv_lock_token","Service Category included services","Lock Token","smallint"
+"dbo","cmc_lcsv_cat_svcs","atxr_source_id","Service Category included services","Attachment Source Id","datetime"
+"dbo","cmc_lcsv_cat_svcs","sys_last_upd_dtm","Service Category included services","Last Update Datetime","datetime"
+"dbo","cmc_lcsv_cat_svcs","sys_usus_id","Service Category included services","Last Update User ID","varchar"
+"dbo","cmc_lcsv_cat_svcs","sys_dbuser_id","Service Category included services","Last Update DBMS User ID","varchar"

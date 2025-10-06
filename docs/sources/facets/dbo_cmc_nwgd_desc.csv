@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_nwgd_desc","nwgx_id","Common Global Capitation Relationship ID description","Common Global Capitation Relationship ID","char"
+"dbo","cmc_nwgd_desc","nwgd_desc","Common Global Capitation Relationship ID description","Common Global Capitation Relationship IDDescription","char"
+"dbo","cmc_nwgd_desc","nwgd_lock_token","Common Global Capitation Relationship ID description","Lock Token","smallint"
+"dbo","cmc_nwgd_desc","atxr_source_id","Common Global Capitation Relationship ID description","Attachment Source Id","datetime"

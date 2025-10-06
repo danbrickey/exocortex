@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_pfds_pr_sched","pfpf_id","Dental Flat Fee Schedule Pricing Profile","Dental Fee Schedule Profile ID","char"
+"dbo","cmc_pfds_pr_sched","dpdp_id","Dental Flat Fee Schedule Pricing Profile","Dental Fee Schedule Profile Procedure Code","char"
+"dbo","cmc_pfds_pr_sched","pfds_eff_dt","Dental Flat Fee Schedule Pricing Profile","Dental Fee Schedule Profile Effective Date","datetime"
+"dbo","cmc_pfds_pr_sched","pfds_term_dt","Dental Flat Fee Schedule Pricing Profile","Dental Fee Schedule Profile Termination Date","datetime"
+"dbo","cmc_pfds_pr_sched","pfds_amt","Dental Flat Fee Schedule Pricing Profile","Dental Fee Schedule Profile Amount","money"
+"dbo","cmc_pfds_pr_sched","pfds_lock_token","Dental Flat Fee Schedule Pricing Profile","Lock Token","smallint"
+"dbo","cmc_pfds_pr_sched","atxr_source_id","Dental Flat Fee Schedule Pricing Profile","Attachment Source Id","datetime"

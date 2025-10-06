@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_ipls_proc_cnv","ipcd_id","CPT-4 to ICD-9 Procedure Code Conversion Table","Procedure Code (CPT-4) for LOS Criteria","char"
+"dbo","cmc_ipls_proc_cnv","icd9_ip_id","CPT-4 to ICD-9 Procedure Code Conversion Table","ICD-9 Procedure Code for LOS Criteria","char"
+"dbo","cmc_ipls_proc_cnv","ipls_use_los_ind","CPT-4 to ICD-9 Procedure Code Conversion Table","ICD-9 Length of Stay Indicator","char"
+"dbo","cmc_ipls_proc_cnv","ipls_lock_token","CPT-4 to ICD-9 Procedure Code Conversion Table","Lock Token","smallint"
+"dbo","cmc_ipls_proc_cnv","atxr_source_id","CPT-4 to ICD-9 Procedure Code Conversion Table","Attachment Source Id","datetime"

@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_segs_services","pdbc_pfx","Service(s) Link to UM Service Group Table","UM Service Group Benefit Component Prefix","char"
+"dbo","cmc_segs_services","segr_id","Service(s) Link to UM Service Group Table","UM Service Group ID","char"
+"dbo","cmc_segs_services","sese_id","Service(s) Link to UM Service Group Table","Service Code ID","char"
+"dbo","cmc_segs_services","segs_lock_token","Service(s) Link to UM Service Group Table","Lock Token","smallint"
+"dbo","cmc_segs_services","atxr_source_id","Service(s) Link to UM Service Group Table","Attachment Source Id","datetime"

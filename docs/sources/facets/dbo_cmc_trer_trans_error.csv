@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_trer_trans_error","syin_inst","Transparency error table","Instance ID","bigint"
+"dbo","cmc_trer_trans_error","trer_error","Transparency error table","Transparency Error","varchar"
+"dbo","cmc_trer_trans_error","trer_exception","Transparency error table","Transparency Exception.","varchar"
+"dbo","cmc_trer_trans_error","trer_create_dtm","Transparency error table","Create date time.","datetime"

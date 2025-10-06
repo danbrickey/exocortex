@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_sypm_sys_parm","sypm_record_type","Capitation Parameter Setting Table","Parm Record Type","char"
+"dbo","cmc_sypm_sys_parm","sypm_cap_adj_per","Capitation Parameter Setting Table","Retroactive Adjustment Period","smallint"
+"dbo","cmc_sypm_sys_parm","sypm_cap_run_day","Capitation Parameter Setting Table","Capitation Run Day","smallint"
+"dbo","cmc_sypm_sys_parm","sypm_last_run_dt","Capitation Parameter Setting Table","Last Run Date","datetime"
+"dbo","cmc_sypm_sys_parm","sypm_lock_token","Capitation Parameter Setting Table","Lock Token","smallint"
+"dbo","cmc_sypm_sys_parm","atxr_source_id","Capitation Parameter Setting Table","Attachment Source Id","datetime"

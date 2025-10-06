@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_wq35_work_que","wq35_row_id","Payment Indicative Work Table","Work Queue Row ID","numeric"
+"dbo","cmc_wq35_work_que","syin_inst","Payment Indicative Work Table","SYSIN Instance ID","bigint"
+"dbo","cmc_wq35_work_que","bpid_stock_id","Payment Indicative Work Table","Batch Print Stock ID","char"
+"dbo","cmc_wq35_work_que","bpid_type","Payment Indicative Work Table","Batch Print Type","char"
+"dbo","cmc_wq35_work_que","bpid_seq_no","Payment Indicative Work Table","Data Row Sequence Number","int"
+"dbo","cmc_wq35_work_que","syin_ref_id","Payment Indicative Work Table","Reference ID","char"
+"dbo","cmc_wq35_work_que","bpst_update","Payment Indicative Work Table","Update BPST table","char"

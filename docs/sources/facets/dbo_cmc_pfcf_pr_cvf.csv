@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_pfcf_pr_cvf","pfpf_id","Medical Conversion Factor Value Pricing Profile","Conversion Factor Profile Identifier","char"
+"dbo","cmc_pfcf_pr_cvf","sepc_mctr_pfpt","Medical Conversion Factor Value Pricing Profile","Conversion Factor Profile Service Pointer","char"
+"dbo","cmc_pfcf_pr_cvf","pfcf_eff_dt","Medical Conversion Factor Value Pricing Profile","Conversion Factor Profile Effective Date","datetime"
+"dbo","cmc_pfcf_pr_cvf","pfcf_term_dt","Medical Conversion Factor Value Pricing Profile","Conversion Factor Profile Termination Date","datetime"
+"dbo","cmc_pfcf_pr_cvf","pfcf_cvf","Medical Conversion Factor Value Pricing Profile","Profile Conversion Factor","int"
+"dbo","cmc_pfcf_pr_cvf","pfcf_lock_token","Medical Conversion Factor Value Pricing Profile","Lock Token","smallint"
+"dbo","cmc_pfcf_pr_cvf","atxr_source_id","Medical Conversion Factor Value Pricing Profile","Attachment Source Id","datetime"

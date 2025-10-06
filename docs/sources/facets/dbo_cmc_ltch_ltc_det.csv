@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_ltch_ltc_det","pdbc_pfx","Long Term Care Hospital Details","Prefix","char"
+"dbo","cmc_ltch_ltc_det","ltch_bill_code","Long Term Care Hospital Details","Hospital Bill Code","char"
+"dbo","cmc_ltch_ltc_det","ltch_lock_token","Long Term Care Hospital Details","Lock Token","smallint"
+"dbo","cmc_ltch_ltc_det","atxr_source_id","Long Term Care Hospital Details","Attachment Source Id","datetime"
+"dbo","cmc_ltch_ltc_det","sys_last_upd_dtm","Long Term Care Hospital Details","Last Update Datetime","datetime"
+"dbo","cmc_ltch_ltc_det","sys_usus_id","Long Term Care Hospital Details","Last Update User ID","varchar"
+"dbo","cmc_ltch_ltc_det","sys_dbuser_id","Long Term Care Hospital Details","Last Update DBMS User ID","varchar"

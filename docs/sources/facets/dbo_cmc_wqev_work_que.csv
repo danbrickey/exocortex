@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_wqev_work_que","wqev_row_id","","Row Identifier","numeric"
+"dbo","cmc_wqev_work_que","evin_id","","Event Instance ID","numeric"
+"dbo","cmc_wqev_work_que","evdf_event_type_cd","","","varchar"
+"dbo","cmc_wqev_work_que","clcl_id","","Accident/Emergency Illness Amount","char"

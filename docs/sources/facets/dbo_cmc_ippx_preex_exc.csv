@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_ippx_preex_exc","pdbc_pfx","Pre-Existing Conditions Procedure Exclusions Table","Pre-Existing Conditions Procedure Exclusions Prefix","char"
+"dbo","cmc_ippx_preex_exc","ipcd_id_low","Pre-Existing Conditions Procedure Exclusions Table","Pre-Existing Conditions Procedure Exclusions Low Procedure","char"
+"dbo","cmc_ippx_preex_exc","ipcd_id_high","Pre-Existing Conditions Procedure Exclusions Table","Pre-Existing Conditions Procedure Exclusions High  Procedure","char"
+"dbo","cmc_ippx_preex_exc","ippx_lock_token","Pre-Existing Conditions Procedure Exclusions Table","Lock Token","smallint"
+"dbo","cmc_ippx_preex_exc","atxr_source_id","Pre-Existing Conditions Procedure Exclusions Table","Attachment Source Id","datetime"

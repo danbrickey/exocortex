@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_umss_sso","umum_ref_id","Second Surgical Waivers","Reference ID","char"
+"dbo","cmc_umss_sso","ipcd_id","Second Surgical Waivers","Procedure Code","char"
+"dbo","cmc_umss_sso","umss_seq_no","Second Surgical Waivers","Sequence Number","smallint"
+"dbo","cmc_umss_sso","umss_sscd_proc","Second Surgical Waivers","SSO Waiver Criteria Procedure Code","char"
+"dbo","cmc_umss_sso","umss_sscd_cd_wav","Second Surgical Waivers","SSO Waiver Criteria Code","char"
+"dbo","cmc_umss_sso","umss_lock_token","Second Surgical Waivers","Lock Token","smallint"
+"dbo","cmc_umss_sso","atxr_source_id","Second Surgical Waivers","Attachment Source Id","datetime"

@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_dumx_dup_warn","pdbc_pfx","Duplicate Claim Rules Disallow Exceptions Table","Duplicate Claim Rules Benefit Component Prefix","char"
+"dbo","cmc_dumx_dup_warn","dumd_seq_no","Duplicate Claim Rules Disallow Exceptions Table","Duplicate Claim Rules Sequence Number","smallint"
+"dbo","cmc_dumx_dup_warn","excd_id","Duplicate Claim Rules Disallow Exceptions Table","Duplicate Claim Rules Disallow Exceptions Explanation Code","char"
+"dbo","cmc_dumx_dup_warn","dumx_lock_token","Duplicate Claim Rules Disallow Exceptions Table","Lock Token","smallint"
+"dbo","cmc_dumx_dup_warn","atxr_source_id","Duplicate Claim Rules Disallow Exceptions Table","Attachment Source Id","datetime"

@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_pfdf_pr_cvf","pfpf_id","Dental Conversion Factor Value Pricing Profile","Dental Conversion Factor Profile ID","char"
+"dbo","cmc_pfdf_pr_cvf","pfdf_eff_dt","Dental Conversion Factor Value Pricing Profile","Dental Conversion Factor Profile Effective Date","datetime"
+"dbo","cmc_pfdf_pr_cvf","pfdf_term_dt","Dental Conversion Factor Value Pricing Profile","Dental Conversion Factor Profile Termination Date","datetime"
+"dbo","cmc_pfdf_pr_cvf","pfdf_cvf","Dental Conversion Factor Value Pricing Profile","Dental Conversion Profile Factor","int"
+"dbo","cmc_pfdf_pr_cvf","pfdf_lock_token","Dental Conversion Factor Value Pricing Profile","Lock Token","smallint"
+"dbo","cmc_pfdf_pr_cvf","atxr_source_id","Dental Conversion Factor Value Pricing Profile","Attachment Source Id","datetime"

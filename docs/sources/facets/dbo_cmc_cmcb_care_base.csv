@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_cmcb_care_base","cmcm_id","Care Plan Category","Case Management ID","char"
+"dbo","cmc_cmcb_care_base","cmcb_mctr_type","Care Plan Category","Care Plan Category Type","char"
+"dbo","cmc_cmcb_care_base","cmcb_pri_ind","Care Plan Category","Care Plan Primary Indictor","char"
+"dbo","cmc_cmcb_care_base","cmcb_lock_token","Care Plan Category","Lock Token","smallint"
+"dbo","cmc_cmcb_care_base","atxr_source_id","Care Plan Category","Attachment Source Id","datetime"

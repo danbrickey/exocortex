@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_ctek_cat_ext_key_d","cten_entity_type","Catalog External Keys","Catalog Entity Type","char"
+"dbo","cmc_ctek_cat_ext_key_d","ctek_ext_key_name","Catalog External Keys","Catalog External Key Name","varchar"
+"dbo","cmc_ctek_cat_ext_key_d","ctek_ext_key_desc","Catalog External Keys","Catalog External Key Name Description","varchar"
+"dbo","cmc_ctek_cat_ext_key_d","ctek_lock_token","Catalog External Keys","Lock Token","smallint"
+"dbo","cmc_ctek_cat_ext_key_d","sys_last_upd_dtm","Catalog External Keys","Last Update Datetime","datetime"
+"dbo","cmc_ctek_cat_ext_key_d","sys_usus_id","Catalog External Keys","Last Update User ID","varchar"
+"dbo","cmc_ctek_cat_ext_key_d","sys_dbuser_id","Catalog External Keys","Last Update DBMS User ID","varchar"

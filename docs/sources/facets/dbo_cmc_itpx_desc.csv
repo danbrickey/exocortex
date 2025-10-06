@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_itpx_desc","itpc_pfx","ITS Component Prefix Description Table","ITS Component Prefix","char"
+"dbo","cmc_itpx_desc","itpc_type","ITS Component Prefix Description Table","ITS Component Type","char"
+"dbo","cmc_itpx_desc","itpx_desc","ITS Component Prefix Description Table","ITS Component Prefix Description","char"
+"dbo","cmc_itpx_desc","itpx_lock_token","ITS Component Prefix Description Table","Lock Token","smallint"
+"dbo","cmc_itpx_desc","atxr_source_id","ITS Component Prefix Description Table","Attachment Source Id","datetime"

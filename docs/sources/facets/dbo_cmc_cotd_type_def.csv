@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_cotd_type_def","cotd_enty_type","User Defined Commission Entity Definition Relationship Table","Type","char"
+"dbo","cmc_cotd_type_def","cotd_desc","User Defined Commission Entity Definition Relationship Table","Description","char"
+"dbo","cmc_cotd_type_def","cotd_rel_lvl","User Defined Commission Entity Definition Relationship Table","Level","char"
+"dbo","cmc_cotd_type_def","cotd_lock_token","User Defined Commission Entity Definition Relationship Table","Lock Token","smallint"
+"dbo","cmc_cotd_type_def","atxr_source_id","User Defined Commission Entity Definition Relationship Table","Attachment Source Id","datetime"

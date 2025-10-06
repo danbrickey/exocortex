@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_dptr_tooth_rng","pdbc_pfx","Dental Tooth Range Table","Dental Procedure Category Conversion Table Prefix","char"
+"dbo","cmc_dptr_tooth_rng","dpdp_id","Dental Tooth Range Table","Dental Procedure Code ID","char"
+"dbo","cmc_dptr_tooth_rng","dpcg_eff_dt","Dental Tooth Range Table","Dental Procedure Code Effective Date","datetime"
+"dbo","cmc_dptr_tooth_rng","dptr_tooth_low","Dental Tooth Range Table","Beginning Tooth in Range","char"
+"dbo","cmc_dptr_tooth_rng","dptr_tooth_high","Dental Tooth Range Table","Ending Tooth in  Range","char"
+"dbo","cmc_dptr_tooth_rng","dptr_lock_token","Dental Tooth Range Table","Lock Token","smallint"
+"dbo","cmc_dptr_tooth_rng","atxr_source_id","Dental Tooth Range Table","Attachment Source Id","datetime"

@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_dpin_incent","pdbc_pfx","Incentive Dental Processing Rules","Incentive Dental Process Rules Benefit Component Prefix","char"
+"dbo","cmc_dpin_incent","dpin_type","Incentive Dental Processing Rules","Incentive Dental Process Rules Type","char"
+"dbo","cmc_dpin_incent","dpin_period","Incentive Dental Processing Rules","Incentive Dental Process Rules Accumulation Period","char"
+"dbo","cmc_dpin_incent","dpin_rule","Incentive Dental Processing Rules","Incentive Dental Process Rules Non-Compliance Rule","char"
+"dbo","cmc_dpin_incent","dpin_lock_token","Incentive Dental Processing Rules","Lock Token","smallint"
+"dbo","cmc_dpin_incent","atxr_source_id","Incentive Dental Processing Rules","Attachment Source Id","datetime"

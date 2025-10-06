@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_sgsc_sg_count","sgsg_ck","Subgroup Count","Subgroup Contived Key","int"
+"dbo","cmc_sgsc_sg_count","sgsc_mctr_ctyp","Subgroup Count","Type","char"
+"dbo","cmc_sgsc_sg_count","sgsc_eff_dt","Subgroup Count","Effective Date","datetime"
+"dbo","cmc_sgsc_sg_count","sgsc_term_dt","Subgroup Count","Termination date","datetime"
+"dbo","cmc_sgsc_sg_count","sgsc_count","Subgroup Count","Count","int"
+"dbo","cmc_sgsc_sg_count","sgsc_lock_token","Subgroup Count","Lock Token","smallint"
+"dbo","cmc_sgsc_sg_count","atxr_source_id","Subgroup Count","Attachment Source Id","datetime"

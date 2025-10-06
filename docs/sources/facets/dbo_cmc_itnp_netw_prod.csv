@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_itnp_netw_prod","itnw_its_nw_id","ITS Network Product","ITS Network ID","char"
+"dbo","cmc_itnp_netw_prod","itnp_seq_no","ITS Network Product","Sequence Number","smallint"
+"dbo","cmc_itnp_netw_prod","itnp_its_prod_id","ITS Network Product","ITS Product ID","char"
+"dbo","cmc_itnp_netw_prod","itnp_its_prod_cd","ITS Network Product","ITS Product Code","char"
+"dbo","cmc_itnp_netw_prod","itnp_addl_data","ITS Network Product","Additional Data","varchar"
+"dbo","cmc_itnp_netw_prod","itnp_lock_token","ITS Network Product","Lock Token","smallint"
+"dbo","cmc_itnp_netw_prod","atxr_source_id","ITS Network Product","Attachment Source Id","datetime"

@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_ihra_its_admin","ihra_its_pfx","ITS HRA Administrative Rules","ITS HRA Administrative Rules ITS HRA Prefix","char"
+"dbo","cmc_ihra_its_admin","ihra_model","ITS HRA Administrative Rules","ITS HRA Administrative Rules ITS HRA Model","char"
+"dbo","cmc_ihra_its_admin","ihra_addl_data","ITS HRA Administrative Rules","ITS HRA Administrative Rules ITS HRA Additional Data","varchar"
+"dbo","cmc_ihra_its_admin","ihra_lock_token","ITS HRA Administrative Rules","Lock Token","smallint"
+"dbo","cmc_ihra_its_admin","atxr_source_id","ITS HRA Administrative Rules","Attachment Source Id","datetime"

@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_dfsc_scat_desc","dfsc_id","Service Categry Description Table","Service Category ID","char"
+"dbo","cmc_dfsc_scat_desc","dfsc_desc","Service Categry Description Table","Service Category Description","varchar"
+"dbo","cmc_dfsc_scat_desc","dfsc_lock_token","Service Categry Description Table","Lock Token","smallint"
+"dbo","cmc_dfsc_scat_desc","atxr_source_id","Service Categry Description Table","Attachment Source Id","datetime"
+"dbo","cmc_dfsc_scat_desc","sys_last_upd_dtm","Service Categry Description Table","Last Update Datetime","datetime"
+"dbo","cmc_dfsc_scat_desc","sys_usus_id","Service Categry Description Table","Last Update User ID","varchar"
+"dbo","cmc_dfsc_scat_desc","sys_dbuser_id","Service Categry Description Table","Last Update DBMS User ID","varchar"

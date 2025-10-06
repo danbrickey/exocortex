@@ -1,0 +1,3 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_cawq_work_que","cawq_row_id","Claim Archive Work Table","Claim Archive Work Queue Row Identifier","numeric"
+"dbo","cmc_cawq_work_que","clcl_id","Claim Archive Work Table","Claim Identifier","char"

@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_idpx_pre_exist","pdbc_pfx","Pre-Existing Conditions","Pre-existing Conditions Benefit Component Prefix","char"
+"dbo","cmc_idpx_pre_exist","idcd_id_rel_low","Pre-Existing Conditions","Pre-existing Conditions Low Related Diagnosis","varchar"
+"dbo","cmc_idpx_pre_exist","idcd_type","Pre-Existing Conditions","ICD Version","char"
+"dbo","cmc_idpx_pre_exist","idcd_id_rel_high","Pre-Existing Conditions","Pre-existing Conditions High Related Diagnosis","varchar"
+"dbo","cmc_idpx_pre_exist","idpx_lock_token","Pre-Existing Conditions","Lock Token","smallint"
+"dbo","cmc_idpx_pre_exist","atxr_source_id","Pre-Existing Conditions","Attachment Source Id","datetime"

@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_nwgr_relation","nwgp_grp_id","Network Link to Network Groups","Network Group ID","char"
+"dbo","cmc_nwgr_relation","nwnw_id","Network Link to Network Groups","Network Group Network ID","char"
+"dbo","cmc_nwgr_relation","nwgr_lock_token","Network Link to Network Groups","Lock Token","smallint"
+"dbo","cmc_nwgr_relation","atxr_source_id","Network Link to Network Groups","Attachment Source Id","datetime"

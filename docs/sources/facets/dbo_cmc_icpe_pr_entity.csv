@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_icpe_pr_entity","prpr_entity","ITS Provider Entity Code Conversion Table","Provider Entity","char"
+"dbo","cmc_icpe_pr_entity","icpe_seq_no","ITS Provider Entity Code Conversion Table","Sequence Number","smallint"
+"dbo","cmc_icpe_pr_entity","prpr_mctr_type","ITS Provider Entity Code Conversion Table","Provider Type","char"
+"dbo","cmc_icpe_pr_entity","icpe_entity_type","ITS Provider Entity Code Conversion Table","ITS Provider Entity Type","char"
+"dbo","cmc_icpe_pr_entity","icpe_addl_data","ITS Provider Entity Code Conversion Table","Additional Data","varchar"
+"dbo","cmc_icpe_pr_entity","icpe_lock_token","ITS Provider Entity Code Conversion Table","Lock Token","smallint"
+"dbo","cmc_icpe_pr_entity","atxr_source_id","ITS Provider Entity Code Conversion Table","Attachment Source Id","datetime"

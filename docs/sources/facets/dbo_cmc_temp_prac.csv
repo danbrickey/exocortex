@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_temp_prac","prpr_id","Temp Storage table","Servicing Provider","char"
+"dbo","cmc_temp_prac","pdbc_pfx","Temp Storage table","Billing Component Prefix","char"
+"dbo","cmc_temp_prac","prap_yr_beg_dt","Temp Storage table","Provider Prepay Accumulator Table Year","datetime"
+"dbo","cmc_temp_prac","prap_cap_amt","Temp Storage table","Provider Prepay Accumulator Table capitation Prepay Amount","money"

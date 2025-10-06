@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_umci_clin_ind","umum_ref_id","Surgical Indications Data","Reference ID","char"
+"dbo","cmc_umci_clin_ind","ipcd_id","Surgical Indications Data","Procedure code","char"
+"dbo","cmc_umci_clin_ind","umci_seq_no","Surgical Indications Data","Sequence Number","smallint"
+"dbo","cmc_umci_clin_ind","mrci_ipcd_id","Surgical Indications Data","Surgical Indications Key","char"
+"dbo","cmc_umci_clin_ind","mrtx_seq_no","Surgical Indications Data","Surgical Indications Text Sequence Number","smallint"
+"dbo","cmc_umci_clin_ind","umci_lock_token","Surgical Indications Data","Lock Token","smallint"
+"dbo","cmc_umci_clin_ind","atxr_source_id","Surgical Indications Data","Attachment Source Id","datetime"

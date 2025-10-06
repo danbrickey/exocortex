@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_hfcd_freq_desc","hfcd_id","Hospital Bill Frequency Description Table","Hospital Frequency Code","char"
+"dbo","cmc_hfcd_freq_desc","hfcd_desc","Hospital Bill Frequency Description Table","Hospital Frequency Code Description","char"
+"dbo","cmc_hfcd_freq_desc","hfcd_lock_token","Hospital Bill Frequency Description Table","Lock Token","smallint"
+"dbo","cmc_hfcd_freq_desc","atxr_source_id","Hospital Bill Frequency Description Table","Attachment Source Id","datetime"

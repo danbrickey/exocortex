@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_temp_sbsg","sbsb_ck","Temp Storage table","Subscriber Contrived Key","int"
+"dbo","cmc_temp_sbsg","sbsg_eff_dt","Temp Storage table","Subgroup Relationship Effective Date","datetime"
+"dbo","cmc_temp_sbsg","grgr_ck","Temp Storage table","Group Address Line 1","int"
+"dbo","cmc_temp_sbsg","sgsg_ck","Temp Storage table","Subgroup Contrived Key","int"
+"dbo","cmc_temp_sbsg","sbsg_term_dt","Temp Storage table","Subgroup Termination Date","datetime"

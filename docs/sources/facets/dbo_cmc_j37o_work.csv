@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_j37o_work","j37o_row_id","Work table for 5010 Outbound 837 batch","Unique Record Identifier","numeric"
+"dbo","cmc_j37o_work","pzpz_id","Work table for 5010 Outbound 837 batch","Application Product ID","char"
+"dbo","cmc_j37o_work","pzap_app_id","Work table for 5010 Outbound 837 batch","Product Application ID","char"
+"dbo","cmc_j37o_work","clcl_id","Work table for 5010 Outbound 837 batch","Claim Identifier","char"
+"dbo","cmc_j37o_work","clcl_cl_sub_type","Work table for 5010 Outbound 837 batch","Claim Sub Type","char"

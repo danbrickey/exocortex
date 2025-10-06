@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_exid_ext_id","memm_row_id","The External ID Table","Master Member Unique ID","numeric"
+"dbo","cmc_exid_ext_id","exid_mctr_ext_type","The External ID Table","External ID Type","char"
+"dbo","cmc_exid_ext_id","exid_id","The External ID Table","External Identifier","varchar"
+"dbo","cmc_exid_ext_id","sys_last_upd_dtm","The External ID Table","Last Update Datetime","datetime"
+"dbo","cmc_exid_ext_id","sys_usus_id","The External ID Table","Last Update User ID","varchar"
+"dbo","cmc_exid_ext_id","sys_dbuser_id","The External ID Table","Last Update DBMS User ID","varchar"
+"dbo","cmc_exid_ext_id","exid_lock_token","The External ID Table","Lock Token","smallint"

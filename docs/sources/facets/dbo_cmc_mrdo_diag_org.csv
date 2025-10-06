@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mrdo_diag_org","mrmr_pfx","Diagnosis Link to Optimal Recovery Guideline Table","M&R Criteria Prefix","char"
+"dbo","cmc_mrdo_diag_org","idcd_id","Diagnosis Link to Optimal Recovery Guideline Table","Diagnosis Code","varchar"
+"dbo","cmc_mrdo_diag_org","mrog_id","Diagnosis Link to Optimal Recovery Guideline Table","M&R Optimal Recovery Guideline (ORG) ID","char"
+"dbo","cmc_mrdo_diag_org","mrdo_lock_token","Diagnosis Link to Optimal Recovery Guideline Table","Lock Token","smallint"
+"dbo","cmc_mrdo_diag_org","atxr_source_id","Diagnosis Link to Optimal Recovery Guideline Table","Attachment Source Id","datetime"

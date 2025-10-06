@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_cisq_work_que","cisq_row_id","Submission Format Creation Work Table","Row ID","numeric"
+"dbo","cmc_cisq_work_que","clcl_id","Submission Format Creation Work Table","Claim Identifier","char"
+"dbo","cmc_cisq_work_que","meme_ck","Submission Format Creation Work Table","Member Contrived Key","int"
+"dbo","cmc_cisq_work_que","clmi_its_cur_sts","Submission Format Creation Work Table","ITS Current Status","char"
+"dbo","cmc_cisq_work_que","clmi_host_plan_cd","Submission Format Creation Work Table","Host Plan Code","char"

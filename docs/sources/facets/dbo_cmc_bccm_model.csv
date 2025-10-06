@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_bccm_model","bccm_id","Benefit Configuration Component Model","Model ID","char"
+"dbo","cmc_bccm_model","pdbc_type","Benefit Configuration Component Model","Component Type","char"
+"dbo","cmc_bccm_model","pdbc_pfx","Benefit Configuration Component Model","Benefit Component Prefix","char"
+"dbo","cmc_bccm_model","bccm_lock_token","Benefit Configuration Component Model","Lock Token","smallint"
+"dbo","cmc_bccm_model","atxr_source_id","Benefit Configuration Component Model","Attachment Source Id","datetime"

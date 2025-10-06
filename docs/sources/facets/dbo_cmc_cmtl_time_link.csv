@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_cmtl_time_link","cmcm_id","Case Management's Time and Call Details Link","Case Management ID","char"
+"dbo","cmc_cmtl_time_link","cmct_seq_no","Case Management's Time and Call Details Link","Contact Sequence No.","smallint"
+"dbo","cmc_cmtl_time_link","cmlg_seq_no","Case Management's Time and Call Details Link","Call Detail/Log Sequence No.","smallint"
+"dbo","cmc_cmtl_time_link","cmtm_seq_no","Case Management's Time and Call Details Link","Link Sequence No.","smallint"
+"dbo","cmc_cmtl_time_link","cmtl_lock_token","Case Management's Time and Call Details Link","Lock Token","smallint"
+"dbo","cmc_cmtl_time_link","atxr_source_id","Case Management's Time and Call Details Link","Attachment Source Id","datetime"

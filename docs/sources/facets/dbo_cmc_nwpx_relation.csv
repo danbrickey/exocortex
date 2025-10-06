@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_nwpx_relation","prpr_id","Provider Common Capition Relationships","Provider ID","char"
+"dbo","cmc_nwpx_relation","nwpx_eff_dt","Provider Common Capition Relationships","Effective Date","datetime"
+"dbo","cmc_nwpx_relation","nwpx_term_dt","Provider Common Capition Relationships","Termination DAte","datetime"
+"dbo","cmc_nwpx_relation","nwpx_mctr_trsn","Provider Common Capition Relationships","Termination Reason","char"
+"dbo","cmc_nwpx_relation","nwpx_id","Provider Common Capition Relationships","Common Primary/Secondary Capitation Relationship ID","char"
+"dbo","cmc_nwpx_relation","nwpx_lock_token","Provider Common Capition Relationships","Lock Token","smallint"

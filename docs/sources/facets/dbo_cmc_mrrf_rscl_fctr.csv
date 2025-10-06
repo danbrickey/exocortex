@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mrrf_rscl_fctr","mrrs_type","HCFA Re-scaling Factors Table","Re-scaling Factor Type","char"
+"dbo","cmc_mrrf_rscl_fctr","mrrs_mctr_mcst","HCFA Re-scaling Factors Table","Re-scaling Factor State","char"
+"dbo","cmc_mrrf_rscl_fctr","mrrs_eff_dt","HCFA Re-scaling Factors Table","Re-scaling Factor Effective Date","datetime"
+"dbo","cmc_mrrf_rscl_fctr","mrrf_mctr_mcct","HCFA Re-scaling Factors Table","Re-scaling Factor County","char"
+"dbo","cmc_mrrf_rscl_fctr","mrrf_fctr","HCFA Re-scaling Factors Table","Re-scaling Factor","int"
+"dbo","cmc_mrrf_rscl_fctr","mrrf_lock_token","HCFA Re-scaling Factors Table","Lock Token","smallint"
+"dbo","cmc_mrrf_rscl_fctr","atxr_source_id","HCFA Re-scaling Factors Table","Attachment Source Id","datetime"

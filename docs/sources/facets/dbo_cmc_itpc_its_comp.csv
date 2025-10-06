@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_itpc_its_comp","itpc_id","ITS Component ID Table","ITS Component ID","char"
+"dbo","cmc_itpc_its_comp","itpc_type","ITS Component ID Table","Component ID","char"
+"dbo","cmc_itpc_its_comp","itpc_eff_dt","ITS Component ID Table","Effective Date","datetime"
+"dbo","cmc_itpc_its_comp","itpc_term_dt","ITS Component ID Table","Termination Date","datetime"
+"dbo","cmc_itpc_its_comp","itpc_pfx","ITS Component ID Table","ITS Component Prefix","char"
+"dbo","cmc_itpc_its_comp","itpc_lock_token","ITS Component ID Table","Lock Token","smallint"
+"dbo","cmc_itpc_its_comp","atxr_source_id","ITS Component ID Table","Attachment Source Id","datetime"

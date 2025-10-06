@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_plds_plan_desc","cspi_id","Plan Description Table","Plan ID","char"
+"dbo","cmc_plds_plan_desc","plds_desc","Plan Description Table","Plan Description","char"
+"dbo","cmc_plds_plan_desc","plds_lock_token","Plan Description Table","Lock Token","smallint"
+"dbo","cmc_plds_plan_desc","atxr_source_id","Plan Description Table","Attachment Source Id","datetime"
+"dbo","cmc_plds_plan_desc","sys_last_upd_dtm","Plan Description Table","Last Update Datetime","datetime"
+"dbo","cmc_plds_plan_desc","sys_usus_id","Plan Description Table","Last Update User ID","varchar"
+"dbo","cmc_plds_plan_desc","sys_dbuser_id","Plan Description Table","Last Update DBMS User ID","varchar"

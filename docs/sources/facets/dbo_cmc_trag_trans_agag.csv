@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_trag_trans_agag","trpp_row_id","Transparency Agreement","Row Identifier","numeric"
+"dbo","cmc_trag_trans_agag","grgr_ck","Transparency Agreement","Group Contrived Key","int"
+"dbo","cmc_trag_trans_agag","cspi_id","Transparency Agreement","Class Plan Identifier","char"
+"dbo","cmc_trag_trans_agag","prpr_id","Transparency Agreement","Provider Identifier","char"
+"dbo","cmc_trag_trans_agag","trag_agag_id_aggregate","Transparency Agreement","Transparency Aggregate container","varchar"

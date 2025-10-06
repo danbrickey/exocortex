@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_svsv_relation","svgr_id_rel","Service Groupings Included Groupings","Lower Level Service Grouping","char"
+"dbo","cmc_svsv_relation","svgr_id","Service Groupings Included Groupings","Higher Service Grouping","char"
+"dbo","cmc_svsv_relation","svsv_lock_token","Service Groupings Included Groupings","Lock Token","smallint"
+"dbo","cmc_svsv_relation","atxr_source_id","Service Groupings Included Groupings","Attachment Source Id","datetime"
+"dbo","cmc_svsv_relation","sys_last_upd_dtm","Service Groupings Included Groupings","Last Update Datetime","datetime"
+"dbo","cmc_svsv_relation","sys_usus_id","Service Groupings Included Groupings","Last Update User ID","varchar"
+"dbo","cmc_svsv_relation","sys_dbuser_id","Service Groupings Included Groupings","Last Update DBMS User ID","varchar"

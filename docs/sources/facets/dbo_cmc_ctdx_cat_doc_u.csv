@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_ctdx_cat_doc_u","cten_entity_type","Catalog Document/Entity Relationships","Catalog Entity Type","char"
+"dbo","cmc_ctdx_cat_doc_u","ctdc_doc_id","Catalog Document/Entity Relationships","Catalog Document Identifier","varchar"
+"dbo","cmc_ctdx_cat_doc_u","ctdx_entity_id","Catalog Document/Entity Relationships","Catalog Document Entity Identifier","varchar"
+"dbo","cmc_ctdx_cat_doc_u","ctdx_lock_token","Catalog Document/Entity Relationships","Lock Token","smallint"
+"dbo","cmc_ctdx_cat_doc_u","sys_last_upd_dtm","Catalog Document/Entity Relationships","Last Update Datetime","datetime"
+"dbo","cmc_ctdx_cat_doc_u","sys_usus_id","Catalog Document/Entity Relationships","Last Update User ID","varchar"
+"dbo","cmc_ctdx_cat_doc_u","sys_dbuser_id","Catalog Document/Entity Relationships","Last Update DBMS User ID","varchar"

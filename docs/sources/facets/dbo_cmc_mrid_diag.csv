@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mrid_diag","mrmr_pfx","Goal Length of Stay by Diagnosis Code","M&R Criteria Prefix","char"
+"dbo","cmc_mrid_diag","idcd_id","Goal Length of Stay by Diagnosis Code","Diagnosis Code","varchar"
+"dbo","cmc_mrid_diag","mrid_los_goal","Goal Length of Stay by Diagnosis Code","Goal Length of Stay","char"
+"dbo","cmc_mrid_diag","mrid_lock_token","Goal Length of Stay by Diagnosis Code","Lock Token","smallint"
+"dbo","cmc_mrid_diag","atxr_source_id","Goal Length of Stay by Diagnosis Code","Attachment Source Id","datetime"

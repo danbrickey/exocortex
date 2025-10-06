@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_ckrk_ref_keys","pzap_app_id","Payment Reference ID TrackingClaim Print Table Line Item Detail","Application ID for the batch","char"
+"dbo","cmc_ckrk_ref_keys","pay_dt","Payment Reference ID TrackingClaim Print Table Line Item Detail","Pay Date for the batch","datetime"
+"dbo","cmc_ckrk_ref_keys","ckrk_last_key","Payment Reference ID TrackingClaim Print Table Line Item Detail","Last Number Used","int"
+"dbo","cmc_ckrk_ref_keys","ckrk_lock_token","Payment Reference ID TrackingClaim Print Table Line Item Detail","Lock Token","smallint"
+"dbo","cmc_ckrk_ref_keys","atxr_source_id","Payment Reference ID TrackingClaim Print Table Line Item Detail","Source ID","datetime"

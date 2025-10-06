@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mdpc_mod_price","pdbc_pfx","Modifier Pricing Rules Table","Modifier Pricing Rules Prefix","char"
+"dbo","cmc_mdpc_mod_price","mdpc_modifier","Modifier Pricing Rules Table","Modifier Pricing Rules Modifier","char"
+"dbo","cmc_mdpc_mod_price","mdpc_pct","Modifier Pricing Rules Table","Modifier Pricing Rules Percentage","money"
+"dbo","cmc_mdpc_mod_price","mdpc_lock_token","Modifier Pricing Rules Table","Lock Token","smallint"
+"dbo","cmc_mdpc_mod_price","atxr_source_id","Modifier Pricing Rules Table","Attachment Source Id","datetime"

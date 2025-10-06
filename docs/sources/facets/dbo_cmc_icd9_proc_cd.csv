@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_icd9_proc_cd","icd9_ip_id","ICD Procedure Code and Description Table","ICD-9 Procedure Code","char"
+"dbo","cmc_icd9_proc_cd","icd9_desc","ICD Procedure Code and Description Table","ICD-9 Procedure Description","varchar"
+"dbo","cmc_icd9_proc_cd","icd9_type","ICD Procedure Code and Description Table","Procedure Type","char"
+"dbo","cmc_icd9_proc_cd","icd9_lock_token","ICD Procedure Code and Description Table","Lock Token","smallint"
+"dbo","cmc_icd9_proc_cd","atxr_source_id","ICD Procedure Code and Description Table","Attachment Source Id","datetime"

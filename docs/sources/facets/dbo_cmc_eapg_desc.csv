@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_eapg_desc","eapg_id","Enhanced Ambulatory Patient Groupings","Enhanced Ambulatory Patient Group Identifier","char"
+"dbo","cmc_eapg_desc","eapg_desc","Enhanced Ambulatory Patient Groupings","Enhanced Ambulatory Patient Grouping Description","varchar"
+"dbo","cmc_eapg_desc","eapg_lock_token","Enhanced Ambulatory Patient Groupings","Lock Token","smallint"
+"dbo","cmc_eapg_desc","atxr_source_id","Enhanced Ambulatory Patient Groupings","Attachment Source Id","datetime"
+"dbo","cmc_eapg_desc","sys_last_upd_dtm","Enhanced Ambulatory Patient Groupings","Last Update Datetime","datetime"
+"dbo","cmc_eapg_desc","sys_usus_id","Enhanced Ambulatory Patient Groupings","Last Update User ID","varchar"
+"dbo","cmc_eapg_desc","sys_dbuser_id","Enhanced Ambulatory Patient Groupings","Last Update DBMS User ID","varchar"

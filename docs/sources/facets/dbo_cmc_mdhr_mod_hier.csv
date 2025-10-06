@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mdhr_mod_hier","mdhr_modifier","Modifier Hierarchy Table","Modifier Hierarchy Modifier","char"
+"dbo","cmc_mdhr_mod_hier","mdhr_priority","Modifier Hierarchy Table","Modifier Hierarchy Priority","smallint"
+"dbo","cmc_mdhr_mod_hier","mdhr_lock_token","Modifier Hierarchy Table","Lock Token","smallint"
+"dbo","cmc_mdhr_mod_hier","atxr_source_id","Modifier Hierarchy Table","Attachment Source Id","datetime"

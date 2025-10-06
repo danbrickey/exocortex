@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_cgsr_related","cgrl_rel_id","Dental Category Relation Table","Dental Category Related ID","char"
+"dbo","cmc_cgsr_related","cgcg_id","Dental Category Relation Table","Dental Category ID","char"
+"dbo","cmc_cgsr_related","cgsr_opts","Dental Category Relation Table","Dental Category Related Parameters Options","char"
+"dbo","cmc_cgsr_related","cgsr_lock_token","Dental Category Relation Table","Lock Token","smallint"
+"dbo","cmc_cgsr_related","atxr_source_id","Dental Category Relation Table","Attachment Source Id","datetime"

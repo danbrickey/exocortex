@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_eaip_ipcd","eaip_id","Clinical Editing Relational Procedure Data Table","Same Day/Followup Procedures Table ID","char"
+"dbo","cmc_eaip_ipcd","eaip_cat","Clinical Editing Relational Procedure Data Table","Same Day/Followup Procedure Table","char"
+"dbo","cmc_eaip_ipcd","eaip_ipcd_id_min","Clinical Editing Relational Procedure Data Table","Procedure code","char"
+"dbo","cmc_eaip_ipcd","eaip_ipcd_id_max","Clinical Editing Relational Procedure Data Table","High Procedure Code","char"
+"dbo","cmc_eaip_ipcd","eaip_lock_token","Clinical Editing Relational Procedure Data Table","Lock Token","smallint"
+"dbo","cmc_eaip_ipcd","atxr_source_id","Clinical Editing Relational Procedure Data Table","Attachment Source Id","datetime"

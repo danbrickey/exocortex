@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_copp_comm_prepro","copp_key_id","Commission Payment Pre-process Table","Commission Payment Pre-process Key ID","char"
+"dbo","cmc_copp_comm_prepro","copp_weight","Commission Payment Pre-process Table","Weight","int"
+"dbo","cmc_copp_comm_prepro","copp_row_id","Commission Payment Pre-process Table","Row ID","numeric"
+"dbo","cmc_copp_comm_prepro","copp_sts","Commission Payment Pre-process Table","Row Status","int"
+"dbo","cmc_copp_comm_prepro","pzap_app_id","Commission Payment Pre-process Table","Application ID","char"

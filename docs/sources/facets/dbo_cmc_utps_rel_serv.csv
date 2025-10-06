@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_utps_rel_serv","pdbc_pfx","Medical Utilization Edits by Procedure Related Services Table","Medical Utilization Edits by Procedure Prefix","char"
+"dbo","cmc_utps_rel_serv","ipcd_id","Medical Utilization Edits by Procedure Related Services Table","Medical Utilization Edits by Procedure Procedure Code","char"
+"dbo","cmc_utps_rel_serv","utip_seq_no","Medical Utilization Edits by Procedure Related Services Table","Medical Utilization Edits by Procedure Sequence Number","smallint"
+"dbo","cmc_utps_rel_serv","utps_sese_id","Medical Utilization Edits by Procedure Related Services Table","Medical Utilization Edits by Procedure Related Service ID","char"
+"dbo","cmc_utps_rel_serv","utps_lock_token","Medical Utilization Edits by Procedure Related Services Table","Lock Token","smallint"
+"dbo","cmc_utps_rel_serv","atxr_source_id","Medical Utilization Edits by Procedure Related Services Table","Attachment Source Id","datetime"

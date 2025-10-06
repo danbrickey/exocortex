@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_ipph_ipcd_desc","ipph_desc","Phonetic Procedure Description Table","Procedure Phonetic Description","char"
+"dbo","cmc_ipph_ipcd_desc","ipcd_id","Phonetic Procedure Description Table","Procedure Code","char"
+"dbo","cmc_ipph_ipcd_desc","ipph_lock_token","Phonetic Procedure Description Table","Lock Token","smallint"
+"dbo","cmc_ipph_ipcd_desc","atxr_source_id","Phonetic Procedure Description Table","Attachment Source Id","datetime"

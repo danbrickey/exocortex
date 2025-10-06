@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_psdc_pos_desc","psdc_id","Dental Place of Service Table","Dental Place of Service Code","char"
+"dbo","cmc_psdc_pos_desc","psdc_desc","Dental Place of Service Table","Place of Service Description","char"
+"dbo","cmc_psdc_pos_desc","psdc_lock_token","Dental Place of Service Table","Lock Token","smallint"
+"dbo","cmc_psdc_pos_desc","atxr_source_id","Dental Place of Service Table","Attachment Source Id","datetime"

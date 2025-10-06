@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_cgwp_wait_per","pdbc_pfx","Dental Category Waiting Period Table","Dental Category Waiting Period Benefit Component Prefix","char"
+"dbo","cmc_cgwp_wait_per","cgcg_id","Dental Category Waiting Period Table","Dental Category ID","char"
+"dbo","cmc_cgwp_wait_per","cgwp_per_type","Dental Category Waiting Period Table","Dental Category Waiting Period Type","char"
+"dbo","cmc_cgwp_wait_per","cgwp_period","Dental Category Waiting Period Table","Dental Category Waiting Period","smallint"
+"dbo","cmc_cgwp_wait_per","excd_id","Dental Category Waiting Period Table","Dental Category Waiting Period Explanation Code","char"
+"dbo","cmc_cgwp_wait_per","cgwp_lock_token","Dental Category Waiting Period Table","Lock Token","smallint"
+"dbo","cmc_cgwp_wait_per","atxr_source_id","Dental Category Waiting Period Table","Attachment Source Id","datetime"

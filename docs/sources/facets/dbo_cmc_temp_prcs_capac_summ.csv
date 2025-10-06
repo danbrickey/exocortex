@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_temp_prcs_capac_summ","prpr_id","Temp Provider Capacity Table","Servicing Provider","char"
+"dbo","cmc_temp_prcs_capac_summ","nwnw_id","Temp Provider Capacity Table","Provider Network Identifier","char"
+"dbo","cmc_temp_prcs_capac_summ","nwpr_pfx","Temp Provider Capacity Table","Network Provider Relationship Prefix","char"
+"dbo","cmc_temp_prcs_capac_summ","prcs_mem_ctr","Temp Provider Capacity Table","","int"
+"dbo","cmc_temp_prcs_capac_summ","nwst_lock_token","Temp Provider Capacity Table","Lock Token","smallint"
+"dbo","cmc_temp_prcs_capac_summ","atxr_source_id","Temp Provider Capacity Table","Attachment Source Id","datetime"

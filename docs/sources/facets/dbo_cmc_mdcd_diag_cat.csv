@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mdcd_diag_cat","mdcd_id","Major Diagnosis Categories and Descriptions Table","Major Diagnostic Category ID","char"
+"dbo","cmc_mdcd_diag_cat","mdcd_desc","Major Diagnosis Categories and Descriptions Table","Major Diagnostic Category Description","char"
+"dbo","cmc_mdcd_diag_cat","mdcd_lock_token","Major Diagnosis Categories and Descriptions Table","Lock Token","smallint"
+"dbo","cmc_mdcd_diag_cat","atxr_source_id","Major Diagnosis Categories and Descriptions Table","Attachment Source Id","datetime"

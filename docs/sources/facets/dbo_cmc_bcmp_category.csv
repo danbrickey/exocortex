@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_bcmp_category","pdbc_type","Benefit Configuration Component Category table","Application Type","char"
+"dbo","cmc_bcmp_category","bcmp_mctr_type","Benefit Configuration Component Category table","Description","char"
+"dbo","cmc_bcmp_category","bcmp_lock_token","Benefit Configuration Component Category table","Lock Token","smallint"
+"dbo","cmc_bcmp_category","atxr_source_id","Benefit Configuration Component Category table","Attachment Source Id","datetime"

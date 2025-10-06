@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_sscd_sso_crit","pdbc_pfx","Second Surgical Opinion Waiver Criteria","SSO Waiver Benefit Component","char"
+"dbo","cmc_sscd_sso_crit","sscd_proc","Second Surgical Opinion Waiver Criteria","SSO Waiver Criteria Procedure Code","char"
+"dbo","cmc_sscd_sso_crit","sscd_cd","Second Surgical Opinion Waiver Criteria","SSO Waiver Criteria Code","char"
+"dbo","cmc_sscd_sso_crit","sscd_text1","Second Surgical Opinion Waiver Criteria","SSO Waiver Criteria Text","varchar"
+"dbo","cmc_sscd_sso_crit","sscd_text2","Second Surgical Opinion Waiver Criteria","SSO Waiver Criteria Text","varchar"
+"dbo","cmc_sscd_sso_crit","sscd_lock_token","Second Surgical Opinion Waiver Criteria","Lock Token","smallint"
+"dbo","cmc_sscd_sso_crit","atxr_source_id","Second Surgical Opinion Waiver Criteria","Attachment Source Id","datetime"

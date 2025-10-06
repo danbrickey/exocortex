@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_dnrx_rwd_exc","pdbc_pfx","Dental Rewards Parameters Exceptions Table","Dental Rewards Parameters Prefix","char"
+"dbo","cmc_dnrx_rwd_exc","cgcg_id","Dental Rewards Parameters Exceptions Table","Dental Rewards Parameters Category Exception","char"
+"dbo","cmc_dnrx_rwd_exc","dnrx_lock_token","Dental Rewards Parameters Exceptions Table","Lock Token","smallint"
+"dbo","cmc_dnrx_rwd_exc","atxr_source_id","Dental Rewards Parameters Exceptions Table","Attachment Source Id","datetime"

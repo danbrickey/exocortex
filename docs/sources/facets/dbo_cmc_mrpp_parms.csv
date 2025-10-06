@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mrpp_parms","mrpp_eff_dt","Medicare Choice Processing Parms","Medicare Choice Parameters Effective Date","datetime"
+"dbo","cmc_mrpp_parms","mrpp_term_dt","Medicare Choice Processing Parms","Termination Date","datetime"
+"dbo","cmc_mrpp_parms","mrpp_choice_pct","Medicare Choice Processing Parms","Medicare Choice Parameters Percentage","int"
+"dbo","cmc_mrpp_parms","mrpp_nae_amt","Medicare Choice Processing Parms","National Average Expenditure","money"
+"dbo","cmc_mrpp_parms","mrpp_actu_prta_pct","Medicare Choice Processing Parms","Part A Percentage","int"
+"dbo","cmc_mrpp_parms","mrpp_lock_token","Medicare Choice Processing Parms","Lock Token","smallint"
+"dbo","cmc_mrpp_parms","atxr_source_id","Medicare Choice Processing Parms","Attachment Source Id","datetime"

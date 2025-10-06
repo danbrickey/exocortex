@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mrpo_proc_org","mrmr_pfx","Link Between ORG and Procedure Code","M&R Criteria Prefix","char"
+"dbo","cmc_mrpo_proc_org","ipcd_id","Link Between ORG and Procedure Code","Procedure Code","char"
+"dbo","cmc_mrpo_proc_org","mrog_id","Link Between ORG and Procedure Code","M&R Optimal Recovery Guideline (ORG) ID","char"
+"dbo","cmc_mrpo_proc_org","mrpo_lock_token","Link Between ORG and Procedure Code","Lock Token","smallint"
+"dbo","cmc_mrpo_proc_org","atxr_source_id","Link Between ORG and Procedure Code","Attachment Source Id","datetime"

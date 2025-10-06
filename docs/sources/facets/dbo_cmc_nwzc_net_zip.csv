@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_nwzc_net_zip","nwst_pfx","Network Set Related Zip Codes Table","Network Set Prefix","char"
+"dbo","cmc_nwzc_net_zip","nwst_eff_dt","Network Set Related Zip Codes Table","Network Set Effective Date","datetime"
+"dbo","cmc_nwzc_net_zip","nwzc_zip_low","Network Set Related Zip Codes Table","Network Set Related Zip Area Low","char"
+"dbo","cmc_nwzc_net_zip","nwst_term_dt","Network Set Related Zip Codes Table","Network Set Termination Date","datetime"
+"dbo","cmc_nwzc_net_zip","nwzc_zip_high","Network Set Related Zip Codes Table","Network Set Related Zip Area High","char"
+"dbo","cmc_nwzc_net_zip","nwzc_lock_token","Network Set Related Zip Codes Table","Lock Token","smallint"
+"dbo","cmc_nwzc_net_zip","atxr_source_id","Network Set Related Zip Codes Table","Attachment Source Id","datetime"

@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_cevm_valid_mod","pdbc_pfx","Clinical Edit Valid Modifier Table","Clinical Editing Criteria Benefit Component Prefix","char"
+"dbo","cmc_cevm_valid_mod","ipcd_id","Clinical Edit Valid Modifier Table","Procedure Code","char"
+"dbo","cmc_cevm_valid_mod","cevm_modifier","Clinical Edit Valid Modifier Table","Clinical Editing Criteria Valid Modifier","char"
+"dbo","cmc_cevm_valid_mod","cevm_eff_dt","Clinical Edit Valid Modifier Table","Effective Date","datetime"
+"dbo","cmc_cevm_valid_mod","cevm_term_dt","Clinical Edit Valid Modifier Table","Termination Date","datetime"
+"dbo","cmc_cevm_valid_mod","cevm_lock_token","Clinical Edit Valid Modifier Table","Lock Token","smallint"
+"dbo","cmc_cevm_valid_mod","atxr_source_id","Clinical Edit Valid Modifier Table","Attachment Source Id","datetime"

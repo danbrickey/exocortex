@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_cocp_comm_per","coar_id","Commission Period Table","Arrangement ID","char"
+"dbo","cmc_cocp_comm_per","cocp_comm_per","Commission Period Table","Commission Period","smallint"
+"dbo","cmc_cocp_comm_per","cocp_beg_dt","Commission Period Table","Commission Period Begin Date","datetime"
+"dbo","cmc_cocp_comm_per","cocp_end_dt","Commission Period Table","Commission Period End Date","datetime"
+"dbo","cmc_cocp_comm_per","cocp_pymt_basis","Commission Period Table","Payment Basis","char"
+"dbo","cmc_cocp_comm_per","cocp_lock_token","Commission Period Table","Lock Token","smallint"
+"dbo","cmc_cocp_comm_per","atxr_source_id","Commission Period Table","Attachment Source Id","datetime"

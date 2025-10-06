@@ -1,0 +1,4 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_temp_mepr","meme_ck","Temp Storage table","Member Contrived Key","int"
+"dbo","cmc_temp_mepr","mepr_pcp_type","Temp Storage table","PCP Type","char"
+"dbo","cmc_temp_mepr","prpr_id","Temp Storage table","Servicing Provider","char"

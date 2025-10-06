@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_rtyp_room_type","rtyp_room_type","Room Type Description Table","Room Type","char"
+"dbo","cmc_rtyp_room_type","rtyp_desc","Room Type Description Table","Room Type Description","varchar"
+"dbo","cmc_rtyp_room_type","rtyp_rm_ind","Room Type Description Table","Room Type Indicator","char"
+"dbo","cmc_rtyp_room_type","rtyp_lock_token","Room Type Description Table","Lock Token","smallint"
+"dbo","cmc_rtyp_room_type","atxr_source_id","Room Type Description Table","Attachment Source Id","datetime"

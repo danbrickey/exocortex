@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mrac_adj_cat","mrat_adj_type","Medicare Choice Adjustment Category Table","Medicare Choice Adjustment Type","char"
+"dbo","cmc_mrac_adj_cat","mrat_eff_dt","Medicare Choice Adjustment Category Table","Medicare Choice Adjustment Effective Date","datetime"
+"dbo","cmc_mrac_adj_cat","mrac_cat","Medicare Choice Adjustment Category Table","Medicare Choice Adjustment (PIPDCG) Category","char"
+"dbo","cmc_mrac_adj_cat","mrac_amt","Medicare Choice Adjustment Category Table","(PIPDCG) Disease Add-on Amount","money"
+"dbo","cmc_mrac_adj_cat","mrac_lock_token","Medicare Choice Adjustment Category Table","Lock Token","smallint"
+"dbo","cmc_mrac_adj_cat","atxr_source_id","Medicare Choice Adjustment Category Table","Attachment Source Id","datetime"

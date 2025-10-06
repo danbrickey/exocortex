@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_zpcd_zip_data","seip_pfx","Zip Code Pricing Information Table","Zip Code Prefix ID","char"
+"dbo","cmc_zpcd_zip_data","zpcd_zip_pfx","Zip Code Pricing Information Table","Zip Code","char"
+"dbo","cmc_zpcd_zip_data","zpcd_eff_dt","Zip Code Pricing Information Table","Zip Code Effective Date","datetime"
+"dbo","cmc_zpcd_zip_data","zpcd_term_dt","Zip Code Pricing Information Table","Zip Code Termination Date","datetime"
+"dbo","cmc_zpcd_zip_data","zpcd_area","Zip Code Pricing Information Table","Zip Code Area Pointer","char"
+"dbo","cmc_zpcd_zip_data","zpcd_lock_token","Zip Code Pricing Information Table","Lock Token","smallint"
+"dbo","cmc_zpcd_zip_data","atxr_source_id","Zip Code Pricing Information Table","Attachment Source Id","datetime"

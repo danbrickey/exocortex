@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_seip_pfx","seip_pfx","Service/Procedure Pricing Table","Service Pricing Prefix","char"
+"dbo","cmc_seip_pfx","seip_pfx_type","Service/Procedure Pricing Table","Service Pricing Prefix Type","char"
+"dbo","cmc_seip_pfx","seip_pfx_desc","Service/Procedure Pricing Table","Service Procedure Pricing Prefix Description","char"
+"dbo","cmc_seip_pfx","seip_lock_token","Service/Procedure Pricing Table","Lock Token","smallint"
+"dbo","cmc_seip_pfx","atxr_source_id","Service/Procedure Pricing Table","Attachment Source Id","datetime"

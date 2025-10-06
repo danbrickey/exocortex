@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_dptc_desc","dptc_cd","Dental Tooth Chart Code Description Table","Dental Tooth Chart Code","char"
+"dbo","cmc_dptc_desc","dptc_desc","Dental Tooth Chart Code Description Table","Dental Tooth Chart Description","char"
+"dbo","cmc_dptc_desc","dptc_color_cd","Dental Tooth Chart Code Description Table","Dental Tooth Chart Color Code","int"
+"dbo","cmc_dptc_desc","dptc_display_ind","Dental Tooth Chart Code Description Table","Dental Tooth Chart Code Display Indicator","char"
+"dbo","cmc_dptc_desc","dptc_lock_token","Dental Tooth Chart Code Description Table","Lock Token","smallint"
+"dbo","cmc_dptc_desc","atxr_source_id","Dental Tooth Chart Code Description Table","Attachment Source Id","datetime"

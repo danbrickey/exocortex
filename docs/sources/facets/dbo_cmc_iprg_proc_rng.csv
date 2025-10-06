@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_iprg_proc_rng","iprg_ipcd_id_from","Clinical Editing Procedure Code Range","Clinical Procedure Code Ranges Low Procedure","char"
+"dbo","cmc_iprg_proc_rng","iprg_ipcd_id_to","Clinical Editing Procedure Code Range","Clinical Procedure Code Ranges High Procedure","char"
+"dbo","cmc_iprg_proc_rng","iprg_type","Clinical Editing Procedure Code Range","Clinical Procedure Code Ranges Category","char"
+"dbo","cmc_iprg_proc_rng","iprg_lock_token","Clinical Editing Procedure Code Range","Lock Token","smallint"
+"dbo","cmc_iprg_proc_rng","atxr_source_id","Clinical Editing Procedure Code Range","Attachment Source Id","datetime"

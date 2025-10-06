@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_grgc_group_count","grgr_ck","Group Count","Group Contrived Key","int"
+"dbo","cmc_grgc_group_count","grgc_mctr_ctyp","Group Count","Type","char"
+"dbo","cmc_grgc_group_count","grgc_eff_dt","Group Count","Effective Date","datetime"
+"dbo","cmc_grgc_group_count","grgc_term_dt","Group Count","Termination Date","datetime"
+"dbo","cmc_grgc_group_count","grgc_count","Group Count","Count","int"
+"dbo","cmc_grgc_group_count","grgc_lock_token","Group Count","Lock Token","smallint"
+"dbo","cmc_grgc_group_count","atxr_source_id","Group Count","Attachment Source Id","datetime"

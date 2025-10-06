@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_utut_desc","utut_cd","Dental Utilization Code Description Table","Dental Utilization Code","char"
+"dbo","cmc_utut_desc","utut_desc","Dental Utilization Code Description Table","Dental Utilization Code Description","char"
+"dbo","cmc_utut_desc","utut_lock_token","Dental Utilization Code Description Table","Lock Token","smallint"
+"dbo","cmc_utut_desc","atxr_source_id","Dental Utilization Code Description Table","Attachment Source Id","datetime"

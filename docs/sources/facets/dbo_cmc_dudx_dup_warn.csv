@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_dudx_dup_warn","pdbc_pfx","Dental Duplicate Claim Rules Disallow Exceptions Table","Dental Duplicate Claim Rules Benefit Component Prefix","char"
+"dbo","cmc_dudx_dup_warn","dudn_seq_no","Dental Duplicate Claim Rules Disallow Exceptions Table","Dental Duplicate Claim Rules Sequence Number","smallint"
+"dbo","cmc_dudx_dup_warn","excd_id","Dental Duplicate Claim Rules Disallow Exceptions Table","Dental Duplicate Claim Rules Disallow Exceptions Explanation Code","char"
+"dbo","cmc_dudx_dup_warn","dudx_lock_token","Dental Duplicate Claim Rules Disallow Exceptions Table","Lock Token","smallint"
+"dbo","cmc_dudx_dup_warn","atxr_source_id","Dental Duplicate Claim Rules Disallow Exceptions Table","Attachment Source Id","datetime"

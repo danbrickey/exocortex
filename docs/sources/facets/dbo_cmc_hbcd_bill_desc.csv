@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_hbcd_bill_desc","hbcd_id","Hospital Bill Code Description Table","Hospital Billing Classification Number","char"
+"dbo","cmc_hbcd_bill_desc","hbcd_desc","Hospital Bill Code Description Table","Hospital Billing Classification Description","char"
+"dbo","cmc_hbcd_bill_desc","rcct_mctr_setg","Hospital Bill Code Description Table","Hospital Bill Classification Setting","char"
+"dbo","cmc_hbcd_bill_desc","hbcd_pos_ind","Hospital Bill Code Description Table","Normative Place of Service Indicator","char"
+"dbo","cmc_hbcd_bill_desc","hbcd_lock_token","Hospital Bill Code Description Table","Lock Token","smallint"
+"dbo","cmc_hbcd_bill_desc","atxr_source_id","Hospital Bill Code Description Table","Attachment Source Id","datetime"

@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_bstx_sum_text","pdbc_pfx","Benefit Summary Text Table","Benefit Summary Benefit Component Prefix","char"
+"dbo","cmc_bstx_sum_text","bsbs_type","Benefit Summary Text Table","Benefit Summary Text Type","char"
+"dbo","cmc_bstx_sum_text","bstx_seq_no","Benefit Summary Text Table","Benefit Summary Text Sequence Number","smallint"
+"dbo","cmc_bstx_sum_text","bstx_text","Benefit Summary Text Table","Benefit Summary Text Line","varbinary"
+"dbo","cmc_bstx_sum_text","bstx_lock_token","Benefit Summary Text Table","Lock Token","smallint"
+"dbo","cmc_bstx_sum_text","atxr_source_id","Benefit Summary Text Table","Attachment Source Id","datetime"

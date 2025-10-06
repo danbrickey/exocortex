@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_tppx_desc","tpct_pfx","Service Conversion Description Table","Service Conversion Table Prefix","char"
+"dbo","cmc_tppx_desc","tppx_desc","Service Conversion Description Table","Service Conversion Table Description","char"
+"dbo","cmc_tppx_desc","tppx_lock_token","Service Conversion Description Table","Lock Token","smallint"
+"dbo","cmc_tppx_desc","atxr_source_id","Service Conversion Description Table","Attachment Source Id","datetime"

@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_enex_desc","enex_exchange_id","Exchange ID Description","Exchange Id","varchar"
+"dbo","cmc_enex_desc","enex_exchange_desc","Exchange ID Description","Description","varchar"
+"dbo","cmc_enex_desc","enex_lock_token","Exchange ID Description","Lock Token","smallint"
+"dbo","cmc_enex_desc","atxr_source_id","Exchange ID Description","Attachment Source Id","datetime"
+"dbo","cmc_enex_desc","sys_last_upd_dtm","Exchange ID Description","Last Update Datetime","datetime"
+"dbo","cmc_enex_desc","sys_usus_id","Exchange ID Description","Last Update User ID","varchar"
+"dbo","cmc_enex_desc","sys_dbuser_id","Exchange ID Description","Last Update DBMS User ID","varchar"

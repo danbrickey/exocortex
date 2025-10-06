@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_zprb_zip_data","seip_pfx","RBRVS Zip Code Table","RBRVS Zip Code ID","char"
+"dbo","cmc_zprb_zip_data","zprb_zip","RBRVS Zip Code Table","RBRVS Zip Code","char"
+"dbo","cmc_zprb_zip_data","zprb_eff_dt","RBRVS Zip Code Table","RBRVS Zip Code Effective Date","datetime"
+"dbo","cmc_zprb_zip_data","zprb_term_dt","RBRVS Zip Code Table","RBRVS Zip Code Termination Date","datetime"
+"dbo","cmc_zprb_zip_data","zpcd_area","RBRVS Zip Code Table","RBRVS Pointer","char"
+"dbo","cmc_zprb_zip_data","zprb_lock_token","RBRVS Zip Code Table","Lock Token","smallint"
+"dbo","cmc_zprb_zip_data","atxr_source_id","RBRVS Zip Code Table","Attachment Source Id","datetime"

@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_eteq_inq_d","etbc_ck","EDI 270/271 Inquiry Definition","Configuraton Contrived Key","int"
+"dbo","cmc_eteq_inq_d","eteq_eq01","EDI 270/271 Inquiry Definition","Inquiry Service Type Code","varchar"
+"dbo","cmc_eteq_inq_d","eteq_supported_ind","EDI 270/271 Inquiry Definition","Supported Indicator","char"
+"dbo","cmc_eteq_inq_d","eteq_last_usus_id","EDI 270/271 Inquiry Definition","Last  Update User ID","char"
+"dbo","cmc_eteq_inq_d","eteq_last_upd_dtm","EDI 270/271 Inquiry Definition","Last Update Datetime","datetime"
+"dbo","cmc_eteq_inq_d","eteq_lock_token","EDI 270/271 Inquiry Definition","Lock Token","smallint"
+"dbo","cmc_eteq_inq_d","atxr_source_id","EDI 270/271 Inquiry Definition","Attachment Source Id","datetime"

@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_rcma_man_alloc","rcpt_id","Manually Allo- cate Receipts to Contract Table","Receipt ID","varchar"
+"dbo","cmc_rcma_man_alloc","blbl_due_dt","Manually Allo- cate Receipts to Contract Table","Due Date","datetime"
+"dbo","cmc_rcma_man_alloc","blcn_id","Manually Allo- cate Receipts to Contract Table","Contract ID","char"
+"dbo","cmc_rcma_man_alloc","rcma_amt","Manually Allo- cate Receipts to Contract Table","Allocation Amount","money"
+"dbo","cmc_rcma_man_alloc","rcma_lock_token","Manually Allo- cate Receipts to Contract Table","Lock Token","smallint"

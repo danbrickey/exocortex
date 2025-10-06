@@ -1,0 +1,4 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_temp_blei","blei_ck","Temp Table used for Billing processes.","Billing Entity Contrived Key","int"
+"dbo","cmc_temp_blei","blei_bill_level","Temp Table used for Billing processes.","Billing Level","char"
+"dbo","cmc_temp_blei","blei_bill_level_ck","Temp Table used for Billing processes.","Billing Level Contrived Key","int"

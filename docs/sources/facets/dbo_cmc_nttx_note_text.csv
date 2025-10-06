@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_nttx_note_text","ntnb_id","UM/CM Note Text","Note ID","datetime"
+"dbo","cmc_nttx_note_text","ntnb_input_dtm","UM/CM Note Text","Note Input Date","datetime"
+"dbo","cmc_nttx_note_text","nttx_seq_no","UM/CM Note Text","Note Sequence Number","smallint"
+"dbo","cmc_nttx_note_text","nttx_text","UM/CM Note Text","Text","char"
+"dbo","cmc_nttx_note_text","nttx_lock_token","UM/CM Note Text","Lock Token","smallint"
+"dbo","cmc_nttx_note_text","atxr_source_id","UM/CM Note Text","Attachment Source Id","datetime"

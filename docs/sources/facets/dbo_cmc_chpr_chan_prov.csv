@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_chpr_chan_prov","chch_id","Channeling Provider Selections","Channel ID","char"
+"dbo","cmc_chpr_chan_prov","prpr_id","Channeling Provider Selections","Channel Provider ID","char"
+"dbo","cmc_chpr_chan_prov","chpr_seq_no","Channeling Provider Selections","Provider Sequence No.","smallint"
+"dbo","cmc_chpr_chan_prov","prad_id","Channeling Provider Selections","Provider Address ID","char"
+"dbo","cmc_chpr_chan_prov","prad_type","Channeling Provider Selections","Provider Address Type","char"
+"dbo","cmc_chpr_chan_prov","chpr_lock_token","Channeling Provider Selections","Lock Token","smallint"
+"dbo","cmc_chpr_chan_prov","atxr_source_id","Channeling Provider Selections","Attachment Source Id","datetime"

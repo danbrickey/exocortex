@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_nwgx_relation","prpr_id","Provider Common Global Capitation Relationship","Provider ID","char"
+"dbo","cmc_nwgx_relation","nwgx_eff_dt","Provider Common Global Capitation Relationship","Effective Date","datetime"
+"dbo","cmc_nwgx_relation","nwgx_term_dt","Provider Common Global Capitation Relationship","Termination Date","datetime"
+"dbo","cmc_nwgx_relation","nwgx_mctr_trsn","Provider Common Global Capitation Relationship","Termination Reason","char"
+"dbo","cmc_nwgx_relation","nwgx_id","Provider Common Global Capitation Relationship","Common Global Capitation Relationship ID","char"
+"dbo","cmc_nwgx_relation","nwgx_lock_token","Provider Common Global Capitation Relationship","Lock Token","smallint"

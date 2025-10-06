@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_copr_comm_prepro","copr_key_id","Commission Pre-process Table","Commission Pre-process Key ID","char"
+"dbo","cmc_copr_comm_prepro","copr_key_ck","Commission Pre-process Table","Commission Pre-process Contrived Key","int"
+"dbo","cmc_copr_comm_prepro","pzap_app_id","Commission Pre-process Table","Application ID","char"
+"dbo","cmc_copr_comm_prepro","copr_row_id","Commission Pre-process Table","Row ID","numeric"

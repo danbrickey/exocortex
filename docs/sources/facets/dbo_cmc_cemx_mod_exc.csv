@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_cemx_mod_exc","cemx_id","Clinical Edit Modifier Default Exceptions Table","Modifier ID","char"
+"dbo","cmc_cemx_mod_exc","cemx_eff_dt","Clinical Edit Modifier Default Exceptions Table","Clinical Edit Modifier Default Exception Effective Date","datetime"
+"dbo","cmc_cemx_mod_exc","cemx_type","Clinical Edit Modifier Default Exceptions Table","Clinical Edit Modifier Default Exception Type","char"
+"dbo","cmc_cemx_mod_exc","cemx_term_dt","Clinical Edit Modifier Default Exceptions Table","Clinical Edit Modifier Default Exception Termination Date","datetime"
+"dbo","cmc_cemx_mod_exc","cemx_lock_token","Clinical Edit Modifier Default Exceptions Table","Lock Token","smallint"
+"dbo","cmc_cemx_mod_exc","atxr_source_id","Clinical Edit Modifier Default Exceptions Table","Attachment Source Id","datetime"

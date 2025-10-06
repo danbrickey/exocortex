@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_eapm_desc","eapm_pay_meth_ind","Enhanced Ambulatory Payment Method Indicators","Enhanced Payment Method Indicators","char"
+"dbo","cmc_eapm_desc","eapm_pay_meth_desc","Enhanced Ambulatory Payment Method Indicators","Description of the EAPG Payment Method Indicators","varchar"
+"dbo","cmc_eapm_desc","eapm_lock_token","Enhanced Ambulatory Payment Method Indicators","Lock Token","smallint"
+"dbo","cmc_eapm_desc","atxr_source_id","Enhanced Ambulatory Payment Method Indicators","Attachment Source Id","datetime"
+"dbo","cmc_eapm_desc","sys_last_upd_dtm","Enhanced Ambulatory Payment Method Indicators","Last Update Datetime","datetime"
+"dbo","cmc_eapm_desc","sys_usus_id","Enhanced Ambulatory Payment Method Indicators","Last Update User ID","varchar"
+"dbo","cmc_eapm_desc","sys_dbuser_id","Enhanced Ambulatory Payment Method Indicators","Last Update DBMS User ID","varchar"

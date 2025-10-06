@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_itpt_desc","itpc_type","ITS Component Type Description","ITS Component Type","char"
+"dbo","cmc_itpt_desc","itpt_desc","ITS Component Type Description","ITS Component Type Description","char"
+"dbo","cmc_itpt_desc","itpt_lock_token","ITS Component Type Description","Lock Token","smallint"
+"dbo","cmc_itpt_desc","atxr_source_id","ITS Component Type Description","Attachment Source Id","datetime"

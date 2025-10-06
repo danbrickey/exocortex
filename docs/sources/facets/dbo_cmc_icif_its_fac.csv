@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_icif_its_fac","icif_category","ITS to Facets Code Conversion Table","Code Category","char"
+"dbo","cmc_icif_its_fac","icif_its_code","ITS to Facets Code Conversion Table","ITS Code","varchar"
+"dbo","cmc_icif_its_fac","icif_facets_code","ITS to Facets Code Conversion Table","Facets Code","varchar"
+"dbo","cmc_icif_its_fac","icif_lock_token","ITS to Facets Code Conversion Table","Lock Token","smallint"
+"dbo","cmc_icif_its_fac","atxr_source_id","ITS to Facets Code Conversion Table","Attachment Source Id","datetime"

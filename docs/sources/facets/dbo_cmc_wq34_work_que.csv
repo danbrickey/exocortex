@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_wq34_work_que","wq34_row_id","834 Outbound WORK TABLE","834O Work Row ID","numeric"
+"dbo","cmc_wq34_work_que","meme_ck","834 Outbound WORK TABLE","Member Contrived Key","int"
+"dbo","cmc_wq34_work_que","as_of_date","834 Outbound WORK TABLE","Eligibility Date","datetime"
+"dbo","cmc_wq34_work_que","elig_date_ind","834 Outbound WORK TABLE","Eligibility Date Indicator","char"

@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_sect_conv","tpct_pfx","Service Code Conversion Table","Service Code Conversion Table Prefix","char"
+"dbo","cmc_sect_conv","sese_id","Service Code Conversion Table","Service ID","char"
+"dbo","cmc_sect_conv","cspd_cat","Service Code Conversion Table","Class Product Category","char"
+"dbo","cmc_sect_conv","rptc_rpt_cat","Service Code Conversion Table","Service Reporting Category","char"
+"dbo","cmc_sect_conv","sect_lock_token","Service Code Conversion Table","Lock Token","smallint"
+"dbo","cmc_sect_conv","atxr_source_id","Service Code Conversion Table","Attachment Source Id","datetime"

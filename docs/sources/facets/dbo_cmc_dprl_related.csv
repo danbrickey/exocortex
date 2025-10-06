@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_dprl_related","dppy_pfx","Dental Procedure Related Table","Dental Procedure Payment Prefix","char"
+"dbo","cmc_dprl_related","dpdp_id","Dental Procedure Related Table","Dental Procedure Code","char"
+"dbo","cmc_dprl_related","dprl_dp_id","Dental Procedure Related Table","Related Dental Procedure","char"
+"dbo","cmc_dprl_related","dprl_lock_token","Dental Procedure Related Table","Lock Token","smallint"
+"dbo","cmc_dprl_related","atxr_source_id","Dental Procedure Related Table","Attachment Source Id","datetime"

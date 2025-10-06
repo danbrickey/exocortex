@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_utss_rel_serv","pdbc_pfx","Medical Utilization Edits by Service Related Services Table","Medical Utilization Edits by Service Prefix","char"
+"dbo","cmc_utss_rel_serv","sese_id","Medical Utilization Edits by Service Related Services Table","Medical Utilization Edits by Service Service ID","char"
+"dbo","cmc_utss_rel_serv","utse_seq_no","Medical Utilization Edits by Service Related Services Table","Medical Utilization Edits by Service Sequence Number","smallint"
+"dbo","cmc_utss_rel_serv","utss_sese_id","Medical Utilization Edits by Service Related Services Table","Medical Utilization Edits by Service Related Service ID","char"
+"dbo","cmc_utss_rel_serv","utss_lock_token","Medical Utilization Edits by Service Related Services Table","Lock Token","smallint"
+"dbo","cmc_utss_rel_serv","atxr_source_id","Medical Utilization Edits by Service Related Services Table","Attachment Source Id","datetime"

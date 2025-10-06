@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_sgtx_transfer","sgsg_ck","Subgroup Accumulator Transfer Acceptance Table","Subgroup Contrived Key","int"
+"dbo","cmc_sgtx_transfer","sgtx_acc_type","Subgroup Accumulator Transfer Acceptance Table","Accumulator Type","char"
+"dbo","cmc_sgtx_transfer","acac_acc_no","Subgroup Accumulator Transfer Acceptance Table","Accumulator Number","smallint"
+"dbo","cmc_sgtx_transfer","sgtx_lock_token","Subgroup Accumulator Transfer Acceptance Table","Lock Token","smallint"
+"dbo","cmc_sgtx_transfer","atxr_source_id","Subgroup Accumulator Transfer Acceptance Table","Attachment Source Id","datetime"

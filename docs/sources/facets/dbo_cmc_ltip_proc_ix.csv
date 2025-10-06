@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_ltip_proc_ix","ltlt_pfx","Limit Accumulator Link to Procedures Table","Limit Benefit Component Prefix","char"
+"dbo","cmc_ltip_proc_ix","acac_acc_no","Limit Accumulator Link to Procedures Table","Limit Accumulator Number","smallint"
+"dbo","cmc_ltip_proc_ix","ltip_ipcd_id_low","Limit Accumulator Link to Procedures Table","Low Procedure","char"
+"dbo","cmc_ltip_proc_ix","ltip_ipcd_id_high","Limit Accumulator Link to Procedures Table","High Procedure","char"
+"dbo","cmc_ltip_proc_ix","ltip_lock_token","Limit Accumulator Link to Procedures Table","Lock Token","smallint"
+"dbo","cmc_ltip_proc_ix","atxr_source_id","Limit Accumulator Link to Procedures Table","Attachment Source Id","datetime"

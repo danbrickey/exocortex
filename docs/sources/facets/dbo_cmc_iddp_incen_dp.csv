@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_iddp_incen_dp","pdbc_pfx","Incentive Dental Required Procedures","Incentive Dental Processing Rules Benefit Component Prefix","char"
+"dbo","cmc_iddp_incen_dp","dpdp_id","Incentive Dental Required Procedures","Incentive Dental Processing Rules Procedure Code","char"
+"dbo","cmc_iddp_incen_dp","iddp_lock_token","Incentive Dental Required Procedures","Lock Token","smallint"
+"dbo","cmc_iddp_incen_dp","atxr_source_id","Incentive Dental Required Procedures","Attachment Source Id","datetime"

@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_ench_desc","ench_channel_id","Enrollment Channel Description","Exchange ID","varchar"
+"dbo","cmc_ench_desc","ench_channel_desc","Enrollment Channel Description","Description","varchar"
+"dbo","cmc_ench_desc","ench_lock_token","Enrollment Channel Description","Lock Token","smallint"
+"dbo","cmc_ench_desc","atxr_source_id","Enrollment Channel Description","Attachment Source Id","datetime"
+"dbo","cmc_ench_desc","sys_last_upd_dtm","Enrollment Channel Description","Last Update Datetime","datetime"
+"dbo","cmc_ench_desc","sys_usus_id","Enrollment Channel Description","Last Update User ID","varchar"
+"dbo","cmc_ench_desc","sys_dbuser_id","Enrollment Channel Description","Last Update DBMS User ID","varchar"

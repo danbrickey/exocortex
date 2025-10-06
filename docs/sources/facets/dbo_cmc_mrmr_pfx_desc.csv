@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mrmr_pfx_desc","mrmr_pfx","Prefix Description for M&R Criteria","M&R Criteria Prefix","char"
+"dbo","cmc_mrmr_pfx_desc","mrmr_desc","Prefix Description for M&R Criteria","M&R Criteria Prefix Description","char"
+"dbo","cmc_mrmr_pfx_desc","mrmr_lock_token","Prefix Description for M&R Criteria","Lock Token","smallint"
+"dbo","cmc_mrmr_pfx_desc","atxr_source_id","Prefix Description for M&R Criteria","Attachment Source Id","datetime"

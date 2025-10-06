@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_mrat_adj_type","mrat_adj_type","Medicare Choice Adjustment Type Table","Medicare Choice Adjustment Type","char"
+"dbo","cmc_mrat_adj_type","mrat_eff_dt","Medicare Choice Adjustment Type Table","Medicare Choice Adjustment Effective Date","datetime"
+"dbo","cmc_mrat_adj_type","mrat_term_dt","Medicare Choice Adjustment Type Table","Medicare Choice Adjustment Termination Date","datetime"
+"dbo","cmc_mrat_adj_type","mrat_lock_token","Medicare Choice Adjustment Type Table","Lock Token","smallint"
+"dbo","cmc_mrat_adj_type","atxr_source_id","Medicare Choice Adjustment Type Table","Attachment Source Id","datetime"

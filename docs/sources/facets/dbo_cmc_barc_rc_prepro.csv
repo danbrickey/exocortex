@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_barc_rc_prepro","blei_ck","Reconciliation Batch Pre-Process","Billing entity contrived key","int"
+"dbo","cmc_barc_rc_prepro","barc_weight","Reconciliation Batch Pre-Process","Weight","int"
+"dbo","cmc_barc_rc_prepro","barc_row_id","Reconciliation Batch Pre-Process","Row ID","numeric"
+"dbo","cmc_barc_rc_prepro","barc_sts","Reconciliation Batch Pre-Process","Status","int"
+"dbo","cmc_barc_rc_prepro","barc_lock_token","Reconciliation Batch Pre-Process","Lock Token","smallint"
+"dbo","cmc_barc_rc_prepro","atxr_source_id","Reconciliation Batch Pre-Process","Attachment Source Id","datetime"

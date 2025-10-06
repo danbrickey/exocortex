@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_icfi_fac_its","icfi_category","Facets to ITS Code Conversion Table","Code Category","char"
+"dbo","cmc_icfi_fac_its","icfi_facets_code","Facets to ITS Code Conversion Table","Facets Code","varchar"
+"dbo","cmc_icfi_fac_its","icfi_its_code","Facets to ITS Code Conversion Table","ITS Code","varchar"
+"dbo","cmc_icfi_fac_its","icfi_its_code_ind","Facets to ITS Code Conversion Table","ITS Code Indicator","char"
+"dbo","cmc_icfi_fac_its","icfi_lock_token","Facets to ITS Code Conversion Table","Lock Token","smallint"
+"dbo","cmc_icfi_fac_its","atxr_source_id","Facets to ITS Code Conversion Table","Attachment Source Id","datetime"

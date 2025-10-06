@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_hsqe_qual_expn","hsqe_pfx","HRA Qualified Medical Expense Table","HRA Qualified Medical Expense Prefix","char"
+"dbo","cmc_hsqe_qual_expn","hsqe_cd","HRA Qualified Medical Expense Table","HRA Qualified Medical Expense Code","char"
+"dbo","cmc_hsqe_qual_expn","hsqe_desc","HRA Qualified Medical Expense Table","HRA Qualified Medical Expense Description","varchar"
+"dbo","cmc_hsqe_qual_expn","hsqe_lock_token","HRA Qualified Medical Expense Table","Lock Token","smallint"
+"dbo","cmc_hsqe_qual_expn","atxr_source_id","HRA Qualified Medical Expense Table","Attachment Source Id","datetime"

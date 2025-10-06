@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_vbbr_vbb_rules","vbbr_id","Value Based Benefits Rules Group ID Table","Value Based Benefit Parms ID","char"
+"dbo","cmc_vbbr_vbb_rules","vbbr_desc","Value Based Benefits Rules Group ID Table","Value Based Benefit Parameters Description","varchar"
+"dbo","cmc_vbbr_vbb_rules","vbbr_lock_token","Value Based Benefits Rules Group ID Table","Lock Token","smallint"
+"dbo","cmc_vbbr_vbb_rules","atxr_source_id","Value Based Benefits Rules Group ID Table","Attachment Source Id","datetime"
+"dbo","cmc_vbbr_vbb_rules","sys_last_upd_dtm","Value Based Benefits Rules Group ID Table","Last Update Datetime","datetime"
+"dbo","cmc_vbbr_vbb_rules","sys_usus_id","Value Based Benefits Rules Group ID Table","Last Update User ID","varchar"
+"dbo","cmc_vbbr_vbb_rules","sys_dbuser_id","Value Based Benefits Rules Group ID Table","Last Update DBMS User ID","varchar"

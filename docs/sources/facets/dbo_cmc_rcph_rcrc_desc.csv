@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_rcph_rcrc_desc","rcph_desc","Phonetic Revenue Code Description Table","Revenue Code Phonetic Description","char"
+"dbo","cmc_rcph_rcrc_desc","rcrc_id","Phonetic Revenue Code Description Table","Revenue Code","char"
+"dbo","cmc_rcph_rcrc_desc","rcph_lock_token","Phonetic Revenue Code Description Table","Lock Token","smallint"
+"dbo","cmc_rcph_rcrc_desc","atxr_source_id","Phonetic Revenue Code Description Table","Attachment Source Id","datetime"
+"dbo","cmc_rcph_rcrc_desc","sys_last_upd_dtm","Phonetic Revenue Code Description Table","Last Update Datetime","datetime"
+"dbo","cmc_rcph_rcrc_desc","sys_usus_id","Phonetic Revenue Code Description Table","Last Update User ID","varchar"
+"dbo","cmc_rcph_rcrc_desc","sys_dbuser_id","Phonetic Revenue Code Description Table","Last Update DBMS User ID","varchar"

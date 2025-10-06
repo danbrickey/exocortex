@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_pdpx_desc","pdbc_pfx","Product Component Type Link to Product Component Prefix Table","Component Prefix ID","char"
+"dbo","cmc_pdpx_desc","pdbc_type","Product Component Type Link to Product Component Prefix Table","Component Prefix ID","char"
+"dbo","cmc_pdpx_desc","pdpx_desc","Product Component Type Link to Product Component Prefix Table","Component Prefix Description","char"
+"dbo","cmc_pdpx_desc","pdpx_lock_token","Product Component Type Link to Product Component Prefix Table","Lock Token","smallint"
+"dbo","cmc_pdpx_desc","atxr_source_id","Product Component Type Link to Product Component Prefix Table","Attachment Source Id","datetime"
+"dbo","cmc_pdpx_desc","sys_row_id","Product Component Type Link to Product Component Prefix Table","System Row Id","varchar"

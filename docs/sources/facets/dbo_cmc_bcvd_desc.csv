@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_bcvd_desc","bcvc_id","Variable Component Model Description Table","Model ID","char"
+"dbo","cmc_bcvd_desc","bcvd_desc","Variable Component Model Description Table","Description","varchar"
+"dbo","cmc_bcvd_desc","pdds_app_type","Variable Component Model Description Table","Application Type","char"
+"dbo","cmc_bcvd_desc","bcvd_lock_token","Variable Component Model Description Table","Lock Token","smallint"
+"dbo","cmc_bcvd_desc","atxr_source_id","Variable Component Model Description Table","Attachment Source Id","datetime"

@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_prxp_xref","prpr_mcpr_input_id","Provider Reference Lookup","Vendor Provider ID","char"
+"dbo","cmc_prxp_xref","mcre_id","Provider Reference Lookup","External Vendor ID","char"
+"dbo","cmc_prxp_xref","prpr_id","Provider Reference Lookup","Provider Identifier","char"
+"dbo","cmc_prxp_xref","prcp_id","Provider Reference Lookup","Common Practitioner Identifier","char"
+"dbo","cmc_prxp_xref","prxp_lock_token","Provider Reference Lookup","Lock Token","smallint"

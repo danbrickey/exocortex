@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_lald_lmt_desc","lalt_id","Service Category Amount Limit Descriptons","Limit ID","char"
+"dbo","cmc_lald_lmt_desc","lalt_desc","Service Category Amount Limit Descriptons","Description","varchar"
+"dbo","cmc_lald_lmt_desc","lald_lock_token","Service Category Amount Limit Descriptons","Lock Token","smallint"
+"dbo","cmc_lald_lmt_desc","atxr_source_id","Service Category Amount Limit Descriptons","Attachment Source Id","datetime"
+"dbo","cmc_lald_lmt_desc","sys_last_upd_dtm","Service Category Amount Limit Descriptons","Last Update Datetime","datetime"
+"dbo","cmc_lald_lmt_desc","sys_usus_id","Service Category Amount Limit Descriptons","Last Update User ID","varchar"
+"dbo","cmc_lald_lmt_desc","sys_dbuser_id","Service Category Amount Limit Descriptons","Last Update DBMS User ID","varchar"

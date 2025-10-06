@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_temp_blbp","blbp_ck","Temp Table used for Billing processes.","Billing Period Contrived Key","int"
+"dbo","cmc_temp_blbp","sbsb_ck","Temp Table used for Billing processes.","Subscriber Contrived Key","int"
+"dbo","cmc_temp_blbp","blbp_eff_dt","Temp Table used for Billing processes.","Effective Date","datetime"
+"dbo","cmc_temp_blbp","blbp_term_dt","Temp Table used for Billing processes.","Termination Date","datetime"
+"dbo","cmc_temp_blbp","blbp_void_ind","Temp Table used for Billing processes.","Void Indicator","char"

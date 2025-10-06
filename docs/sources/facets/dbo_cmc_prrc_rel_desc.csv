@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_prrc_rel_desc","prrc_id","Provider Relation Code Description table","Provider Relation Code","char"
+"dbo","cmc_prrc_rel_desc","prrc_desc","Provider Relation Code Description table","Provider Relation Code Description","varchar"
+"dbo","cmc_prrc_rel_desc","prrc_lock_token","Provider Relation Code Description table","Lock Token","smallint"
+"dbo","cmc_prrc_rel_desc","atxr_source_id","Provider Relation Code Description table","Attachment Source Id","datetime"
+"dbo","cmc_prrc_rel_desc","sys_last_upd_dtm","Provider Relation Code Description table","Last Update Datetime","datetime"
+"dbo","cmc_prrc_rel_desc","sys_usus_id","Provider Relation Code Description table","Last Update User ID","varchar"
+"dbo","cmc_prrc_rel_desc","sys_dbuser_id","Provider Relation Code Description table","Last Update DBMS User ID","varchar"

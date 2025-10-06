@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_nwgp_net_group","nwgp_grp_id","Provider Network Group Definitions","Network Group Identifier","char"
+"dbo","cmc_nwgp_net_group","nwgp_name","Provider Network Group Definitions","Network Group Name","char"
+"dbo","cmc_nwgp_net_group","nwgp_name_xlow","Provider Network Group Definitions","Network Group Name Case Insensitivity Field","char"
+"dbo","cmc_nwgp_net_group","nwgp_lock_token","Provider Network Group Definitions","Lock Token","smallint"
+"dbo","cmc_nwgp_net_group","atxr_source_id","Provider Network Group Definitions","Attachment Source Id","datetime"

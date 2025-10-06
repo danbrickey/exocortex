@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_trpp_trans_pre_proc","trpp_row_id","Transparency Pre Processor table","Row Identifier","numeric"
+"dbo","cmc_trpp_trans_pre_proc","trpp_weight","Transparency Pre Processor table","Assignment Weight","int"
+"dbo","cmc_trpp_trans_pre_proc","grgr_ck","Transparency Pre Processor table","Group Contrived Key","int"
+"dbo","cmc_trpp_trans_pre_proc","cspi_id","Transparency Pre Processor table","Class Plan ID","char"
+"dbo","cmc_trpp_trans_pre_proc","prpr_id","Transparency Pre Processor table","Provider Identifier","char"
+"dbo","cmc_trpp_trans_pre_proc","cacheid","Transparency Pre Processor table","CACHE ID","char"

@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_geop_code_prep","geop_row_id","Geo Code Batch Pre-Process Table","Row ID - Identity","numeric"
+"dbo","cmc_geop_code_prep","prad_id","Geo Code Batch Pre-Process Table","Provider Address ID","varchar"
+"dbo","cmc_geop_code_prep","prad_type","Geo Code Batch Pre-Process Table","Provider Address Type","varchar"
+"dbo","cmc_geop_code_prep","prad_eff_dt","Geo Code Batch Pre-Process Table","Provider Address Effective Date","datetime"
+"dbo","cmc_geop_code_prep","geop_sts","Geo Code Batch Pre-Process Table","Batch Status","smallint"
+"dbo","cmc_geop_code_prep","geop_lock_token","Geo Code Batch Pre-Process Table","Lock Token","smallint"
+"dbo","cmc_geop_code_prep","atxr_source_id","Geo Code Batch Pre-Process Table","Attachment Source Id","datetime"

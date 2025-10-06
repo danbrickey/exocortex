@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_temp_bldf","blei_ck","Temp Table used for Billing processes.","Billing Entity Contrived Key","int"
+"dbo","cmc_temp_bldf","bldf_eff_dt","Temp Table used for Billing processes.","Data row effective date","datetime"
+"dbo","cmc_temp_bldf","bldf_term_dt","Temp Table used for Billing processes.","Data row termination date","datetime"
+"dbo","cmc_temp_bldf","bldf_bl_type","Temp Table used for Billing processes.","Billing Type","char"

@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_olol_oth_liab","pdbc_pfx","Other Party Liability Table","Other Party Liability Benefit Component Prefix","char"
+"dbo","cmc_olol_oth_liab","olol_opl_type","Other Party Liability Table","Other Party Liability Type","char"
+"dbo","cmc_olol_oth_liab","olol_calc_type","Other Party Liability Table","Other Party Liability Calculation Type","char"
+"dbo","cmc_olol_oth_liab","olol_sav_ind","Other Party Liability Table","Other Party Liability Savings Indicator","char"
+"dbo","cmc_olol_oth_liab","olol_opts","Other Party Liability Table","Other Party Liability Options","char"
+"dbo","cmc_olol_oth_liab","olol_lock_token","Other Party Liability Table","Lock Token","smallint"
+"dbo","cmc_olol_oth_liab","atxr_source_id","Other Party Liability Table","Attachment Source Id","datetime"

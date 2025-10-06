@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_ceir_iir_msg","ceir_type","Info  Issue and Review Messages Table","Code Type","char"
+"dbo","cmc_ceir_iir_msg","ceir_code","Info  Issue and Review Messages Table","Message Code","char"
+"dbo","cmc_ceir_iir_msg","ceir_text","Info  Issue and Review Messages Table","Message Text","varchar"
+"dbo","cmc_ceir_iir_msg","ceir_lock_token","Info  Issue and Review Messages Table","Lock Token","smallint"
+"dbo","cmc_ceir_iir_msg","atxr_source_id","Info  Issue and Review Messages Table","Attachment Source Id","datetime"

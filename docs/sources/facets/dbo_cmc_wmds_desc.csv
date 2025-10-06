@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_wmds_desc","wmds_rec_type","User Defined Warning Messages Text Table","User Warning Message Description Record Type","char"
+"dbo","cmc_wmds_desc","wmds_seq_no","User Defined Warning Messages Text Table","User Defined Warning Message Description Sequence Number","smallint"
+"dbo","cmc_wmds_desc","wmds_text1","User Defined Warning Messages Text Table","User Warning Message Description Text 1","char"
+"dbo","cmc_wmds_desc","wmds_text2","User Defined Warning Messages Text Table","User Warning Message Description Text 2","char"
+"dbo","cmc_wmds_desc","wmds_lock_token","User Defined Warning Messages Text Table","Lock Token","smallint"
+"dbo","cmc_wmds_desc","atxr_source_id","User Defined Warning Messages Text Table","Attachment Source Id","datetime"

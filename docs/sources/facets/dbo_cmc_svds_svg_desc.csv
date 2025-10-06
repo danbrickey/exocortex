@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_svds_svg_desc","svbl_id","Service Group Billing Strategy Description","Service Group Billing Strategy ID","char"
+"dbo","cmc_svds_svg_desc","svds_desc","Service Group Billing Strategy Description","Service Group Billing Strategy ID Description","varchar"
+"dbo","cmc_svds_svg_desc","svds_lock_token","Service Group Billing Strategy Description","Lock Token","smallint"
+"dbo","cmc_svds_svg_desc","atxr_source_id","Service Group Billing Strategy Description","Attachment Source Id","datetime"
+"dbo","cmc_svds_svg_desc","sys_last_upd_dtm","Service Group Billing Strategy Description","Last Update Datetime","datetime"
+"dbo","cmc_svds_svg_desc","sys_usus_id","Service Group Billing Strategy Description","Last Update User ID","varchar"
+"dbo","cmc_svds_svg_desc","sys_dbuser_id","Service Group Billing Strategy Description","Last Update DBMS User ID","varchar"

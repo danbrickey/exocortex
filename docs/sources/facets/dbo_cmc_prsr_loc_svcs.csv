@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_prsr_loc_svcs","prpr_id","Provider Site Visit Evaluation Information","Provider Identifier","char"
+"dbo","cmc_prsr_loc_svcs","prad_id","Provider Site Visit Evaluation Information","Provider Address Identifier","char"
+"dbo","cmc_prsr_loc_svcs","prad_type","Provider Site Visit Evaluation Information","Provider Address Type","char"
+"dbo","cmc_prsr_loc_svcs","prad_eff_dt","Provider Site Visit Evaluation Information","Provider Address (Type) Effective Date","datetime"
+"dbo","cmc_prsr_loc_svcs","prsr_mctr_svcs","Provider Site Visit Evaluation Information","Provider Address Location Services","char"
+"dbo","cmc_prsr_loc_svcs","prsr_lock_token","Provider Site Visit Evaluation Information","Lock Token","smallint"
+"dbo","cmc_prsr_loc_svcs","atxr_source_id","Provider Site Visit Evaluation Information","Attachment Source Id","datetime"

@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_itlo_local","itlo_local_plan_cd","ITS Local Control Data Table","ITS Local Plan Code","char"
+"dbo","cmc_itlo_local","itlo_ctrl_plan_cd","ITS Local Control Data Table","ITS Control Plan Code","char"
+"dbo","cmc_itlo_local","itlo_lock_token","ITS Local Control Data Table","Lock Token","smallint"
+"dbo","cmc_itlo_local","atxr_source_id","ITS Local Control Data Table","Attachment Source Id","datetime"

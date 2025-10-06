@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_graf_accum_filter","grgr_ck","Group Level Accumulator Filter","Group Contrived Key","int"
+"dbo","cmc_graf_accum_filter","graf_acc_type","Group Level Accumulator Filter","Accumulator Type","char"
+"dbo","cmc_graf_accum_filter","acac_acc_no","Group Level Accumulator Filter","Accumulator Number","smallint"
+"dbo","cmc_graf_accum_filter","graf_lock_token","Group Level Accumulator Filter","Lock Token","smallint"
+"dbo","cmc_graf_accum_filter","sys_last_upd_dtm","Group Level Accumulator Filter","Last Update Datetime","datetime"
+"dbo","cmc_graf_accum_filter","sys_usus_id","Group Level Accumulator Filter","Last Update User ID","varchar"
+"dbo","cmc_graf_accum_filter","sys_dbuser_id","Group Level Accumulator Filter","Last Update DBMS User ID","varchar"

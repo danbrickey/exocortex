@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_pdpt_desc","pdbc_type","Prefix Type Description Table","Prefix Type","char"
+"dbo","cmc_pdpt_desc","pdpt_desc","Prefix Type Description Table","Prefix Type Description","char"
+"dbo","cmc_pdpt_desc","pdpt_lock_token","Prefix Type Description Table","Lock Token","smallint"
+"dbo","cmc_pdpt_desc","atxr_source_id","Prefix Type Description Table","Attachment Source Id","datetime"

@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_dpph_dpdp_desc","dpph_desc","Phonetic Dental Procedure Description Table","Dental Phonetic Description","char"
+"dbo","cmc_dpph_dpdp_desc","dpdp_id","Phonetic Dental Procedure Description Table","Dental Procedure Code","char"
+"dbo","cmc_dpph_dpdp_desc","dpph_lock_token","Phonetic Dental Procedure Description Table","Lock Token","smallint"
+"dbo","cmc_dpph_dpdp_desc","atxr_source_id","Phonetic Dental Procedure Description Table","Attachment Source Id","datetime"

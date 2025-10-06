@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_cten_cat_entity","cten_entity_type","Catalog Entity","Catalog Entity Type","char"
+"dbo","cmc_cten_cat_entity","cten_entity_desc","Catalog Entity","Catalog Description","varchar"
+"dbo","cmc_cten_cat_entity","cten_lock_token","Catalog Entity","Lock Token","smallint"
+"dbo","cmc_cten_cat_entity","sys_last_upd_dtm","Catalog Entity","Last Update Datetime","datetime"
+"dbo","cmc_cten_cat_entity","sys_usus_id","Catalog Entity","Last Update User ID","varchar"
+"dbo","cmc_cten_cat_entity","sys_dbuser_id","Catalog Entity","Last Update DBMS User ID","varchar"

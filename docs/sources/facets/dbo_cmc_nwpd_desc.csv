@@ -1,0 +1,5 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_nwpd_desc","nwpx_id","Common Capitation Relationship Description","Common Primary/Secondary Capitation Relationship ID","char"
+"dbo","cmc_nwpd_desc","nwpd_desc","Common Capitation Relationship Description","Common Primary/Secondary Capitation Relationship ID Description","char"
+"dbo","cmc_nwpd_desc","nwpd_lock_token","Common Capitation Relationship Description","Lock Token","smallint"
+"dbo","cmc_nwpd_desc","atxr_source_id","Common Capitation Relationship Description","Attachment Source Id","datetime"

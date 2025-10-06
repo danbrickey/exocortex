@@ -1,0 +1,7 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_eaid_idcd","eaip_id","Followup Included Diagnoses Table","Same Day/Followup/Pretreat Proc Table ID","char"
+"dbo","cmc_eaid_idcd","eaid_idcd_id_min","Followup Included Diagnoses Table","Included Diagnoses Low Range Entry","varchar"
+"dbo","cmc_eaid_idcd","eaid_idcd_type","Followup Included Diagnoses Table","ICD Version","char"
+"dbo","cmc_eaid_idcd","eaid_idcd_id_max","Followup Included Diagnoses Table","Included Diagnoses High Range Entry","varchar"
+"dbo","cmc_eaid_idcd","eaid_lock_token","Followup Included Diagnoses Table","Lock Token","smallint"
+"dbo","cmc_eaid_idcd","atxr_source_id","Followup Included Diagnoses Table","Attachment Source Id","datetime"

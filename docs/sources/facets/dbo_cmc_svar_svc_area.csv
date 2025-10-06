@@ -1,0 +1,8 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_svar_svc_area","svar_id","Service Area Description Table","Provider In Area Zip Codes ID","char"
+"dbo","cmc_svar_svc_area","svar_desc","Service Area Description Table","Description","varchar"
+"dbo","cmc_svar_svc_area","svar_lock_token","Service Area Description Table","Lock Token","smallint"
+"dbo","cmc_svar_svc_area","atxr_source_id","Service Area Description Table","Attachment Source Id","datetime"
+"dbo","cmc_svar_svc_area","sys_last_upd_dtm","Service Area Description Table","Last Update Datetime","datetime"
+"dbo","cmc_svar_svc_area","sys_usus_id","Service Area Description Table","Last Update User ID","varchar"
+"dbo","cmc_svar_svc_area","sys_dbuser_id","Service Area Description Table","Last Update DBMS User ID","varchar"

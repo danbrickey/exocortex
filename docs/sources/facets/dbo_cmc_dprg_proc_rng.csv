@@ -1,0 +1,6 @@
+"source_schema","source_table","source_column","table_description","column_description","column_data_type"
+"dbo","cmc_dprg_proc_rng","dprg_dpdp_id_from","Dental Clinical Procedure Code Ranges Table","Dental Clinical Procedure Code Ranges Low Procedure","char"
+"dbo","cmc_dprg_proc_rng","dprg_dpdp_id_to","Dental Clinical Procedure Code Ranges Table","Dental Clinical Procedure Code Ranges High Procedure","char"
+"dbo","cmc_dprg_proc_rng","dgds_group","Dental Clinical Procedure Code Ranges Table","Dental Clinical Procdedure Code Ranges Grouping","char"
+"dbo","cmc_dprg_proc_rng","dprg_lock_token","Dental Clinical Procedure Code Ranges Table","Lock Token","smallint"
+"dbo","cmc_dprg_proc_rng","atxr_source_id","Dental Clinical Procedure Code Ranges Table","Attachment Source Id","datetime"
