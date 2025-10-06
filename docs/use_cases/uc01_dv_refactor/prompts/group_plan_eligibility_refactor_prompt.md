@@ -1,6 +1,13 @@
 # Data Vault Refactor Prompt: group_plan_eligibility
 
-Please follow the project guidelines and generate the refactored code for the **group_plan_eligibility** entity.
+## Import Context Files
+@docs\architecture\edp_platform_architecture.md
+@docs\use_cases\uc01_dv_refactor\dv_refactor_project_context.md
+@docs\engineering-knowledge-base\data-vault-2.0-guide.md
+
+@docs\sources\facets\dbo_cmc_cspi_cs_plan.csv
+
+Please follow the project guidelines and generate the refactored code for the **group_plan_eligibility** entity, using [dbo_cmc_cspi_cs_plan.csv] as the data dictionary info 
 
 ## Expected Output Summary
 
@@ -38,53 +45,57 @@ I expect that the Raw Vault artifacts generated will include:
 
 ## Data Dictionary
 
-Use this information to map source view references in the prior model code back to the source columns, and rename columns in the rename views:
+Use this information to map source view references in the prior model code back to the source columns, and rename columns in the rename views: [dbo_cmc_cspi_cs_plan.csv] 
 
-```csv
-source_schema,source_table,source_column,table_description,column_description,column_data_type
-dbo,cmc_cspi_cs_plan,grgr_ck,Plan/Product Linking Data Table,Class/Plan Group Contrived Key,int
-dbo,cmc_cspi_cs_plan,cscs_id,Plan/Product Linking Data Table,Class ID,char
-dbo,cmc_cspi_cs_plan,cspd_cat,Plan/Product Linking Data Table,Class/Plan Product Category,char
-dbo,cmc_cspi_cs_plan,cspi_id,Plan/Product Linking Data Table,Plan ID,char
-dbo,cmc_cspi_cs_plan,cspi_eff_dt,Plan/Product Linking Data Table,Class/Plan Effective Date,datetime
-dbo,cmc_cspi_cs_plan,cspi_term_dt,Plan/Product Linking Data Table,Class/Plan Termination Date,datetime
-dbo,cmc_cspi_cs_plan,pdpd_id,Plan/Product Linking Data Table,Product ID,char
-dbo,cmc_cspi_cs_plan,cspi_sel_ind,Plan/Product Linking Data Table,Class/Plan Selectable Indicator,char
-dbo,cmc_cspi_cs_plan,cspi_fi,Plan/Product Linking Data Table,Class/Plan Family Indicator,char
-dbo,cmc_cspi_cs_plan,cspi_guar_dt,Plan/Product Linking Data Table,Class/Plan Rate Guarantee Date,datetime
-dbo,cmc_cspi_cs_plan,cspi_guar_per_mos,Plan/Product Linking Data Table,Class/Plan Rate Guarantee Period Months,smallint
-dbo,cmc_cspi_cs_plan,cspi_guar_ind,Plan/Product Linking Data Table,Class/Plan Rate Guarantee Indicator,char
-dbo,cmc_cspi_cs_plan,pmar_pfx,Plan/Product Linking Data Table,Class/Plan Age Volume Reduction Table Prefix,char
-dbo,cmc_cspi_cs_plan,wmds_seq_no,Plan/Product Linking Data Table,Class/Plan User Warning Message,smallint
-dbo,cmc_cspi_cs_plan,cspi_open_beg_mmdd,Plan/Product Linking Data Table,Class/Plan Open Enrollment Begin Period,smallint
-dbo,cmc_cspi_cs_plan,cspi_open_end_mmdd,Plan/Product Linking Data Table,Class/Plan Open Enrollment End Period,smallint
-dbo,cmc_cspi_cs_plan,gpai_id,Plan/Product Linking Data Table,Class/Plan Group Administration Rules ID,char
-dbo,cmc_cspi_cs_plan,cspi_its_prefix,Plan/Product Linking Data Table,ITS Prefix,char
-dbo,cmc_cspi_cs_plan,cspi_age_calc_meth,Plan/Product Linking Data Table,Premium Age Calculation Method,char
-dbo,cmc_cspi_cs_plan,cspi_card_stock,Plan/Product Linking Data Table,Member ID Card Stock,char
-dbo,cmc_cspi_cs_plan,cspi_mctr_ctyp,Plan/Product Linking Data Table,Product Member ID Card Type,char
-dbo,cmc_cspi_cs_plan,cspi_hedis_cebreak,Plan/Product Linking Data Table,HEDIS Continuous Enrollment Break,char
-dbo,cmc_cspi_cs_plan,cspi_hedis_days,Plan/Product Linking Data Table,HEDIS Continuous Enrollment Days,smallint
-dbo,cmc_cspi_cs_plan,cspi_pdpd_beg_mmdd,Plan/Product Linking Data Table,Plan Year Begin Date,smallint
-dbo,cmc_cspi_cs_plan,nwst_pfx,Plan/Product Linking Data Table,Network Set Prefix,char
-dbo,cmc_cspi_cs_plan,cspi_pdpd_co_mnth,Plan/Product Linking Data Table,,smallint
-dbo,cmc_cspi_cs_plan,cvst_pfx,Plan/Product Linking Data Table,Covering Provider Set Prefix,char
-dbo,cmc_cspi_cs_plan,hsai_id,Plan/Product Linking Data Table,HRA Administrative Information ID,char
-dbo,cmc_cspi_cs_plan,cspi_postpone_ind,Plan/Product Linking Data Table,Postponement Indicator,char
-dbo,cmc_cspi_cs_plan,grdc_pfx,Plan/Product Linking Data Table,Debit Card/Bank Relationship Prefix,char
-dbo,cmc_cspi_cs_plan,uted_pfx,Plan/Product Linking Data Table,Dental Utilization Edits Prefix,char
-dbo,cmc_cspi_cs_plan,vbbr_id,Plan/Product Linking Data Table,Value Based Benefits Parms ID,char
-dbo,cmc_cspi_cs_plan,svbl_id,Plan/Product Linking Data Table,Billing Strategy (Vision Only),char
-dbo,cmc_cspi_cs_plan,cspi_lock_token,Plan/Product Linking Data Table,Lock Token,smallint
-dbo,cmc_cspi_cs_plan,atxr_source_id,Plan/Product Linking Data Table,Attachment Source Id,datetime
-dbo,cmc_cspi_cs_plan,sys_last_upd_dtm,Plan/Product Linking Data Table,Last Update Datetime,datetime
-dbo,cmc_cspi_cs_plan,sys_usus_id,Plan/Product Linking Data Table,Last Update User ID,varchar
-dbo,cmc_cspi_cs_plan,sys_dbuser_id,Plan/Product Linking Data Table,Last Update DBMS User ID,varchar
-dbo,cmc_cspi_cs_plan,cspi_sec_plan_cd_nvl,Plan/Product Linking Data Table,Secondary Plan Processing code,char
-dbo,cmc_cspi_cs_plan,mcre_id_nvl,Plan/Product Linking Data Table,Authorization/Certification Related Entity ID,char
-dbo,cmc_cspi_cs_plan,cspi_its_acct_excp_nvl,Plan/Product Linking Data Table,ITS Account Exception,char
-dbo,cmc_cspi_cs_plan,cspi_ren_beg_mmdd_nvl,Plan/Product Linking Data Table,Policy Issuance or Renewal Begins Date,smallint
-dbo,cmc_cspi_cs_plan,cspi_hios_id_nvl,Plan/Product Linking Data Table,Health Insurance Oversight System Identifier,varchar
-dbo,cmc_cspi_cs_plan,cspi_itspfx_acctid_nvl,Plan/Product Linking Data Table,ITS Prefix Account ID,varchar
-dbo,cmc_cspi_cs_plan,pgps_pfx,Plan/Product Linking Data Table,Patient Care Program Set,varchar
-```
+### Data Dictionary
+
+**Table:** dbo.cmc_cspi_cs_plan
+**Description:** Plan/Product Linking Data Table
+
+| Source Column | Column Description | Data Type |
+| --- | --- | --- |
+| grgr_ck | Class/Plan Group Contrived Key | int |
+| cscs_id | Class ID | char |
+| cspd_cat | Class/Plan Product Category | char |
+| cspi_id | Plan ID | char |
+| cspi_eff_dt | Class/Plan Effective Date | datetime |
+| cspi_term_dt | Class/Plan Termination Date | datetime |
+| pdpd_id | Product ID | char |
+| cspi_sel_ind | Class/Plan Selectable Indicator | char |
+| cspi_fi | Class/Plan Family Indicator | char |
+| cspi_guar_dt | Class/Plan Rate Guarantee Date | datetime |
+| cspi_guar_per_mos | Class/Plan Rate Guarantee Period Months | smallint |
+| cspi_guar_ind | Class/Plan Rate Guarantee Indicator | char |
+| pmar_pfx | Class/Plan Age Volume Reduction Table Prefix | char |
+| wmds_seq_no | Class/Plan User Warning Message | smallint |
+| cspi_open_beg_mmdd | Class/Plan Open Enrollment Begin Period | smallint |
+| cspi_open_end_mmdd | Class/Plan Open Enrollment End Period | smallint |
+| gpai_id | Class/Plan Group Administration Rules ID | char |
+| cspi_its_prefix | ITS Prefix | char |
+| cspi_age_calc_meth | Premium Age Calculation Method | char |
+| cspi_card_stock | Member ID Card Stock | char |
+| cspi_mctr_ctyp | Product Member ID Card Type | char |
+| cspi_hedis_cebreak | HEDIS Continuous Enrollment Break | char |
+| cspi_hedis_days | HEDIS Continuous Enrollment Days | smallint |
+| cspi_pdpd_beg_mmdd | Plan Year Begin Date | smallint |
+| nwst_pfx | Network Set Prefix | char |
+| cspi_pdpd_co_mnth |  | smallint |
+| cvst_pfx | Covering Provider Set Prefix | char |
+| hsai_id | HRA Administrative Information ID | char |
+| cspi_postpone_ind | Postponement Indicator | char |
+| grdc_pfx | Debit Card/Bank Relationship Prefix | char |
+| uted_pfx | Dental Utilization Edits Prefix | char |
+| vbbr_id | Value Based Benefits Parms ID | char |
+| svbl_id | Billing Strategy (Vision Only) | char |
+| cspi_lock_token | Lock Token | smallint |
+| atxr_source_id | Attachment Source Id | datetime |
+| sys_last_upd_dtm | Last Update Datetime | datetime |
+| sys_usus_id | Last Update User ID | varchar |
+| sys_dbuser_id | Last Update DBMS User ID | varchar |
+| cspi_sec_plan_cd_nvl | Secondary Plan Processing code | char |
+| mcre_id_nvl | Authorization/Certification Related Entity ID | char |
+| cspi_its_acct_excp_nvl | ITS Account Exception | char |
+| cspi_ren_beg_mmdd_nvl | Policy Issuance or Renewal Begins Date | smallint |
+| cspi_hios_id_nvl | Health Insurance Oversight System Identifier | varchar |
+| cspi_itspfx_acctid_nvl | ITS Prefix Account ID | varchar |
+| pgps_pfx | Patient Care Program Set | varchar |
