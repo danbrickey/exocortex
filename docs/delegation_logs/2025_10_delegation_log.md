@@ -12,18 +12,9 @@
 
 # Tasks That Should Be Delegated
 
-## **DATE DELEGATED**: TBD
-- **TASK**: Contract document PoC infrastructure
-- **DELEGATE**: Martin Rivera
-- **FOLLOW-UP**: TBD
-- **NOTES**:
-  - Snowflake stage setup
-  - Cortex AI permissions and testing
-  - Initial summarization testing
-
 - **Repository configuration and splitting** (DevOps/Admin skills: Ian, Mike, or Emily)
-  - Current: 2 repos (EDP_source_data, EDP_Data_Domains)
-  - Future: 4 repos (add EDP_Streaming, EDP_Data_Integrations)
+  - Current: 2 repos (edp_source_data, edp_data_domains)
+  - Future: 4 repos (add edp_streaming, edp_data_integrations)
 - **Dev environment testing and validation** (Data Engineering: Jason, Shreya, Cameron, Brian)
   - Validate dev_raw_clone_db works for all teams
   - Test dbt projects in new environment configurations
@@ -31,6 +22,20 @@
 # Tasks That Have Been Delegated
 
 # DELEGATED TASKS
+
+## **DATE DELEGATED**: 2025_10_9
+- **TASK**: Provider MVP Business Vault Design - d_provider_agreement
+- **DELEGATE**: Martin Rivera
+- **FOLLOW-UP**: 2025_10_15
+- **NOTES**:
+  - Dan 
+    - Screenshot of DAG
+    - STored Proc Code
+    - Post to Confluence
+  - Martin
+    - Design Business Vault and dimensional model
+    - Create spec/starter code and review
+    - Assign engineering work
 
 ## **DATE DELEGATED**: 2025_10_01
 - **TASK**: Zero-copy clone creation and management
