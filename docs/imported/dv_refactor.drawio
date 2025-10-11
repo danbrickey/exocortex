@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Data Vault Refactoring Assistant" id="data-vault-refactor">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="1">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- Background -->
+        <mxCell id="background" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8f9ff;strokeColor=none;gradientColor=#e8f4f8;gradientDirection=south;" vertex="1" parent="1">
+          <mxGeometry width="1400" height="900" as="geometry"/>
+        </mxCell>
+        
+        <!-- Title -->
+        <mxCell id="title" value="Data Vault Refactoring Assistant" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#2c3e50;" vertex="1" parent="1">
+          <mxGeometry x="500" y="10" width="400" height="30" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="subtitle" value="Architecture &amp; Workflow Overview" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#7f8c8d;" vertex="1" parent="1">
+          <mxGeometry x="550" y="40" width="300" height="20" as="geometry"/>
+        </mxCell>
+        
+        <!-- User Section -->
+        <mxCell id="user-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498db;strokeColor=#2980b9;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="80" width="180" height="80" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="user-title" value="👤 User" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="50" y="90" width="180" height="20" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="user-arch" value="Data Architect" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="50" y="115" width="180" height="15" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="user-eng" value="Data Engineer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="50" y="135" width="180" height="15" as="geometry"/>
+        </mxCell>
+        
+        <!-- Main Application Box -->
+        <mxCell id="main-app-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2c3e50;strokeWidth=3;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="80" width="680" height="480" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="main-app-title" value="Streamlit in Snowflake Application" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#2c3e50;" vertex="1" parent="1">
+          <mxGeometry x="480" y="90" width="280" height="25" as="geometry"/>
+        </mxCell>
+        
+        <!-- Context Management Sidebar -->
+        <mxCell id="context-sidebar" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ecf0f1;strokeColor=#bdc3c7;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="300" y="130" width="160" height="400" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="context-title" value="📚 Context Management" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#2c3e50;" vertex="1" parent="1">
+          <mxGeometry x="300" y="140" width="160" height="20" as="geometry"/>
+        </mxCell>
+        
+        <!-- Context Documents -->
+        <mxCell id="arch-guidelines" value="Architecture Guidelines" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e74c3c;strokeColor=none;fontColor=#ffffff;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="170" width="140" height="25" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="project-guidance" value="Project Guidance" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e67e22;strokeColor=none;fontColor=#ffffff;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="205" width="140" height="25" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="legacy-code" value="Legacy Code" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f39c12;strokeColor=none;fontColor=#ffffff;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="240" width="140" height="25" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="column-mappings" value="Column Mappings" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27ae60;strokeColor=none;fontColor=#ffffff;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="275" width="140" height="25" as="geometry"/>
+        </mxCell>
+        
+        <!-- Token Management -->
+        <mxCell id="token-mgmt" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9b59b6;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="310" y="320" width="140" height="50" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="token-title" value="🎛️ Token Management" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="310" y="325" width="140" height="15" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="token-input" value="Input: 12,450" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="310" y="345" width="140" height="10" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="token-output" value="Output: 8,320" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="310" y="355" width="140" height="10" as="geometry"/>
+        </mxCell>
+        
+        <!-- Model Selection -->
+        <mxCell id="model-selection" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#34495e;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="310" y="385" width="140" height="35" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="model-title" value="🤖 Model Selection" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="310" y="390" width="140" height="15" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="model-name" value="claude-3-5-sonnet" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="310" y="405" width="140" height="10" as="geometry"/>
+        </mxCell>
+        
+        <!-- Main Interface Tabs -->
+        <!-- Chat Tab -->
+        <mxCell id="chat-tab" value="💬 Chat Assistant" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498db;strokeColor=none;fontColor=#ffffff;fontSize=11;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="130" width="140" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- Dashboard Tab -->
+        <mxCell id="dashboard-tab" value="📊 Dashboard" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2ecc71;strokeColor=none;fontColor=#ffffff;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="130" width="140" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- Artifacts Tab -->
+        <mxCell id="artifacts-tab" value="📁 Artifacts" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e67e22;strokeColor=none;fontColor=#ffffff;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="130" width="120" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- Chat Interface Detail -->
+        <mxCell id="chat-detail" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ecf8ff;strokeColor=#3498db;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="480" y="180" width="180" height="170" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="chat-detail-title" value="Conversation Flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fontColor=#2c3e50;" vertex="1" parent="1">
+          <mxGeometry x="480" y="190" width="180" height="15" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="user-msg" value="👤: Refactor Customer entity" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498db;strokeColor=none;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="490" y="215" width="160" height="20" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="ai-msg" value="🤖: Generated hub, satellite&#xa;and current views..." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2ecc71;strokeColor=none;fontColor=#ffffff;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="490" y="245" width="160" height="30" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="save-msg" value="💾 Save as Artifact" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e74c3c;strokeColor=none;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="490" y="285" width="160" height="20" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="entity-msg" value="📋 Set Entity: Customer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f39c12;strokeColor=none;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="490" y="315" width="160" height="20" as="geometry"/>
+        </mxCell>
+        
+        <!-- Dashboard Detail -->
+        <mxCell id="dashboard-detail" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eafaf1;strokeColor=#2ecc71;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="680" y="180" width="140" height="170" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="dashboard-title" value="Project Progress" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fontColor=#2c3e50;" vertex="1" parent="1">
+          <mxGeometry x="680" y="190" width="140" height="15" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="completed-metric" value="✅ Completed: 12/25" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27ae60;strokeColor=none;fontColor=#ffffff;fontSize=9;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="215" width="120" height="25" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="progress-metric" value="🔄 In Progress: 8" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f39c12;strokeColor=none;fontColor=#ffffff;fontSize=9;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="250" width="120" height="25" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="notstarted-metric" value="⚪ Not Started: 5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#95a5a6;strokeColor=none;fontColor=#ffffff;fontSize=9;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="285" width="120" height="25" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="progress-bar-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ecf0f1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="690" y="320" width="120" height="15" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="progress-bar" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27ae60;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="690" y="320" width="58" height="15" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="progress-text" value="48% Complete" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1;fontColor=#2c3e50;" vertex="1" parent="1">
+          <mxGeometry x="680" y="325" width="140" height="10" as="geometry"/>
+        </mxCell>
+        
+        <!-- Artifact Manager Detail -->
+        <mxCell id="artifact-detail" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fdf2e9;strokeColor=#e67e22;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="830" y="180" width="120" height="170" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="artifact-title" value="Saved Artifacts" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fontColor=#2c3e50;" vertex="1" parent="1">
+          <mxGeometry x="830" y="190" width="120" height="15" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="hub-artifact" value="hub_customer.sql" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e74c3c;strokeColor=none;fontColor=#ffffff;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="840" y="215" width="100" height="15" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="sat-artifact" value="sat_customer.sql" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498db;strokeColor=none;fontColor=#ffffff;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="840" y="235" width="100" height="15" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="current-artifact" value="current_customer.sql" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2ecc71;strokeColor=none;fontColor=#ffffff;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="840" y="255" width="100" height="15" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="docs-artifact" value="docs_customer.md" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f39c12;strokeColor=none;fontColor=#ffffff;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="840" y="275" width="100" height="15" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="status-finalized" value="🟢 Finalized" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1;fontColor=#27ae60;" vertex="1" parent="1">
+          <mxGeometry x="830" y="300" width="120" height="10" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="status-draft" value="🟡 Draft" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1;fontColor=#f39c12;" vertex="1" parent="1">
+          <mxGeometry x="830" y="315" width="120" height="10" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="status-review" value="🔵 Review" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1;fontColor=#3498db;" vertex="1" parent="1">
+          <mxGeometry x="830" y="330" width="120" height="10" as="geometry"/>
+        </mxCell>
+        
+        <!-- Snowflake Cortex Section -->
+        <mxCell id="cortex-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a365d;strokeColor=#2c5aa0;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="200" width="200" height="160" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="cortex-title" value="❄️ Snowflake Cortex" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="210" width="200" height="20" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="claude-model" value="claude-3-5-sonnet" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4299e1;strokeColor=none;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="240" width="180" height="20" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="mistral-model" value="mistral-large2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#38b2ac;strokeColor=none;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="265" width="180" height="20" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="llama-model" value="llama3.1-405b" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#805ad5;strokeColor=none;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="290" width="180" height="20" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="mixtral-model" value="mixtral-8x7b" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d69e2e;strokeColor=none;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="315" width="180" height="20" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="security-text" value="🔐 Enterprise Security" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="340" width="200" height="15" as="geometry"/>
+        </mxCell>
+        
+        <!-- Database Storage Section -->
+        <mxCell id="database-section" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2c3e50;strokeColor=#34495e;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="600" width="680" height="160" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="database-title" value="🗄️ Snowflake Database Storage" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="480" y="610" width="280" height="25" as="geometry"/>
+        </mxCell>
+        
+        <!-- Artifacts Table -->
+        <mxCell id="artifacts-table" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#34495e;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="300" y="650" width="280" height="90" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="artifacts-table-title" value="edw2_refactor_artifacts" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="300" y="655" width="280" height="15" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="artifact-fields" value="• artifact_id (PK)&#xa;• entity_name&#xa;• artifact_type&#xa;• content (SQL/docs)&#xa;• status (draft/review/final)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#ecf0f1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="675" width="260" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Entities Table -->
+        <mxCell id="entities-table" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#34495e;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="600" y="650" width="280" height="90" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="entities-table-title" value="edw2_refactor_entities" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="600" y="655" width="280" height="15" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="entity-fields" value="• entity_name (PK)&#xa;• status&#xa;• total_artifacts&#xa;• finalized_artifacts&#xa;• progress_tracking" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#ecf0f1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="675" width="260" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Key Benefits Box -->
+        <mxCell id="benefits-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27ae60;strokeColor=#229954;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="600" width="180" height="160" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="benefits-title" value="🎯 Key Benefits" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="50" y="610" width="180" height="20" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="benefit1" value="✅ Context Persistence" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="640" width="160" height="15" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="benefit1-desc" value="No more re-explaining" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="655" width="160" height="10" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="benefit2" value="📊 Progress Tracking" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="675" width="160" height="15" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="benefit2-desc" value="Entity-level status" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="690" width="160" height="10" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="benefit3" value="🔐 Enterprise Security" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="710" width="160" height="15" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="benefit3-desc" value="Data never leaves SF" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="725" width="160" height="10" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="benefit4" value="⚡ Several Times Faster" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="745" width="160" height="15" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="benefit4-desc" value="Than manual process" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="760" width="160" height="10" as="geometry"/>
+        </mxCell>
+        
+        <!-- Data Flow Box -->
+        <mxCell id="dataflow-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#dee2e6;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="80" width="200" height="100" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="dataflow-title" value="🔄 Data Flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#2c3e50;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="90" width="200" height="15" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="flow-step1" value="1. Load persistent context" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#495057;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="110" width="180" height="12" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="flow-step2" value="2. Chat with AI assistant" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#495057;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="125" width="180" height="12" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="flow-step3" value="3. Generate DV artifacts" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#495057;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="140" width="180" height="12" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="flow-step4" value="4. Track &amp; manage progress" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#495057;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="155" width="180" height="12" as="geometry"/>
+        </mxCell>
+        
+        <!-- Arrows -->
+        <!-- User to App -->
+        <mxCell id="arrow1" value="" style="endArrow=classic;html=1;strokeColor=#3498db;strokeWidth=3;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="user-box" target="main-app-box">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="120" as="sourcePoint"/>
+            <mxPoint x="280" y="120" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arrow1-label" value="Interact" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fontColor=#3498db;" vertex="1" parent="1">
+          <mxGeometry x="240" y="105" width="50" height="15" as="geometry"/>
+        </mxCell>
+        
+        <!-- App to Cortex -->
+        <mxCell id="arrow2" value="" style="endArrow=classic;html=1;strokeColor=#e67e22;strokeWidth=3;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="main-app-box" target="cortex-section">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="960" y="280" as="sourcePoint"/>
+            <mxPoint x="1000" y="280" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arrow2-label" value="AI Requests" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fontColor=#e67e22;" vertex="1" parent="1">
+          <mxGeometry x="970" y="265" width="70" height="15" as="geometry"/>
+        </mxCell>
+        
+        <!-- App to Database -->
+        <mxCell id="arrow3" value="" style="endArrow=classic;html=1;strokeColor=#2ecc71;strokeWidth=3;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="main-app-box" target="database-section">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="620" y="560" as="sourcePoint"/>
+            <mxPoint x="620" y="600" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arrow3-label" value="Store Artifacts" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fontColor=#2ecc71;" vertex="1" parent="1">
+          <mxGeometry x="570" y="570" width="80" height="15" as="geometry"/>
+        </mxCell>
+        
+        <!-- Context Flow (dashed) -->
+        <mxCell id="context-arrow" value="" style="endArrow=classic;html=1;strokeColor=#9b59b6;strokeWidth=2;dashed=1;dashPattern=5 5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="context-sidebar" target="chat-detail">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="330" as="sourcePoint"/>
+            <mxPoint x="480" y="265" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="470" y="330"/>
+              <mxPoint x="470" y="265"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="context-label" value="Persistent Context" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=2;fontColor=#9b59b6;" vertex="1" parent="1">
+          <mxGeometry x="420" y="290" width="80" height="15" as="geometry"/>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,21 +1,17 @@
-mmnn# Enterprise Data Platform (EDP) Data Domain Architecture Context
+# Enterprise Data Platform (EDP) Data Domain Architecture Context
 
 ## Overview
 
-This document describes the architecture, tools, environments, and conventions for the Enterprise Data Platform (EDP) Data Domain project, designed for Data Vault 2.0 implementation using dbt and Snowflake. The EDP vision is to make it a hub for all the enterprise data needs. Both analytical and operational use cases that do not need to run directly in the source systems will be served here, and as the EDP is built out, the existing on prem services and processes will move to the EDP when dependecies are in place.
+This document describes the architecture, tools, environments, and conventions for the Enterprise Data Platform (EDP) project, designed for Data Vault 2.0 implementation using dbt and Snowflake. The EDP vision is to make it a hub for all the enterprise data needs. Both analytical and operational use cases that do not need to run directly in the source systems will be served here, and as the EDP is built out, the existing on prem services and processes will move to the EDP when dependecies are in place.
 
 ## Platform Architecture
 
 ### Core Infrastructure
 
-- **Cloud Platform**: `AWS`
 - **Data Warehouse**: `Snowflake`
-- **Data Architecture**: `Data Vault 2.0` (transitioning from 3NF)
+- **Data Architecture**: `Data Vault 2.0 with a Kimball dimensional model`
 - **Transformation Tool**: `dbt Cloud`
 - **Data Vault Package**: `automateDV`
-- **Visualization Tool**: `Tableau Cloud`
-- **Data Quality Tool**: `Anomalo`
-- **Data Governance and Catalog Tool**: `Alation`
 
 ### Data Layer Architecture
 
@@ -26,7 +22,7 @@ Raw Layer → Integration Layer → Curation Layer → Consumption Layer
 #### Layer Descriptions
 
 - **Raw Layer**: Equivalent to a Bronze medallion layer. Raw CDC (Change Data Capture) data from source systems, snowflake shares, or ingested files.
-- **Integration Layer**: Data in modular, reusable, integrated format. Some light cleansing to conform datatypes and creation of record identification keys that maintain uniqueness acrosss all sources (protection againsy key collisions). Typically source id + source PK. Raw Data Vault with Hubs, Links, and Satellites following Data Vault 2.0 methodology. We are beginning the process of refactoring our existing 3NF data model in this layer. Also contains Current Views with all satellite columns.
+- **Integration Layer**: Data in modular, reusable, integrated format. Some light cleansing to conform datatypes and creation of record identification keys that maintain uniqueness acrosss all sources (protection againsy key collisions). Typically source id + source PK. Raw Data Vault with Hubs, Links, and Satellites following Data Vault 2.0 methodology. Also contains Current Views with all satellite columns and Backward-compatible views replicating original 3NF table structures.
 - **Curation Layer**: Fit for purpose data shapes. Business Vault following Data Vault 2.0 methodology, Dimensional Models, flattened datasets for ML and extracts, Small, purpose-built 3NF models to support operations application use cases (e.g. Customer Service)
 - **Consumption Layer**: Common access layer with fit for use data. Data Vault Information Mart, Constrained data sets for specific sets of use cases. Targeted data marts with specialized transformations that should not be conformed across the enterprise (e.g. CMS EDGE Server data extracts, which have very particular CMS rules).
 
@@ -42,7 +38,8 @@ Raw Layer → Integration Layer → Curation Layer → Consumption Layer
 - **Links**: `l_<entity1>_<entity2>` (e.g. `l_class_group`)
 - **Satellites**: `s_<entity>_<source>` (e.g. `s_product_gemstone_facets`)
 - **Reference Tables**: `r__<entity>` (e.g. `r_date_spine`)
-- **Current Views**: `current_<entity>`
+- **Current Views**: `cv_<entity>`
+- **Backward Compatible Views**: `bwd_<entity>`
 
 #### Business Vault (Curation Layer) Naming Conventions
 
@@ -58,9 +55,9 @@ Raw Layer → Integration Layer → Curation Layer → Consumption Layer
 
 #### Information Mart (Consumption Layer)
 
-- **Dimensions**: `dim_<entity>` (e.g. `dim_product`)
-- **Fact Tables**: `fact_<entity> (e.g. `fact_member_coverage`)
-- **Bridge Tables**: `bridge_<entity>_<purpose>` (e.g. `bridge_medical_claim_procedure`)
+- **Dimensions**: `dim_<entity>` (e.g. `dim_procedure`)
+- **Fact Tables**: `fact_<entity>` (e.g. `fact_medical_claim`)
+- **Bridge Tables**: `bridge_<fact_name>_<dimension_name>` (e.g. `bridge_medical_claim_procedure`)
 
 ### Source System Suffixes
 
@@ -68,7 +65,6 @@ Use full source_system value as suffix:
 
 - `legacy_facets` - Legacy FACETS system
 - `gemstone_facets` - Gemstone FACETS system
-- `valenz` - VALENZ system
 
 ## Source Systems
 
@@ -99,18 +95,6 @@ Use full source_system value as suffix:
 - **Effectivity Satellites**: Time-based effective periods
 - **Multi-Active Satellites**: Multiple active records per business key
 
-### Current View Requirements
-
-- Include all satellite columns
-- Handle column name mapping and data type consistency
-- Implement conflict resolution for overlapping columns
-- **Default Behavior**: Use same key as hub/link including source_system
-- Filter to most recent business key record from satellite for each source
-- **Do not combine records from multiple sources** unless explicitly specified
-- Base on hub or link table
-- LEFT JOIN to satellites for current records only
-- Handle null values and missing data appropriately
-
 ## Configuration Variables
 
 ### Incremental Loading
@@ -132,9 +116,3 @@ When referencing this architecture in other chats or projects:
 
 1. **Data Vault Implementation**: Follow automate_dv package conventions
 2. **Naming**: Always use the specified prefixes and source system suffixes
-3. **Current Views**: Default to single-source views unless multi-source is explicitly required
-4. **Environment Handling**: Use the database naming patterns for proper environment separation
-5. **Schema Organization**: Follow the established domain-based schema structure
-6. **Testing**: Apply appropriate test severity based on environment type
-
-This architecture is intented to support a scalable, auditable data platform with clear lineage for the transition from 3NF to Data Vault 2.0.
