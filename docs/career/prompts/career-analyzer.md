@@ -138,7 +138,35 @@ Identify 3-5 next-level roles that represent natural advancement from the CV. Fo
 
 ### 4. AI Career Path Analysis
 
-Provide detailed analysis of 2-3 AI career paths best suited to the CV. Detailed career advisor prompts for the listed AI Native career paths are located here: docs\career\prompts\ai_career_paths. Feel free to suggest careers that are not on the list. Access those files if more career path details are needed. 
+Provide detailed analysis of 2-3 AI career paths best suited to the CV. Detailed career advisor prompts for the listed AI Native career paths are located here: docs\career\prompts\ai_career_paths. Feel free to suggest careers that are not on the list. Access those files if more career path details are needed.
+
+**IMPORTANT OUTPUT REQUIREMENTS:**
+When providing AI career path analysis, you MUST deliver comprehensive output following this structure for EACH recommended path (typically 2-3 paths):
+
+1. **Executive Summary** with quantified current fit assessment (X% match)
+2. **Detailed "Why This is Your Best Match" section** explaining alignment with strengths
+3. **Comprehensive Gap Analysis** with specific skills/experience gaps identified
+4. **Phased Transition Timeline** broken into:
+   - Phase 1: Pre-Master's or Foundation (Now - specified milestone)
+   - Phase 2: During Master's or Skill Development (specified timeframe)
+   - Phase 3: Post-Master's or Job-Ready Preparation (specified timeframe)
+   - Each phase must include specific courses, projects, time commitments, costs, deliverables
+5. **Curated Learning Resources** with exact course names, providers, costs, durations
+6. **Entry Strategy** with specific companies, job titles, application approaches
+7. **Market Outlook & Compensation** with salary ranges by experience level
+8. **Comparative Analysis Table** comparing ALL recommended paths across key criteria (fit, compensation, market demand, etc.)
+9. **Unified Action Plan** with immediate next steps broken down by timeframe:
+   - Next 30 days
+   - Next 6 months
+   - Next 12-18 months
+   - Post-education milestones (if applicable)
+10. **Specific resource recommendations** including books, certifications, communities, networking strategies
+
+**Output Length Expectation:**
+A comprehensive AI career path analysis should be 5,000-15,000 words covering all paths in depth. Do NOT provide abbreviated or summary-only output. The goal is to give the candidate a complete, actionable roadmap they can execute immediately with specific learning resources, portfolio project ideas, networking strategies, and phased timelines.
+
+**Integration with Career Plan:**
+The output from this analysis should serve as the foundation for developing a detailed career plan document with measurable goals, timelines, and success criteria.
 
 Career paths with details available:
 
