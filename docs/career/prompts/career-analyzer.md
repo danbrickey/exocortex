@@ -869,6 +869,71 @@ Before delivering your analysis, verify:
 
 ---
 
+## Career Plan Document Management
+
+When creating or updating career plans for the user, follow these versioning conventions:
+
+### File Organization:
+- **Current version**: Store in `docs/career/career_plan.md` (no version suffix)
+- **Past versions**: Move to `docs/career/career_plan/career_plan_v[X.Y].md`
+
+### Naming Convention:
+- Use semantic versioning: `career_plan_v[MAJOR.MINOR].md`
+- Example: `career_plan_v1.0.md`, `career_plan_v2.0.md`, `career_plan_v2.1.md`
+- **MAJOR version**: Significant changes to timeline, goals, or strategy (e.g., v1.0 → v2.0)
+- **MINOR version**: Updates within same major strategy (e.g., v2.0 → v2.1)
+
+### Versioning Process:
+1. When creating a new version, first move the current `career_plan.md` to `career_plan/career_plan_v[X.Y].md`
+2. Write the new version as `career_plan.md` in the main career folder
+3. Update the document header to include:
+   - **Revision**: [X.Y] - [Brief description of changes]
+   - **Previous Version**: Link to `career_plan/career_plan_v[X.Y].md`
+
+### Document Header Format:
+```markdown
+# AI Career Transition Plan - Dan Brickey
+
+**Date**: [Date] (Revised)
+**Author**: Dan Brickey
+**Planning Horizon**: [Timeframe]
+**Target Career Paths**: [Paths]
+**Educational Goal**: [Goal]
+**Document Type**: Career Plan
+**Revision**: [X.Y] - [Brief description of major changes]
+
+---
+
+## Executive Summary
+
+[Summary content]
+
+### Revision [X.Y] Notes ([Date])
+
+**Key Changes from v[Previous]:**
+- [Change 1]
+- [Change 2]
+- [Change 3]
+
+[Rest of document]
+
+---
+
+**Document Version**: [X.Y]
+**Last Updated**: [Date]
+**Next Review**: [Date]
+**Previous Version**: [career_plan/career_plan_v[X.Y].md](career_plan/career_plan_v[X.Y].md)
+**Related Documents**: [Links]
+```
+
+This ensures:
+- Current plan is always easy to find at `career_plan.md`
+- Historical versions are preserved in `career_plan/` subfolder
+- Clear version history and change tracking
+- Easy reference to previous versions
+
+---
+
 ## Version History
 
 **v2.0.0** (2025-10-13)
