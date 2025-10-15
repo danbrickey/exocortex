@@ -1,5 +1,5 @@
 # AI Career Path Analysis for Dan Brickey
-**Date**: January 14, 2025
+**Date**: October 14, 2025 (Updated from January 14, 2025)
 **Author**: Claude (AI Career Advisor)
 **Subject**: Dan Brickey
 **Document Type**: Career Advice & Path Analysis
@@ -17,8 +17,8 @@ Based on your CV, preferences, and timeline, you have strong alignment with thre
 **Key Insight**: These roles have 70-80% skill overlap, allowing you to pursue all three simultaneously. The work you do at Blue Cross to build AI Solutions Architect skills also builds AI Strategist and AI Coach skills.
 
 **Recommended Timeline**:
-- **Pre-Master's (Now - Fall 2026)**: Transform Blue Cross role to be AI-native, build portfolio
-- **During Master's (Fall 2026 - Spring 2028)**: Formalize credentials, expand portfolio, maintain employment
+- **Pre-Master's (October 2025 - Fall 2026)**: Transform Blue Cross role to be AI-native, build portfolio (11 months remaining)
+- **During Master's (Fall 2026 - Spring 2028)**: Formalize credentials, expand portfolio, maintain full-time employment (part-time study)
 - **Post-Master's (Spring 2028+)**: Decision point to either stay at transformed Blue Cross role or transition to external AI-native position
 
 ---
@@ -64,10 +64,10 @@ Based on your CV, preferences, and timeline, you have strong alignment with thre
 
 ### Transition Timeline
 
-#### Phase 1: Pre-Master's (Now - Fall 2026)
+#### Phase 1: Pre-Master's (October 2025 - Fall 2026)
 *Goal: Transform Blue Cross role + build AI portfolio*
 
-**Months 1-6 (Q1-Q2 2025):**
+**Months 1-6 (October 2025 - March 2026):**
 
 **Blue Cross Projects:**
 - Lead Snowflake Cortex AI proof-of-concept (document classification, anomaly detection, or semantic search)
@@ -84,7 +84,7 @@ Based on your CV, preferences, and timeline, you have strong alignment with thre
 - Document architecture, data pipeline, and business value
 - GitHub repo + blog post/LinkedIn article
 
-**Months 7-18 (Q3 2025 - Fall 2026):**
+**Months 7-11 (April 2026 - August 2026):**
 
 **Blue Cross Title Evolution:**
 - Propose title change: "AI & Data Solutions Architect" or "Enterprise AI/Data Architect"
@@ -100,15 +100,18 @@ Based on your CV, preferences, and timeline, you have strong alignment with thre
 - Informational interviews with AI Solutions Architects at Snowflake, Databricks, AWS
 
 #### Phase 2: During Master's (Fall 2026 - Spring 2028)
-*Goal: Academic credential + advanced portfolio*
+*Goal: Academic credential + advanced portfolio while working full-time*
+
+**Note**: Part-time study while maintaining full-time employment at Blue Cross. Focus on integration, not overload.
 
 **Coursework Application:**
 - Use Blue Cross EDP as "lab" for assignments (real-world data, business problems)
 - Capstone project: AI solution for healthcare analytics (publishable case study)
 
-**Internship/Consulting (Optional):**
-- Summer 2027: Part-time consulting engagement with Hakkoda or similar (AI solutions for their clients)
-- Leverage Blue Cross relationship + graduate student status
+**Guest Lectures (Feasible during program):**
+- Guest lecture opportunities at local universities or conferences
+- Share Blue Cross AI transformation story
+- Leverage these for networking and visibility without time commitment of internship
 
 **Certification Roadmap:**
 - **AWS Certified Machine Learning - Specialty** (demonstrates cloud ML architecture)
@@ -171,9 +174,9 @@ Based on your CV, preferences, and timeline, you have strong alignment with thre
 
 ### Transition Timeline
 
-#### Phase 1: Pre-Master's (Now - Fall 2026)
+#### Phase 1: Pre-Master's (October 2025 - Fall 2026)
 
-**Months 1-6:**
+**Months 1-6 (October 2025 - March 2026):**
 
 **Blue Cross Internal Strategy Work:**
 - Create **"Blue Cross AI Adoption Roadmap"** document (use cases, prioritization, governance framework)
@@ -189,7 +192,7 @@ Based on your CV, preferences, and timeline, you have strong alignment with thre
 - Write **LinkedIn article**: "How We're Training Data Engineers to Work with AI at Blue Cross"
 - Present to regional CIO/data leadership group on AI adoption lessons learned
 
-**Months 7-18:**
+**Months 7-11 (April 2026 - August 2026):**
 
 **Consulting Side Project (Optional):**
 - Help 1-2 healthcare organizations with AI readiness assessments (leverage Blue Cross experience)
@@ -202,6 +205,8 @@ Based on your CV, preferences, and timeline, you have strong alignment with thre
 
 #### Phase 2: During Master's (Fall 2026 - Spring 2028)
 
+**Note**: Part-time study while maintaining full-time employment at Blue Cross.
+
 **Research Focus:**
 - Capstone: "AI Adoption Maturity Model for Healthcare Payers" (publishable research)
 - Study AI governance frameworks (EU AI Act, NIST AI Risk Management Framework)
@@ -209,6 +214,10 @@ Based on your CV, preferences, and timeline, you have strong alignment with thre
 **Blue Cross Evolution:**
 - Formalize role as **"Director of AI Strategy"** or **"AI/Data Strategy Lead"** (if promoted internally)
 - Lead enterprise AI transformation program (if Blue Cross commits to AI investment)
+
+**Guest Lectures & Visibility:**
+- Guest lecture at local universities on AI strategy and governance
+- Conference presentations on healthcare AI transformation
 
 #### Phase 3: Post-Master's (Spring 2028+)
 
@@ -265,9 +274,9 @@ Based on your CV, preferences, and timeline, you have strong alignment with thre
 
 ### Transition Timeline
 
-#### Phase 1: Pre-Master's (Now - Fall 2026)
+#### Phase 1: Pre-Master's (October 2025 - Fall 2026)
 
-**Months 1-6:**
+**Months 1-6 (October 2025 - March 2026):**
 
 **Blue Cross Pilot Programs:**
 - Launch **"AI Office Hours"** (weekly drop-in sessions for engineers to get AI help)
@@ -283,7 +292,7 @@ Based on your CV, preferences, and timeline, you have strong alignment with thre
 - Blog series: "Teaching Data Engineers to Work with AI" (document your Blue Cross experience)
 - LinkedIn presence: Share weekly AI adoption tips, lessons learned
 
-**Months 7-18:**
+**Months 7-11 (April 2026 - August 2026):**
 
 **Blue Cross Formal Program:**
 - Launch **"AI Champions Network"** (train 10-15 early adopters across departments)
@@ -293,9 +302,11 @@ Based on your CV, preferences, and timeline, you have strong alignment with thre
 **External Engagement:**
 - Guest lecture at Boise State or UVU: "AI for Data Professionals"
 - Regional conference talk: "Coaching Data Teams Through AI Adoption"
-- Consulting: Deliver AI training workshops for 2-3 organizations
+- Consulting: Deliver AI training workshops for 1-2 organizations (time permitting)
 
 #### Phase 2: During Master's (Fall 2026 - Spring 2028)
+
+**Note**: Part-time study while maintaining full-time employment at Blue Cross.
 
 **Research Focus:**
 - Capstone: "AI Adoption Playbook for Healthcare Data Teams" (case study of Blue Cross transformation)
@@ -304,6 +315,10 @@ Based on your CV, preferences, and timeline, you have strong alignment with thre
 **Instructional Design Coursework (Optional):**
 - Take 1-2 electives in education/adult learning theory (if UVU program allows)
 - Alternatively: Self-study instructional design (ADDIE model, Bloom's taxonomy)
+
+**Guest Lectures (Feasible during program):**
+- Continue guest lecture opportunities at local universities
+- Share AI coaching and enablement experiences at conferences
 
 #### Phase 3: Post-Master's (Spring 2028+)
 
@@ -364,7 +379,7 @@ Based on your CV, preferences, and timeline, you have strong alignment with thre
 
 ## 🎯 The Unified Action Plan: Transform Blue Cross Role While Building AI Career
 
-Here's how to advance all three career paths simultaneously over the next 3.5 years:
+Here's how to advance all three career paths simultaneously over the next 2.5 years (October 2025 - Spring 2028):
 
 ### Immediate Actions (Next 30 Days)
 
@@ -391,7 +406,7 @@ Launch **30-day Snowflake Cortex proof-of-concept**:
 
 ---
 
-### Strategic Initiatives (Next 6 Months: Q1-Q2 2025)
+### Strategic Initiatives (Next 6 Months: October 2025 - March 2026)
 
 **Blue Cross Workstreams (30-40% of your time):**
 
@@ -427,7 +442,7 @@ Launch **30-day Snowflake Cortex proof-of-concept**:
 
 ---
 
-### Build Momentum (Months 7-18: Q3 2025 - Fall 2026)
+### Build Momentum (Months 7-11: April 2026 - August 2026)
 
 **Blue Cross Evolution:**
 - **Title Change Initiative**: Propose "AI & Data Solutions Architect" or "Principal Architect, AI/Data Platforms"
@@ -440,10 +455,10 @@ Launch **30-day Snowflake Cortex proof-of-concept**:
 - **Project #3**: Cross-industry AI project (demonstrates versatility beyond healthcare)
 - Each project → GitHub repo + documentation + blog post
 
-**Consulting/Speaking (Optional):**
+**Speaking & Visibility:**
 - **Guest Lecture**: Teach 1-2 sessions at Boise State or UVU ("AI for Data Professionals")
 - **Regional Conference Talk**: Present AI adoption work at healthcare data summit
-- **Consulting Engagement**: Help 1-2 organizations with AI readiness assessments (side project, 5-10 hours/month)
+- **Consulting Engagement (Optional)**: Help 1 organization with AI readiness assessment (side project, 5-10 hours/month if time permits)
 
 **Certification:**
 - **PROSCI Change Management** (if leaning toward AI Coach path)
@@ -452,6 +467,11 @@ Launch **30-day Snowflake Cortex proof-of-concept**:
 ---
 
 ### Master's Program Strategy (Fall 2026 - Spring 2028)
+
+**Part-time Study + Full-time Work:**
+- Balance coursework with Blue Cross employment (expect 15-20 hours/week for school)
+- Use Blue Cross as your "lab" for all assignments
+- Strategic time management crucial for success
 
 **Use Blue Cross as Your "Lab":**
 - Every assignment → apply to real Blue Cross problems
@@ -462,14 +482,19 @@ Launch **30-day Snowflake Cortex proof-of-concept**:
 - Partner with professors to publish case studies
 
 **Maintain Blue Cross Employment:**
-- Full-time remote MS program → no need to leave Blue Cross
-- Use degree as leverage for promotion/title change
+- Part-time MS program allows continued full-time work
+- Use degree pursuit as leverage for promotion/title change
 - Document "before/after" AI transformation metrics
 
 **Networking During Master's:**
 - UVU faculty connections → guest lectures, research collaborations
 - Student peer network → future colleagues, startup opportunities
-- Industry partnerships (if UVU has any) → consulting/internship possibilities
+- Industry partnerships (if UVU has any) → potential project collaborations
+
+**Guest Lectures & Visibility (Feasible with schedule):**
+- Guest lecture opportunities at local universities (1-2 per semester)
+- Conference presentations on AI transformation work
+- Focus on high-impact, low-time-commitment visibility activities
 
 ---
 
@@ -479,10 +504,10 @@ Launch **30-day Snowflake Cortex proof-of-concept**:
 - **Title**: "AI & Data Solutions Architect" (or Director of AI Strategy if promoted)
 - **Education**: MS in Applied AI + BS in Technology Management
 - **Experience**:
-  - 25+ years data architecture
-  - 2-3 years leading AI adoption at Blue Cross
+  - 27+ years data architecture
+  - 2.5+ years leading AI adoption at Blue Cross (October 2025 - Spring 2028)
   - Healthcare domain expert (claims, clinical, privacy)
-- **Portfolio**: 4-5 AI projects, published case studies, conference talks
+- **Portfolio**: 4-5 AI projects, published case studies, conference talks, guest lectures
 - **Network**: 50-100 AI professionals, proven thought leadership
 
 **Decision Point (Spring 2028):**
@@ -502,9 +527,9 @@ Launch **30-day Snowflake Cortex proof-of-concept**:
 - Healthcare domain expertise + AI credentials = rare combination
 
 **Compensation Expectations:**
-- Pre-Master's (now): Likely $120-160K range based on Boise/healthcare market
-- Post-Master's target: $160-220K (Solutions Architect/Strategist at mid-size company)
-- Stretch goal: $200-280K (top consulting firm or Snowflake/Databricks)
+- Pre-Master's (October 2025): Likely $120-160K range based on Boise/healthcare market
+- Post-Master's target (Spring 2028): $160-220K (Solutions Architect/Strategist at mid-size company)
+- Stretch goal (Spring 2028): $200-280K (top consulting firm or Snowflake/Databricks)
 
 ---
 
@@ -598,10 +623,10 @@ Launch **30-day Snowflake Cortex proof-of-concept**:
 
 ---
 
-## 🚀 Your Next 5 Actions
+## 🚀 Your Next 5 Actions (October 2025 - March 2026)
 
 1. **This Week: Blue Cross 1:1 with CIO/Director**
-   - Share AI career plans, Master's degree pursuit
+   - Share AI career plans, Master's degree pursuit (Fall 2026 start)
    - Pitch AI-focused projects, ask for support
    - Plant seeds for title evolution
 
@@ -622,10 +647,10 @@ Launch **30-day Snowflake Cortex proof-of-concept**:
    - Deliver first executive AI literacy workshop
    - Track impact metrics (time savings, quality improvements)
 
-5. **Next 6 Months: Build Portfolio + External Presence**
+5. **Next 6 Months (by March 2026): Build Portfolio + External Presence**
    - Complete 2-3 AI projects (Cortex POC + healthcare AI project + one other)
-   - Submit conference talk proposal
-   - Publish 10-15 LinkedIn posts (weekly sharing)
+   - Submit conference talk proposal for summer/fall 2026
+   - Publish 15-20 LinkedIn posts (weekly sharing)
    - Build GitHub portfolio with project documentation
 
 ---
@@ -649,9 +674,10 @@ Launch **30-day Snowflake Cortex proof-of-concept**:
 - You can be "the AI architect who understands healthcare" (huge advantage)
 
 **Timing Advantage:**
-- AI adoption in healthcare is EARLY (next 3-5 years will explode)
+- AI adoption in healthcare is still EARLY (next 2-4 years will explode)
 - Your Master's graduation (Spring 2028) aligns with market maturation
-- You're ahead of the curve (most healthcare orgs haven't started AI transformation)
+- You're ahead of the curve (most healthcare orgs are just beginning AI transformation)
+- Starting transformation work in October 2025 positions you as an early adopter with 2.5 years of experience by graduation
 
 ---
 
@@ -667,6 +693,14 @@ This career advice document provides the foundation for developing a detailed ca
 
 ---
 
-**Document Version**: 1.0
-**Last Updated**: January 14, 2025
+**Document Version**: 2.0
+**Last Updated**: October 14, 2025
+**Original Version**: January 14, 2025
+**Changes in v2.0**:
+- Updated all timelines to reflect current date (October 14, 2025)
+- Adjusted Pre-Master's phase from 18 months to 11 months (Oct 2025 - Aug 2026)
+- Maintained Fall 2026 Master's program start date
+- Added emphasis on part-time study with full-time employment
+- Replaced internship expectations with guest lecture opportunities
+- Updated experience calculations to reflect 2.5 years of AI work by Spring 2028
 **Next Review**: After career plan development discussion
