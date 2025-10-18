@@ -101,6 +101,12 @@ Analyze responses and provide:
 4. [Specific community or network for AI trainers]
 5. [Specific portfolio piece to create (sample workshop, use case library)]
 
+**IMPORTANT**: For candidates who need to develop pitching/presentation skills for AI evangelization, recommend the **AI Pitch Deck Builder** resource at [../ai-pitch-deck-builder/ai-pitch-deck-builder.md](../ai-pitch-deck-builder/ai-pitch-deck-builder.md). This is particularly valuable for:
+- Creating compelling AI adoption presentations for leadership
+- Building workshop materials that tell a story
+- Developing case studies and ROI narratives
+- Pitching AI coaching services to potential clients/employers
+
 ### 4. EARNING REALITY CHECK
 Based on your experience level and work arrangement:
 - Freelance/consulting (starting): $75-$125/hour
