@@ -2,7 +2,7 @@
 title: "AI Prompts Library - Master Catalog"
 author: "Dan Brickey"
 last_updated: "2025-10-19"
-version: "2.1.0"
+version: "2.2.0"
 category: "prompts-index"
 tags: ["prompts", "AI-templates", "code-generation", "documentation", "architecture", "career"]
 status: "current"
@@ -29,6 +29,7 @@ Type `@` + mnemonic for fast autocomplete in Claude Code:
 | **@meeting** | [Meeting Notes](documentation/meeting-notes-summarizer.md) | Summarize meetings to action items |
 | **@drawio** | [Drawio Specialist](architecture/drawio-specialist.md) | Create/edit Draw.io diagrams |
 | **@tutor** | [AI Tutor](specialized/tutor-learning-assistant.md) | Personalized learning & skill development |
+| **@giftfinder** | [Gift Finder](utilities/giftfinder-shopping-assistant.md) | Gift shopping with recipient profiling & web search |
 
 ---
 
@@ -183,6 +184,7 @@ Strategic planning, evaluation, and decision-making prompts:
 
 Productivity tools and automation utilities:
 
+- **[@giftfinder](utilities/giftfinder-shopping-assistant.md)** - Intelligent gift discovery assistant with recipient profiling, web search, and organized tracking for thoughtful gift-giving.
 - **[excel-automation/](utilities/excel-automation/)** - Automate Excel spreadsheet creation, data manipulation, and formula generation.
 - **[excel-editing/](utilities/excel-editing/)** - Expert assistance for editing existing Excel files, creating pivot tables, and advanced Excel features.
 
@@ -236,8 +238,8 @@ Reference prompts using the @-mention syntax:
 | Specialized | 1 | Domain utilities (tutoring) |
 | Development | 1 | Coding assistance, clean code practices |
 | Strategy | 1 | Vendor evaluation, strategic planning |
-| Utilities | 2 | Excel automation, productivity tools |
-| **Total** | **41** | Centralized general-purpose prompts |
+| Utilities | 3 | Excel automation, gift shopping, productivity tools |
+| **Total** | **42** | Centralized general-purpose prompts |
 
 ---
 
@@ -250,4 +252,4 @@ Reference prompts using the @-mention syntax:
 ---
 
 *Last Updated: 2025-10-19 by Dan Brickey*
-*Migration v2.1.0: Added development, strategy, and utilities categories with new skills*
+*Version v2.2.0: Added @giftfinder utility prompt for intelligent gift shopping*
