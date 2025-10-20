@@ -10,8 +10,9 @@ We aim to automate the refactoring of legacy SQL Server-based dimensional models
 - @docs\architecture\edp_platform_architecture.md
 - @docs\architecture\edp-layer-architecture-detailed.md
 - @docs\engineering-knowledge-base\data-vault-2.0-guide.md
-- @docs\use_cases\uc02_edw2_refactor\examples\input_example_edw2_refacor_dim_class_type_old_code.md
-- @docs\use_cases\uc02_edw2_refactor\examples\input_example_edw2_refacor_dim_class_type mappings.csv
+- Example Input: @docs\use_cases\uc02_edw2_refactor\examples\input_example_edw2_refacor_dim_class_type_old_code.md
+- Example Input: @docs\use_cases\uc02_edw2_refactor\examples\input_example_edw2_refacor_dim_class_type mappings.csv
+- Example Output: @docs\work_tracking\ai_transformation\use_cases\uc02_edw2_refactor\output\class_type
 
 ### Old Development Pattern
 
