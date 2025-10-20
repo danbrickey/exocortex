@@ -25,7 +25,8 @@
       "Bash(head:*)",
       "Bash(cat:*)",
       "Bash(tr:*)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "Bash(py -c \"import re; content = open(r''c:\\Users\\danbr\\github-danbrickey\\edp-ai-expert-team\\docs\\work_tracking\\ai_transformation\\use_cases\\uc02_edw2_refactor\\input\\pcp_attribution\\pcp_attribution_edw2.sql'', ''r'', encoding=''utf-8'', errors=''ignore'').read(); tables = set(re.findall(r''v_\\w+_combined_current'', content, re.IGNORECASE)); [print(t) for t in sorted(tables, key=str.lower)]\")"
     ],
     "deny": [],
     "ask": []
