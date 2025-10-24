@@ -78,9 +78,13 @@ This is the EDP AI Expert Team repository - a specialized consulting practice fo
 - Commit changes together
 
 ## Auto-Import Context Files
+@docs\architecture\edp-project-overview.md
 @docs\architecture\edp_platform_architecture.md
 @docs\architecture\edp-layer-architecture-detailed.md
+@docs\architecture\project-roadmap.md
 @docs\engineering-knowledge-base\environment-database-configuration.md
+
+For additional context including architecture patterns, business rules, and standards, see [.ai/context.md](.ai/context.md).
 
 ## EDP Data Domains - dbt Implementation Context
 
