@@ -5,7 +5,8 @@
       "Bash(mkdir -p \"c:\\Users\\danbr\\github-danbrickey\\edp-ai-expert-team\\docs\\work_tracking\\ai_transformation\\use_cases\\uc02_edw2_refactor\\output\\member_person\")",
       "Bash(mv v_member_person_current.sql v_member_person_lenient.sql)",
       "Bash(mkdir -p \"c:\\Users\\danbr\\github-danbrickey\\edp-ai-expert-team\\docs\\work_tracking\\ai_transformation\\use_cases\\uc02_edw2_refactor\\output\\pcp_attribution\")",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
