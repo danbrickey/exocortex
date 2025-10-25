@@ -1,13 +1,14 @@
 ---
 title: "EDP Documentation Master Index"
 author: "AI Expert Team Cabinet"
-last_updated: "2025-10-16T10:45:00Z"
-version: "1.0.0"
+last_updated: "2025-10-24T18:00:00Z"
+version: "2.0.0"
 document_type: "index"
 status: "active"
 audience: ["all"]
 description: "AI-navigable master catalog for locating documentation across the EDP project"
 maintenance: "Update monthly (auto-generated sections) + manual updates for major additions"
+changelog: "v2.0.0 - Reorganized with lowercase naming, new architecture/overview and architecture/layers folders"
 ---
 
 # EDP Documentation Master Index
@@ -28,8 +29,8 @@ maintenance: "Update monthly (auto-generated sections) + manual updates for majo
 ### "I need to understand the EDP platform architecture..."
 
 **Start Here**:
-- **Platform Overview**: [edp_platform_architecture.md](architecture/edp_platform_architecture.md) - High-level EDP architecture, AWS + Snowflake integration, medallion architecture
-- **Layer Architecture**: [edp-layer-architecture-detailed.md](architecture/edp-layer-architecture-detailed.md) - Detailed specifications for Raw, Integration, Curation, and Consumption layers
+- **Platform Overview**: [edp-platform-architecture.md](architecture/overview/edp-platform-architecture.md) - High-level EDP architecture, AWS + Snowflake integration, medallion architecture
+- **Layer Architecture**: [edp-layer-architecture-detailed.md](architecture/layers/edp-layer-architecture-detailed.md) - Detailed specifications for Raw, Integration, Curation, and Consumption layers
 - **Patterns Library**: [patterns/](architecture/patterns/) - Reusable architecture patterns (multi-tenancy, security, performance)
 
 **Related**:
@@ -41,11 +42,11 @@ maintenance: "Update monthly (auto-generated sections) + manual updates for majo
 ### "I need to understand data ingestion and integration..."
 
 **Start Here**:
-- **Data Ingestion Architecture**: [edp-data-ingestion-architecture.md](architecture/edp-data-ingestion-architecture.md) - CDC patterns, source system connections, MSK streaming
-- **Near Real-Time Architecture**: [edp-near-realtime-architecture.md](architecture/edp-near-realtime-architecture.md) - Real-time streaming patterns, Kafka/MSK integration
+- **Data Ingestion Architecture**: [data-ingestion-architecture.md](architecture/layers/data-ingestion-architecture.md) - CDC patterns, source system connections, MSK streaming
+- **Near Real-Time Architecture**: [near-realtime-architecture.md](architecture/layers/near-realtime-architecture.md) - Real-time streaming patterns, Kafka/MSK integration
 
 **Related**:
-- Data Vault integration layer: [edp-layer-architecture-detailed.md](architecture/edp-layer-architecture-detailed.md) (Integration Layer section)
+- Data Vault integration layer: [edp-layer-architecture-detailed.md](architecture/layers/edp-layer-architecture-detailed.md) (Integration Layer section)
 - Source system documentation: [sources/facets/](sources/facets/)
 
 ---
@@ -54,7 +55,7 @@ maintenance: "Update monthly (auto-generated sections) + manual updates for majo
 
 **Start Here**:
 - **Data Vault 2.0 Guide**: [data-vault-2.0-guide.md](engineering-knowledge-base/data-vault-2.0-guide.md) - Comprehensive implementation guide for DV2.0 patterns
-- **Integration Layer Architecture**: [edp-layer-architecture-detailed.md](architecture/edp-layer-architecture-detailed.md) (Integration Layer section) - DV2.0 implementation in EDP
+- **Integration Layer Architecture**: [edp-layer-architecture-detailed.md](architecture/layers/edp-layer-architecture-detailed.md) (Integration Layer section) - DV2.0 implementation in EDP
 
 **Related**:
 - Data Vault terminology: [data-vault-2.0-terminology.md](glossaries/data-vault-2.0-terminology.md)
@@ -127,11 +128,11 @@ maintenance: "Update monthly (auto-generated sections) + manual updates for majo
 
 | Document | Layers | Topics | Audience | Last Updated |
 |----------|--------|--------|----------|--------------|
-| [edp_platform_architecture.md](architecture/edp_platform_architecture.md) | Cross-layer | Platform, AWS, Snowflake, medallion architecture | Architects, Engineers, Directors | 2025-10-15 |
-| [edp-layer-architecture-detailed.md](architecture/edp-layer-architecture-detailed.md) | All layers | Layer specifications, data flow, transformations | Architects, Engineers | 2025-10-15 |
-| [edp-data-ingestion-architecture.md](architecture/edp-data-ingestion-architecture.md) | Raw | CDC, source systems, MSK, ingestion patterns | Architects, Engineers | 2025-10-10 |
-| [edp-near-realtime-architecture.md](architecture/edp-near-realtime-architecture.md) | Raw, Integration | Real-time streaming, Kafka, event processing | Architects, Engineers | 2025-10-10 |
-| [edp-master-data-management-strategy.md](architecture/edp-master-data-management-strategy.md) | Curation | MDM, golden records, entity resolution | Architects, Engineers, Analysts | 2025-10-08 |
+| [edp-platform-architecture.md](architecture/overview/edp-platform-architecture.md) | Cross-layer | Platform, AWS, Snowflake, medallion architecture | Architects, Engineers, Directors | 2025-10-15 |
+| [edp-layer-architecture-detailed.md](architecture/layers/edp-layer-architecture-detailed.md) | All layers | Layer specifications, data flow, transformations | Architects, Engineers | 2025-10-15 |
+| [data-ingestion-architecture.md](architecture/layers/data-ingestion-architecture.md) | Raw | CDC, source systems, MSK, ingestion patterns | Architects, Engineers | 2025-10-10 |
+| [near-realtime-architecture.md](architecture/layers/near-realtime-architecture.md) | Raw, Integration | Real-time streaming, Kafka, event processing | Architects, Engineers | 2025-10-10 |
+| [master-data-management-strategy.md](architecture/layers/master-data-management-strategy.md) | Curation | MDM, golden records, entity resolution | Architects, Engineers, Analysts | 2025-10-08 |
 | [multi-tenancy-architecture.md](architecture/patterns/multi-tenancy-architecture.md) | Integration | Multi-tenant, security, RBAC, data segregation | Architects, Engineers | 2025-10-16 |
 
 ### Business Rules Documentation
@@ -262,9 +263,9 @@ maintenance: "Update monthly (auto-generated sections) + manual updates for majo
 
 ### Raw Layer (Source Data Landing)
 **Architecture**:
-- [edp-data-ingestion-architecture.md](architecture/edp-data-ingestion-architecture.md) - CDC patterns and ingestion
-- [edp-near-realtime-architecture.md](architecture/edp-near-realtime-architecture.md) - Real-time streaming
-- [edp-layer-architecture-detailed.md](architecture/edp-layer-architecture-detailed.md) - Raw layer specifications
+- [data-ingestion-architecture.md](architecture/layers/data-ingestion-architecture.md) - CDC patterns and ingestion
+- [near-realtime-architecture.md](architecture/layers/near-realtime-architecture.md) - Real-time streaming
+- [edp-layer-architecture-detailed.md](architecture/layers/edp-layer-architecture-detailed.md) - Raw layer specifications
 
 **Topics**: CDC, MSK Kafka, Fivetran, source system connections, landing zones
 
@@ -272,7 +273,7 @@ maintenance: "Update monthly (auto-generated sections) + manual updates for majo
 
 ### Integration Layer (Data Vault 2.0)
 **Architecture**:
-- [edp-layer-architecture-detailed.md](architecture/edp-layer-architecture-detailed.md) - Integration layer specifications
+- [edp-layer-architecture-detailed.md](architecture/layers/edp-layer-architecture-detailed.md) - Integration layer specifications
 - [multi-tenancy-architecture.md](architecture/patterns/multi-tenancy-architecture.md) - Multi-tenant patterns
 
 **Implementation Guides**:
@@ -284,8 +285,8 @@ maintenance: "Update monthly (auto-generated sections) + manual updates for majo
 
 ### Curation Layer (Business Vault & Master Data)
 **Architecture**:
-- [edp-layer-architecture-detailed.md](architecture/edp-layer-architecture-detailed.md) - Curation layer specifications
-- [edp-master-data-management-strategy.md](architecture/edp-master-data-management-strategy.md) - MDM strategy
+- [edp-layer-architecture-detailed.md](architecture/layers/edp-layer-architecture-detailed.md) - Curation layer specifications
+- [master-data-management-strategy.md](architecture/layers/master-data-management-strategy.md) - MDM strategy
 
 **Topics**: Point-in-time tables, bridge tables, business rules, calculated fields, master data
 
@@ -293,7 +294,7 @@ maintenance: "Update monthly (auto-generated sections) + manual updates for majo
 
 ### Consumption Layer (Dimensional Models & Analytics)
 **Architecture**:
-- [edp-layer-architecture-detailed.md](architecture/edp-layer-architecture-detailed.md) - Consumption layer specifications
+- [edp-layer-architecture-detailed.md](architecture/layers/edp-layer-architecture-detailed.md) - Consumption layer specifications
 
 **Topics**: Star schemas, dimensional models, fact tables, aggregates, reporting views
 
@@ -302,7 +303,7 @@ maintenance: "Update monthly (auto-generated sections) + manual updates for majo
 ## Cross-Reference Resources
 
 ### Documentation Standards
-- **Taxonomy**: [TAXONOMY.md](TAXONOMY.md) - Controlled vocabulary for documentation classification
+- **Taxonomy**: [taxonomy.md](taxonomy.md) - Controlled vocabulary for documentation classification
 - **Architecture README**: [architecture/README.md](architecture/README.md) - Architecture documentation standards
 - **Engineering KB README**: [engineering-knowledge-base/README.md](engineering-knowledge-base/README.md) - Implementation guide standards
 
@@ -328,7 +329,7 @@ maintenance: "Update monthly (auto-generated sections) + manual updates for majo
 1. **Start broad**: Look in "Quick Navigation by Intent" section
 2. **Drill down**: Follow links to specific documents
 3. **Explore related**: Check "Related" links and cross-references
-4. **Check taxonomy**: Use [TAXONOMY.md](TAXONOMY.md) for precise keyword searches
+4. **Check taxonomy**: Use [taxonomy.md](taxonomy.md) for precise keyword searches
 
 ### Searching by Tags
 Use taxonomy tags in AI queries:
@@ -348,7 +349,7 @@ Find documents tagged with:
 ### Manual Updates: Document additions, major restructuring
 
 **To add a new document to this index**:
-1. Ensure document has complete frontmatter with taxonomy tags (see [TAXONOMY.md](TAXONOMY.md))
+1. Ensure document has complete frontmatter with taxonomy tags (see [taxonomy.md](taxonomy.md))
 2. Add entry to appropriate section(s) in this index
 3. Update cross-references and related docs
 4. Update "Last Updated" timestamp in this file
