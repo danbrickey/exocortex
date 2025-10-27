@@ -1,0 +1,394 @@
+version: 2
+
+models:
+  - name: prep_member_person
+    description: >
+      Prep model that applies business rules and joins from legacy v_FacetsMemberUMI_current view.
+
+      This model:
+      - Joins member demographics with external person ID from reference data
+      - Maps source codes (SourceID=1 -> GEM, else -> FCT)
+      - Includes subscriber and group relationships
+      - Filters out proxy subscribers
+      - Only includes records where external ID type = 'EXRM'
+
+    columns:
+      - name: constituent_id
+        description: External constituent/person identifier (EXID_ID from CMC_EXID_EXT_ID)
+        tests:
+          - not_null
+
+      - name: member_bk
+        description: Member business key (natural key from source system)
+        tests:
+          - not_null
+          - unique
+
+      - name: person_bk
+        description: Person business key linking to external person record
+
+      - name: group_bk
+        description: Group business key for member's group affiliation
+        tests:
+          - not_null
+
+      - name: subscriber_bk
+        description: Subscriber business key for member's subscriber relationship
+        tests:
+          - not_null
+
+      - name: member_suffix
+        description: Member name suffix (Jr., Sr., III, etc.)
+
+      - name: member_first_name
+        description: Member's first/given name
+        tests:
+          - not_null
+
+      - name: member_last_name
+        description: Member's last/family name
+        tests:
+          - not_null
+
+      - name: member_sex
+        description: Member's biological sex code
+        tests:
+          - accepted_values:
+              values: ['M', 'F', 'U', 'O']
+              quote: false
+
+      - name: member_birth_dt
+        description: Member's date of birth
+        tests:
+          - not_null
+
+      - name: member_ssn
+        description: Member's Social Security Number (encrypted/masked in production)
+
+      - name: group_id
+        description: Group identifier for member's affiliated group
+        tests:
+          - not_null
+
+      - name: subscriber_id
+        description: Subscriber identifier
+        tests:
+          - not_null
+
+      - name: source_code
+        description: >
+          Mapped source code derived from source_id:
+          - 'GEM' when source_id = 1
+          - 'FCT' for all other sources
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['GEM', 'FCT']
+              quote: true
+
+      - name: member_source
+        description: Original source system for the member record
+        tests:
+          - not_null
+
+      - name: edp_record_source
+        description: EDP record source identifier
+
+      - name: load_date
+        description: Date and time the row was loaded in the data vault
+        tests:
+          - not_null
+
+      - name: start_date
+        description: Date and time the row started in the data vault (effective from)
+        tests:
+          - not_null
+
+      - name: create_time
+        description: CDC timestamp when the row was created in source system
+
+  - name: stg_member_person_business
+    description: >
+      Staging model that generates hash keys and hashdiff for the member_person
+      business vault computed satellite. Prepares data from prep_member_person
+      for loading into bv_s_member_person.
+
+    columns:
+      - name: member_person_hk
+        description: Hash key for member person (parent hub key)
+        tests:
+          - not_null
+          - unique
+
+      - name: member_person_hashdiff
+        description: Hash diff for change detection across all payload columns
+        tests:
+          - not_null
+
+  - name: bv_s_member_person
+    description: >
+      Business Vault Computed Satellite: Member Person
+
+      Enriched member person data with external constituent ID and business rules applied.
+      This is a computed satellite that derives data from raw vault tables plus business logic.
+
+      Type: Type 2 SCD - Tracks all changes to member person attributes over time
+
+      Parent Hub: member_hub (via member_person_hk)
+
+      Business Logic Applied:
+      - Combines member demographics with external person identifier
+      - Maps source codes based on source_id
+      - Filters for valid subscribers and groups
+      - Excludes proxy subscribers
+
+    tests:
+      # Test that we don't have duplicate active records
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - member_person_hk
+            - load_datetime
+
+    columns:
+      - name: member_person_hk
+        description: Hash key identifying the member person entity (parent key)
+        tests:
+          - not_null
+
+      - name: member_person_hashdiff
+        description: Hash of all payload columns for change detection
+        tests:
+          - not_null
+
+      - name: constituent_id
+        description: External constituent/person identifier
+
+      - name: member_bk
+        description: Member business key (natural key)
+        tests:
+          - not_null
+
+      - name: person_bk
+        description: Person business key linking to external person record
+
+      - name: group_bk
+        description: Group business key
+        tests:
+          - not_null
+
+      - name: subscriber_bk
+        description: Subscriber business key
+        tests:
+          - not_null
+
+      - name: member_suffix
+        description: Member name suffix
+
+      - name: member_first_name
+        description: Member's first name
+        tests:
+          - not_null
+
+      - name: member_last_name
+        description: Member's last name
+        tests:
+          - not_null
+
+      - name: member_sex
+        description: Member's biological sex code
+        tests:
+          - accepted_values:
+              values: ['M', 'F', 'U', 'O']
+              quote: false
+
+      - name: member_birth_dt
+        description: Member's date of birth
+        tests:
+          - not_null
+
+      - name: member_ssn
+        description: Member's Social Security Number
+
+      - name: group_id
+        description: Group identifier
+        tests:
+          - not_null
+
+      - name: subscriber_id
+        description: Subscriber identifier
+        tests:
+          - not_null
+
+      - name: source_code
+        description: Mapped source code (GEM or FCT)
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['GEM', 'FCT']
+              quote: true
+
+      - name: member_source
+        description: Original source system
+        tests:
+          - not_null
+
+      - name: effective_from
+        description: Effective start date/time for this version of the record
+        tests:
+          - not_null
+
+      - name: load_datetime
+        description: Load date/time into the data vault
+        tests:
+          - not_null
+
+      - name: record_source
+        description: Source system identifier
+
+  - name: dim_member_person
+    description: >
+      Dimensional Model: Member Person
+
+      Denormalized member person dimension for reporting and analytics.
+
+      Type: Type 2 Slowly Changing Dimension
+      - Tracks historical changes to member person attributes
+      - Uses effective_from/effective_to for temporal queries
+
+      Grain: One row per member per effective period
+
+      Source: bv_s_member_person (business vault computed satellite)
+
+      Legacy Equivalent: v_FacetsMemberUMI_current
+
+    tests:
+      # Ensure surrogate keys are unique
+      - unique:
+          column_name: member_person_sk
+
+      # Ensure each member has only one current record
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - member_bk
+            - is_current
+          where: "is_current = true"
+
+      # Test that effective date ranges don't overlap for the same member
+      - dbt_expectations.expect_row_values_to_have_data_for_every_n_datepart:
+          date_col: effective_from
+          group_by: member_bk
+          datepart: day
+
+    columns:
+      - name: member_person_sk
+        description: Surrogate key for the dimension (hash of member_bk + effective_from)
+        tests:
+          - not_null
+          - unique
+
+      - name: member_bk
+        description: Member business key (natural key)
+        tests:
+          - not_null
+
+      - name: person_bk
+        description: Person business key
+
+      - name: constituent_id
+        description: External constituent/person identifier
+
+      - name: subscriber_id
+        description: Subscriber identifier
+        tests:
+          - not_null
+
+      - name: group_id
+        description: Group identifier
+        tests:
+          - not_null
+
+      - name: member_suffix
+        description: Member name suffix (defaulted to empty string if null)
+
+      - name: member_first_name
+        description: Member's first name (defaulted to 'Unknown' if null)
+        tests:
+          - not_null
+
+      - name: member_last_name
+        description: Member's last name (defaulted to 'Unknown' if null)
+        tests:
+          - not_null
+
+      - name: member_sex
+        description: Member's biological sex code (defaulted to 'U' if null)
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['M', 'F', 'U', 'O']
+              quote: false
+
+      - name: member_birth_dt
+        description: Member's date of birth
+
+      - name: member_ssn
+        description: Member's Social Security Number
+
+      - name: member_age_years
+        description: Calculated age in years based on birth date and current date
+
+      - name: member_full_name
+        description: Concatenated full name (first + last)
+
+      - name: source_code
+        description: Mapped source code (GEM or FCT)
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['GEM', 'FCT']
+              quote: true
+
+      - name: source
+        description: Original source system
+        tests:
+          - not_null
+
+      - name: group_bk
+        description: Group business key (for joining to group dimension)
+        tests:
+          - not_null
+
+      - name: subscriber_bk
+        description: Subscriber business key (for joining to subscriber dimension)
+        tests:
+          - not_null
+
+      - name: effective_from
+        description: Effective start date/time for this version of the record
+        tests:
+          - not_null
+
+      - name: effective_to
+        description: >
+          Effective end date/time for this version of the record.
+          Set to '9999-12-31' for current records.
+        tests:
+          - not_null
+
+      - name: is_current
+        description: >
+          Boolean flag indicating if this is the current/active version.
+          True if effective_to is null (in source), false otherwise.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+              quote: false
+
+      - name: load_datetime
+        description: Load date/time into the data vault
+        tests:
+          - not_null
+
+      - name: record_source
+        description: Source system identifier

@@ -7,12 +7,14 @@
 We aim to automate the refactoring of legacy SQL Server-based dimensional models (EDW2) into dbt models for Snowflake (EDW3). When I use the term EDW2 I am refering to the legacy code from Wherescape/SQL Server, when I use the term EDW3, that refers to the new Snowflake implementation of our dimensional model and business vault. The legacy models were generated using Wherescape RED and are tightly coupled to an on-prem SQL Server environment. The goal is to modernize these models to align with the Data Vault 2.0 methodology and Snowflake-native performance patterns, using the automate_dv dbt package where applicable. The refactored EDW3 artifacts would live in the Curation Layer and pull data from the raw vault in the Integration Layer.
 
 ### Context Documents and example code
-- @docs\architecture\edp_platform_architecture.md
-- @docs\architecture\edp-layer-architecture-detailed.md
-- @docs\engineering-knowledge-base\data-vault-2.0-guide.md
-- Example Input: @docs\use_cases\uc02_edw2_refactor\examples\input_example_edw2_refacor_dim_class_type_old_code.md
-- Example Input: @docs\use_cases\uc02_edw2_refactor\examples\input_example_edw2_refacor_dim_class_type mappings.csv
-- Example Output: @docs\work_tracking\ai_transformation\use_cases\uc02_edw2_refactor\output\class_type
+- For general EDP architecture: @docs\architecture\edp_platform_architecture.md
+- For EDP Layered architecture specs: @docs\architecture\edp-layer-architecture-detailed.md
+- For business vault design: @docs\engineering-knowledge-base\data-vault-2.0-guide.md
+- When creating business rule documents use: @ai-resources\prompts\documentation\bizrules-documenter.md
+- Example Input: @docs\work-tracking\ai-transformation\use_cases\uc02_edw2_refactor\input\network_set\dimNetworkSet.sql
+- Example Output - mapping: @docs\work-tracking\ai-transformation\use_cases\uc02_edw2_refactor\output\network_set\mapping_edw2_refactor_network_set.csv
+- Example Output - Business Rules Document: @docs\work-tracking\ai-transformation\use_cases\uc02_edw2_refactor\output\network_set\network_set_business_rules.md
+- Example Output dbt Files: @docs\work-tracking\ai-transformation\use_cases\uc02_edw2_refactor\output\network_set
 
 ### Old Development Pattern
 
@@ -31,6 +33,7 @@ Each old dimensional artifact works similarly:
   - mapping of old raw vault tables and columns to new raw vault tables and columns provide by the engineer after initial analysis
 
 - Outputs:
+  - Create output files in a folder named after the entity being refactored. For example, if refactoring the dimNetworkSet object, create a folder named `network_set` in the output path.
   - An incomplete mapping document for the raw vault translation with all EDW2 raw vault referencese for the current refactoring problem that an engineer can fill out with the analogous tables from the new raw vault. 
   - A list of recommended business vault objects.
   - dbt model SQL files using Snowflake SQL and automate_dv macros to build the business vault object.
@@ -67,7 +70,7 @@ The workflow would go something like:
   - From the source code provided make a list of all the tables and source columns used in the code. Columns used to forward the data to the next stored proc or view . These should be raw vault artifacts and typically follow the naming patterns:
     - Satellites: `v_*_current`, or `v_s*_combined_current`
     - Reference: `v_r_*`
-  - Display this list in a code block that can be copied in csv ready format: old_table_name,old_column_name
+  - Save the output as a csv file named mapping_edw2_refactor_<entity_name>.csv: old_table_name,old_column_name
   - Pause here for the engineer to complete a mapping document based on this result, and verify that all dependencies are available
 
 ### 2. Mapping Validation
@@ -89,8 +92,12 @@ The workflow would go something like:
 
 - **Purpose**: Generate the dbt code for the business vault object(s) and the dimensional artifact(s)
 - **Logic**:
-  - Use the column mapping and code analysis results to create dbt models. Typically this would be a computed satellite and a dimension/fact.
-  - Use CTEs at the beginning of the dbt models as specified in the coding standards section
+  - analyze the old source code, the mapping document, and the business vault recommendation
+  - typically the steps would be:
+    - prep_<entity_name>_business.sql or prep_<entity_name>.sql - prepare the data for business vault loading, this is where much of the business rule code would go. Use CTEs at the beginning of the dbt models as specified in the coding standards section
+    - stg_<entity_name>_business.sql or stg_<entity_name>.sql - create hashkeys and hashdiff to load the business vault computed satellite or other business vault object
+    - [bv_s,bv_brg,bv_h,bv_l,bv_pit]_<entity_name>.sql - load the business vault computed satellite or other business vault object using the automate_dv macros
+  - Use the column mapping and code analysis results to create dbt models. Typically this would be a computed satellite and a dimension/fact, but this could be bridge or pit as well depending on the use case.
   - Pause here for the engineer to give feedback and adjust the recommendation
 
 ### 4. Testing Recommendations
