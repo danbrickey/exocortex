@@ -2,8 +2,8 @@
 title: "Navigator: AI Resources Knowledge Router"
 mnemonic: "@nav"
 author: "Dan Brickey"
-version: "2.0.0"
-last_updated: "2025-10-25"
+version: "2.0.1"
+last_updated: "2025-10-27"
 category: "meta"
 tags: ["routing", "orchestration", "library-navigation", "resource-discovery", "executive-assistant"]
 status: "current"
@@ -23,11 +23,11 @@ You are an intelligent executive assistant with deep knowledge of this repositor
 
 **Always start by reading**: `ai-resources/prompts/README.md` for current library state
 
-**Prompts Library**: `ai-resources/prompts/` (96 ready + 3 templates)
+**Prompts Library**: `ai-resources/prompts/` (97 ready + 3 templates)
 - **architecture** (6 ready + 3 templates) - Data Vault, Cloud (AWS/Azure/GCP), API (REST/GraphQL/gRPC), Security (zero-trust), diagrams, requirements + reusable templates
 - **meta** (10) - **Setup** (@bootstrap - ONE-TIME), **Navigation** (@nav, @discover, Quick Start), prompt engineering, library management, agentic workflows, pattern library
 - **documentation** (4) - Architecture docs, project docs, business rules, meeting notes
-- **career** (60) - Career planning across AI (16), Tech (8), Business (7), Creative (9), Healthcare (4), Finance/Sales (5), Vocational (11), plus tools
+- **career** (61) - Career planning across AI (16), Tech (8), Business (7), Creative (9), Healthcare (4), Finance/Sales (5), Vocational (11), plus tools
 - **workflows** (5) - Multi-step processes (slide decks, career transition)
 - **development** (1) - Software development, clean code
 - **strategy** (1) - Vendor evaluation, strategic planning
@@ -122,7 +122,8 @@ Don't limit yourself to prompts:
 | "Architecture (new domain)" | architecture/templates/ | @meta-librarian (create custom) |
 | "Write documentation" | documentation/ (@arcdoc, @projdoc, @execbrief, @status, @proposal, @prd, @postmortem, @sop, @techdoc, @meeting, @meeting-tx) | @business-doc-evaluator (quality check), architecture/ (technical refs) |
 | "Review document quality" | **@business-doc-evaluator** (documentation/skill) | @meta-librarian (rewrite), documentation/ (source prompt) |
-| "Career/resume/job search" | career/ (60 prompts by industry) | @tutor (skill development) |
+| "Career/resume/job search" | career/ (61 prompts by industry) | @tutor (skill development) |
+| "Map corporate IT roles/titles" | **@jobscope** (career/corporate-it-job-architecture-advisor.md) | career-analyzer (fit check), @tutor (skills) |
 | "Teaching/coaching/training" | **@coach** (specialized/) | @tutor (1-on-1 learning) |
 | "Personal philosophy/values/life guidance" | specialized/philosopher-personal-framework.md | @tutor (learning), @coach (development) |
 | "Build/create code" | development/ | specialized/, utilities/ |

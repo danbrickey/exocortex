@@ -1,8 +1,8 @@
 ---
 title: "AI Prompts Library - Master Catalog"
 author: "Dan Brickey"
-last_updated: "2025-10-19"
-version: "2.2.0"
+last_updated: "2025-10-27"
+version: "2.3.0"
 category: "prompts-index"
 tags: ["prompts", "AI-templates", "code-generation", "documentation", "architecture", "career"]
 status: "current"
@@ -23,6 +23,7 @@ Type `@` + mnemonic for fast autocomplete in Claude Code:
 | **@librarian** | [Prompt Librarian](meta/librarian-prompt-management.md) | Manage prompt library organization & metadata |
 | **@meta** | [Meta-Prompt Engineer](meta/meta-prompt-engineer.md) | Create high-quality prompts with evaluation |
 | **@architect** | [Data Architect](architecture/architect-data-vault.md) | Data Vault 2.0 & dimensional modeling expert |
+| **@jobscope** | [Corporate IT Job Architecture Advisor](career/corporate-it-job-architecture-advisor.md) | Decode & compare U.S. corporate IT roles |
 | **@arcdoc** | [Architecture Docs](documentation/arcdoc-documentation-architect.md) | Architecture documentation with business rules |
 | **@bizrules** | [Business Rules](documentation/bizrules-documenter.md) | Document business rules from code |
 | **@projdoc** | [Project Docs](documentation/projdoc-expert.md) | Create project documentation |
@@ -98,6 +99,7 @@ Prompts for career planning, analysis, and development:
 ### Career Planning & Analysis
 - **[career-analyzer.md](career/career-analyzer.md)** - Analyze career paths, create development plans, and identify skill gaps.
 - **[career-cv-interviewer.md](career/career-cv-interviewer.md)** - Interview assistant for building comprehensive CV/resume content.
+- **[corporate-it-job-architecture-advisor.md](career/corporate-it-job-architecture-advisor.md)** - Interpret or assemble IT job descriptions, map authority boundaries, and recommend titles aligned with U.S. corporate structures.
 
 ### AI Career Path Role Prompts
 **Location**: [career/ai_career_paths/](career/ai_career_paths/)
