@@ -4,7 +4,8 @@
       "Bash(powershell -ExecutionPolicy Bypass -File:*)",
       "Bash(powershell -Command:*)",
       "Bash(mkdir:*)",
-      "Bash(test:*)"
+      "Bash(test:*)",
+      "Bash(rm:*)"
     ],
     "deny": [],
     "ask": []

@@ -1,0 +1,487 @@
+version: 2
+
+models:
+  - name: bv_s_member_cob_profile
+    description: |
+      Business Vault computed effectivity satellite storing member Coordination of Benefits (COB)
+      profile information across discrete date ranges. Combines eligibility and COB data to determine
+      coverage status and billing order for Medical, Dental, and Drug benefits.
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - member_hk
+              - start_date
+
+    columns:
+      - name: member_hk
+        description: Hash key for the member (parent hub key)
+        data_tests:
+          - not_null
+
+      - name: hashdiff
+        description: Hash of all payload columns for change detection
+        data_tests:
+          - not_null
+
+      - name: start_date
+        description: Effective start date for this COB profile period
+        data_tests:
+          - not_null
+
+      - name: end_date
+        description: Effective end date for this COB profile period (inclusive)
+        data_tests:
+          - not_null
+
+      - name: source
+        description: Source system identifier (e.g., GEM, FCT)
+
+      - name: member_bk
+        description: Member business key (natural key from source system)
+        data_tests:
+          - not_null
+
+      - name: group_id
+        description: Group identifier for the member
+        data_tests:
+          - not_null
+
+      - name: subscriber_id
+        description: Subscriber identifier for the member
+        data_tests:
+          - not_null
+
+      - name: member_suffix
+        description: Member suffix distinguishing dependents from subscriber
+
+      - name: group_bk
+        description: Group business key
+        data_tests:
+          - not_null
+
+      - name: subscriber_bk
+        description: Subscriber business key
+        data_tests:
+          - not_null
+
+      - name: member_first_name
+        description: Member's first name
+
+      - name: edp_record_source
+        description: EDP record source system name
+
+      - name: medical_coverage
+        description: Indicates if member has medical coverage during this period
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: dental_coverage
+        description: Indicates if member has dental coverage during this period
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: drug_coverage
+        description: Indicates if member has drug/pharmacy coverage during this period
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: has_medical_cob
+        description: Indicates if member has Coordination of Benefits for medical claims
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: medical_cob_order
+        description: BCI's payment order for medical claims (Primary, Secondary, Tertiary, or No)
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Primary', 'Secondary', 'Tertiary', 'No']
+
+      - name: coverage_id_medical
+        description: MCRE_ID code identifying the other medical insurance carrier
+
+      - name: medical_2blues
+        description: Flags if the medical COB involves another Blue Cross Blue Shield plan
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: has_dental_cob
+        description: Indicates if member has Coordination of Benefits for dental claims
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: dental_cob_order
+        description: BCI's payment order for dental claims (Primary, Secondary, Tertiary, or No)
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Primary', 'Secondary', 'Tertiary', 'No']
+
+      - name: coverage_id_dental
+        description: MCRE_ID code identifying the other dental insurance carrier
+
+      - name: dental_2blues
+        description: Flags if the dental COB involves another Blue Cross Blue Shield plan
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: has_drug_cob
+        description: Indicates if member has Coordination of Benefits for drug/pharmacy claims
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: drug_cob_order
+        description: BCI's payment order for drug/pharmacy claims (Primary, Secondary, Tertiary, or No)
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Primary', 'Secondary', 'Tertiary', 'No']
+
+      - name: drug_2blues
+        description: Flags if the drug COB involves another Blue Cross Blue Shield plan
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: create_date
+        description: Timestamp when the COB profile record was created
+        data_tests:
+          - not_null
+
+  - name: xwalk_member_cob_profile
+    description: |
+      Crosswalk lookup table providing member COB profiles for claims processing and reporting.
+      One row per member per discrete date range, showing coverage status and COB order across
+      Medical, Dental, and Drug benefits. Used to lookup member's COB status for any given service date.
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - source_id
+              - member_bk
+              - start_date
+
+    columns:
+      - name: source_id
+        description: Source system identifier
+        data_tests:
+          - not_null
+
+      - name: member_bk
+        description: Member business key
+        data_tests:
+          - not_null
+
+      - name: start_date
+        description: Start date of the COB profile period
+        data_tests:
+          - not_null
+
+      - name: end_date
+        description: End date of the COB profile period (inclusive)
+        data_tests:
+          - not_null
+
+      - name: group_id
+        description: Group identifier
+        data_tests:
+          - not_null
+
+      - name: subscriber_id
+        description: Subscriber identifier
+        data_tests:
+          - not_null
+
+      - name: member_suffix
+        description: Member suffix (dependent sequence number)
+
+      - name: group_bk
+        description: Group business key
+        data_tests:
+          - not_null
+
+      - name: subscriber_bk
+        description: Subscriber business key
+        data_tests:
+          - not_null
+
+      - name: member_first_name
+        description: Member's first name
+
+      - name: coverage_id_medical
+        description: Insurance carrier code for medical COB
+
+      - name: coverage_id_dental
+        description: Insurance carrier code for dental COB
+
+      - name: medical_coverage
+        description: Whether member has medical coverage
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: has_medical_cob
+        description: Whether member has medical COB
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: medical_cob_order
+        description: BCI's payment order for medical claims
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Primary', 'Secondary', 'Tertiary', 'No']
+
+      - name: medical_is_bci_primary
+        description: Derived flag indicating BCI is primary payer for medical
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: medical_is_bci_secondary
+        description: Derived flag indicating BCI is secondary payer for medical
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: medical_is_bci_tertiary
+        description: Derived flag indicating BCI is tertiary payer for medical
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: medical_2blues
+        description: Flag for Two Blues scenario (medical)
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: dental_coverage
+        description: Whether member has dental coverage
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: has_dental_cob
+        description: Whether member has dental COB
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: dental_cob_order
+        description: BCI's payment order for dental claims
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Primary', 'Secondary', 'Tertiary', 'No']
+
+      - name: dental_is_bci_primary
+        description: Derived flag indicating BCI is primary payer for dental
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: dental_is_bci_secondary
+        description: Derived flag indicating BCI is secondary payer for dental
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: dental_is_bci_tertiary
+        description: Derived flag indicating BCI is tertiary payer for dental
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: dental_2blues
+        description: Flag for Two Blues scenario (dental)
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: drug_coverage
+        description: Whether member has drug/pharmacy coverage
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: has_drug_cob
+        description: Whether member has drug COB
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: drug_cob_order
+        description: BCI's payment order for drug/pharmacy claims
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Primary', 'Secondary', 'Tertiary', 'No']
+
+      - name: drug_is_bci_primary
+        description: Derived flag indicating BCI is primary payer for drugs
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: drug_is_bci_secondary
+        description: Derived flag indicating BCI is secondary payer for drugs
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: drug_is_bci_tertiary
+        description: Derived flag indicating BCI is tertiary payer for drugs
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: drug_2blues
+        description: Flag for Two Blues scenario (drug)
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
+      - name: edp_record_source
+        description: Source system that provided the data
+
+      - name: dss_load_date
+        description: Date the record was loaded into the data warehouse
+
+      - name: dss_create_time
+        description: Timestamp when record was created
+
+      - name: dss_update_time
+        description: Timestamp when record was last updated
+
+seeds:
+  - name: seed_cob_two_blues_carriers
+    description: |
+      Reference data listing insurance carrier codes (MCRE_ID) that represent Blue Cross Blue Shield
+      plans, including BCI, FEP, BlueCard, and Medicare Advantage Blues plans. Used to identify
+      "Two Blues" scenarios where a member has multiple Blues coverages.
+    columns:
+      - name: mcre_id
+        description: Insurance carrier code from member COB records
+        data_tests:
+          - unique
+          - not_null
+
+      - name: carrier_name
+        description: Human-readable name of the insurance carrier
+
+      - name: carrier_type
+        description: Classification of carrier type (BCBS, BCI, FEP, BlueCard, Medicare Advantage)
+
+      - name: notes
+        description: Additional context or usage notes
+
+  - name: seed_cob_medicare_part_d_primary
+    description: |
+      Reference data listing MCRE_ID codes where BCI should be PRIMARY payer for drug/pharmacy claims.
+      These codes are excluded from medical COB determination as they represent drug-only scenarios.
+    columns:
+      - name: mcre_id
+        description: Insurance carrier code
+        data_tests:
+          - unique
+          - not_null
+
+      - name: description
+        description: Human-readable description of the code
+
+      - name: cob_rule
+        description: The COB rule this code triggers
+
+      - name: notes
+        description: Explanation of business context
+
+  - name: seed_cob_medicare_part_d_secondary
+    description: |
+      Reference data listing MCRE_ID codes where BCI should be SECONDARY payer for drug/pharmacy claims.
+      Another insurer is primary for drug coverage when these codes are present.
+    columns:
+      - name: mcre_id
+        description: Insurance carrier code
+        data_tests:
+          - unique
+          - not_null
+
+      - name: description
+        description: Human-readable description of the code
+
+      - name: cob_rule
+        description: The COB rule this code triggers
+
+      - name: notes
+        description: Explanation of business context
