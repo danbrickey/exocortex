@@ -1,4 +1,7 @@
 # Additional Context for AI Assistants
+This document provides context and reference information for AI assistants working on the EDP AI Expert Team repository. It outlines key resources, documentation structure, and usage notes to facilitate effective assistance.
+
+All files should be named using lower snake case.
 
 ## Architecture Documentation
 

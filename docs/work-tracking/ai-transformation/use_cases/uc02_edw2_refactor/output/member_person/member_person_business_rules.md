@@ -1,10 +1,76 @@
 # Member Person Business Rules
 
-## Overview
+## Executive Summary
+
+This system tracks member demographics and personal information for healthcare plan enrollees. It combines member details (name, birth date, gender) with their external constituent ID, subscriber relationship, and group affiliation. The system ensures data accuracy by filtering out test records, validating that member data comes from the correct source systems (GEM or FCT), and tracking changes over time.
+
+**Key Points for Leadership:**
+- Members must have both a subscriber and a group to appear in reports
+- System excludes test/placeholder records to ensure accurate member counts
+- Historical changes are tracked, allowing us to see what a member's information looked like at any point in time
+- Data comes from two main sources (GEM and FCT) and cannot be mixed for the same member
+
+---
+
+## Business Analyst Summary
+
+This module keeps track of member demographic information and connects each member to their external person ID, subscriber account, and group plan. It replaces the old `v_FacetsMemberUMI_current` view with a modern system that tracks changes over time.
+
+### Key Business Rules
+
+- **Rule 1 (Source Identification):** When the system sees a source ID of 1, it labels the data as "GEM". All other source IDs are labeled as "FCT". This helps us know which source system the member data came from.
+
+- **Rule 2 (External ID Filtering):** Only member IDs marked as "EXRM" (External Reference Member) are included. This filters out internal test IDs and temporary placeholders. Some members may not have an external ID yet, which is acceptable.
+
+- **Rule 3 (Test Data Exclusion):** Any subscriber ID that starts with "PROXY" is automatically removed. These are fake test records used by the system and would give us wrong member counts if included in reports.
+
+- **Rule 4 (Source Matching):** A member's data from different tables (member info, person ID, subscriber, group) must all come from the same source system. You cannot mix GEM data with FCT data for the same member.
+
+- **Rule 5 (Required Connections):** Every member must be connected to both a subscriber (the account holder) and a group (the coverage plan). Members can exist without an external person ID, but they must have these two connections or they will not show up in reports.
+
+- **Rule 6 (Current Data Only):** The system processes only the most recent version of each member's information when preparing data, but keeps historical versions for tracking changes over time.
+
+- **Rule 7 (Handling Missing Information):** When a member's first name, last name, or gender is missing in reports, the system fills in "Unknown" for names or "U" (unspecified) for gender. This prevents blank fields in reports.
+
+- **Rule 8 (Age Calculation):** The system automatically calculates each member's age in years based on their birth date. This age updates every time you run a report.
+
+- **Rule 9 (Change Tracking):** Every time a member's information changes (name change, address update, etc.), the system saves both the old and new versions with start and end dates. This lets you see what information was valid at any point in time.
+
+### Important Terms
+
+- **Member:** A person enrolled in a healthcare plan (may be the subscriber or a dependent).
+- **Subscriber:** The main account holder who has the insurance contract.
+- **Group:** The health plan or network the member belongs to.
+- **Constituent ID:** An external reference number used to identify the person in other systems.
+- **Source Code:** The label (GEM or FCT) that tells us which computer system the member data came from.
+- **Proxy Subscriber:** A fake test record used for system testing, not a real person.
+- **Type 2 SCD (Slowly Changing Dimension):** A method for tracking historical changes by keeping old and new versions of data with start and end dates.
+
+### Simple Example
+
+**Scenario:** Jane Smith changes her last name to Jane Johnson after getting married.
+
+1. **Before change:** Record shows "Jane Smith" with effective dates 2020-01-01 to 2024-06-15, marked as not current
+2. **After change:** New record shows "Jane Johnson" with effective dates 2024-06-16 to 9999-12-31 (far future date), marked as current
+3. **Result:** Reports using current data show "Jane Johnson". Historical reports for dates before June 2024 show "Jane Smith".
+
+### What to Watch
+
+- **Members without external IDs:** Some members may not have a constituent ID if they are newly enrolled or if data migration is incomplete. This is expected and the system handles it by leaving that field blank.
+
+- **Source system consistency:** If a member's data appears in both GEM and FCT, only the records where all pieces (member, subscriber, group) come from the same source will show up. Mixed-source records are excluded to prevent data quality issues.
+
+- **Test data filtering:** The system depends on proxy subscriber IDs starting with "PROXY" to filter them out. If naming conventions change, this filter may need updating or real member counts could be affected.
+
+---
+
+## Technical Documentation
+
+### Overview
 
 This document describes the business rules implemented in the member_person refactored models. These rules were extracted from the legacy `v_FacetsMemberUMI_current` view and reimplemented in the EDW3 data vault architecture.
 
-## Legacy Source
+### Legacy Source
 
 - **Database**: HDSVault
 - **Schema**: biz
