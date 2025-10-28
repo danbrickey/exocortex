@@ -54,9 +54,9 @@ This logic connects health plan members to their external person identifiers use
 - **Join Strategy**: Uses LEFT JOIN for person (some members may not have external IDs), INNER JOIN for subscriber and group (required relationships).
 - **Source Consistency**: All joins enforce matching source codes between entities to prevent cross-source data contamination.
 - **Change Detection**: Business vault satellite uses hashdiff on all payload columns to track demographic and relationship changes.
-- **Incremental Loading**: Business vault satellite uses incremental materialization with member_person_hk as unique key for performance.
+- **Incremental Loading**: Business vault satellite uses incremental materialization with member_hk as unique key for performance.
 - **Lookup Table Current State**: Crosswalk table queries business vault for current records only using max(effective_from) pattern.
-- **Hash Key Strategy**: Uses member_bk as sole component of member_person_hk; lookup table generates composite surrogate key from source + member_bk.
+- **Hash Key Strategy**: Uses source and member_bk to generate member_hk (ties to h_member hub); lookup table generates composite surrogate key from source + member_bk.
 - **Null Handling**: member_suffix coalesced to empty string in lookup table to enable reliable composite key matching.
 
 ## Important Terms

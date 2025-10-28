@@ -108,6 +108,65 @@ The workflow would go something like:
   - Analyze the generated dbt models
   - Generate a dbt model yml file with appropriate tests and descriptions for each of the dbt models
 
+#### dbt Test Format Standards
+
+**IMPORTANT**: All dbt tests in YAML files must use the new format with an `arguments` section, which is now **required** (not optional).
+
+**Test Format Examples**:
+
+```yaml
+# Column-level tests
+columns:
+  - name: member_sex
+    description: Member's biological sex code
+    data_tests:
+      - not_null
+      - accepted_values:
+          arguments:
+            values: ['M', 'F', 'U', 'O']
+
+  - name: member_bk
+    description: Member business key
+    data_tests:
+      - not_null
+      - unique
+      - relationships:
+          arguments:
+            to: ref('h_member')
+            field: member_bk
+
+# Table-level tests
+models:
+  - name: bv_s_member_person
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - member_hk
+              - load_datetime
+```
+
+**Key Requirements**:
+- ✅ All parameterized tests (like `accepted_values`, `relationships`) MUST have an `arguments:` section
+- ✅ The `arguments:` section contains the test parameters (like `values:`, `field:`, `to:`)
+- ✅ Simple tests without parameters (like `not_null`, `unique`) don't need the `arguments:` section
+- ❌ NEVER use the old format without `arguments:` for parameterized tests
+
+**Old Format (DEPRECATED)**:
+```yaml
+# DON'T DO THIS
+- accepted_values:
+    values: ['M', 'F', 'U', 'O']  # Missing arguments: wrapper
+```
+
+**New Format (REQUIRED)**:
+```yaml
+# DO THIS
+- accepted_values:
+    arguments:
+      values: ['M', 'F', 'U', 'O']  # Properly wrapped in arguments:
+```
+
 ### 5. Business Rule Document
 
 - **Purpose**: Document business rules applied in the transformations in the business vault and dimensional model in natural language as a markdown file for review by business data stewards and domain experts.

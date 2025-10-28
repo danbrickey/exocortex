@@ -3,7 +3,8 @@
     "allow": [
       "Bash(powershell -ExecutionPolicy Bypass -File:*)",
       "Bash(powershell -Command:*)",
-      "Bash(mkdir:*)"
+      "Bash(mkdir:*)",
+      "Bash(test:*)"
     ],
     "deny": [],
     "ask": []

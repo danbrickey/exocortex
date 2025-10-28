@@ -49,6 +49,7 @@ current_person as (
         person_id_type
     from {{ ref('current_person') }}
     where person_id_type = 'EXRM'  -- Only external reference member IDs
+    and person_id is not null  -- Filter out null person IDs
 ),
 
 current_subscriber as (
@@ -105,11 +106,12 @@ member_person_prep as (
 
     from current_member m
 
-    -- LEFT JOIN to person for external constituent ID
+    -- INNER JOIN to person for external constituent ID
     -- (some members may not have external IDs)
-    left join current_person p
+    inner join current_person p
         on m.person_bk = p.person_bk
         and m.member_source = p.source
+        and p.person_id is not null
 
     -- INNER JOIN to subscriber (must have valid subscriber)
     inner join current_subscriber s

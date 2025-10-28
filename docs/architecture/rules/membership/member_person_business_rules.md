@@ -1,252 +1,99 @@
 ---
 title: "Member Person Business Rules"
 document_type: "business_rules"
-business_domain: ["membership"]
+business_domain: ["membership", "person"]
 edp_layer: "business_vault"
-technical_topics: ["member-person-crosswalk", "constituent-mapping", "data-vault-2.0", "bridge-table"]
-audience: ["membership-operations", "business-analysts", "data-stewards"]
+technical_topics: ["computed-satellite", "data-vault-2.0", "member-identification", "external-id-mapping"]
+audience: ["executive-leadership", "business-operations", "analytics-engineering"]
 status: "draft"
-last_updated: "2025-10-21"
+last_updated: "2025-10-28"
 version: "1.0"
 author: "Dan Brickey"
-description: "Business rules for mapping members to person constituent IDs with lenient matching strategy for internal use"
+description: "Defines how member records are linked to external person identifiers and which members qualify for cross-system identification."
 related_docs:
   - "docs/architecture/edp_platform_architecture.md"
   - "docs/engineering-knowledge-base/data-vault-2.0-guide.md"
-model_name: "br_member_person, v_member_person_lenient"
+model_name: "bv_s_member_person"
 legacy_source: "HDSVault.biz.v_FacetsMemberUMI_current"
 ---
 
-# Member Person Business Rules
+# Member Person – Business Rules
 
-## Purpose
+## Executive Snapshot
 
-This document describes the business rules applied when mapping member records to person (constituent) identifiers and creating the member demographic crosswalk view. This enables queries to pivot between member context and person context across different systems.
+This logic connects health plan members to their external person identifiers used across our enterprise systems. It ensures we can accurately track member data across multiple platforms while filtering out test accounts and maintaining data quality. This capability enables accurate member identification for care coordination, claims processing, and customer service operations.
 
-## Business Context
+## Operational Summary
 
-Members are identified by member business keys in the benefits administration systems (Gemstone Facets and Legacy Facets). However, for cross-system integration and constituent management, members must be linked to person constituent IDs that represent the individual across all enterprise systems.
+- **Cross-System Member Lookup**: Enables staff to find the same person across different systems using either member ID or external person ID.
+- **Data Quality Protection**: Automatically excludes proxy/test subscriber accounts that should not appear in production reporting or analytics.
+- **Valid Member Enforcement**: Only processes members who have valid subscriber and group relationships, preventing orphaned or incomplete records.
+- **External ID Validation**: Only includes members with external reference member IDs (EXRM type), ensuring we can link to other enterprise systems.
+- **Historical Tracking**: Maintains complete history of member demographic changes and ID assignments over time.
 
-### Matching Strategies
+## Key Business Rules
 
-Different use cases require different levels of matching strictness:
+- **External Person ID Linking**: When a member record exists in our claims system, then link it to the external person identifier (EXRM type) if one exists, except for members without external IDs who receive a null person_id.
 
-- **Lenient Matching** (v_member_person_lenient): For internal reporting, business partner data sharing, and analytics where broader matching is acceptable. Uses EXRM person ID type.
-- **Strict Matching** (v_member_person_strict): For external/member portal use cases requiring precise matching to avoid any possibility of overmatching. *To be implemented based on operational requirements.*
+- **Proxy Subscriber Exclusion**: When a subscriber identifier starts with "PROXY", then exclude that member from the crosswalk, except none (this is an absolute filter for test accounts).
 
-The member-person crosswalk provides:
-- Translation from member identifiers to constituent IDs
-- Current demographic information for members
-- Source system attribution
-- Filtering of non-standard member records (e.g., proxy subscribers)
-- Flexible matching strategies via reusable bridge table
+- **Valid Group Requirement**: When processing a member record, then that member must belong to a valid, active group, except members without group relationships are excluded entirely.
 
-## Data Sources
+- **Valid Subscriber Requirement**: When processing a member record, then that member must have a valid, active subscriber record, except members without subscriber relationships are excluded entirely.
 
-### Primary Sources
-- **current_member**: Member demographic and identification data from both Gemstone Facets and Legacy Facets systems
-- **current_person**: Person constituent ID mapping from constituent master system
-- **current_subscriber**: Subscriber identification data
-- **current_group**: Group identification data
+- **Source Consistency Validation**: When joining member, subscriber, and group records, then all records must share the same source system identifier, except none (cross-source joins are not permitted).
 
-### Source System Codes
-- **gemstone_facets**: Represented as source code '1' in legacy system, translated to 'gemstone_facets' in EDW3
-- **legacy_facets**: All other source codes, translated to 'legacy_facets' in EDW3
+- **Current Records Only**: When building the lookup table, then use only the most recent version of each member's data, except historical versions are preserved in the business vault satellite.
 
-## Business Vault Bridge: br_member_person
+- **External ID Type Restriction**: When linking to external person IDs, then only use person_id_type = 'EXRM', except other ID types (internal references, temporary IDs) are excluded.
 
-### Purpose
-Creates a general-purpose, reusable mapping between member business keys and person constituent IDs. The bridge includes all person ID types without filtering, allowing downstream views to apply use case-specific criteria.
+- **Standardized Source Codes**: When identifying the source system, then use the standardized source codes from the raw vault (GEM, FCT), except do not recreate legacy source_id to source code mappings.
 
-### Data Transformation Rules
+## Engineering Notes
 
-#### 1. Source Code Translation
-**Rule**: Convert numeric source identifiers to descriptive names
-- Source code '1' → 'gemstone_facets'
-- All other source codes → 'legacy_facets'
+- **Join Strategy**: Uses LEFT JOIN for person (some members may not have external IDs), INNER JOIN for subscriber and group (required relationships).
+- **Source Consistency**: All joins enforce matching source codes between entities to prevent cross-source data contamination.
+- **Change Detection**: Business vault satellite uses hashdiff on all payload columns to track demographic and relationship changes.
+- **Incremental Loading**: Business vault satellite uses incremental materialization with member_hk as unique key for performance.
+- **Lookup Table Current State**: Crosswalk table queries business vault for current records only using max(effective_from) pattern.
+- **Hash Key Strategy**: Uses source and member_bk to generate member_hk (ties to h_member hub); lookup table generates composite surrogate key from source + member_bk.
+- **Null Handling**: member_suffix coalesced to empty string in lookup table to enable reliable composite key matching.
 
-**Business Rationale**: Provides clear, human-readable source attribution for downstream reporting and analysis.
+## Important Terms
 
-#### 2. Person ID Type Inclusion
-**Rule**: Include all person ID types in the bridge (no filtering)
+- **Member**: A person covered under a health insurance policy, identified by member_bk.
+- **Subscriber**: The primary policyholder responsible for the insurance account, identified by subscriber_identifier.
+- **Group**: The employer or organization sponsoring the insurance coverage, identified by group_id.
+- **Person ID**: The external identifier (person_id) used to link this member to enterprise systems outside the claims platform.
+- **EXRM ID Type**: Stands for "External Reference Member" - the specific type of person ID used for cross-system member linking.
+- **Proxy Subscriber**: Test or placeholder subscriber accounts that start with "PROXY" and should be excluded from production data.
+- **Source**: The originating claims system - either GEM (Gemstone Facets) or FCT (Legacy Facets).
+- **Business Vault Computed Satellite**: A data vault table that combines data from multiple raw vault sources and applies business rules, tracking full history of changes.
+- **Crosswalk Table**: A lookup table that maps member identifiers to person identifiers for the current point in time.
+- **Business Key (bk)**: The natural identifier from the source system that uniquely identifies an entity.
 
-**Business Rationale**: The bridge is a general-purpose resource. Use case-specific views (lenient vs strict) apply appropriate person_id_type filters based on their matching strategy requirements.
+## Example Scenario
 
-#### 3. Member-Person Join Logic
-**Rule**: Join member to person based on:
-- person_bk (person business key) must match between member and person records
-- source (source system code) must match between member and person records
+**Situation**: A customer service representative receives a call from John Smith who has a question about his claim.
 
-**Join Type**: LEFT JOIN (not all members may have person constituent IDs)
+**How the rules work**:
 
-**Business Rationale**:
-- Ensures members are matched to the correct person record from the same source system
-- Allows for members without person mappings (NULL person_id) rather than dropping them
+1. The rep searches using member_bk = "M123456" and source = "GEM"
+2. The crosswalk lookup finds: group_id = "ABC-CORP", subscriber_identifier = "SUB-789", member_suffix = "01"
+3. **External ID Linking** rule: System returns person_id = "EXRM-999888" (the EXRM type external identifier)
+4. **Proxy Exclusion** rule: If subscriber_identifier was "PROXY-TEST-001", this member would not appear in results
+5. **Valid Group Requirement**: The member has group_bk = "GRP-ABC", so passes validation
+6. **Valid Subscriber Requirement**: The member has subscriber_bk = "SUB-789-BK", so passes validation
+7. The rep can now use person_id "EXRM-999888" to look up John's records in care management, provider directory, and other enterprise systems
 
-#### 4. Effectivity Dating
-**Rule**: Use edp_start_dt from member record as the effective start date for the mapping
+**What happens next**: If John's group changes employment groups next week, a new record will be added to the business vault satellite with the updated group_id, but the historical version remains available for claims processed during his time at the previous group.
 
-**Business Rationale**: Tracks when the member-person relationship became effective in the data warehouse, enabling historical analysis.
+## What to Watch
 
-### Output Columns
+- **Missing External IDs**: Some members may not have person_id values if they lack EXRM type external identifiers. Monitor the percentage of members without person_id to identify integration issues with the external identity system.
 
-| Column | Source | Transformation | Business Meaning |
-|--------|--------|----------------|------------------|
-| member_person_bridge_key | Calculated | Surrogate key from member_bk + source_code + edp_start_dt | Unique identifier for bridge record |
-| member_bk | current_member | Pass-through | Member business key from source system |
-| person_bk | current_person | Pass-through | Person business key for hub reference |
-| person_id | current_person | Pass-through | External constituent ID for cross-system lookup |
-| person_id_type | current_person | Pass-through | Type of person ID (e.g., EXRM) - enables use case filtering |
-| source_code | current_member | Translated (1→gemstone_facets, else→legacy_facets) | Human-readable source system name |
-| edp_record_source | current_member | Pass-through | Original data vault record source |
-| edp_start_dt | current_member | Pass-through | Effective date of mapping |
-| edp_load_dt | System | current_timestamp() | Timestamp when bridge record was created |
-| cdc_timestamp | current_member | Pass-through | Source system change data capture timestamp |
+- **Source Consistency**: The source code matching enforced in joins assumes raw vault correctly standardizes GEM/FCT values. If source values are inconsistent or null, members will be excluded from the crosswalk.
 
-## Curation View: v_member_person_lenient
+- **Proxy Subscriber Detection**: The "PROXY%" pattern match assumes all test accounts follow this naming convention. Test accounts with different naming patterns will not be filtered and could contaminate production reporting.
 
-### Purpose
-Provides current-state member demographic information with person constituent ID mapping using lenient matching strategy. Designed for internal reporting, business partner data sharing, and analytics use cases where broader matching is acceptable.
-
-### Data Transformation Rules
-
-#### 1. Member Dimension Joins
-**Rule**: Join member to subscriber and group using:
-- subscriber_bk and source must match
-- group_bk and source must match
-
-**Join Type**: INNER JOIN
-
-**Business Rationale**: Only include members with valid subscriber and group relationships. Members without these relationships are considered incomplete/invalid.
-
-#### 2. Proxy Subscriber Exclusion
-**Rule**: Exclude all records where subscriber_id starts with 'PROXY'
-
-**Business Rationale**: Proxy subscribers are system-generated placeholders and should not be included in member demographic reporting or constituent crosswalks.
-
-#### 3. Person Constituent ID Lookup (Lenient Matching)
-**Rule**: Join to br_member_person bridge using:
-- member_bk must match
-- source_code must match
-- person_id_type = 'EXRM' (External Member type only)
-
-**Join Type**: LEFT JOIN
-
-**Business Rationale**:
-- Include all valid members even if they don't have a person constituent ID mapping yet
-- NULL person_id indicates member needs constituent assignment
-- EXRM person ID type provides lenient matching suitable for internal use
-- More restrictive matching would be applied in v_member_person_strict for external use cases
-
-#### 4. Column Name Standardization
-**Rule**: Rename columns to match legacy output expectations:
-- member_first_name → first_name
-- member_last_name → last_name
-- member_sex → gender
-- member_birth_dt → birth_date
-- member_ssn → ssn
-- edp_record_source → dss_record_source
-- edp_start_dt → dss_load_date and dss_start_date
-- cdc_timestamp → dss_create_time
-
-**Business Rationale**: Maintains backward compatibility with legacy reporting systems and downstream consumers expecting these column names.
-
-### Output Columns
-
-| Column | Source | Transformation | Business Meaning |
-|--------|--------|----------------|------------------|
-| constituent_id | br_member_person.person_id | Pass-through (may be NULL) | External person/constituent ID for cross-system queries |
-| member_bk | current_member | Pass-through | Member business key - primary identifier |
-| group_id | current_group | Pass-through | Group identifier from source system |
-| subscriber_id | current_subscriber | Pass-through, filtered (no PROXY%) | Subscriber identifier, proxy subscribers excluded |
-| member_suffix | current_member | Pass-through | Member suffix (e.g., 01=subscriber, 02=spouse, 03=child) |
-| first_name | current_member.member_first_name | Renamed | Member's first name |
-| last_name | current_member.member_last_name | Renamed | Member's last name |
-| gender | current_member.member_sex | Renamed | Member's gender/sex code |
-| birth_date | current_member.member_birth_dt | Renamed | Member's date of birth |
-| ssn | current_member.member_ssn | Renamed | Member's social security number (PII - handle per security policy) |
-| source_code | current_member.source | Pass-through | Source system (gemstone_facets or legacy_facets) |
-| dss_record_source | current_member.edp_record_source | Renamed | Data vault record source metadata |
-| dss_load_date | current_member.edp_start_dt | Renamed | Date/time row was loaded into data vault |
-| dss_start_date | current_member.edp_start_dt | Renamed (same as dss_load_date) | Date/time row became effective |
-| dss_create_time | current_member.cdc_timestamp | Renamed | Source system CDC timestamp |
-
-## Data Quality Rules
-
-### Required Fields
-- member_bk must not be NULL
-- subscriber_id must not be NULL
-- group_id must not be NULL
-- source_code must be either 'gemstone_facets' or 'legacy_facets'
-- edp_start_dt must not be NULL
-
-### Optional Fields
-- constituent_id may be NULL if no person mapping exists
-- birth_date may be NULL (warn if missing)
-- All demographic fields (first_name, last_name, gender, ssn) may be NULL
-
-### Business Validation Rules
-- subscriber_id must NOT start with 'PROXY'
-- person_id_type must equal 'EXRM' when person mapping exists
-- When constituent_id is populated, it should reference a valid person record
-
-## Migration from Legacy
-
-### Legacy Implementation
-- **View**: HDSVault.biz.v_FacetsMemberUMI_current
-- **Architecture**: Single view performing all joins and transformations
-- **Source Database**: SQL Server with cross-database joins to HDSInformationMart
-
-### EDW3 Implementation
-- **Models**:
-  - br_member_person (business vault bridge - incremental materialization, no filtering)
-  - v_member_person_lenient (curation layer view with EXRM filtering for internal use)
-  - v_member_person_strict (future: curation layer view with strict matching for external use)
-- **Architecture**: Separated concerns - general-purpose bridge + use case-specific views
-- **Source Database**: Snowflake with all data in integrated raw vault
-
-### Key Differences
-1. **Source identifiers**: 'GEM'/'FCT' → 'gemstone_facets'/'legacy_facets'
-2. **dss_version removed**: Legacy tracked version numbers; EDW3 uses temporal ordering via timestamps
-3. **Separation of concerns**: General-purpose bridge + use case-specific views (lenient/strict)
-4. **Incremental loading**: Bridge table supports incremental updates for performance
-5. **Matching strategies**: Bridge stores all person ID types; views apply use case-specific filtering
-
-## Business Ownership
-
-### Data Stewardship
-- **Primary Owner**: Membership Operations
-- **Constituent ID Mapping**: Enterprise Master Data Management team
-- **Source System SMEs**:
-  - Gemstone Facets: [Team/Contact TBD]
-  - Legacy Facets: [Team/Contact TBD]
-
-### Use Cases
-
-**Lenient Matching (v_member_person_lenient):**
-- Internal reporting and analytics
-- Business partner data sharing
-- Cross-system constituent lookup for internal operations
-- Data quality and reconciliation processes
-
-**Strict Matching (v_member_person_strict - future):**
-- Member portal person identification
-- External-facing applications
-- Operational systems requiring precise matching
-- Use cases where overmatching could expose incorrect data to members
-
-## Questions for Review
-
-1. **Proxy Subscriber Filter**: Should we document which specific subscriber ID patterns constitute "proxy" subscribers beyond the 'PROXY%' pattern?
-
-2. **NULL Constituent IDs**: What is the expected percentage of members without constituent_id mappings? Should this trigger data quality alerts?
-
-3. **Source Code '1' Only for Gemstone**: Is source code '1' exclusively for Gemstone Facets, or are there edge cases?
-
-4. **Person ID Type 'EXRM'**: Are there other person_id_type values we should be aware of? Should we document what they represent?
-
-5. **Historical Changes**: When a member's person_id changes (e.g., duplicate cleanup), should we track this history in the bridge, or is current-state sufficient?
-
-6. **Strict Matching Criteria**: What specific matching rules should be applied for v_member_person_strict to ensure safe use in member portal and external-facing applications?
-
-7. **Use Case Categorization**: Are there other use cases beyond internal/external that require different matching strategies?
+- **Group/Subscriber Relationship Changes**: When members change groups or subscribers, new records are created in the business vault satellite. Ensure downstream reporting uses the lookup table (current state) unless historical analysis is explicitly required.

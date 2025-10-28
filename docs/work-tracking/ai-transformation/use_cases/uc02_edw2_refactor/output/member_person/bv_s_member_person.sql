@@ -1,7 +1,7 @@
 {{
     config(
         materialized='incremental',
-        unique_key='member_person_hk',
+        unique_key='member_hk',
         tags=['business_vault', 'satellite', 'member_person', 'computed']
     )
 }}
@@ -11,7 +11,7 @@
 
     Purpose: Enriched member person data with external constituent ID and business rules applied
 
-    Parent Hub: member_hub (via member_person_hk)
+    Parent Hub: h_member (via member_hk)
 
     Type: Computed Satellite (derives data from raw vault + business logic)
 
@@ -25,7 +25,7 @@
 #}
 
 {% set yaml_metadata %}
-parent_hashkey: 'member_person_hk'
+parent_hashkey: 'member_hk'
 src_hashdiff: 'member_person_hashdiff'
 src_payload:
     - person_id

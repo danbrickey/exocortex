@@ -52,10 +52,10 @@ models:
 
       - name: member_sex
         description: Member's biological sex code
-        tests:
+        data_tests:
           - accepted_values:
-              values: ['M', 'F', 'U', 'O']
-              quote: false
+              arguments:
+                values: ['M', 'F', 'U', 'O']
 
       - name: member_birth_dt
         description: Member's date of birth
@@ -108,8 +108,8 @@ models:
       for loading into bv_s_member_person.
 
     columns:
-      - name: member_person_hk
-        description: Hash key for member person (parent hub key)
+      - name: member_hk
+        description: Hash key for member (parent hub key - hash of source and member_bk, ties to h_member hub)
         tests:
           - not_null
           - unique
@@ -128,7 +128,7 @@ models:
 
       Type: Type 2 SCD - Tracks all changes to member person attributes over time
 
-      Parent Hub: member_hub (via member_person_hk)
+      Parent Hub: h_member (via member_hk)
 
       Business Logic Applied:
       - Combines member demographics with external person identifier
@@ -140,12 +140,12 @@ models:
       # Test that we don't have duplicate active records
       - dbt_utils.unique_combination_of_columns:
           combination_of_columns:
-            - member_person_hk
+            - member_hk
             - load_datetime
 
     columns:
-      - name: member_person_hk
-        description: Hash key identifying the member person entity (parent key)
+      - name: member_hk
+        description: Hash key identifying the member entity (parent key - hash of source and member_bk, ties to h_member hub)
         tests:
           - not_null
 
@@ -245,7 +245,8 @@ models:
       Grain: One row per unique member (current records only)
 
       Lookup Keys:
-      - Primary: source + member_bk
+      - Primary: member_hk (data vault hash key)
+      - Alternate: source + member_bk
       - Alternate: source + group_id + subscriber_identifier + member_suffix
 
       Source: bv_s_member_person (business vault computed satellite)
@@ -255,7 +256,7 @@ models:
     tests:
       # Ensure primary lookup key is unique
       - unique:
-          column_name: member_person_lookup_key
+          column_name: member_hk
 
       # Ensure natural key combination is unique
       - dbt_utils.unique_combination_of_columns:
@@ -264,8 +265,8 @@ models:
             - member_bk
 
     columns:
-      - name: member_person_lookup_key
-        description: Surrogate key for lookup table (hash of source + member_bk)
+      - name: member_hk
+        description: Data vault hash key for member (hash of source + member_bk, ties to h_member hub)
         tests:
           - not_null
           - unique

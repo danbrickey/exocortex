@@ -13,7 +13,8 @@
     Grain: One row per unique member (current records only)
 
     Lookup Keys:
-    - Primary: source + member_bk
+    - Primary: member_hk (data vault hash key from h_member hub)
+    - Alternate: source + member_bk
     - Alternate: source + group_id + subscriber_identifier + member_suffix
 
     Source: bv_s_member_person (business vault computed satellite)
@@ -23,6 +24,9 @@
 
 with member_person_current as (
     select
+        -- Hub Key (Primary Key)
+        member_hk,
+
         -- Source Information
         source,
 
@@ -43,23 +47,19 @@ with member_person_current as (
         subscriber_bk,
 
         -- Metadata
-        load_datetime,
-        record_source
+        load_datetime
 
     from {{ ref('bv_s_member_person') }}
     where effective_from = (
         select max(effective_from)
         from {{ ref('bv_s_member_person') }} inner_sat
-        where inner_sat.member_person_hk = {{ ref('bv_s_member_person') }}.member_person_hk
+        where inner_sat.member_hk = {{ ref('bv_s_member_person') }}.member_hk
     )
 )
 
 select
-    -- Generate surrogate key for lookup table
-    {{ dbt_utils.generate_surrogate_key([
-        'source',
-        'member_bk'
-    ]) }} as member_person_lookup_key,
+    -- Hub Key (use data vault hash key as primary key)
+    member_hk,
 
     -- Primary Lookup Keys
     source,
@@ -79,7 +79,6 @@ select
     subscriber_bk,
 
     -- Metadata
-    load_datetime as last_updated_datetime,
-    record_source
+    load_datetime as last_updated_datetime
 
 from member_person_current

@@ -20,7 +20,8 @@
 {% set yaml_metadata %}
 source_model: 'prep_member_person'
 hashed_columns:
-    member_person_hk:
+    member_hk:
+        - source
         - member_bk
     member_person_hashdiff:
         is_hashdiff: true
