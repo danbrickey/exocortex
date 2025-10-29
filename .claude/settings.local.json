@@ -6,7 +6,8 @@
       "Bash(mkdir:*)",
       "Bash(test:*)",
       "Bash(rm:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(if not exist \"docs\\use_cases\\uc01_dv_refactor\\output\\member_rating\" mkdir \"docs\\use_cases\\uc01_dv_refactor\\output\\member_rating\")"
     ],
     "deny": [],
     "ask": []
