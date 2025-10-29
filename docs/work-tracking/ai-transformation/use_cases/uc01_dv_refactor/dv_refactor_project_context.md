@@ -6,7 +6,7 @@ We are refactoring from a 3NF integration layer to a Data Vault 2.0 architecture
 
 Please analyze the information in the provided context and generate refactored code for the specified entity (referred to as <entity_name> in this doc). Generate output for all artifacts at once without prompting user for input.
 
-Create the folder if necessary and write the generated files to the following path: `docs\use_cases\uc01_dv_refactor\output\<entity_name>`
+Create the folder if necessary and write the generated files to the following path: `docs\work-tracking\ai-transformation\use_cases\uc01_dv_refactor\output\<entity_name>`
 
 Provide complete code for at least one of every artifact type to save typing on the engineer's part.
 
@@ -70,7 +70,7 @@ columns: - "tenant_id" - "claim_bk" - "claim_line_bk" - "member_bk" - "provider_
 - **Naming**: `stg_<entity>_<source>.sql`
 - **Macro**: `automate_dv.stage`
 - **Logic**:
-  - Include derived columns from legacy models (e.g., `product_component_type_ik`).
+  - Include standard derived columns: `source`, `load_datetime`, `edp_start_dt`.
   - Define hash keys and hashdiffs.
   - Use `load_datetime` and `source` as standard metadata.
   - include all columns from rename views even if they are not part of the prior dbt model code.

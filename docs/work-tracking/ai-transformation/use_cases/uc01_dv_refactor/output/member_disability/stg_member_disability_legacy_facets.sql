@@ -1,21 +1,17 @@
 {% set yaml_metadata %}
-source_model: "stg_member_rating_legacy_facets_rename"
+source_model: "stg_member_disability_legacy_facets_rename"
 
 derived_columns:
   source: "'{{ var('legacy_source_system') }}'"
   load_datetime: "edp_start_dt"
   edp_start_dt: "edp_start_dt"
-  member_rating_ik: "{{ dbt_utils.generate_surrogate_key(['tenant_id', 'source', 'member_bk', 'rating_eff_dt']) }}"
+  member_disability_ik: "{{ dbt_utils.generate_surrogate_key(['tenant_id', 'source', 'member_bk', 'disability_eff_dt']) }}"
 
 hashed_columns:
   member_hk:
     - source
     - member_bk
-  member_rating_lk:
-    - source
-    - member_bk
-    - rating_eff_dt
-  member_rating_hashdiff:
+  member_disability_hashdiff:
     is_hashdiff: true
     columns:
       - source
@@ -23,13 +19,15 @@ hashed_columns:
       - load_datetime
       - edp_start_dt
       - member_bk
-      - rating_eff_dt
-      - rating_term_dt
+      - disability_eff_dt
+      - disability_term_dt
+      - disability_term_reason_cd
       - group_bk
-      - smoker_ind
-      - underwriting_class_1_cd
-      - underwriting_class_2_cd
-      - underwriting_class_3_cd
+      - disability_desc
+      - disability_type_cd
+      - last_verification_dt
+      - last_verification_name
+      - verification_method_cd
       - lock_token_nbr
       - attachment_source_id
       - edp_record_status

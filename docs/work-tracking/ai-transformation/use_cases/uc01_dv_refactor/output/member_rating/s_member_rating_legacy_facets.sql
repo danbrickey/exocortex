@@ -1,9 +1,9 @@
 {% set yaml_metadata %}
-source_model: "stg_member_rating_gemstone_facets"
+source_model: "stg_member_rating_legacy_facets"
 
-src_pk: "member_rating_lk"
+src_pk: "member_hk"
 
-src_dfk: "member_hk"
+src_dfk: null
 
 src_sfk: null
 

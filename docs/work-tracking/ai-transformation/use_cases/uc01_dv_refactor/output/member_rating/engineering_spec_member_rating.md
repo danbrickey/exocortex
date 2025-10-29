@@ -2,9 +2,8 @@
 
 ## 🧱 Artifact Summary
 
-- **Entity Type**: Link + Effectivity Satellites
+- **Entity Type**: Hub + Effectivity Satellites (attached to existing hub)
 - **Hub Name**: h_member (existing hub)
-- **Link Name**: l_member_rating
 - **Satellite(s)**:
   - s_member_rating_legacy_facets
   - s_member_rating_gemstone_facets
@@ -18,11 +17,6 @@
 ---
 
 ## 🔑 Business Keys
-
-### Link Keys
-- **member_rating_lk**: Composite key for the link
-  - member_hk (from meme_ck)
-  - member_rating_eff_dt (from mert_eff_dt)
 
 ### Hub Keys
 - **member_hk**: References existing h_member hub (from meme_ck)
@@ -65,7 +59,6 @@ derived_columns:
   source: "'{{ var('*_source_system') }}'"
   load_datetime: "edp_start_dt"
   edp_start_dt: "edp_start_dt"
-  member_rating_ik: "{{ dbt_utils.generate_surrogate_key(['tenant_id', 'source', 'member_bk', 'rating_eff_dt']) }}"
 ```
 
 ### Hashed Columns
@@ -74,10 +67,6 @@ hashed_columns:
   member_hk:
     - "source"
     - "member_bk"
-  member_rating_lk:
-    - "source"
-    - "member_bk"
-    - "rating_eff_dt"
   member_rating_hashdiff:
     is_hashdiff: true
     columns:
@@ -101,29 +90,6 @@ hashed_columns:
 
 ---
 
-## 🔗 Link
-
-### l_member_rating.sql
-
-```yaml
-source_model:
-  - stg_member_rating_legacy_facets
-  - stg_member_rating_gemstone_facets
-
-src_pk: member_rating_lk
-
-src_fk:
-  - member_hk
-
-src_ldts: load_datetime
-
-src_source: source
-```
-
-**Note**: This link connects to the existing h_member hub using member_hk. The link primary key (member_rating_lk) is a composite of member_hk and rating_eff_dt.
-
----
-
 ## 🛰️ Effectivity Satellites
 
 ### s_member_rating_legacy_facets.sql / s_member_rating_gemstone_facets.sql
@@ -131,9 +97,9 @@ src_source: source
 ```yaml
 source_model: "stg_member_rating_*_facets"
 
-src_pk: "member_rating_lk"
+src_pk: "member_hk"
 
-src_dfk: "member_hk"
+src_dfk: null
 
 src_sfk: null
 
@@ -165,14 +131,13 @@ src_extra_columns:
   - edp_record_status
   - edp_record_source
   - member_hk
-  - member_rating_ik
 
 src_ldts: "load_datetime"
 
 src_source: "source"
 ```
 
-**Note**: These are effectivity satellites attached to the l_member_rating link. The src_dfk references the member_hk from the parent hub.
+**Note**: These are effectivity satellites attached directly to the h_member hub. Since src_pk is member_hk, multiple rating periods can exist for the same member, differentiated by their effective dates.
 
 ---
 
@@ -180,39 +145,24 @@ src_source: "source"
 
 ### current_member_rating.sql
 
-```yaml
-base_model: l_member_rating
-
-satellite_models:
-  - s_member_rating_legacy_facets
-  - s_member_rating_gemstone_facets
-
-enable_current_flag: true
-```
-
 The current view should:
-- Join l_member_rating link with both satellite models
+- Join h_member hub directly with both satellite models
 - Union across all source systems (legacy_facets and gemstone_facets)
-- Filter to the latest record per member_rating_lk
+- Filter to the latest record per member_hk and rating_eff_dt combination
 - Include all columns from satellites
 
 ---
 
 ## ⏱️ Recommended Tests
 
-- **Link Tests**:
-  - Unique combination of business keys (member_bk, rating_eff_dt)
-  - Not null member_bk
-  - Not null rating_eff_dt
-  - Valid references to h_member
-
 - **Satellite Tests**:
-  - Not null member_rating_lk
+  - Not null member_hk
   - Not null hashdiff
+  - Not null rating_eff_dt
   - Effective dates are valid (rating_eff_dt ≤ rating_term_dt)
-  - No gaps in effective dates for same business key combination
-  - No overlapping effective date ranges for same business key combination
-  - Referential integrity between link and satellites
+  - No gaps in effective dates for same member
+  - No overlapping effective date ranges for same member
+  - Referential integrity to h_member hub
 
 - **Data Quality Tests**:
   - Valid values for smoker_ind
@@ -223,11 +173,12 @@ The current view should:
 
 ## 📝 Implementation Notes
 
-1. The h_member hub already exists, so we only need to create the link and satellites
-2. The link uses a composite key (member_hk + rating_eff_dt) to uniquely identify each rating period
-3. Effectivity satellites track the temporal aspects of member ratings
-4. The src_end_date (rating_term_dt) may need special handling for open-ended records (e.g., '2199-12-31' for no termination date)
-5. Ensure that the source system variables are properly configured in dbt_project.yml
+1. The h_member hub already exists, so we only need to create the effectivity satellites
+2. The effectivity satellites attach directly to the h_member hub using member_hk as the src_pk
+3. Each member can have multiple rating periods, differentiated by effective dates
+4. Effectivity satellites track the temporal aspects of member ratings with src_eff, src_start_date, and src_end_date
+5. The src_end_date (rating_term_dt) may need special handling for open-ended records (e.g., '2199-12-31' for no termination date)
+6. Ensure that the source system variables are properly configured in dbt_project.yml
 
 ---
 
@@ -243,8 +194,6 @@ models/
           stg_member_rating_legacy_facets.sql
           stg_member_rating_gemstone_facets_rename.sql
           stg_member_rating_gemstone_facets.sql
-      links/
-        l_member_rating.sql
       satellites/
         effectivity/
           s_member_rating_legacy_facets.sql

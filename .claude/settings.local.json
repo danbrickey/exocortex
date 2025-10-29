@@ -7,7 +7,9 @@
       "Bash(test:*)",
       "Bash(rm:*)",
       "Bash(python:*)",
-      "Bash(if not exist \"docs\\use_cases\\uc01_dv_refactor\\output\\member_rating\" mkdir \"docs\\use_cases\\uc01_dv_refactor\\output\\member_rating\")"
+      "Bash(if not exist \"docs\\use_cases\\uc01_dv_refactor\\output\\member_rating\" mkdir \"docs\\use_cases\\uc01_dv_refactor\\output\\member_rating\")",
+      "Bash(if not exist \"docs\\work-tracking\\ai-transformation\\use_cases\\uc01_dv_refactor\\output\\member_disability\" mkdir \"docs\\work-tracking\\ai-transformation\\use_cases\\uc01_dv_refactor\\output\\member_disability\")",
+      "Bash(if not exist \"docs\\work-tracking\\ai-transformation\\use_cases\\uc01_dv_refactor\\output\\member_student_status\" mkdir \"docs\\work-tracking\\ai-transformation\\use_cases\\uc01_dv_refactor\\output\\member_student_status\")"
     ],
     "deny": [],
     "ask": []

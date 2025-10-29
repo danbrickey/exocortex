@@ -1,7 +1,6 @@
-
-
 @ai-resources\prompts\data_vault_refactor_prompt_generator.md
-Create a prompt from this info:
+Create dbt models and supporting docs from this info:
+
 [sources] = legacy_facets, gemstone_facets
 [entity_name] = benefit_summary_text
 [source_schema].[source_table] = dbo.cmc_bstx_sum_text
@@ -42,5 +41,3 @@ Create a prompt from this info:
   - standard satellites with all renamed columns from [source_table] 
   - attached to [link_name] l_benefit_summary_text_product_prefix
   - include system columns
-
-@docs\use_cases\uc01_dv_refactor\dv_refactor_project_context.md use this prompt info: @docs\use_cases\uc01_dv_refactor\refactor_prompts\benefit_summary_text_refactor_prompt.md

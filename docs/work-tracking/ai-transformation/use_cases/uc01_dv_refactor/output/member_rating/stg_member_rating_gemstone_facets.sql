@@ -11,10 +11,6 @@ hashed_columns:
   member_hk:
     - source
     - member_bk
-  member_rating_lk:
-    - source
-    - member_bk
-    - rating_eff_dt
   member_rating_hashdiff:
     is_hashdiff: true
     columns:

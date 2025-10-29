@@ -345,7 +345,6 @@ derived_columns:
   source: "'{{ var('gemstone_source_system') }}'"
   load_datetime: "edp_start_dt"
   edp_start_dt: "edp_start_dt"
-  member_cob_ik: "{{ dbt_utils.generate_surrogate_key(['tenant_id', 'source', 'member_bk', 'cob_ins_type_bk', 'cob_ins_order_bk', 'cob_supp_drug_type_bk', 'cob_eff_dt']) }}"
 
 hashed_columns:
   member_hk: ["source", "member_bk"]
@@ -418,7 +417,6 @@ derived_columns:
   source: "'{{ var('legacy_source_system') }}'"
   load_datetime: "edp_start_dt"
   edp_start_dt: "edp_start_dt"
-  member_cob_ik: "{{ dbt_utils.generate_surrogate_key(['tenant_id', 'source', 'member_bk', 'cob_ins_type_bk', 'cob_ins_order_bk', 'cob_supp_drug_type_bk', 'cob_eff_dt']) }}"
 
 hashed_columns:
   member_hk: ["source", "member_bk"]
@@ -633,7 +631,6 @@ src_extra_columns:
   - edp_record_source
   - member_hk
   - cob_indicator_hk
-  - member_cob_ik
 
 src_ldts: "load_datetime"
 
@@ -713,7 +710,6 @@ src_extra_columns:
   - edp_record_source
   - member_hk
   - cob_indicator_hk
-  - member_cob_ik
 
 src_ldts: "load_datetime"
 src_source: "source"

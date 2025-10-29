@@ -1,20 +1,20 @@
 {% set yaml_metadata %}
-source_model: "stg_member_rating_legacy_facets"
+source_model: "stg_member_disability_legacy_facets"
 
-src_pk: "member_rating_lk"
+src_pk: "member_hk"
 
-src_dfk: "member_hk"
+src_dfk: null
 
 src_sfk: null
 
-src_eff: "rating_eff_dt"
+src_eff: "disability_eff_dt"
 
-src_start_date: "rating_eff_dt"
+src_start_date: "disability_eff_dt"
 
-src_end_date: "rating_term_dt"
+src_end_date: "disability_term_dt"
 
 src_hashdiff:
-  source_column: "member_rating_hashdiff"
+  source_column: "member_disability_hashdiff"
   alias: "hashdiff"
 
 src_extra_columns:
@@ -23,19 +23,21 @@ src_extra_columns:
   - load_datetime
   - edp_start_dt
   - member_bk
-  - rating_eff_dt
-  - rating_term_dt
+  - disability_eff_dt
+  - disability_term_dt
+  - disability_term_reason_cd
   - group_bk
-  - smoker_ind
-  - underwriting_class_1_cd
-  - underwriting_class_2_cd
-  - underwriting_class_3_cd
+  - disability_desc
+  - disability_type_cd
+  - last_verification_dt
+  - last_verification_name
+  - verification_method_cd
   - lock_token_nbr
   - attachment_source_id
   - edp_record_status
   - edp_record_source
   - member_hk
-  - member_rating_ik
+  - member_disability_ik
 
 src_ldts: "load_datetime"
 
