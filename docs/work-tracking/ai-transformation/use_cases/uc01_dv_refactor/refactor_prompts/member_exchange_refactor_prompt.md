@@ -1,4 +1,4 @@
-@ai-resources\prompts\data_vault_refactor_prompt_generator.md
+@docs\work-tracking\ai-transformation\use_cases\uc01_dv_refactor\dv_refactor_project_context.md
 Create dbt models and supporting docs from this info:
 
 [sources] = legacy_facets, gemstone_facets
@@ -17,11 +17,12 @@ Create dbt models and supporting docs from this info:
   - Names:
     - s_member_exchange_gemstone_facets
     - s_member_exchange_legacy_facets
-  - effectivity satellites with all renamed columns from [source_table]
-    - src_eff: mees_eff_dt from source
-    - src_start_date: mees_eff_dt from source  
-    - src_end_date: mees_term_dt from source 
   - attached to [link_name] l_member_exchange
   - include system columns
+  - driving_key: member_hk
+  - src_eff: mees_eff_dt
+  - src_start_date: mees_eff_dt
+  - src_end_date: mees_term_dt
+  - payload_columns: all non-key columns from [data_dictionary_info]
 [data_dictionary_info] = @docs/sources/facets/dbo_cmc_mees_exchange.csv
 [current_view] = current_member_exchange

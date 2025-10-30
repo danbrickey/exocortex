@@ -7,71 +7,31 @@ This document contains all artifacts related to the member_cob entity refactorin
 
 ## File: member_cob_dv_refactor_prompt.md
 ## docs\use_cases\uc01_dv_refactor\refactor_prompts\
+@docs\work-tracking\ai-transformation\use_cases\uc01_dv_refactor\dv_refactor_project_context.md
+Create dbt models and supporting docs from this info:
 
-Please follow the project guidelines and generate the refactored spec for the member_cob entity
-
-### Expected Output Summary
-
-- Data Dictionary source_table name:
-  - cmc_mecb_cob
-
-I expect that the Raw Vault artifacts will include:
-
-- Rename Views (1 per source)
-  - stg_member_cob_legacy_facets_rename.sql
-  - stg_member_cob_gemstone_facets_rename.sql
-- Staging Views (1 per source)
-  - stg_member_cob_legacy_facets.sql
-  - stg_member_cob_gemstone_facets.sql
-- Hub
-  - h_cob_indicator.sql
-    - business Keys: cob_indicator_hk (composite key from source columns mecb_insur_type, mecb_insur_order, and mecb_mctr_styp)
-- Link
-  - l_member_cob.sql
-    - business Keys: member_hk (from source column: meme_ck), cob_indicator_hk (composite key from source columns mecb_insur_type, mecb_insur_order, and mecb_mctr_styp)
-- Effectivity Satellites (1 per source)
-  - s_member_cob_legacy_facets.sql
-  - s_member_cob_gemstone_facets.sql
-- Current View
-  - cv_member_cob.sql
-- Backward Compatible View
-  - bwd_member_cob.sql
-
-### Data Dictionary
-
-- Use this information to map source view references in the prior model code back to the source solumns, and rename columns in the rename views:
-
-```csv
-source_schema,source_table, source_column, table_description, column_description, column_data_type
-dbo,cmc_mecb_cob,meme_ck,Member COB Information Data,Member Contrived Key,int
-dbo,cmc_mecb_cob,mecb_insur_type,Member COB Information Data,Insurance Type,char
-dbo,cmc_mecb_cob,mecb_insur_order,Member COB Information Data,Insurance Order,char
-dbo,cmc_mecb_cob,mecb_mctr_styp,Member COB Information Data, Supplemental Drug Type,char
-dbo,cmc_mecb_cob,mecb_eff_dt,Member COB Information Data,Coordination of Benefits Effective Date,datetime
-dbo,cmc_mecb_cob,mecb_term_dt,Member COB Information Data,Termination Date,datetime
-dbo,cmc_mecb_cob,mecb_mctr_trsn,Member COB Information Data,Termination Reason,char
-dbo,cmc_mecb_cob,grgr_ck,Member COB Information Data,Group Contrived Key,int
-dbo,cmc_mecb_cob,mcre_id,Member COB Information Data,Coordination of Benefits Carrier Identifier,char
-dbo,cmc_mecb_cob,mecb_policy_id,Member COB Information Data,Policy Identifier,varchar
-dbo,cmc_mecb_cob,mecb_mctr_msp,Member COB Information Data,Medicare Secondary Payer Type,char
-dbo,cmc_mecb_cob,mecb_mctr_ptyp,Member COB Information Data,Prescription Drug Coverage Type,char
-dbo,cmc_mecb_cob,mecb_rxbin,Member COB Information Data,Prescription Drug Bin Number,char
-dbo,cmc_mecb_cob,mecb_rxpcn,Member COB Information Data,Prescription Drug PCN Number,varchar
-dbo,cmc_mecb_cob,mecb_rx_group,Member COB Information Data,Prescription Drug Group Number,varchar
-dbo,cmc_mecb_cob,mecb_rx_id,Member COB Information Data,Prescription Drug ID Number,varchar
-dbo,cmc_mecb_cob,mecb_last_ver_dt,Member COB Information Data,Last Verification Date,datetime
-dbo,cmc_mecb_cob,mecb_last_ver_name,Member COB Information Data,Last Verification Name,varchar
-dbo,cmc_mecb_cob,mecb_mctr_vmth,Member COB Information Data,Last Verification Method,char
-dbo,cmc_mecb_cob,mecb_loi_start_dt,Member COB Information Data,Claim LOI Start Date,datetime
-dbo,cmc_mecb_cob,mecb_prim_last_nm,Member COB Information Data,Last Name of Primary COB holder,varchar
-dbo,cmc_mecb_cob,mecb_prim_first_nm,Member COB Information Data,First Name of Primary COB holder,varchar
-dbo,cmc_mecb_cob,mecb_prim_id,Member COB Information Data,ID of Primary COB holder,varchar
-dbo,cmc_mecb_cob,mecb_lock_token,Member COB Information Data,Lock Token,smallint
-dbo,cmc_mecb_cob,atxr_source_id,Member COB Information Data,Attachment Source Id,datetime
-dbo,cmc_mecb_cob,sys_last_upd_dtm,Member COB Information Data,Last Update Datetime,datetime
-dbo,cmc_mecb_cob,sys_usus_id,Member COB Information Data,Last Update User ID,varchar
-dbo,cmc_mecb_cob,sys_dbuser_id,Member COB Information Data,Last Update DBMS User ID,varchar
-```
+[sources] = legacy_facets, gemstone_facets
+[entity_name] = member_cob
+[source_schema].[source_table] = dbo.cmc_mecb_cob
+[hub_name] = h_cob_indicator
+[hub_key] = cob_indicator_hk [mecb_insur_type, mecb_insur_order, mecb_mctr_styp from source]
+[link_name] = l_member_cob
+[link_keys]:
+  - member_cob_lk:
+    - member_hk (meme_ck from source) 
+    - cob_indicator_hk (mecb_insur_type, mecb_insur_order, mecb_mctr_styp from source)
+[effectivity_satellites]:
+  - Names:
+    - s_member_cob_gemstone_facets
+    - s_member_cob_legacy_facets
+  - effectivity satellites with all renamed columns from [source_table]
+    - src_eff: mecb_eff_dt from source
+    - src_start_date: mecb_eff_dt from source  
+    - src_end_date: mecb_term_dt from source 
+  - attached to [link_name] l_member_cob
+  - include system columns
+[data_dictionary_info] = @docs/sources/facets/dbo_cmc_mecb_cob.csv
+[current_view] = current_member_cob
 ---
 
 # Output Example

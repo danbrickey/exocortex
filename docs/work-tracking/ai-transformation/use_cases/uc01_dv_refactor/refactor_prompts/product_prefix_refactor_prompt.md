@@ -103,5 +103,5 @@ dbo,cmc_pdpx_desc,sys_row_id,Product Component Type Link to Product Component Pr
   - h_product_component_type (must exist or be created separately)
 - **Source Systems**: legacy_facets, gemstone_facets
 - **Architecture Docs**:
-  - [docs/architecture/edp_platform_architecture.md](../../architecture/edp_platform_architecture.md)
-  - [docs/engineering-knowledge-base/data-vault-2.0-guide.md](../../engineering-knowledge-base/data-vault-2.0-guide.md)
+  - [docs/architecture/overview/edp-platform-architecture.md](../../../architecture/overview/edp-platform-architecture.md)
+  - [docs/engineering-knowledge-base/data-vault-2.0-guide.md](../../../engineering-knowledge-base/data-vault-2.0-guide.md)

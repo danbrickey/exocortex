@@ -12,8 +12,8 @@ Provide complete code for at least one of every artifact type to save typing on 
 
 
 ### Context Documents and example code
-- @docs\architecture\edp_platform_architecture.md
-- @docs\architecture\edp-layer-architecture-detailed.md
+- @docs\architecture\overview\edp-platform-architecture.md
+- @docs\architecture\layers\edp-layer-architecture-detailed.md
 - @docs\engineering-knowledge-base\data-vault-2.0-guide.md
 - @docs\use_cases\uc01_dv_refactor\examples\combined_member_cob_refactoring_example.md
 
