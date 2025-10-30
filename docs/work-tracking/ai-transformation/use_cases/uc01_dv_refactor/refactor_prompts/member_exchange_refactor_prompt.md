@@ -27,4 +27,4 @@ Create dbt models and supporting docs from this info:
 [data_dictionary_info] = @docs/sources/facets/dbo_cmc_mees_exchange.csv
 [current_view] = current_member_exchange
 
-Output all generated files here: docs\work-tracking\ai-transformation\use_cases\uc01_dv_refactor\output\[entity_name]
+Output all generated files here: `docs\work-tracking\ai-transformation\use_cases\uc01_dv_refactor\output\[entity_name]`

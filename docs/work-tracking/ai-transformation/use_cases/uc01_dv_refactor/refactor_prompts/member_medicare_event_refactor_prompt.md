@@ -1,4 +1,4 @@
-@ai-resources\prompts\data_vault_refactor_prompt_generator.md
+@docs\work-tracking\ai-transformation\use_cases\uc01_dv_refactor\dv_refactor_project_context.md
 Create dbt models and supporting docs from this info:
 
 [sources] = legacy_facets, gemstone_facets
@@ -25,3 +25,5 @@ Create dbt models and supporting docs from this info:
   - include system columns
 [data_dictionary_info] = @docs/sources/facets/dbo_cmc_memd_mecr_detl.csv 
 [current_view] = current_member_medicare_event
+
+Output all generated files here: `docs\work-tracking\ai-transformation\use_cases\uc01_dv_refactor\output\[entity_name]`

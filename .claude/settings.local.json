@@ -13,7 +13,8 @@
       "Bash(dir:*)",
       "Bash(if not exist \"docs\\work-tracking\\ai-transformation\\use_cases\\uc01_dv_refactor\\output\\subscriber_rating\" mkdir \"docs\\work-tracking\\ai-transformation\\use_cases\\uc01_dv_refactor\\output\\subscriber_rating\")",
       "Bash(if not exist \"docs\\work-tracking\\ai-transformation\\use_cases\\uc01_dv_refactor\\output\\subscriber_employment\" mkdir \"docs\\work-tracking\\ai-transformation\\use_cases\\uc01_dv_refactor\\output\\subscriber_employment\")",
-      "Bash(if not exist \"docs\\work-tracking\\ai-transformation\\use_cases\\uc01_dv_refactor\\output\\subscriber_warning_msg\" mkdir \"docs\\work-tracking\\ai-transformation\\use_cases\\uc01_dv_refactor\\output\\subscriber_warning_msg\")"
+      "Bash(if not exist \"docs\\work-tracking\\ai-transformation\\use_cases\\uc01_dv_refactor\\output\\subscriber_warning_msg\" mkdir \"docs\\work-tracking\\ai-transformation\\use_cases\\uc01_dv_refactor\\output\\subscriber_warning_msg\")",
+      "Bash(if not exist \"docs\\work-tracking\\ai-transformation\\use_cases\\uc01_dv_refactor\\output\\member_medicare_event\" mkdir \"docs\\work-tracking\\ai-transformation\\use_cases\\uc01_dv_refactor\\output\\member_medicare_event\")"
     ],
     "deny": [],
     "ask": []
