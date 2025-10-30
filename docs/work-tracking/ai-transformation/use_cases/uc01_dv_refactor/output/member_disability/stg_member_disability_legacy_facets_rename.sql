@@ -1,6 +1,6 @@
 with source as (
     select *
-    from {{ ref('enterprise_data_platform', 'stg_legacy_facets_hist__dbo_cmc_mehd_handicap') }}
+    from {{ ref('enterprise_data_platform', 'stg_legacy_bcifacets_hist__dbo_cmc_mehd_handicap') }}
 ),
 
 renamed as (
@@ -10,7 +10,7 @@ renamed as (
         meme_ck as member_bk,
         mehd_eff_dt as disability_eff_dt,
         mehd_term_dt as disability_term_dt,
-        mehd_mctr_trsn as disability_term_reason_cd,
+        mehd_mctr_trsn as termination_reason_cd,
         grgr_ck as group_bk,
         mehd_desc as disability_desc,
         mehd_type as disability_type_cd,

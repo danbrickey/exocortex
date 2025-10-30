@@ -25,7 +25,7 @@ src_extra_columns:
   - member_bk
   - disability_eff_dt
   - disability_term_dt
-  - disability_term_reason_cd
+  - termination_reason_cd
   - group_bk
   - disability_desc
   - disability_type_cd
@@ -37,7 +37,6 @@ src_extra_columns:
   - edp_record_status
   - edp_record_source
   - member_hk
-  - member_disability_ik
 
 src_ldts: "load_datetime"
 

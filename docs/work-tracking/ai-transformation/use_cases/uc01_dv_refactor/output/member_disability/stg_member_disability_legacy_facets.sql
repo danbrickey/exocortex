@@ -5,7 +5,6 @@ derived_columns:
   source: "'{{ var('legacy_source_system') }}'"
   load_datetime: "edp_start_dt"
   edp_start_dt: "edp_start_dt"
-  member_disability_ik: "{{ dbt_utils.generate_surrogate_key(['tenant_id', 'source', 'member_bk', 'disability_eff_dt']) }}"
 
 hashed_columns:
   member_hk:
@@ -21,7 +20,7 @@ hashed_columns:
       - member_bk
       - disability_eff_dt
       - disability_term_dt
-      - disability_term_reason_cd
+      - termination_reason_cd
       - group_bk
       - disability_desc
       - disability_type_cd
