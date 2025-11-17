@@ -27,4 +27,3 @@ Then:
 
 5. Create after asking for confirmation:
     - improved version of the prompt with an incrementing version number appended to the filename, e.g. ai-resources/prompts/example_prompt_v2_1.md
-    - update the lib
