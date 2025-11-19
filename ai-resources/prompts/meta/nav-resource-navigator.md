@@ -131,6 +131,7 @@ Don't limit yourself to prompts:
 | "Build/create code" | development/ | specialized/, utilities/ |
 | "Strategic decision" | strategy/ | architecture/ (requirements) |
 | "Automate/productivity" | utilities/ | development/ |
+| "Process/organize emails" | **@emailsurvey** (utilities/email-survey-organizer.md) | career/ (job applications), documentation/ (requirements) |
 | "Multi-step task" | workflows/ | Recommend creating workflow |
 | "Create a prompt" | meta/ (@meta-librarian) | prompting-pattern-library/ |
 | "Create/design assessment/test/quiz" | **@assess** (meta/) | @meta-librarian (custom prompt) |

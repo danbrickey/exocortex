@@ -33,6 +33,7 @@ Type `@` + mnemonic for fast autocomplete in Claude Code:
 | **@drawio** | [Drawio Specialist](architecture/drawio-specialist.md) | Create/edit Draw.io diagrams |
 | **@tutor** | [AI Tutor](specialized/tutor-learning-assistant.md) | Personalized learning & skill development |
 | **@giftfinder** | [Gift Finder](utilities/giftfinder-shopping-assistant.md) | Gift shopping with recipient profiling & web search |
+| **@emailsurvey** | [Email Survey Organizer](utilities/email-survey-organizer.md) | Survey emails, extract information, and organize for tasks like job applications and documentation |
 
 ---
 
@@ -191,6 +192,7 @@ Strategic planning, evaluation, and decision-making prompts:
 Productivity tools and automation utilities:
 
 - **[@giftfinder](utilities/giftfinder-shopping-assistant.md)** - Intelligent gift discovery assistant with recipient profiling, web search, and organized tracking for thoughtful gift-giving.
+- **[@emailsurvey](utilities/email-survey-organizer.md)** - Survey emails, extract relevant information, and organize it for specific tasks like job applications and documentation.
 - **[excel-automation/](utilities/excel-automation/)** - Automate Excel spreadsheet creation, data manipulation, and formula generation.
 - **[excel-editing/](utilities/excel-editing/)** - Expert assistance for editing existing Excel files, creating pivot tables, and advanced Excel features.
 
@@ -244,8 +246,8 @@ Reference prompts using the @-mention syntax:
 | Specialized | 1 | Domain utilities (tutoring) |
 | Development | 1 | Coding assistance, clean code practices |
 | Strategy | 1 | Vendor evaluation, strategic planning |
-| Utilities | 3 | Excel automation, gift shopping, productivity tools |
-| **Total** | **43** | Centralized general-purpose prompts |
+| Utilities | 4 | Excel automation, gift shopping, email organization, productivity tools |
+| **Total** | **44** | Centralized general-purpose prompts |
 
 ---
 
