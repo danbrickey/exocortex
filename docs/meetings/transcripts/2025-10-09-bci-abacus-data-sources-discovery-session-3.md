@@ -57,12 +57,12 @@ Action: Provide mappings and descriptions for FM model standardization
 Dan B
 
 Thank you,
-Lorraine Maldonado | Sr. Program Mgr. param($m) [char][convert]::ToInt32($m.Groups[1].Value, 16)  param($m) [char][convert]::ToInt32($m.Groups[1].Value, 16)  param($m) [char][convert]::ToInt32($m.Groups[1].Value, 16) 
+Lorraine Maldonado | Sr. Program Mgr.
 M: 215-260-4640
 Lorraine.maldonado@abacusinsights.com<mailto:Lorraine.maldonado@abacusinsights.com>
-https://urldefense.com/v3/__http://www.abacusinsights.com__;!!BRJ0QSYGnkzhVH5s0g!IJhYnvKuLERg2cK3tYfx4DzsLSwBFpl0SteIOREID-akg2owse8CFiyxI1f37ikQD1QknWfcfsve4FK9TVWHy2BXK86kvSPTMEqo$ <https://urldefense.com/v3/__http://www.abacusinsights.com/__;!!BRJ0QSYGnkzhVH5s0g!IJhYnvKuLERg2cK3tYfx4DzsLSwBFpl0SteIOREID-akg2owse8CFiyxI1f37ikQD1QknWfcfsve4FK9TVWHy2BXK86kvRIGajgw$ >
+[REDACTED URL] <[REDACTED URL]>
 
- [/var/folders/84/p2n75p4s641cp95402y1b8sc0000gn/T/com.microsoft.Outlook/Content.MSO/1BB555AA.tmp] <https://urldefense.com/v3/__https://nam12.safelinks.protection.outlook.com/?url param($m) [char][convert]::ToInt32($m.Groups[1].Value, 16) https*3A*2F*2Fabacusinsights.com*2F&data param($m) [char][convert]::ToInt32($m.Groups[1].Value, 16) 05*7C01*7Clorraine.maldonado*40abacusinsights.com*7C49a6e3dd72b64831c3f208dae466cf38*7C0819ed188d9747bb930bec1982f9aa76*7C0*7C0*7C638073427486990014*7CUnknown*7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0*3D*7C3000*7C*7C*7C&sdata param($m) [char][convert]::ToInt32($m.Groups[1].Value, 16) 9jQQPAbzfo0GDJy0a8a16dvNl8YvXIxWYyzyFVnGjj8*3D&reserved param($m) [char][convert]::ToInt32($m.Groups[1].Value, 16) 0__;JSUlJSUlJSUlJSUlJSUlJSUlJSU!!BRJ0QSYGnkzhVH5s0g!IJhYnvKuLERg2cK3tYfx4DzsLSwBFpl0SteIOREID-akg2owse8CFiyxI1f37ikQD1QknWfcfsve4FK9TVWHy2BXK86kvVJy3d_r$ >
+ [REDACTED URL] <[REDACTED URL]>
 [signature_350526463]
 
 -----Original Appointment-----
@@ -79,16 +79,20 @@ Complete data sources discovery
 Confirm pre-requisites required
 
 ________________________________________________________________________________
-Microsoft Teams Need help?<https://urldefense.com/v3/__https://aka.ms/JoinTeamsMeeting?omkt param($m) [char][convert]::ToInt32($m.Groups[1].Value, 16) en-US__;!!BRJ0QSYGnkzhVH5s0g!IJhYnvKuLERg2cK3tYfx4DzsLSwBFpl0SteIOREID-akg2owse8CFiyxI1f37ikQD1QknWfcfsve4FK9TVWHy2BXK86kvdfE11ch$ >
-Join the meeting now<https://teams.microsoft.com/l/meetup-join/19%3ameeting_ZjRhNDcyZDgtNmVhOS00MWM2LWI5ZTktYzUzZTNhZjc0NjYz%40thread.v2/0?context param($m) [char][convert]::ToInt32($m.Groups[1].Value, 16) %7b%22Tid%22%3a%220819ed18-8d97-47bb-930b-ec1982f9aa76%22%2c%22Oid%22%3a%2251516e7a-b217-43dc-8759-703ffd099d9f%22%7d >
-Meeting ID: 244 670 941 757 2
-Passcode: az2nu7WX
+Microsoft Teams Need help?<[REDACTED URL]>
+Join the meeting now<[REDACTED URL]>
+Meeting ID: [REDACTED]
+Passcode: [REDACTED]
 ________________________________
 Dial in by phone
-+1 857-341-0625,,526325567#<tel:+18573410625,,526325567> United States, Belmont
-Find a local number<https://dialin.teams.microsoft.com/a736e6c9-a0dc-445d-b64e-57594c155d73?id param($m) [char][convert]::ToInt32($m.Groups[1].Value, 16) 526325567 >
-Phone conference ID: 526 325 567#
-For organizers: Meeting options<https://teams.microsoft.com/meetingOptions/?organizerId param($m) [char][convert]::ToInt32($m.Groups[1].Value, 16) 51516e7a-b217-43dc-8759-703ffd099d9f&tenantId param($m) [char][convert]::ToInt32($m.Groups[1].Value, 16) 0819ed18-8d97-47bb-930b-ec1982f9aa76&threadId param($m) [char][convert]::ToInt32($m.Groups[1].Value, 16) 19_meeting_ZjRhNDcyZDgtNmVhOS00MWM2LWI5ZTktYzUzZTNhZjc0NjYz@thread.v2&messageId param($m) [char][convert]::ToInt32($m.Groups[1].Value, 16) 0&language param($m) [char][convert]::ToInt32($m.Groups[1].Value, 16) en-US > | Reset dial-in PIN<https://dialin.teams.microsoft.com/usp/pstnconferencing >
+[REDACTED PHONE NUMBER]<tel:[REDACTED PHONE NUMBER]> United States, Belmont
+Find a local number<[REDACTED URL]>
+Phone conference ID: [REDACTED]
+For organizers: Meeting options<[REDACTED URL]> | Reset dial-in PIN<[REDACTED URL]>
 ________________________________________________________________________________
+
+
+
+
 
 
