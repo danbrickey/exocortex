@@ -1,0 +1,538 @@
+# Prompt Engineering Patterns - Slide Deck Specification
+# Structure separates text_elements (render as readable text) from visual_direction (imagery to generate)
+
+metadata:
+  presentation_title: "Prompt Engineering Patterns"
+  total_slides: 25
+  default_aspect_ratio: "16:9"
+
+slides:
+  # ============================================
+  # SECTION 1.0: Introduction
+  # ============================================
+  
+  - id: 1
+    section: "Introduction"
+    title: "Title Slide"
+    text_elements:
+      - type: main_title
+        content: "Prompt Engineering Patterns"
+      - type: subtitle
+        content: "From Intuition to Engineering"
+      - type: presenter
+        content: "Dan Brickey"
+    visual_direction: |
+      A title slide composition with the main title as the dominant element.
+      Clean, professional layout with clear visual hierarchy.
+      Space for presenter name in lower portion.
+
+  - id: 2
+    section: "Introduction"
+    title: "The 'Team of Interns' Metaphor"
+    text_elements:
+      - type: main_title
+        content: "Your 'Team of Interns'"
+      - type: labels
+        content: ["Fast", "Cheap", "Eager to Please", "Lacks Experience"]
+    visual_direction: |
+      Central illustration of 3-4 friendly, eager intern characters (simple, approachable style).
+      Characters should look bright and helpful but slightly naive or uncertain.
+      Surround them with floating labels or badges showing their traits.
+      Include subtle visual cues: speed lines for "fast", dollar signs crossed out for "cheap",
+      question marks floating nearby for "lacks experience".
+    notes: "This metaphor is the throughline of the entire presentation"
+
+  - id: 3
+    section: "Introduction"
+    title: "From Intuition to Engineering"
+    text_elements:
+      - type: main_title
+        content: "From Intuition to Engineering"
+      - type: comparison_left
+        content: "Casual Chat"
+      - type: comparison_right
+        content: "Technical Discipline"
+    visual_direction: |
+      Split composition showing transformation/evolution.
+      Left side: casual, informal representation (speech bubbles, question marks, loose/sketchy).
+      Right side: structured, engineered representation (blueprints, diagrams, precision tools).
+      Arrow or visual flow connecting left to right showing the progression.
+    notes: "Emphasizes the shift in mindset the presentation advocates"
+
+  - id: 4
+    section: "Introduction"
+    title: "The Agenda / The Toolkit"
+    text_elements:
+      - type: main_title
+        content: "The Toolkit"
+      - type: numbered_list
+        content:
+          - "1. Self-Correction Systems"
+          - "2. Meta-Prompting"
+          - "3. Reasoning Scaffolds"
+          - "4. Perspective Engineering"
+          - "5. Specialized Tactics"
+      - type: footer
+        content: "Resources: [Confluence Link]"
+    visual_direction: |
+      Visual representation of a toolkit or toolbox concept.
+      Five distinct tools or compartments, each representing one tier.
+      Tools should be visually distinct and hint at their function:
+      - Self-Correction: loop/cycle symbol
+      - Meta-Prompting: nested boxes or recursion hint
+      - Reasoning Scaffolds: ladder or framework structure
+      - Perspective Engineering: multiple viewpoints/faces
+      - Specialized Tactics: precision instruments
+    notes: "Consider showing the 5 tiers as a visual hierarchy or progression"
+
+  # ============================================
+  # SECTION 2.0: Tier 1 - Self-Correction Systems
+  # ============================================
+
+  - id: 5
+    section: "Tier 1: Self-Correction Systems"
+    title: "Section Title - Self-Correction Systems"
+    text_elements:
+      - type: tier_label
+        content: "Tier 1"
+      - type: main_title
+        content: "Self-Correction Systems"
+      - type: tagline
+        content: "Stop hallucinations before they commit"
+    visual_direction: |
+      Section divider slide with strong visual presence.
+      Imagery suggesting error prevention or course correction:
+      could be a compass self-adjusting, a path with a wrong turn being avoided,
+      or a document with errors being caught and fixed.
+      The "Tier 1" should be visually prominent as a badge or marker.
+    notes: "First of five tier section openers - establish consistent visual pattern"
+
+  - id: 6
+    section: "Tier 1: Self-Correction Systems"
+    title: "Chain-of-Verification (CoVe)"
+    text_elements:
+      - type: main_title
+        content: "Chain-of-Verification (CoVe)"
+      - type: process_steps
+        content: ["1. Draft", "2. Critique", "3. Verify", "4. Finalize"]
+    visual_direction: |
+      Circular or cyclical four-step loop diagram.
+      Each step is a distinct node connected by directional arrows.
+      Visual icons for each step:
+      - Draft: document/pencil
+      - Critique: magnifying glass or red pen
+      - Verify: checklist or checkmark
+      - Finalize: stamp of approval or polished document
+      The loop should feel like a quality assurance process.
+    notes: "Use cases: contract review, technical specifications"
+
+  - id: 7
+    section: "Tier 1: Self-Correction Systems"
+    title: "Adversarial Prompting"
+    text_elements:
+      - type: main_title
+        content: "Adversarial Prompting"
+      - type: subtitle
+        content: "Security & Risk Assessment"
+      - type: key_concept
+        content: "Red Team Persona"
+    visual_direction: |
+      Split or contrasting composition showing transformation.
+      Left/default: friendly, helpful assistant character (the standard LLM persona).
+      Right/activated: the same character transformed into an aggressive "Red Team" 
+      security tester - could wear a red hat, have a more critical expression,
+      hold a magnifying glass looking for vulnerabilities.
+      Visual metaphor of breaking through the "helpful assistant" bias.
+    notes: "Show the persona shift that enables finding vulnerabilities"
+
+  - id: 8
+    section: "Tier 1: Self-Correction Systems"
+    title: "Strategic Edge Case Learning"
+    text_elements:
+      - type: main_title
+        content: "Strategic Edge Case Learning"
+      - type: comparison_labels
+        content: ["Standard Prompt", "Edge-Case Primed Prompt"]
+      - type: result_indicators
+        content: ["✗ FAIL", "✓ SUCCESS"]
+    visual_direction: |
+      Split-screen comparison layout.
+      Left side: "Standard Prompt" with a failing SQL query result (red X, error state).
+      Right side: "Edge-Case Primed Prompt" with successful SQL query (green checkmark, success state).
+      Include visual representation of code/query blocks on each side.
+      The contrast should be stark and immediately readable.
+    notes: "Particularly effective for coding tasks like SQL generation"
+
+  # ============================================
+  # SECTION 3.0: Tier 2 - Meta-Prompting
+  # ============================================
+
+  - id: 9
+    section: "Tier 2: Meta-Prompting"
+    title: "Section Title - Meta-Prompting"
+    text_elements:
+      - type: tier_label
+        content: "Tier 2"
+      - type: main_title
+        content: "Meta-Prompting"
+      - type: tagline
+        content: "Use AI to design better prompts"
+    visual_direction: |
+      Section divider slide with recursive/self-referential visual theme.
+      Imagery suggesting AI helping to design prompts: could be nested boxes,
+      a mirror reflecting improvement, or a blueprint being drafted by an AI hand.
+      The concept of "prompts about prompts" should come through visually.
+      "Tier 2" badge consistent with Tier 1 styling.
+    notes: "Recursive concept - the AI improves its own instructions"
+
+  - id: 10
+    section: "Tier 2: Meta-Prompting"
+    title: "Reverse Prompting"
+    text_elements:
+      - type: main_title
+        content: "Reverse Prompting"
+      - type: subtitle
+        content: "For Unfamiliar Tasks"
+      - type: process_steps
+        content:
+          - "1. Ask AI to design the optimal prompt"
+          - "2. Specify essential reasoning steps"
+          - "3. Execute the AI-designed prompt"
+    visual_direction: |
+      Visual flow showing role reversal or backwards process.
+      Instead of user → prompt → AI, show AI → prompt design → user approval → execution.
+      Could use arrows flowing in unexpected direction, or show the AI
+      holding a clipboard/checklist while the user reviews.
+      Emphasize the "ask the expert to design the question" concept.
+    notes: "Especially useful when you don't know what you don't know"
+
+  - id: 11
+    section: "Tier 2: Meta-Prompting"
+    title: "Recursive Prompt Optimization"
+    text_elements:
+      - type: main_title
+        content: "Recursive Prompt Optimization"
+      - type: subtitle
+        content: "Building Production-Ready Prompts"
+      - type: progression
+        content: ["Basic Prompt", "Add Constraints", "Add Error Handling", "Bulletproof"]
+    visual_direction: |
+      Iterative refinement visualization - could be:
+      - A spiral staircase ascending toward quality
+      - A rough sketch progressively becoming a detailed blueprint
+      - A simple shape being refined through multiple passes
+      Show 3-4 stages of evolution from rough to polished.
+      Each iteration adds visible layers of robustness (shields, checks, armor metaphor).
+    notes: "The prompt evolves through multiple critique-and-improve cycles"
+
+  # ============================================
+  # SECTION 4.0: Tier 3 - Reasoning Scaffolds
+  # ============================================
+
+  - id: 12
+    section: "Tier 3: Reasoning Scaffolds"
+    title: "Section Title - Reasoning Scaffolds"
+    text_elements:
+      - type: tier_label
+        content: "Tier 3"
+      - type: main_title
+        content: "Reasoning Scaffolds"
+      - type: tagline
+        content: "Force systematic thinking"
+    visual_direction: |
+      Section divider featuring the "Intern" character from slide 2.
+      The intern is studying a whiteboard or checklist, looking focused and methodical.
+      Visual metaphor of scaffolding or framework structure supporting the thinking process.
+      Construction scaffolding around a "thought" or "idea" being built.
+      "Tier 3" badge consistent with previous tiers.
+    notes: "Callback to intern metaphor - giving them structure to work within"
+
+  - id: 13
+    section: "Tier 3: Reasoning Scaffolds"
+    title: "Deliberate Over-Instruction"
+    text_elements:
+      - type: main_title
+        content: "Deliberate Over-Instruction"
+      - type: subtitle
+        content: "Fighting the Brevity Bias"
+      - type: key_phrases
+        content:
+          - "Be exhaustive"
+          - "Prioritize completeness"
+          - "No summaries"
+    visual_direction: |
+      Contrast between thin/minimal output and thick/comprehensive output.
+      Left: a tiny, sparse document (what the AI wants to produce).
+      Right: a detailed, thorough document (what we actually need).
+      Could show a funnel being reversed - expanding rather than condensing.
+      Emphasize "more is more" for technical architecture tasks.
+    notes: "Particularly important for technical architecture documentation"
+
+  - id: 14
+    section: "Tier 3: Reasoning Scaffolds"
+    title: "Chain-of-Thought (Zero-Shot vs. Few-Shot)"
+    text_elements:
+      - type: main_title
+        content: "Chain-of-Thought"
+      - type: comparison_headers
+        content: ["Zero-Shot", "Few-Shot"]
+      - type: zero_shot_content
+        content: "\"Think step-by-step\""
+      - type: few_shot_content
+        content: "Input → Reasoning → Output (with examples)"
+    visual_direction: |
+      Side-by-side comparison of two approaches.
+      Zero-Shot side: simple, single instruction with a thought bubble.
+      Few-Shot side: multiple example blocks showing the pattern (input box → 
+      reasoning steps → output box), repeated 2-3 times to show examples.
+      Visual emphasis on the structural difference between the approaches.
+    notes: "Foundation technique - many other methods build on this"
+
+  - id: 15
+    section: "Tier 3: Reasoning Scaffolds"
+    title: "Few-Shot Chain-of-Thought (Deep Dive)"
+    text_elements:
+      - type: main_title
+        content: "Few-Shot Chain-of-Thought"
+      - type: subtitle
+        content: "Show the Reasoning Path"
+      - type: example_structure
+        content:
+          - "Example Input"
+          - "Step 1: [Reasoning]"
+          - "Step 2: [Reasoning]"
+          - "Output"
+    visual_direction: |
+      Detailed visualization of the few-shot learning process.
+      Show a clear example with visible reasoning steps as a template,
+      then an arrow pointing to a new problem being solved the same way.
+      The AI is "mimicking" the demonstrated reasoning pattern.
+      Could use IT troubleshooting as the visual context (computer, diagnostic steps).
+    notes: "Powerful for IT troubleshooting and similar diagnostic tasks"
+
+  - id: 16
+    section: "Tier 3: Reasoning Scaffolds"
+    title: "Reference Class Priming"
+    text_elements:
+      - type: main_title
+        content: "Reference Class Priming"
+      - type: subtitle
+        content: "Ensuring Consistency"
+      - type: key_concept
+        content: "Gold Standard Example"
+    visual_direction: |
+      Visual of a "gold standard" or exemplar being used as a reference.
+      Could show a trophy/medal document labeled "Gold Standard" with arrows 
+      pointing to multiple output documents that match its style and quality.
+      Emphasize matching: structure, tone, and quality level.
+      Think of it like a style guide or template being followed precisely.
+    notes: "Ensures consistency in output quality, structure, and tone"
+
+  - id: 17
+    section: "Tier 3: Reasoning Scaffolds"
+    title: "Tree-of-Thought (ToT)"
+    text_elements:
+      - type: main_title
+        content: "Tree-of-Thought (ToT)"
+      - type: subtitle
+        content: "The Most Advanced Scaffold"
+      - type: key_concepts
+        content: ["Branch", "Evaluate", "Backtrack"]
+    visual_direction: |
+      Tree diagram showing branching decision paths.
+      Root node at top/left, branching into multiple possible paths.
+      Some branches marked with X (dead ends), others with checkmarks (viable).
+      Show the concept of "backtracking" - an arrow going back up to try another branch.
+      Contrast with a single linear chain (standard CoT) shown faintly for comparison.
+    notes: "Solves the linearity problem of standard Chain-of-Thought"
+
+  # ============================================
+  # SECTION 5.0: Tier 4 - Perspective Engineering
+  # ============================================
+
+  - id: 18
+    section: "Tier 4: Perspective Engineering"
+    title: "Section Title - Perspective Engineering"
+    text_elements:
+      - type: tier_label
+        content: "Tier 4"
+      - type: main_title
+        content: "Perspective Engineering"
+      - type: tagline
+        content: "Beyond the neutral viewpoint"
+    visual_direction: |
+      Section divider showing multiple viewpoints or perspectives.
+      Could be a prism splitting light into multiple colors,
+      or multiple characters looking at the same object from different angles.
+      The concept of "one thing, many interpretations" should be clear.
+      "Tier 4" badge consistent with previous tiers.
+    notes: "Moving past the AI's default 'helpful neutral' stance"
+
+  - id: 19
+    section: "Tier 4: Perspective Engineering"
+    title: "Multi-Persona Debate"
+    text_elements:
+      - type: main_title
+        content: "Multi-Persona Debate"
+      - type: persona_labels
+        content: ["CFO", "CISO", "VP Engineering"]
+      - type: outcome_label
+        content: "Synthesized Solution"
+    visual_direction: |
+      Three distinct persona characters in debate/discussion arrangement.
+      Each has distinct visual identity suggesting their role:
+      - CFO: charts, dollar signs, conservative appearance
+      - CISO: shield, lock, security-focused appearance
+      - VP Engineering: gears, code, technical appearance
+      Arrows or speech bubbles showing conflicting viewpoints converging
+      into a central "synthesized solution" node.
+    notes: "Simulating stakeholder perspectives surfaces blind spots"
+
+  - id: 20
+    section: "Tier 4: Perspective Engineering"
+    title: "Temperature Simulation"
+    text_elements:
+      - type: main_title
+        content: "Temperature Simulation"
+      - type: comparison_labels
+        content: ["Low Temp (Precise)", "High Temp (Creative)"]
+      - type: outcome_label
+        content: "Combined Analysis"
+    visual_direction: |
+      Visual thermometer or temperature gauge as central metaphor.
+      Left side: "cold" colors (blue), precise/structured output, rigid shapes.
+      Right side: "hot" colors (red/orange), creative/expansive output, flowing shapes.
+      Center: the two being blended or combined into a balanced result.
+      Show this as simulating the API temperature setting within the prompt itself.
+    notes: "Get both conservative and creative analyses, then synthesize"
+
+  # ============================================
+  # SECTION 6.0: Tier 5 - Specialized Tactics
+  # ============================================
+
+  - id: 21
+    section: "Tier 5: Specialized Tactics"
+    title: "Section Title - Specialized Tactics"
+    text_elements:
+      - type: tier_label
+        content: "Tier 5"
+      - type: main_title
+        content: "Specialized Tactics"
+      - type: tagline
+        content: "Tactical tools for specific challenges"
+    visual_direction: |
+      Section divider with a "tactical toolkit" or "specialist equipment" theme.
+      Could show precision instruments, specialized tools for specific jobs,
+      or a Swiss Army knife with unique attachments.
+      Emphasize these are situational tools, not everyday techniques.
+      "Tier 5" badge consistent with previous tiers.
+    notes: "Final tier - these are for specific situations, not general use"
+
+  - id: 22
+    section: "Tier 5: Specialized Tactics"
+    title: "Summary-Expand Loop"
+    text_elements:
+      - type: main_title
+        content: "Summary-Expand Loop"
+      - type: subtitle
+        content: "Managing Context Window Limits"
+      - type: process_steps
+        content:
+          - "1. Pause"
+          - "2. Compress to Summary"
+          - "3. Copy"
+          - "4. Paste into New Chat"
+    visual_direction: |
+      Visual showing a long conversation being compressed and continued.
+      Left: a very long scroll/document representing a lengthy conversation.
+      Middle: the scroll being compressed into a small summary block.
+      Right: the summary being placed into a fresh, new chat window.
+      Show the "continuation" with an arrow bridging old to new.
+    notes: "Practical technique for long-running conversations"
+
+  - id: 23
+    section: "Tier 5: Specialized Tactics"
+    title: "Controlled Hallucination (CHI)"
+    text_elements:
+      - type: main_title
+        content: "Controlled Hallucination"
+      - type: subtitle
+        content: "Creative Brainstorming"
+      - type: key_label
+        content: "SPECULATIVE"
+      - type: warning
+        content: "Label outputs explicitly"
+    visual_direction: |
+      Creative, imaginative visual with clear "speculative" labeling.
+      Could show a lightbulb with wild, creative ideas flowing out,
+      but contained within a clearly marked "speculation zone" or boundary.
+      Emphasize the balance: creativity is encouraged BUT must be labeled.
+      Use caution colors (yellow/orange) for the speculative boundary.
+    notes: "For brainstorming - creativity with explicit uncertainty labels"
+
+  - id: 24
+    section: "Tier 5: Specialized Tactics"
+    title: "Calibrated Confidence (CCP)"
+    text_elements:
+      - type: main_title
+        content: "Calibrated Confidence"
+      - type: subtitle
+        content: "Accountable Uncertainty"
+      - type: example_scores
+        content:
+          - "High Confidence (90%+)"
+          - "Medium Confidence (60-89%)"
+          - "Low Confidence (<60%)"
+    visual_direction: |
+      Visual representation of confidence scoring system.
+      Could be a gauge/meter showing confidence levels, or a traffic light system
+      (green = high confidence, yellow = medium, red = low).
+      Show example statements with confidence scores attached.
+      Emphasize accountability - the AI must quantify its certainty.
+    notes: "Forces the model to be accountable for its uncertainty level"
+
+  # ============================================
+  # SECTION 7.0: Closing & Q&A
+  # ============================================
+
+  - id: 25
+    section: "Closing"
+    title: "Summary - The New Workflow"
+    text_elements:
+      - type: main_title
+        content: "The New Workflow"
+      - type: recap_list
+        content:
+          - "CoVe - Verify before committing"
+          - "Meta-Prompting - Let AI design prompts"
+          - "ToT - Branch and backtrack"
+          - "Perspectives - Simulate stakeholders"
+      - type: callback
+        content: "Your Team of Interns"
+      - type: action_item
+        content: "Automate the repetitive & describable"
+    visual_direction: |
+      Summary composition bringing back the "intern team" from slide 2.
+      The interns now look more capable/confident, equipped with the tools
+      from the five tiers (visual callbacks to key techniques).
+      Could show them successfully completing tasks with the new methods.
+      Reinforcing message: these techniques make your "interns" more effective.
+    notes: "Callback to opening metaphor - the interns are now equipped"
+
+  - id: 26
+    section: "Closing"
+    title: "Q&A / Resources"
+    text_elements:
+      - type: main_title
+        content: "Questions?"
+      - type: resource_link
+        content: "[Prompt Library Confluence Link]"
+      - type: closing_message
+        content: "Treat prompts like engineered code"
+    visual_direction: |
+      Clean closing slide with space for Q&A.
+      Visual of a resource library or code repository.
+      Include visual cue for "engineered code" - perhaps a prompt 
+      displayed in a code editor or with version control symbols.
+      Professional, open composition inviting questions.
+    notes: "Final slide - keep clean and focused on the resource link"
