@@ -124,7 +124,9 @@ You do this recursively until the model hands you a massive, bulletproof block o
 **[Slide: Tier 3 - Reasoning Scaffolds]**
 
 **Speaker:** Okay, Tier 3. This is my favorite section. **Reasoning Scaffolds**.
-This is how we stop the model from being lazy. Models want to save compute. They want to give you the shortest, most probable answer. We need to force them to think systematically.
+**Speaker:** Okay, Tier 3. This is my favorite section. **Reasoning Scaffolds**.
+This is how we stop the model from being lazy.
+Remember our intern? Chain-of-Thought is like forcing them to show their math on the whiteboard before writing the answer. If you just ask for the answer, they guess. If you ask for the steps, they calculate.
 
 **[Slide: Deliberate Over-Instruction]**
 
@@ -165,7 +167,9 @@ Tree-of-Thought solves this. It asks the model to:
 2.  Evaluate which one is most promising.
 3.  Discard the bad paths and proceed with the good one.
 
-It simulates a search algorithm, allowing the model to "backtrack" if it hits a dead end. This is essential for complex coding tasks or debugging race conditions where the first guess is usually wrong.
+It simulates a search algorithm, allowing the model to "backtrack" if it hits a dead end.
+Think of it like a chess game. The model looks three moves ahead, sees a checkmate, and backs up to try a different move.
+This is essential for complex coding tasks or debugging race conditions where the first guess is usually wrong.
 
 ---
 
@@ -236,7 +240,9 @@ If you can describe the workflow clearly enough to prompt it using these techniq
 
 **[Slide: Q&A / Resources Link]**
 
-The prompt library is at the link on the screen. Start treating your prompts like code—version them, test them, and engineer them.
+The prompt library is at the link on the screen.
+Download the 'Prompt Engineering Reference Guide' from the link. It has the copy-paste templates for everything we discussed.
+Start treating your prompts like code—version them, test them, and engineer them.
 
 Thank you. I have time for questions.
 
