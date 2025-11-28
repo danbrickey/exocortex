@@ -1,5 +1,12 @@
 # Slide Deck Style Guide
 
+* **[Whiteboard Sketch Style](#whiteboard-sketch-style)**: Hand-Drawn Analog Whiteboard Sketch.
+* **[Refined Technical Blueprint](#refined-technical-blueprint)**: A professional, high-tech engineering schematic adapted for clear presentation visibility, balancing a complex technical feel with high legibility, and featuring a precise, constructed, and glowing aesthetic.
+* **[Vintage Techno-Botanical Scientific Plate](#vintage-techno-botanical-scientific-plate)**: A hand-drawn, 19th-century scientific illustration plate combining organic botany with integrated technical or abstract concepts, presented on aged parchment.
+* **[Renaissance Technical Sketchbook on Aged Parchment](#renaissance-technical-sketchbook-on-aged-parchment)**: A page torn from a Renaissance-era inventor’s sketchbook, specifically emulating the technical and analytical style of Leonardo da Vinci, rendered in monotone sepia ink on an antique surface to feel hand-drawn, studied, and ancient.
+* **[Sumi-e & Washi (Japanese Ink Wash and Rice Paper)](#sumi-e--washi-japanese-ink-wash-and-rice-paper)**: Presents modern concepts through traditional Japanese hand-painted media, avoiding harsh digital lines, flat colors, or glossy finishings, ensuring every element feels handcrafted and natural.
+* **[Modern Clean Material Infographic](#modern-clean-material-infographic)**: A clean, minimalist, and professional aesthetic designed for maximum clarity and approachable data visualization, utilizing a soft, harmonious color palette and geometric shapes enhanced by subtle depth effects to resemble layered paper or "material design."
+
 ## Whiteboard Sketch Style
 **Style Description:** Hand-Drawn Analog Whiteboard Sketch
 
@@ -141,3 +148,38 @@ Text elements must match the vintage scientific aesthetic.
 *   **Outlines:** Expressive, flowing black ink brushstrokes.
 *   **Coloring:** Loose watercolor fills; color may bleed over edges or leave white space for a hand-painted feel.
 *   **Subject Matter Treatment:** Technical or modern subjects rendered organically (e.g., watercolor painting of a blueprint, diffused watercolor blooms for "glowing" elements).
+
+## Modern Clean Material Infographic
+**Style Description:** A clean, minimalist, and professional aesthetic designed for maximum clarity and approachable data visualization. It utilizes a soft, harmonious color palette and geometric shapes enhanced by subtle depth effects, resembling layered paper or "material design." The look is airy, organized, and friendly, prioritizing easy digestion of structured information.
+
+### 1. Overall Aesthetic and Background
+*   **Aesthetic:** The aesthetic is minimalist, bright, and airy.
+*   **Background Color:** Pure white (#FFFFFF) or extremely pale light gray.
+*   **Background Texture:** None. The background is clean, flat, and devoid of patterns or gradients to ensure maximal contrast with foreground elements.
+
+### 2. Color Palette and Depth
+*   **Color Usage:** Color is used strategically for coding and visual interest, avoiding harsh tones.
+*   **Accent Colors:** A harmonious palette of soft pastels to mid-tones. Common examples include mint green, sky blue, soft coral/salmon, sunny yellow, and muted lavender. Each distinct section or step usually holds one primary accent color.
+*   **Depth Effect (Key Feature):** Elements are not entirely flat. Containers, circles, and arrows feature soft, diffused drop shadows, giving them a slight "lift" off the white background, creating a clean, layered paper or 3D effect.
+
+### 3. Shapes and Containers
+*   **Data Organization:** Data is organized into distinct, modular geometric forms.
+*   **Shape Types:** Dominant shapes are circles, rounded rectangles, lozenges, hexagons, and soft-edged chevrons or arrows. Sharp corners are rare.
+*   **Container Styling:** Content boxes are often pure white with a subtle shadow, bordered or accented by the section's theme color. Some elements are solid colored shapes (like numbered circles in a process flow).
+
+### 4. Typography
+*   **Readability:** Text is designed for quick scanning and readability.
+*   **Font Style:** Clean, modern, standard sans-serif fonts throughout (e.g., Helvetica Neue, Montserrat, or similar).
+*   **Hierarchy and Color:**
+    *   **Titles/Headers:** Bold, often in dark gray (e.g., #333333) or matching the section's accent color. Frequently uses all-caps for short labels (e.g., "STEP 01", "ANALYSIS").
+    *   **Body Text:** Dark gray or soft black for high readability without the harshness of pure black.
+
+### 5. Graphic Elements and Iconography
+*   **Visuals:** Visuals are simple and supportive of the data flow.
+*   **Icons:** Minimalist, thin-line icons or simple flat-fill icons. They are almost always contained within a circle, usually colored white against a colored background circle, or colored against a white background circle.
+*   **Connectors and Flow:** Flow is emphasized heavily. Connectors include dashed lines, dotted curved paths, and distinct arrow shapes that guide the eye clearly from one module to the next.
+
+### 6. Layout Principles
+*   **Modularity:** The layout emphasizes modularity and breathing room.
+*   **White Space:** Generous use of negative space (padding/margins) between elements so nothing feels crowded.
+*   **Structure:** Slides are structured around clear models: linear timelines, cyclical processes, segmented pyramids, or distinct grouped data points. The sequence is usually explicitly stated with numbers (01, 02, 03, etc.).
