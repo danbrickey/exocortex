@@ -1,12 +1,13 @@
 # Slide Deck Style Guide
 
+* **[Overlay Glassy](#overlay-glassy)**: A modern, sleek, and interactive style that uses translucent and reflective elements to create a sense of depth and sophistication, often featuring blurred backgrounds and subtle animations.
 * **[Whiteboard Sketch Style](#whiteboard-sketch-style)**: Hand-Drawn Analog Whiteboard Sketch.
 * **[Refined Technical Blueprint](#refined-technical-blueprint)**: A professional, high-tech engineering schematic adapted for clear presentation visibility, balancing a complex technical feel with high legibility, and featuring a precise, constructed, and glowing aesthetic.
 * **[Vintage Techno-Botanical Scientific Plate](#vintage-techno-botanical-scientific-plate)**: A hand-drawn, 19th-century scientific illustration plate combining organic botany with integrated technical or abstract concepts, presented on aged parchment.
 * **[Renaissance Technical Sketchbook on Aged Parchment](#renaissance-technical-sketchbook-on-aged-parchment)**: A page torn from a Renaissance-era inventor’s sketchbook, specifically emulating the technical and analytical style of Leonardo da Vinci, rendered in monotone sepia ink on an antique surface to feel hand-drawn, studied, and ancient.
 * **[Sumi-e & Washi (Japanese Ink Wash and Rice Paper)](#sumi-e--washi-japanese-ink-wash-and-rice-paper)**: Presents modern concepts through traditional Japanese hand-painted media, avoiding harsh digital lines, flat colors, or glossy finishings, ensuring every element feels handcrafted and natural.
 * **[Modern Clean Material Infographic](#modern-clean-material-infographic)**: A clean, minimalist, and professional aesthetic designed for maximum clarity and approachable data visualization, utilizing a soft, harmonious color palette and geometric shapes enhanced by subtle depth effects to resemble layered paper or "material design."
-
+    
 ## Whiteboard Sketch Style
 **Style Description:** Hand-Drawn Analog Whiteboard Sketch
 
@@ -183,3 +184,33 @@ Text elements must match the vintage scientific aesthetic.
 *   **Modularity:** The layout emphasizes modularity and breathing room.
 *   **White Space:** Generous use of negative space (padding/margins) between elements so nothing feels crowded.
 *   **Structure:** Slides are structured around clear models: linear timelines, cyclical processes, segmented pyramids, or distinct grouped data points. The sequence is usually explicitly stated with numbers (01, 02, 03, etc.).
+
+## Overlay Glassy
+**Style Description:** A modern, high-tech aesthetic characterized by transparent, glowing glass elements overlaid on a dark, futuristic background. The style creates a sense of depth, dimensionality, and light, combining a clean digital interface with an immersive, atmospheric feel.
+
+### 1. Overall Aesthetic and Background
+*   **Aesthetic:** A futuristic, glowing digital interface with a deep sense of depth.
+*   **Background Color:** A dark, deep blue to purple gradient.
+*   **Background Texture:** A smooth, dark gradient with subtle light effects. It may feature faint, glowing abstract data points, lines, or subtle light particles that add depth without being distracting.
+
+### 2. Frames and Containers
+Content is presented within distinct, transparent glass-like containers.
+*   **Appearance:** Containers have the appearance of glowing, frosted glass with a subtle glow around the edges. They are transparent, allowing the background gradient to show through, which enhances the layered, three-dimensional effect.
+*   **Border Style:** Borders are often rounded and appear to be made of glowing light, sometimes with a subtle blue or purple neon effect.
+
+### 3. Typography
+Text is designed for high legibility against the dark, glowing background.
+*   **Primary Text Color:** High-contrast white.
+*   **Font Style:** Clean, modern sans-serif fonts are used throughout. Titles are large, prominent, and bold.
+*   **Accent Colors:** Accent colors like glowing blue, cyan, purple, and magenta are used for emphasis, bullet points, and graphical elements. Status indicators, such as for an error, might use a glowing red.
+
+### 4. Graphic Elements and Iconography
+Visuals are stylized to match the glassy, glowing aesthetic.
+*   **Icons:** Icons are stylized, glowing, and appear to be made of light or glass. They are often contained within glowing glass circles or badges.
+*   **Arrows and Connectors:** Arrows and flow lines are large, glowing, and stylized, appearing as beams of light or translucent, glowing paths.
+*   **Images and Data Visualization:** Images and data charts are often integrated into the glass containers, sometimes with a glowing border or overlay. 3D elements like hands holding devices or abstract shapes are also rendered with a glowing, digital finish.
+
+### 5. Layout Principles
+The layout emphasizes a clean, modern organization with a clear hierarchy.
+*   **Padding:** Ample padding within and around the glass containers ensures a clean, uncluttered look.
+*   **Structure:** Slides are often structured with a main title block, followed by content organized into distinct glass panels or a central glowing graphic element. The use of layers creates a sense of depth.
