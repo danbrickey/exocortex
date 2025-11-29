@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables (SECRETS)
+.env
+
+# Generated content
+generated_images/
+generated_images_test/
+
+# IDE
+.vscode/
+.idea/
