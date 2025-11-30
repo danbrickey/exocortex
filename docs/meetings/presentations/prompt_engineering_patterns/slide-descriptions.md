@@ -2,8 +2,8 @@ Here is a list of the needed slides based on the provided presentation script.
 
 **1.0 Introduction**
 
-* **Slide 1: Title Slide - Advanced Prompt Engineering Patterns**
-    * **Description:** A title slide for the presentation. It should include the main title, "Advanced Prompt Engineering Patterns," the speaker's name, and the date.
+* **Slide 1: Title Slide - Prompt Engineering Patterns**
+    * **Description:** A title slide for the presentation. It should include the main title, "Prompt Engineering Patterns," with a subtitle "From Intuition to Engineering".
 * **Slide 2: The "Team of Interns" Metaphor**
     * **Description:** A slide introducing the central metaphor of the presentation. It should visually represent LLMs as a "Team of Bright, Helpful (but Naive) Interns," highlighting their speed, low cost, lack of experience, and tendency to please.
 * **Slide 3: From Intuition to Engineering**
