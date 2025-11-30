@@ -20,7 +20,8 @@ Here is a list of the needed slides based on the provided presentation script.
 * **Slide 7: Adversarial Prompting**
     * **Description:** A slide introducing "Adversarial Prompting" as a tool for security and risk assessment. It should explain how it breaks the model's "helpful assistant" bias by assigning it an aggressive "Red Team" persona to find vulnerabilities.
 * **Slide 8: Strategic Edge Case Learning**
-    * **Description:** A slide describing "Strategic Edge Case Learning," particularly useful for coding tasks like generating SQL queries. It should illustrate the method of priming the model with three specific example types: 1. Baseline, 2. Failure Mode, and 3. Edge Case.
+    * **Description:** A slide describing "Strategic Edge Case Learning," particularly useful for coding tasks like generating SQL queries.
+    * **Visual:** Split screen showing "Standard Prompt" (Fail) vs "Edge-Case Primed Prompt" (Success) on a SQL query.
 
 **3.0 Tier 2: Meta-Prompting**
 
@@ -35,6 +36,7 @@ Here is a list of the needed slides based on the provided presentation script.
 
 * **Slide 12: Tier 3 - Reasoning Scaffolds**
     * **Description:** A title slide for the "Reasoning Scaffolds" section, introducing the goal of forcing the model to think systematically instead of being lazy.
+    * **Visual:** The "Intern" character looking at a whiteboard or checklist.
 * **Slide 13: Deliberate Over-Instruction**
     * **Description:** A slide explaining "Deliberate Over-Instruction," a technique used to fight the model's brevity bias, especially in technical architecture tasks. It should emphasize explicitly requesting exhaustive depth and prioritizing completeness over summaries.
 * **Slide 14: Chain-of-Thought (Zero-Shot vs. Few-Shot)**
@@ -61,8 +63,11 @@ Here is a list of the needed slides based on the provided presentation script.
     * **Description:** A title slide for the "Specialized Tactics" section, introducing tactical tools for specific challenges.
 * **Slide 22: Summary-Expand Loop**
     * **Description:** A slide explaining the "Summary-Expand Loop" for managing the context window limit in long conversations. It should outline the steps: pause, compress conversation into a summary, copy, and paste into a new chat to continue.
-* **Slide 23: Controlled Hallucination & Calibrated Confidence**
-    * **Description:** A slide covering two contrasting techniques: "Controlled Hallucination (CHI)" for creative brainstorming and "Calibrated Confidence (CCP)" for making the model accountable for its uncertainty by assigning confidence scores.
+* **Slide 23a: Controlled Hallucination (CHI)**
+    * **Description:** A slide covering "Controlled Hallucination" for creative brainstorming. It should emphasize explicitly labeling outputs as "speculative".
+* **Slide 23b: Calibrated Confidence (CCP)**
+    * **Description:** A slide covering "Calibrated Confidence," making the model accountable for its uncertainty by assigning confidence scores.
+    * **Note:** These are split to separate the "Creative" vs "Precise" concepts.
 
 **7.0 Closing & Q&A**
 
