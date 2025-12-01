@@ -1,0 +1,86 @@
+# Prompt Engineering Patterns - Slide Deck Specification
+# Structure separates text_elements (render as readable text) from visual_direction (imagery to generate)
+
+metadata:
+  presentation_title: "Prompt Engineering Patterns"
+  total_slides: 25
+  default_aspect_ratio: "16:9"
+
+slides:
+  # ============================================
+  # SECTION 1.0: Introduction
+  # ============================================
+  
+  - id: 1
+    section: "Introduction"
+    title: "Title Slide"
+    text_elements:
+      - type: main_title
+        content: "Prompt Engineering Patterns"
+      - type: subtitle
+        content: "From Intuition to Engineering"
+      - type: presenter
+        content: "Dan Brickey"
+    visual_direction: |
+      A title slide composition with the main title as the dominant element.
+      Clean, professional layout with clear visual hierarchy.
+      Space for presenter name in lower portion.
+
+  - id: 2
+    section: "Introduction"
+    title: "The 'Team of Interns' Metaphor"
+    text_elements:
+      - type: main_title
+        content: "Your 'Team of Interns'"
+      - type: labels
+        content: ["Fast", "Cheap", "Eager to Please", "Lacks Experience"]
+    visual_direction: |
+      Central illustration of 3-4 friendly, eager intern characters (simple, approachable style).
+      Characters should look bright and helpful but slightly naive or uncertain.
+      Surround them with floating labels or badges showing their traits.
+      Include subtle visual cues: speed lines for "fast", dollar signs crossed out for "cheap",
+      question marks floating nearby for "lacks experience".
+    notes: "This metaphor is the throughline of the entire presentation"
+
+  - id: 3
+    section: "Introduction"
+    title: "From Intuition to Engineering"
+    text_elements:
+      - type: main_title
+        content: "From Intuition to Engineering"
+      - type: comparison_left
+        content: "Casual Chat"
+      - type: comparison_right
+        content: "Technical Discipline"
+    visual_direction: |
+      Split composition showing transformation/evolution.
+      Left side: casual, informal representation (speech bubbles, question marks, loose/sketchy).
+      Right side: structured, engineered representation (blueprints, diagrams, precision tools).
+      Arrow or visual flow connecting left to right showing the progression.
+    notes: "Emphasizes the shift in mindset the presentation advocates"
+
+  - id: 4
+    section: "Introduction"
+    title: "The Agenda / The Toolkit"
+    text_elements:
+      - type: main_title
+        content: "The Toolkit"
+      - type: numbered_list
+        content:
+          - "1. Self-Correction Systems"
+          - "2. Meta-Prompting"
+          - "3. Reasoning Scaffolds"
+          - "4. Perspective Engineering"
+          - "5. Specialized Tactics"
+      - type: footer
+        content: "Resources: [Confluence Link]"
+    visual_direction: |
+      Visual representation of a toolkit or toolbox concept.
+      Five distinct tools or compartments, each representing one tier.
+      Tools should be visually distinct and hint at their function:
+      - Self-Correction: loop/cycle symbol
+      - Meta-Prompting: nested boxes or recursion hint
+      - Reasoning Scaffolds: ladder or framework structure
+      - Perspective Engineering: multiple viewpoints/faces
+      - Specialized Tactics: precision instruments
+    notes: "Consider showing the 5 tiers as a visual hierarchy or progression"
