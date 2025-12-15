@@ -13,7 +13,7 @@ author: "Dan Brickey"
 description: "Comprehensive logic guide for linking member records to external person identifiers enabling cross-system member tracking"
 related_docs:
   - "docs/work-tracking/ai-transformation/use_cases/uc02_edw2_refactor/output/member_person/member_person_business_rules.md"
-  - "docs/architecture/edp_platform_architecture.md"
+  - "docs/architecture/overview/edp-platform-architecture.md"
   - "docs/engineering-knowledge-base/data-vault-2.0-guide.md"
 model_name: "bv_s_member_person"
 legacy_source: "HDSVault.biz.v_FacetsMemberUMI_current"

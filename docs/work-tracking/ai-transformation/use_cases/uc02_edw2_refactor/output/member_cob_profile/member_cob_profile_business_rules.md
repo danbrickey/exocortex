@@ -11,7 +11,7 @@ version: "1.0"
 author: "Dan Brickey"
 description: "Business rules for determining member Coordination of Benefits (COB) profiles across discrete date ranges for Medical, Dental, and Drug coverage."
 related_docs:
-  - "docs/architecture/edp_platform_architecture.md"
+  - "docs/architecture/overview/edp-platform-architecture.md"
   - "docs/engineering-knowledge-base/data-vault-2.0-guide.md"
 model_name: "xwalk_member_cob_profile"
 legacy_source: "HDSVault.biz.spCOBProfileLookup"
@@ -554,4 +554,3 @@ For questions about this business rule documentation, contact:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | 2025-10-28 | Dan Brickey | Initial draft - refactored from legacy EDW2 stored procedure |
-

@@ -13,7 +13,7 @@ author: "Dan Brickey"
 description: "Computes member Coordination of Benefits profiles across discrete date ranges to determine payer order for Medical, Dental, and Drug claims."
 related_docs:
   - "docs/work-tracking/ai-transformation/use_cases/uc02_edw2_refactor/output/member_cob_profile/member_cob_profile_business_rules.md"
-  - "docs/architecture/edp_platform_architecture.md"
+  - "docs/architecture/overview/edp-platform-architecture.md"
   - "docs/engineering-knowledge-base/data-vault-2.0-guide.md"
 model_name: "bv_s_member_cob_profile"
 legacy_source: "HDSVault.biz.spCOBProfileLookup"

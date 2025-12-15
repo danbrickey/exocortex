@@ -11,7 +11,7 @@ version: "1.0"
 author: "Dan Brickey"
 description: "Defines how member records are linked to external person identifiers and which members qualify for cross-system identification."
 related_docs:
-  - "docs/architecture/edp_platform_architecture.md"
+  - "docs/architecture/overview/edp-platform-architecture.md"
   - "docs/engineering-knowledge-base/data-vault-2.0-guide.md"
 model_name: "bv_s_member_person"
 legacy_source: "HDSVault.biz.v_FacetsMemberUMI_current"

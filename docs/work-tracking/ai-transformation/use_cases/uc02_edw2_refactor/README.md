@@ -273,9 +273,9 @@ Each refactored entity should produce:
 
 ## Related Documentation
 
-- **Architecture**: [../../architecture/edp_platform_architecture.md](../../architecture/edp_platform_architecture.md)
-- **Data Vault Guide**: [../../engineering-knowledge-base/data-vault-2.0-guide.md](../../engineering-knowledge-base/data-vault-2.0-guide.md)
-- **Layer Architecture**: [../../architecture/edp-layer-architecture-detailed.md](../../architecture/edp-layer-architecture-detailed.md)
+- **Architecture**: [../../../../architecture/overview/edp-platform-architecture.md](../../../../architecture/overview/edp-platform-architecture.md)
+- **Data Vault Guide**: [../../../../engineering-knowledge-base/data-vault-2.0-guide.md](../../../../engineering-knowledge-base/data-vault-2.0-guide.md)
+- **Layer Architecture**: [../../../../architecture/layers/edp-layer-architecture-detailed.md](../../../../architecture/layers/edp-layer-architecture-detailed.md)
 
 ---
 
