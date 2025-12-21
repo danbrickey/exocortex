@@ -1,18 +1,18 @@
 ---
 title: "Gift Profile: Cade Brickey"
-created: "2025-11-26"
-last_updated: "2025-11-26"
+created: "2025-12-16"
+last_updated: "2025-12-16"
 category: "family"
-tags: ["anime", "manga", "vinyl records", "heavy metal shirts", "soccer"]
+tags: ["gaming", "music", "anime", "prog-rock", "pc-gaming", "one-piece"]
 status: "active"
 ---
 
 # Gift Profile: Cade Brickey
 
-**Relationship**: Son
+**Relationship**: Son (oldest)
 **Nickname/Known As**: Cade
-**Birthday**: 07-13-1994
-**Anniversary**: 11/11
+**Birthday**: July 13 (1994)
+**Anniversary**: November 11 (married 2017 to Audra)
 
 ---
 
@@ -20,87 +20,95 @@ status: "active"
 
 **Address**:
 ```
-297 E 1910 S
-Orem, UT 84058
+[Address needed]
+[City, State ZIP]
 ```
 
-**Phone**: 208-515-8000
-**Email**: cade@gmail.com
+**Phone**: [If relevant]
+**Email**: [If relevant]
 
 ---
 
 ## Quick Snapshot
 
-[Write 2-3 sentences capturing who they are, what matters to them, and their current life context. Update this as their life changes - new job, new baby, retirement, etc.]
+Cade is the oldest son, married to Audra since 2017. He has very defined interests: progressive rock/metal music (Tool, Coheed and Cambria, Journey), anime/manga (especially One Piece - major collector), PC gaming (Armored Core, Death Stranding), and unique collectibles (Thundercats knife). He has a distinct aesthetic leaning toward band merchandise and anime-related items.
 
-**Current Life Stage**: Married no kids
+**Current Life Stage**: Married adult (30 years old)
 
 ---
 
 ## Interests & Passions
 
-### [Category 1 - e.g., "Hobbies"]
-- **[Specific Interest 1]**: [Details about depth of involvement, what aspects they enjoy, skill level]
-- **[Specific Interest 2]**: [Details]
+### Music - Progressive Rock/Metal
+- **Tool**: Lateralus vinyl (2024) - major fan
+- **Coheed and Cambria**: T-shirts, likely concert-goer
+- **Journey**: T-shirt (2021)
+- **Band stickers** (2020)
 
-### [Category 2 - e.g., "Entertainment"]
-- **Books**: [Genres, favorite authors, current reads]
-- **Movies/TV**: [Favorite genres, shows they love]
-- **Music**: [Genres, favorite artists, concerts they attend]
+### Anime & Manga
+- **One Piece**: MAJOR interest - manga sets in 2023 ($102) and 2024 ($128) - ongoing collection
+- **Collectibles**: Thundercats Knife (2023) - nostalgic/anime adjacent
 
-### [Category 3 - e.g., "Activities"]
-- **[Activity 1]**: [Details about how often, who with, what they love about it]
-- **[Activity 2]**: [Details]
+### Gaming
+- **PC Gaming**: Armored Core: Fires of Rubicon (2023), Death Stranding (2019)
+- **Nintendo Switch**: Received joint gift with Audra (2018), SSBU
+- **Gaming setup**: Chair (2022), Light Bars (2022), Wifi Adapter (2022), laptop fan (2024)
 
-[Add or remove categories based on what's relevant for this person]
+### Unique/Quirky
+- **Marble Run** (2024) - kinetic desk toy
+- **Smores maker** (2019)
+- **Poo plunger & Unicorn Gold spray** (2017) - gag gifts appreciated
 
 ---
 
 ## Style & Preferences
 
-**Aesthetic**: [Design style - Modern, Vintage, Minimalist, Bohemian, etc.]
-**Favorite Colors**: [List colors they gravitate toward]
-**Home Decor Style**: [If relevant - Farmhouse, Industrial, Coastal, etc.]
+**Aesthetic**: Band merch, anime-inspired, geeky-cool
+**Favorite Colors**: Unknown
+**Home Decor Style**: Unknown
 
 **Gift Philosophy**:
-- Prefers: [Practical / Experiential / Sentimental / Humorous / Luxury / Handmade / Unknown]
-- Values: [Quality over quantity / Sustainability / Local/small business / Brand names / etc.]
+- Prefers: Music / Anime / Gaming / Collectibles
+- Values: Items connected to specific fandoms he loves
 
-**Collection Interests**: [Do they collect anything? Mugs, books, vinyl records, etc.]
+**Collection Interests**: 
+- One Piece manga (actively collecting)
+- Band vinyl/merchandise
+- Gaming collectibles
 
 ---
 
 ## Practical Information
 
 **Budget Guidelines**:
-- Typical occasions: $[range]
-- Special occasions (milestone birthdays, etc.): $[range]
-- Group gifts: $[range per person]
+- Typical occasions: $200-300
+- Special occasions: $300+
+- Joint gifts with Audra for household items
 
-**Preferred Shopping Sites**: [Where they love to shop - helps you find things in their style]
-- [Amazon / Etsy / Target / Local boutiques / REI / etc.]
+**Preferred Shopping Sites**: 
+- Amazon
+- Gaming specialty stores
+- Band merchandise sites
 
 ### Sizes (Fill in as you learn them)
 
 | Type | Size | Notes |
 |------|------|-------|
-| **Shirt** | 3XL | Relaxed fit |
-| **Pants/Jeans** | [Size or Unknown] | [Inseam if relevant, Style preferences] |
-| **Shoes** | [Size or Unknown] | [Width (Narrow/Medium/Wide), Shoe type preferences] |
-| **Ring** | [Size or Unknown] | [Finger (if specific), Metal preferences: Gold/Silver/Rose Gold] |
-| **Hat** | [Size or Unknown] | [Hat style preferences] |
-| **Gloves** | [Size or Unknown] | |
-
-**Other Size Info**: [Dress size, jacket size, etc. if relevant]
+| **Shirt** | Unknown | Band t-shirts work well |
+| **Pants/Jeans** | Unknown | |
+| **Shoes** | Unknown | |
+| **Ring** | Unknown | Married |
+| **Hat** | Unknown | |
+| **Gloves** | Unknown | |
 
 ### Restrictions & Considerations
 
-- **Allergies**: Lactose intolerant, hayfever, prone to indigestion
-- **Dietary**: None
-- **Religious/Cultural**: None
-- **Space Constraints**: Apartment, no garage
-- **Tech Ecosystem**: Android, Gaming PC
-- **Pet Considerations**: 2 dogs
+- **Allergies**: Unknown
+- **Dietary**: Unknown
+- **Religious/Cultural**: Unknown
+- **Space Constraints**: Unknown
+- **Tech Ecosystem**: PC gamer, Nintendo Switch
+- **Pet Considerations**: Unknown
 
 ---
 
@@ -108,114 +116,115 @@ Orem, UT 84058
 
 ### Gifts Given
 
-Record every gift you give them so you never repeat (unless it's consumables they love!).
-
 | Date | Occasion | Gift | Price | Their Reaction | Notes |
 |------|----------|------|-------|----------------|-------|
-| YYYY-MM-DD | [Birthday/Christmas/etc.] | [What you gave] | $[amount] | [Loved it / Used it / Didn't seem excited / etc.] | [Any additional notes] |
-| | | | | | |
-| | | | | | |
-| | | | | | |
+| 2024-12 | Christmas | Tool - Lateralus vinyl | $38.76 | | Music! |
+| 2024-12 | Christmas | One Piece books | $128.30 | | Manga |
+| 2024-12 | Christmas | T-shirt | $24.99 | | |
+| 2024-12 | Christmas | Nose Hair trimmer | $12.99 | | Practical |
+| 2024-12 | Christmas | Marble Run | $32.00 | | Desk toy |
+| 2024-12 | Christmas | Laptop fan | $36.00 | | PC setup |
+| 2023-12 | Christmas | Thundercats Knife | $35.90 | | Collectible |
+| 2023-12 | Christmas | Fires of Rubicon | $39.99 | | Armored Core game |
+| 2023-12 | Christmas | One Piece manga | $102.00 | | Major gift |
+| 2023-12 | Christmas | Coheed T-shirt | $25.99 | | Band merch |
+| 2023-12 | Christmas | Legos | $26.00 | | |
+| 2022-12 | Christmas | T-Shirt | $24.99 | | |
+| 2022-12 | Christmas | Wifi Adapter | $17.99 | | PC |
+| 2022-12 | Christmas | Gaming Chair | $139.99 | | Major gift |
+| 2022-12 | Christmas | Light Bars | $49.99 | | PC setup |
+| 2021-12 | Christmas | Watch | $242.00 | | Major gift! |
+| 2021-12 | Christmas | Journey T-shirt | $27.95 | | Band merch |
+| 2020-12 | Christmas | Pajamas | $14.99 | | |
+| 2020-12 | Christmas | Toiletry kit | $6.86 | | |
+| 2020-12 | Christmas | Band stickers | $8.49 | | |
+| 2020-12 | Christmas | Hoodie | $21.00 | | |
+| 2020-12 | Christmas | T-shirt | $20.99 | | |
+| 2020-12 | Christmas | Sign | $13.25 | | |
+| 2020-12 | Christmas | Blanket | $20.31 | | |
+| 2020-12 | Christmas | Sign | $4.00 | | |
+| 2020-12 | Christmas | Game | $59.99 | | |
+| 2020-12 | Christmas (w/Audra) | Idaho sign | $13.00 | | Joint |
+| 2020-12 | Christmas (w/Audra) | Sound bar | $120.00 | | Joint |
+| 2019-12 | Christmas | Smores maker | $24.99 | | |
+| 2019-12 | Christmas | Memory Card | $16.99 | | |
+| 2019-12 | Christmas | Dashcam | $109.99 | | |
+| 2019-12 | Christmas | Death Stranding | $35.00 | | Game |
+| 2019-12 | Christmas | Hoodie | $25.00 | | |
+| 2018-12 | Christmas | Gift Card | $100.00 | | Amazon |
+| 2018-12 | Christmas (w/Audra) | Nintendo Switch | $299.00 | | Joint |
+| 2018-12 | Christmas (w/Audra) | SSBU | $68.87 | | Joint |
+| 2017-12 | Christmas | Water bottle | $6.99 | | |
+| 2017-12 | Christmas | Pajamas | $14.00 | | |
+| 2017-12 | Christmas | Toiletry set | $10.00 | | |
+| 2017-12 | Christmas | PB pretzels | $8.50 | | Snacks |
+| 2017-12 | Christmas | Toiletry set | $10.00 | | |
+| 2017-12 | Christmas | Poo plunger | $20.00 | | Gag gift |
+| 2017-12 | Christmas | Unicorn Gold spray | $6.33 | | Gag gift |
+| 2017-12 | Christmas (w/Audra) | Comforter | $100.00 | | Joint |
+| 2017-12 | Christmas (w/Audra) | Bowls | $17.00 | | Joint |
+| 2017-12 | Christmas (w/Audra) | Tool set | $5.00 | | Joint |
 
 **Gifts That Were Home Runs** (reference these patterns!):
-- [Gift that they absolutely loved - note why it worked so well]
-- [Another successful gift - what made it perfect]
+- One Piece manga - actively collecting, major investment two years running
+- Band merchandise (Tool vinyl, Coheed/Journey shirts) - music is core identity
+- Gaming setup items (chair, light bars) - PC gaming focus
+- Watch (2021) - major gift that worked well
 
 **Gifts That Missed the Mark** (avoid these patterns):
-- [Gift that didn't land well - note why to avoid similar items]
-
-### Gifts Received From Them
-
-Track what they give you to understand their gift-giving style (can inform what they might appreciate!).
-
-| Date | Occasion | Gift They Gave You | Notes |
-|------|----------|-------------------|-------|
-| YYYY-MM-DD | [Occasion] | [What they gave you] | [Thoughtful / Practical / Humorous / etc.] |
-| | | | |
+- [Need feedback]
+- Note: Generic toiletry sets may be filler - focus on interests
 
 ---
 
 ## Gift Ideas Bank
 
-Use this section to capture ideas throughout the year as you think of them or as they drop hints!
-
 ### Ideas to Research
 
 | Idea | Price Range | Why It Fits | Where to Find | Status |
 |------|-------------|-------------|---------------|--------|
-| [Gift idea] | $[XX-XX] | [Connection to their interests/needs] | [Store/site] | Idea |
-| | | | | |
-| | | | | |
-
-**Status Key**:
-- **Idea**: Just thought of it, needs research
-- **Researched**: Found specific products, have links
-- **Shortlist**: Top contenders for next gift
-- **Purchased**: Bought and given (move to Gift History after)
-- **Pass**: Decided against it (note why to save future time)
-
-### Specific Products/Links
-
-[Paste links to specific items you've found that would be perfect. Include price and why it fits.]
-
-**Example**:
-- **[Product Name](URL)** - $XX.XX - Perfect because [reason]. Available at [store]. [Note any size/color considerations]
+| One Piece manga (next volumes) | $50-150 | Active collection | Amazon | Idea |
+| Tool/Coheed vinyl or merch | $30-75 | Music fan | Band sites/Amazon | Idea |
+| PC gaming accessories | $30-80 | PC gamer | Amazon | Idea |
+| Unique desk toys | $25-50 | Liked Marble Run | Amazon | Idea |
+| Anime collectibles | $25-75 | One Piece, etc | Amazon/specialty | Idea |
 
 ### Hints They've Dropped
 
 [Record things they mention wanting, needing, or admiring - with dates!]
 
-- **[Date]**: "[Quote or paraphrase what they said]" - [Your interpretation/idea]
-- **[Date]**: Mentioned they [need/want/love] [something specific]
-
 ---
 
 ## Notes & Insights
 
-[Use this section for anything that doesn't fit elsewhere but is useful for gift-giving]
-
 **Upcoming Life Events**:
-- [Graduations, weddings, moves, job changes, new babies, etc. - note approximate dates]
+- Birthday: July 13 each year
+- Anniversary: November 11 (with Audra)
 
 **Changes in Interests**:
-- [Track when they pick up new hobbies or drop old ones - helps keep profile current]
+- 2017-2018: Setting up household with Audra (joint gifts)
+- 2019-2020: Gaming focus (Death Stranding, dashcam)
+- 2021-2022: PC gaming setup (chair, light bars)
+- 2023-2024: Deep into One Piece collecting, Tool/Coheed music
 
 **Gift-Giving Occasions**:
-- [What occasions do you typically exchange gifts? Birthday, Christmas, both, etc.]
-- [Do they prefer surprises or input on gifts?]
+- Christmas (primary)
+- Birthday (July 13)
+- Joint gifts with Audra for household
 
 **Shopping/Giving Preferences**:
-- [Do they like to open gifts early or on the day?]
-- [Prefer experiences over things?]
-- [Like practical items they'll use or fun/decorative items?]
-
-**Other Useful Info**:
-- [Anything else that helps you give better gifts]
+- Appreciates fandom-specific items over generic gifts
+- Music and anime are safe bets
 
 ---
 
 ## Collaboration Notes
 
-**Gift Coordination With**: [Other people you might split gifts with or coordinate with]
-- [Name]: [Relationship to recipient] - [Contact info if needed]
-
-**Group Gift Opportunities**: [Occasions where you might organize/join group gifts for this person]
+**Gift Coordination With**: Audra (wife)
+- Joint gifts for Cade & Audra as a couple appear in gift history
+- Married November 2017
 
 ---
 
-*Last Updated: [YYYY-MM-DD]*
+*Last Updated: 2025-12-16*
 *Profile managed with Gift Finder Assistant (@giftfinder)*
-
----
-
-## Template Usage Instructions
-
-**Before saving this as a new profile**:
-
-1. **Replace all bracketed placeholders** with actual information (or "Unknown" if you don't know yet)
-2. **Fill in the frontmatter** at the top (title, dates, category, tags)
-3. **Save with naming convention**: `FirstName-LastName.md` in appropriate category folder
-4. **Add to PROFILE-INDEX.md** so it's searchable
-5. **Delete this "Template Usage Instructions" section** before saving
-
-**Don't worry about completing everything immediately** - fill in what you know and add more over time!
