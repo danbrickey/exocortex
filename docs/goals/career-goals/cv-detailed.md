@@ -2,7 +2,7 @@
 ## Curriculum Vitae
 
 **Contact Information**
-- Address: 16222 N Glacier Peak Dr, Nampa, ID 83651
+- Address: 297 E 1910 E, Orem, UT 84058
 - Phone: 208-286-8042
 - Email: danbrickey@gmail.com
 
