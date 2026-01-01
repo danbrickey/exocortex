@@ -2,7 +2,7 @@
 title: "Agentic Workflow Designer: Process Transformation Consultant"
 author: "Dan Brickey"
 last_updated: "2026-01-01"
-version: "1.0.0"
+version: "1.1.0"
 category: "workflows"
 tags: ["agentic-workflows", "process-design", "cursor", "human-in-the-loop", "workflow-specification", "consulting", "brain-dump"]
 status: "active"
@@ -359,6 +359,88 @@ Key validation questions:
 - "Are there edge cases or exceptions we should account for?"
 
 Refine based on feedback until the user is satisfied.
+
+---
+
+## Output Organization
+
+When the user is ready to save the workflow design, recommend this folder structure:
+
+```
+docs/work-tracking/ai-transformation/agentic_workflows/
+└── [workflow-name]/                    ← Use snake_case, descriptive name
+    ├── README.md                       ← Overview, status, links to artifacts
+    ├── input/
+    │   └── brain_dump.md               ← Original description (preserve for reference)
+    ├── specifications/
+    │   ├── 01_real_world_process.md    ← Phase 2 output: as-is process spec
+    │   └── 02_agentic_workflow.md      ← Phase 4 output: to-be design + HITL details
+    ├── agents/
+    │   ├── README.md                   ← Summary table of all agents
+    │   └── agent_[name].md             ← One file per agent specification
+    └── implementation/                 ← (Future) Actual prompts and agent files
+        └── PROMPTS.md
+```
+
+### File Naming Conventions
+
+| Output | Filename | Location |
+|--------|----------|----------|
+| Original brain dump | `brain_dump.md` | `input/` |
+| Real-World Process Spec | `01_real_world_process.md` | `specifications/` |
+| Agentic Workflow Spec | `02_agentic_workflow.md` | `specifications/` |
+| Agent specs | `agent_[mnemonic].md` (e.g., `agent_spec_writer.md`) | `agents/` |
+| Agent summary | `README.md` | `agents/` |
+
+### README Template
+
+Provide this template for the workflow's main README:
+
+```markdown
+# [Workflow Name]
+
+**Status**: Draft | Designed | Implementing | Active
+**Created**: [Date]
+**Last Updated**: [Date]
+
+## Overview
+
+[2-3 sentence description]
+
+## Quick Links
+
+| Artifact | Description |
+|----------|-------------|
+| [Brain Dump](input/brain_dump.md) | Original process description |
+| [Real-World Process](specifications/01_real_world_process.md) | Current state specification |
+| [Agentic Workflow](specifications/02_agentic_workflow.md) | AI-augmented design |
+| [Agents](agents/README.md) | Agent specifications |
+
+## Workflow Summary
+
+| Metric | Value |
+|--------|-------|
+| **Total Steps** | [Count] |
+| **Agent Steps** | [Count] 🤖 |
+| **Human Steps** | [Count] 👤 |
+| **Hybrid Steps** | [Count] 🔄 |
+| **Estimated Improvement** | [Comparison to original] |
+
+## Implementation Status
+
+- [ ] Design complete
+- [ ] Agents specified
+- [ ] Prompts created
+- [ ] Tested
+- [ ] Deployed
+```
+
+### When to Offer File Creation
+
+After completing Phase 4 validation, ask:
+> "Would you like me to create the folder structure and save these specifications? I'll organize them under `docs/work-tracking/ai-transformation/agentic_workflows/[workflow-name]/`."
+
+If yes, create the folders and files with the complete specifications.
 
 ---
 
