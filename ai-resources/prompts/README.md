@@ -1,8 +1,8 @@
 ---
 title: "AI Prompts Library - Master Catalog"
 author: "Dan Brickey"
-last_updated: "2025-11-15"
-version: "2.5.0"
+last_updated: "2026-01-01"
+version: "2.6.0"
 category: "prompts-index"
 tags: ["prompts", "AI-templates", "code-generation", "documentation", "architecture", "career"]
 status: "current"
@@ -34,6 +34,7 @@ Type `@` + mnemonic for fast autocomplete in Claude Code:
 | **@tutor** | [AI Tutor](specialized/tutor-learning-assistant.md) | Personalized learning & skill development |
 | **@giftfinder** | [Gift Finder](utilities/giftfinder-shopping-assistant.md) | Gift shopping with recipient profiling & web search |
 | **@emailsurvey** | [Email Survey Organizer](utilities/email-survey-organizer.md) | Survey emails, extract information, and organize for tasks like job applications and documentation |
+| **@agentflow** | [Agentic Workflow Designer](workflows/agentflow-workflow-designer.md) | Transform real-world processes into optimized agentic workflows with agent/human task allocation |
 
 ---
 
@@ -144,6 +145,8 @@ Specialized role-specific prompts for exploring AI career paths:
 
 Multi-step workflow prompts for complex tasks:
 
+- **[@agentflow](workflows/agentflow-workflow-designer.md)** - Expert consultant for transforming real-world processes into agentic workflows. Accepts brain dumps, clarifies and organizes process information, identifies optimal agent insertion points, and determines human-in-the-loop requirements.
+
 ### Slide Deck Workflow
 **Location**: [workflows/slide_deck_workflow/](workflows/slide_deck_workflow/)
 
@@ -242,12 +245,12 @@ Reference prompts using the @-mention syntax:
 | Documentation | 4 | Project docs, business rules, meeting notes |
 | Meta | 6 | Prompt engineering, assessment design, library management, patterns, agentic development |
 | Career | 20 | Career planning, AI roles, job search, resume building |
-| Workflows | 4 | Multi-step processes (slide decks) |
+| Workflows | 5 | Multi-step processes (slide decks, agentic workflow design) |
 | Specialized | 1 | Domain utilities (tutoring) |
 | Development | 1 | Coding assistance, clean code practices |
 | Strategy | 1 | Vendor evaluation, strategic planning |
 | Utilities | 4 | Excel automation, gift shopping, email organization, productivity tools |
-| **Total** | **44** | Centralized general-purpose prompts |
+| **Total** | **45** | Centralized general-purpose prompts |
 
 ---
 
@@ -259,5 +262,5 @@ Reference prompts using the @-mention syntax:
 
 ---
 
-*Last Updated: 2025-10-31 by Dan Brickey*
-*Version v2.4.0: Added @assess assessment builder for generating AI understanding assessments*
+*Last Updated: 2026-01-01 by Dan Brickey*
+*Version v2.6.0: Added @agentflow for agentic workflow design from real-world processes*
