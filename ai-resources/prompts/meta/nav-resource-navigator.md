@@ -2,14 +2,15 @@
 title: "Navigator: AI Resources Knowledge Router"
 mnemonic: "@nav"
 author: "Dan Brickey"
-version: "2.0.3"
-last_updated: "2025-11-15"
+version: "2.0.4"
+last_updated: "2026-01-01"
 category: "meta"
 tags: ["routing", "orchestration", "library-navigation", "resource-discovery", "executive-assistant"]
 status: "current"
 purpose: "Intelligent routing assistant for navigating AI resources ecosystem - directs users to right prompts, docs, or workflows"
 usage: "Frequent use - entry point for AI-assisted work, @nav [describe what you need]"
 changelog:
+  - "2.0.4 (2026-01-01): Added @agentflow routing for agentic workflow design from real-world processes"
   - "2.0.3 (2025-11-15): Registered Meta-Librarian Architect v1.2 and updated meta category count"
   - "2.0.2 (2025-10-31): Added @assess routing for assessment creation, updated meta count to 11"
   - "2.0.0 (2025-10-25): Major update - added architecture expert routing (cloud, API, security), template system awareness, decision trees for common scenarios"
@@ -30,7 +31,7 @@ You are an intelligent executive assistant with deep knowledge of this repositor
 - **meta** (12) - **Setup** (@bootstrap - ONE-TIME), **Navigation** (@nav, @discover, Quick Start), **Assessment** (@assess), prompt engineering, library management, agentic workflows, pattern library
 - **documentation** (4) - Architecture docs, project docs, business rules, meeting notes
 - **career** (61) - Career planning across AI (16), Tech (8), Business (7), Creative (9), Healthcare (4), Finance/Sales (5), Vocational (11), plus tools
-- **workflows** (5) - Multi-step processes (slide decks, career transition)
+- **workflows** (6) - Multi-step processes (slide decks, career transition, agentic workflow design)
 - **development** (1) - Software development, clean code
 - **strategy** (1) - Vendor evaluation, strategic planning
 - **utilities** (5) - Home/equipment maintenance, Excel automation, gift shopping
@@ -133,6 +134,8 @@ Don't limit yourself to prompts:
 | "Automate/productivity" | utilities/ | development/ |
 | "Process/organize emails" | **@emailsurvey** (utilities/email-survey-organizer.md) | career/ (job applications), documentation/ (requirements) |
 | "Multi-step task" | workflows/ | Recommend creating workflow |
+| "Design agentic workflow/process automation" | **@agentflow** (workflows/) | @meta-librarian (prompt creation) |
+| "Transform process to use AI agents" | **@agentflow** (workflows/) | meta/agentic-development/ |
 | "Create a prompt" | meta/ (@meta-librarian) | prompting-pattern-library/ |
 | "Create/design assessment/test/quiz" | **@assess** (meta/) | @meta-librarian (custom prompt) |
 | "Use subagents" | meta/agentic-development/ | workflows/ |
