@@ -7,6 +7,7 @@
 * **[Renaissance Technical Sketchbook on Aged Parchment](#renaissance-technical-sketchbook-on-aged-parchment)**: A page torn from a Renaissance-era inventor’s sketchbook, specifically emulating the technical and analytical style of Leonardo da Vinci, rendered in monotone sepia ink on an antique surface to feel hand-drawn, studied, and ancient.
 * **[Sumi-e & Washi (Japanese Ink Wash and Rice Paper)](#sumi-e--washi-japanese-ink-wash-and-rice-paper)**: Presents modern concepts through traditional Japanese hand-painted media, avoiding harsh digital lines, flat colors, or glossy finishings, ensuring every element feels handcrafted and natural.
 * **[Modern Clean Material Infographic](#modern-clean-material-infographic)**: A clean, minimalist, and professional aesthetic designed for maximum clarity and approachable data visualization, utilizing a soft, harmonious color palette and geometric shapes enhanced by subtle depth effects to resemble layered paper or "material design."
+* **[Dark Technical Material](#dark-technical-material)**: A hybrid aesthetic blending the credibility of dark technical blueprints with the clarity of modern material design, featuring a dark slate background, clean modular containers with soft glows, and a focused accent palette for technical diagrams and architecture presentations.
     
 ## Whiteboard Sketch Style
 **Style Description:** Hand-Drawn Analog Whiteboard Sketch
@@ -214,3 +215,64 @@ Visuals are stylized to match the glassy, glowing aesthetic.
 The layout emphasizes a clean, modern organization with a clear hierarchy.
 *   **Padding:** Ample padding within and around the glass containers ensures a clean, uncluttered look.
 *   **Structure:** Slides are often structured with a main title block, followed by content organized into distinct glass panels or a central glowing graphic element. The use of layers creates a sense of depth.
+
+## Dark Technical Material
+**Style Description:** A hybrid aesthetic that combines the technical credibility of dark engineering blueprints with the clarity and approachability of modern material design. Ideal for technical presentations requiring complex diagrams, architecture flows, and clear text hierarchy. The style communicates "serious infrastructure" while remaining organized and readable over extended viewing sessions.
+
+### 1. Overall Aesthetic and Background
+The aesthetic balances technical gravitas with modern clarity—think dark-mode IDE meets architecture diagram.
+*   **Background Color:** Dark slate blue-gray (e.g., #1E2A38, #2D3748, or similar muted dark tones). Softer than midnight blue to reduce eye strain during longer presentations.
+*   **Background Texture:** A very faint dot grid pattern (like engineering graph paper) at low opacity (5-10%). This provides subtle visual interest and a sense of precision without competing with content. Alternatively, a faint subtle gradient from slightly darker edges to center can add depth.
+*   **Overall Feel:** Professional, technical, and modern. Should feel like a well-designed developer tool or architecture documentation—credible but not intimidating.
+
+### 2. Frames and Containers
+Content is organized into clean, modular containers that "lift" off the dark background.
+*   **Shape:** Rounded rectangles with consistent corner radius (8-12px equivalent). Avoid sharp corners—the soft edges distinguish this from pure blueprint aesthetic.
+*   **Border Style:** Thin borders (1-2px) in a subtle lighter tone than the background (e.g., muted teal, slate gray, or the section's accent color at 40-60% opacity).
+*   **Depth Effect:** Soft, diffused drop shadows or subtle outer glow give containers a slight "material" lift off the background. The effect should be understated—enough to create hierarchy, not enough to feel like floating glass.
+*   **Fill:** Containers have a slightly lighter fill than the background (e.g., #2A3A4A) or are semi-transparent with a subtle blur effect. The contrast should be gentle, not stark.
+
+### 3. Color Palette
+A restrained palette with strategic accent colors for visual coding and emphasis.
+*   **Background Tones:** Dark slate blues and grays (#1E2A38, #2D3748, #374151).
+*   **Container/Surface Tones:** Slightly lighter slate (#3D4F5F, #4A5568) or semi-transparent overlays.
+*   **Primary Text:** High-contrast off-white or pale blue-white (#F7FAFC, #E2E8F0) for maximum readability.
+*   **Secondary Text:** Muted light gray (#A0AEC0, #94A3B8) for supporting text, labels, and metadata.
+*   **Accent Colors (Core Set):** Use 3-4 distinct accent colors for visual coding of concepts:
+    *   **Teal/Cyan (#38B2AC, #22D3EE):** Primary accent—used for key highlights, important elements, and primary call-outs.
+    *   **Amber/Gold (#F6AD55, #FBBF24):** Secondary accent—used for relationships, connections, or warning states.
+    *   **Soft Violet (#9F7AEA, #A78BFA):** Tertiary accent—used for supporting concepts or differentiation.
+    *   **Muted Coral (#FC8181, #F87171):** Reserved for errors, alerts, or "stop" concepts.
+*   **Accent Usage:** Accents should glow subtly against the dark background but avoid neon intensity. Think "backlit" rather than "glowing billboard."
+
+### 4. Typography
+Text is optimized for high legibility against dark backgrounds with clear hierarchy.
+*   **Font Style:** Clean, modern sans-serif fonts throughout. Geometric or humanist sans-serifs work well (e.g., Inter, Manrope, DM Sans, IBM Plex Sans). Avoid overly thin weights.
+*   **Titles/Headers:** Bold weight, off-white (#F7FAFC), large and prominent. May include a subtle text-shadow or glow effect in the slide's accent color for emphasis.
+*   **Body Text:** Regular or medium weight, off-white or pale gray. Line spacing should be generous (1.4-1.6) for readability.
+*   **Labels and Annotations:** Smaller size, muted gray (#94A3B8) or the relevant accent color. Used for diagram labels, figure captions, and metadata.
+*   **Code/Technical Terms:** Monospace font in a slightly different color (e.g., soft teal or muted amber) to distinguish technical terminology.
+
+### 5. Graphic Elements and Iconography
+Visuals are clean, geometric, and purpose-built for technical communication.
+*   **Icons:** Simple, line-based icons with consistent stroke weight. Icons should be rendered in off-white or the section's accent color. Avoid heavy fills—outline style maintains the technical, diagrammatic feel.
+*   **Diagrams:** Node-and-edge graphs, flowcharts, and architecture diagrams are first-class citizens. Nodes should be rounded shapes (circles, rounded rectangles) with subtle fills and accent-colored borders. Connection lines should be clean with distinct arrowheads.
+*   **Connection Lines:** Use solid or dashed lines with soft glow effects in accent colors. Line weight should be consistent (2-3px). Arrowheads should be simple and geometric.
+*   **Shapes for Concepts:** Use consistent shapes to represent recurring concepts (e.g., circles for entities, hexagons for processes, rounded rectangles for layers). This creates a visual vocabulary the audience can learn.
+*   **Subtle Glow Effects:** Key diagram elements may have a soft outer glow in their accent color. This draws attention without overwhelming—the glow should be diffused, not hard-edged.
+
+### 6. Layout Principles
+The layout prioritizes clarity, modularity, and visual breathing room.
+*   **Grid System:** Content aligns to an implicit grid. Modular containers snap to consistent positions, creating visual rhythm.
+*   **White Space (Dark Space):** Generous padding within containers and margins between elements. Nothing should feel crowded—the dark background provides natural separation.
+*   **Visual Hierarchy:** Clear three-level hierarchy: (1) Slide title at top, (2) Main content in central containers, (3) Supporting labels/metadata smaller and muted.
+*   **Title Block:** A consistent title area at the top of each slide. May be a subtle container or simply bold text with accent underline.
+*   **Metadata Block:** Optional small block in bottom corner for slide numbers, section labels, or presenter attribution. Muted and unobtrusive.
+*   **Flow Direction:** For process flows and architecture diagrams, prefer left-to-right or top-to-bottom orientation. Use numbered steps (01, 02, 03) in accent-colored circles for sequential content.
+
+### 7. Diagram-Specific Guidance
+Since this style is optimized for technical architecture presentations, additional guidance for common diagram types:
+*   **Layered Architecture Diagrams:** Stack horizontal containers vertically with clear labels. Use consistent accent colors per layer. Connection arrows flow between layers with subtle glow.
+*   **Hub-and-Spoke Diagrams:** Central node (larger, emphasized with primary accent) with radiating connection lines to satellite nodes. Lines may curve gently for visual interest.
+*   **Process Flows:** Numbered steps in accent-colored circles connected by arrows. Each step may be contained in a rounded rectangle with the step description.
+*   **Comparison Tables:** Use alternating subtle row shading. Headers in accent color. Keep borders minimal—let spacing define the grid.
