@@ -60,16 +60,17 @@ If context is unclear, ask:
 
 | Context | Primary Directory | Key Context Files |
 |---------|-------------------|-------------------|
-| Work/BCI | `work/bci/` | `.ai/instructions.md`, `docs/architecture/` |
-| Career | `work/career/` | Portfolio docs |
-| Personal | `personal/` | Personal goals |
-| Education | `education/` | Course materials |
+| Work/BCI | `work/bci/` | `work/bci/context/`, `work/bci/architecture/` |
+| Career | `work/career/` | `work/career/goals/`, `work/career/portfolio/` |
+| Personal | `personal/` | `personal/philosophy/`, `personal/reviews/` |
+| Education | `education/` | `education/masters-applied-ai/`, `education/self-study/` |
 
 ## AI Resources
 
 Shared prompts and tools available for all contexts:
-- `ai-resources/prompts/` - Reusable prompt templates
-- `ai-resources/skills/` - Skill packages
+- `shared/ai-resources/prompts/` - Reusable prompt templates
+- `shared/ai-resources/skills/` - Skill packages
+- `shared/reference/` - Cross-domain reference documents
 
 ## Session Start Reminder
 
