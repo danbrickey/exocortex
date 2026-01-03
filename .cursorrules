@@ -1,0 +1,79 @@
+# Cursor Rules - Multi-Domain Knowledge Base
+
+## Context Awareness
+
+This repository contains multiple life domains. At the start of each session, determine which context applies:
+
+### Domain Detection
+
+When the user starts a conversation, check for context clues:
+- **Work/BCI**: References to Data Vault, dbt, Snowflake, BCI, Blue Cross, EDP, healthcare data
+- **Work/Career**: Resume, portfolio, job search, skills, career goals
+- **Personal**: Journal, personal goals, life planning, family, non-work projects
+- **Education**: Courses, learning, certifications, study notes, tutorials
+
+If context is unclear, ask:
+> "Which context are we working in today? Work (BCI), Career, Personal, or Education?"
+
+### Context-Specific Behavior
+
+**Work/BCI Context**:
+- Load context from `work/bci/` and `.ai/instructions.md`
+- Remember the security perimeter constraints
+- Be aware of PHI and sensitive data restrictions
+- Reference Data Vault patterns from `docs/architecture/patterns/`
+- Follow dbt and automate_dv conventions
+
+**Career Context**:
+- Focus on shareable, portfolio-worthy content
+- Help with resume, skills documentation, career planning
+- Reference `work/career/` for goals and portfolio
+
+**Personal Context**:
+- Respect privacy - this is personal content
+- Reference `personal/` directories
+- Help with personal projects, goals, journaling
+
+**Education Context**:
+- Support learning and note-taking
+- Reference `education/` directories
+- Help with course notes, study plans, skill building
+
+## Global Rules (All Contexts)
+
+### Communication Style
+- Be direct and concise
+- Use markdown formatting
+- Provide actionable suggestions
+
+### Repository Conventions
+- Use frontmatter with timestamps, versions, authors
+- Keep related changes together in commits
+- Update READMEs when adding content
+
+### Security Awareness
+- Never include credentials, tokens, or secrets in files
+- For work context, be aware of security perimeter constraints
+- Ask before including potentially sensitive information
+
+## Quick References
+
+| Context | Primary Directory | Key Context Files |
+|---------|-------------------|-------------------|
+| Work/BCI | `work/bci/` | `.ai/instructions.md`, `docs/architecture/` |
+| Career | `work/career/` | Portfolio docs |
+| Personal | `personal/` | Personal goals |
+| Education | `education/` | Course materials |
+
+## AI Resources
+
+Shared prompts and tools available for all contexts:
+- `ai-resources/prompts/` - Reusable prompt templates
+- `ai-resources/skills/` - Skill packages
+
+## Session Start Reminder
+
+At the start of significant work sessions, consider asking:
+1. What context are we in?
+2. What's the goal for this session?
+3. Any constraints or considerations?

@@ -61,6 +61,46 @@ Working within those constraints, I'd like to find some tutorials that will help
 - ✅ Can use Cursor for design process with sanitized/generalized examples
 - ✅ Templates, patterns, and prompts developed here can be used in the BCI environment
 
+### Asymmetric Data Flow Constraint
+
+**Critical workflow constraint**: Data flows easily IN but not OUT of the BCI network.
+
+| Direction | Difficulty | Method | Frequency |
+|-----------|------------|--------|-----------|
+| **Cursor → BCI** | Easy | Copy files to private network | Anytime |
+| **BCI → Cursor** | Hard | Email with security checks | Weekly or less |
+
+**Limitations on export (BCI → Cursor)**:
+- Requires email
+- Goes through security checks
+- File size and attachment count limits
+- Manual, time-consuming process
+- Must avoid sensitive/protected information
+
+**Solution: Context Sync File**
+
+Create a standardized "context sync file" that:
+1. Is designed to be safe for export (no PHI, no security-sensitive details)
+2. Contains project status, progress, and non-sensitive metadata
+3. Can be generated/updated by Amazon Q inside BCI
+4. Is exported weekly (or as needed) via email
+5. Enables continuity between Cursor design work and BCI implementation
+
+**Safe to include in context sync**:
+- ✅ Code style patterns (generalized)
+- ✅ Status updates (what's complete, pending, evaluated)
+- ✅ Workflow progress tracking
+- ✅ Template structures
+- ✅ Lessons learned (generalized)
+- ✅ Prompt effectiveness notes
+
+**NOT safe to include**:
+- ❌ Protected health information (PHI)
+- ❌ Security-sensitive infrastructure details
+- ❌ Specific internal system configurations
+- ❌ Proprietary business data
+- ❌ Anything that could pose security risk if exposed
+
 ### Implementation Guidance Needed
 
 **Key constraint**: User is accustomed to richer environments (Cursor) but must implement in a more constrained setup (VSCode + Amazon Q). Workflow deliverables should include:

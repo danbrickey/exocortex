@@ -18,6 +18,11 @@ An agentic workflow to accelerate Data Vault architecture at BCI by transforming
 | [Agentic Workflow](specifications/02_agentic_workflow.md) | AI-augmented design (pending) |
 | [Agents](agents/README.md) | Agent specifications (pending) |
 | [Amazon Q Guide](implementation/amazon_q_guide.md) | Practical guide for runtime environment |
+| [Context Sync](sync/CONTEXT_SYNC.md) | **Shareable status file** for BCI ↔ Cursor sync |
+| [Local Context (Cursor)](sync/LOCAL_CONTEXT_CURSOR.md) | Cursor-only context (does NOT sync) |
+| [Local Context (BCI Template)](sync/LOCAL_CONTEXT_BCI_TEMPLATE.md) | Template for BCI-only context |
+| [Sync Update Prompt](implementation/prompts/context_sync_update.md) | Amazon Q prompt to update sync file |
+| [Security Audit Prompt](implementation/prompts/security_audit_sync.md) | **Audit before export** - checks for sensitive data |
 
 ## Tech Stack Constraints
 
@@ -41,6 +46,32 @@ An agentic workflow to accelerate Data Vault architecture at BCI by transforming
 | Snowflake Cortex AI | Not yet implemented | ⚠️ Future |
 
 **Key Constraint**: Workflow runs on Amazon Q + dbt Copilot. Prompts designed here in Cursor must be portable to BCI's VSCode environment.
+
+### Asymmetric Data Flow
+
+```
+┌─────────────────────────────┐              ┌─────────────────────────────┐
+│  CURSOR (Design)            │              │  BCI (Private Network)      │
+│                             │              │                             │
+│  ┌───────────────────────┐  │              │  ┌───────────────────────┐  │
+│  │ LOCAL_CONTEXT_CURSOR  │  │              │  │ LOCAL_CONTEXT (BCI)   │  │
+│  │ (stays here)          │  │              │  │ (stays here)          │  │
+│  │ • Design notes        │  │              │  │ • Internal systems    │  │
+│  │ • Cursor techniques   │  │              │  │ • Team details        │  │
+│  └───────────────────────┘  │              │  └───────────────────────┘  │
+│                             │              │                             │
+│  ┌───────────────────────┐  │  ◀── EASY ── │  (Copy prompts/templates)  │
+│  │ CONTEXT_SYNC.md       │◀─┼──────────────┼─▶│ CONTEXT_SYNC.md       │  │
+│  │ (shared, audited)     │  │  ── HARD ──▶ │  │ (shared, audited)     │  │
+│  └───────────────────────┘  │  Email+Audit │  └───────────────────────┘  │
+└─────────────────────────────┘              └─────────────────────────────┘
+```
+
+**Data flow rules**:
+- **Into BCI**: Copy anytime (prompts, templates, workflow updates)
+- **Out of BCI**: Weekly via email (CONTEXT_SYNC.md only)
+- **Before export**: Run security audit prompt to check for sensitive data
+- **Local context**: Stays in each environment, never crosses perimeter
 
 ## Current Status
 
