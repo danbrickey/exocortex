@@ -1,7 +1,7 @@
 # BCI Data Vault Design Workflow
 
 **Organization**: Blue Cross of Idaho (BCI)
-**Status**: Draft (Phase 2 Complete)
+**Status**: Draft (Phase 4 Complete - Agent Specs Ready)
 **Created**: 2026-01-02
 **Last Updated**: 2026-01-03
 
@@ -15,8 +15,9 @@ An agentic workflow to accelerate Data Vault architecture at BCI by transforming
 |----------|-------------|
 | [Brain Dump](input/brain_dump.md) | Original process description and conversation |
 | [Real-World Process](specifications/01_real_world_process.md) | Current state specification |
-| [Agentic Workflow](specifications/02_agentic_workflow.md) | AI-augmented design (pending) |
-| [Agents](agents/README.md) | Agent specifications (pending) |
+| [Agentic Workflow](specifications/02_agentic_workflow.md) | AI-augmented design |
+| [Agents](agents/README.md) | Agent specifications |
+| [Spec Examples](input/examples/) | Reference specifications for agent design |
 | [Amazon Q Guide](implementation/amazon_q_guide.md) | Practical guide for runtime environment |
 | [Context Sync](sync/CONTEXT_SYNC.md) | **Shareable status file** for BCI ↔ Cursor sync |
 | [Local Context (Cursor)](sync/LOCAL_CONTEXT_CURSOR.md) | Cursor-only context (does NOT sync) |
@@ -77,13 +78,17 @@ An agentic workflow to accelerate Data Vault architecture at BCI by transforming
 
 - [x] Initial brain dump captured
 - [x] Clarifying questions answered
-- [x] Phase 2: Real-World Process Specification (draft)
-- [x] Phase 2: Validated by user
-- [ ] Phase 3: Agent/Human Allocation
-- [ ] Phase 4: Agentic Workflow Specification
-- [ ] Agents specified
-- [ ] Prompts created
-- [ ] Tested
+- [x] Phase 2: Real-World Process Specification (validated)
+- [x] Phase 3: Agent/Human Allocation (4 hybrid, 4 human, 1 agent)
+- [x] Phase 4: Agentic Workflow Specification
+- [x] Agents specified (3 of 5 - high/medium priority)
+  - [x] @spec-generator (High priority)
+  - [x] @dbt-prompt-builder (High priority)
+  - [x] @code-evaluator (Medium priority)
+  - [ ] @diagram-validator (Low priority - planned)
+  - [ ] @design-advisor (Low priority - planned)
+- [ ] Prompts created (portable for Amazon Q)
+- [ ] Tested in BCI environment
 - [ ] Deployed
 
 ## Open Questions
