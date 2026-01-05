@@ -1,9 +1,9 @@
 # BCI Data Vault Design Workflow
 
 **Organization**: Blue Cross of Idaho (BCI)
-**Status**: Draft (Phase 4 Complete - Agent Specs Ready)
+**Status**: ✅ Ready for BCI Testing (Phase A Prompts Complete)
 **Created**: 2026-01-02
-**Last Updated**: 2026-01-03
+**Last Updated**: 2026-01-04
 
 ## Overview
 
@@ -87,9 +87,23 @@ An agentic workflow to accelerate Data Vault architecture at BCI by transforming
   - [x] @code-evaluator (Medium priority)
   - [ ] @diagram-validator (Low priority - planned)
   - [ ] @design-advisor (Low priority - planned)
-- [ ] Prompts created (portable for Amazon Q)
+- [x] Prompts created - Phase A (spec-generator, dbt-prompt-builder)
+- [ ] Prompts created - Phase B (code-evaluator)
 - [ ] Tested in BCI environment
 - [ ] Deployed
+
+## Ready for Testing
+
+**Status**: ✅ Ready to deploy to BCI for testing
+
+Copy these files to BCI VSCode:
+1. `implementation/prompts/spec_intake_template.md`
+2. `implementation/prompts/spec_generator_prompt.md`
+3. `implementation/prompts/dbt_prompt_builder_prompt.md`
+4. `implementation/amazon_q_guide.md`
+5. `sync/CONTEXT_SYNC.md`
+
+See `implementation/README.md` for the test workflow.
 
 ## Open Questions
 
