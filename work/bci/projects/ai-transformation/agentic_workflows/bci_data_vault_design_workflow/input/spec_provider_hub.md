@@ -69,32 +69,12 @@ when data quality checks run,
 then no null values exist in required business key columns and all hash keys are valid.
 
 Given the hub is loaded,  
-when the hub is compared to **h_provider_count**,  
+when the hub is compared to source provider records,  
 then the key counts in the hub match the source records.
-The test should look like this:
-
-```yml
-models:
-  - name: h_provider
-    tests:
-      - hub_source_count_match:
-          business_key_column: provider_hk
-          source_model: h_provider_count
-```
 
 Given the same-as link is populated,  
-when the link is compared to **sal_provider_facets_count**,
-then all provider records are correctly linked across source systems with valid hub references.
-The test should look like this:
-
-```yml
-models:
-  - name: sal_provider_facets
-    tests:
-      - source_count_match:
-          business_key_column: sal_provider_facets_hk
-          source_model: sal_provider_facets_count
-```
+when the link is compared to the source data,
+then all provider records are linked across source systems with valid hub references.
 
 **Metadata:**
 

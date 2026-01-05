@@ -1,7 +1,7 @@
 # @spec-generator Prompt for Amazon Q
 
-**Version**: 1.0
-**Last Updated**: 2026-01-03
+**Version**: 1.1
+**Last Updated**: 2026-01-05
 **Runtime**: Amazon Q Developer (VSCode)
 
 ---
@@ -45,6 +45,7 @@ So that we can [business value - tracking changes, supporting analytics, etc.].
 **Technical Details:**
 
 - **Entity Name**: [name]
+- **Parent Hub**: [if satellite-only, reference existing hub like h_member]
 - **Source Data**:
   - Source Project: `enterprise_data_platform`
   - Source Models:
@@ -54,6 +55,7 @@ So that we can [business value - tracking changes, supporting analytics, etc.].
   - [list each business key column]
 - **Hubs** (using automate_dv hub macro):
   - h_[entity] - Hub for [entity] business key
+  [Omit this section for satellite-only entities]
 - **Satellites** (using automate_dv sat macro):
   - s_[entity]_gemstone_facets - Descriptive attributes from Gemstone system
   - s_[entity]_legacy_facets - Descriptive attributes from legacy system
@@ -61,11 +63,12 @@ So that we can [business value - tracking changes, supporting analytics, etc.].
   [If identity resolution needed between systems, describe the SAL and join logic]
   - sal_[entity]_facets - Same-as link for [entity] identity resolution
   - The staging view should have a hash expression for the sal_[entity]_facets_hk column.
+  [Omit this section if no SAL is needed]
 
 **Source Column Mapping / Payload**
-| source_table | source_column | target_column |
-|--------------|---------------|---------------|
-| [source] | [column] | [target] |
+| source_table | source_column | target_column | column_description |
+|--------------|---------------|---------------|-------------------|
+| [source] | [column] | [target] | [description] |
 [Include all payload columns from the design]
 
 **Acceptance Criteria:**
@@ -83,39 +86,20 @@ So that we can [business value - tracking changes, supporting analytics, etc.].
 **then** no null values exist in required business key columns and all hash keys are valid.
 
 **Given** the hub is loaded,
-**when** the hub is compared to **h_[entity]_count**,
+**when** the hub is compared to source records,
 **then** the key counts in the hub match the source records.
-The test should look like this:
-
-```yml
-models:
-  - name: h_[entity]
-    tests:
-      - source_count_match:
-          business_key_column: [entity]_hk
-          source_model: h_[entity]_count
-```
 
 [If SAL exists, add:]
 **Given** the same-as link is populated,
-**when** the link is compared to **sal_[entity]_facets_count**,
+**when** the link is compared to source data,
 **then** all [entity] records are correctly linked across source systems with valid hub references.
-The test should look like this:
-
-```yml
-models:
-  - name: sal_[entity]_facets
-    tests:
-      - source_count_match:
-          business_key_column: sal_[entity]_facets_hk
-          source_model: sal_[entity]_facets_count
-```
 
 **Metadata:**
 
 - Story ID: [TBD or provided]
 - Architect Estimate: [X] days
 - Deliverables: [list downstream uses]
+- Dependencies: [list any required hub/link dependencies]
 
 ---
 
@@ -146,6 +130,14 @@ models:
 5. **Source systems**: BCI has two primary systems:
    - Gemstone Facets (current)
    - Legacy BCI Facets (historical)
+
+6. **Column mapping table**: Include `column_description` for each column
+
+## Important Notes
+
+- Do NOT include YAML test blocks - tests are defined separately during implementation
+- Focus on design intent and column mappings
+- Specifications should be complete but not include implementation details
 
 ## Instructions
 
@@ -187,6 +179,26 @@ Key payload columns:
 Need SAL for identity resolution between Gemstone and Legacy claim lines.
 ```
 
+**Example satellite-only input:**
+
+```
+Entity: member_disability
+Type: Satellites only (on existing h_member hub)
+Business Keys: subscriber_id, member_suffix (inherited from h_member)
+
+Sources:
+- stg_gemstone_facets_hist__dbo_cmc_mehd_handicap
+- stg_legacy_bcifacets_hist__dbo_cmc_mehd_handicap
+
+Key payload columns:
+- mehd_eff_dt (disability_eff_dt)
+- mehd_term_dt (disability_term_dt)
+- mehd_type (disability_type)
+- mehd_desc (disability_description)
+
+No SAL needed - joins to h_member via meme_ck.
+```
+
 ---
 
 ## Tips for Best Results
@@ -194,7 +206,8 @@ Need SAL for identity resolution between Gemstone and Legacy claim lines.
 1. **Be specific with source models** - full path helps the agent generate accurate refs
 2. **List key payload columns** - even if not exhaustive, gives the agent a starting point
 3. **Mention SAL if needed** - identity resolution logic is complex; flag it explicitly
-4. **Review and refine** - treat output as a draft; add/correct as needed
+4. **Specify satellite-only** - if adding satellites to an existing hub, say so explicitly
+5. **Review and refine** - treat output as a draft; add/correct as needed
 
 ---
 
@@ -205,4 +218,3 @@ After using this prompt, update `sync/CONTEXT_SYNC.md` with:
 - Quality score (1-5)
 - Issues found
 - Refinements needed
-

@@ -20,6 +20,8 @@ so that we can track member demographic changes over time and support member mon
     - `stg_gemstone_facets_hist__dbo_cmc_meme_member`
     - `stg_legacy_bcifacets_hist__dbo_cmc_sbsb_subsc`
     - `stg_gemstone_facets_hist__dbo_cmc_sbsb_subsc`
+    - `stg_legacy_bcifacets_hist__dbo_cmc_meda_me_data`
+    - `stg_gemstone_facets_hist__dbo_cmc_meda_me_data`
 - **Staging Views**:
   - join cmc_meme_member to cmc_sbsb_subsc on sbsb_ck
 - **Business Key**
@@ -28,16 +30,19 @@ so that we can track member demographic changes over time and support member mon
 - **Hubs** (using automate_dv hub macro):
   - h_member - Hub for member business key
 - **Satellites** (using automate_dv sat macro):
-  - s_member_gemstone_facets - Descriptive attributes from Gemstone system
-  - s_member_legacy_facets - Descriptive attributes from legacy system
+  - s_member_gemstone_facets - Descriptive attributes from Gemstone Facets system
+  - s_member_legacy_facets - Descriptive attributes from Legacy Facets system
 - **Same-As Links** (using automate_dv link macro):
   For Gemstone members, use the meme_record_no to the legacy meme_ck from the source to left join back to the legacy member record and get the subscriber_id and member_suffix they were converted from. This will be used to populate the same as link sal_member_facets
+  
+- **Staging Join Example (for Rename view)**
   ```sql
   -- Example join to get prior member business key for same as link
   source as (
   select
       sbsb.sbsb_id subscriber_id,
       mem.*,
+      coalesce(meda.meda_confid_ind, 'N') confidential_ind,
       p_mem.meme_sfx sal_member_suffix,
       p_sub.subscriber_id sal_subscriber_id
   from {{ ref('enterprise_data_platform', 'stg_gemstone_facets_hist__dbo_cmc_meme_member') }} mem
@@ -47,6 +52,8 @@ so that we can track member demographic changes over time and support member mon
   on mem.meme_record_no = p_mem.meme_ck
   left join {{ ref('enterprise_data_platform', 'stg_legacy_bcifacets_hist__dbo_cmc_sbsb_subsc') }} p_sub
   on p_mem.sbsb_ck = p_sub.sbsb_ck
+  left join {{ ref('enterprise_data_platform', 'stg_legacy_bcifacets_hist__dbo_cmc_meda_me_data') }} meda
+  on mem.meme_ck = meda.meme_ck
   )
   ```
   - sal_member_facets - Same-as link for member identity resolution using the sal_subscriber_id and sal_member_suffix columns in the staging view.
@@ -87,6 +94,9 @@ so that we can track member demographic changes over time and support member mon
 | ...cmc_meme_member | sbad_type_work | member_address_type_work |
 | ...cmc_meme_member | sal_subscriber_id | sal_subscriber_id |
 | ...cmc_meme_member | sal_member_suffix | sal_member_suffix |
+| ...cmc_meda_me_data | meda_confid_ind | confidential_ind |
+| ...cmc_meme_member | edp_start_dt | edp_start_dt |
+| ...cmc_meme_member | edp_record_status | edp_record_status |
 
 **Acceptance Criteria:**
 
@@ -103,32 +113,12 @@ so that we can track member demographic changes over time and support member mon
 **then** no null values exist in required business key columns and all hash keys are valid.
 
 **Given** the hub is loaded,  
-**when** the hub is compared to **h_member_count**,  
+**when** the hub is compared to source member records,  
 **then** the key counts in the hub match the source records.
-The test should look like this:
-
-```yml
-models:
-  - name: h_member
-    tests:
-      - source_count_match:
-          business_key_column: member_hk
-          source_model: h_member_count
-```
 
 **Given** the same-as link is populated,  
-**when** the link is compared to **sal_member_facets_count**,
-**then** all member records are correctly linked across source systems with valid hub references.
-The test should look like this:
-
-```yml
-models:
-  - name: sal_member_facets
-    tests:
-      - source_count_match:
-          business_key_column: sal_member_facets_hk
-          source_model: sal_member_facets_count
-```
+**when** the link is compared to the source data,
+**then** all member records are linked across source systems with valid hub references.
 
 **Metadata:**
 

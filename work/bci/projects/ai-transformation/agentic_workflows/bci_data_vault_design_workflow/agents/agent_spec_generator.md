@@ -27,7 +27,7 @@
 
 | Output | Format | Destination | Acceptance Criteria |
 |--------|--------|-------------|---------------------|
-| Complete specification | Markdown | File in `specs/` folder | All sections present; matches template; ready for engineer |
+| Complete specification | Markdown | File in `input/examples/` folder | All sections present; matches template; ready for engineer |
 
 ## Output Template
 
@@ -46,6 +46,7 @@ So that we can [business value].
 **Technical Details:**
 
 - **Entity Name**: [name]
+- **Parent Hub**: [if satellite-only, reference existing hub]
 - **Source Data**:
   - Source Project: `enterprise_data_platform`
   - Source Models:
@@ -62,9 +63,9 @@ So that we can [business value].
   [Include join logic for identity resolution if applicable]
 
 **Source Column Mapping / Payload**
-| source_table | source_column | target_column |
-|--------------|---------------|---------------|
-| ... | ... | ... |
+| source_table | source_column | target_column | column_description |
+|--------------|---------------|---------------|-------------------|
+| ... | ... | ... | ... |
 
 **Acceptance Criteria:**
 
@@ -81,22 +82,14 @@ when data quality checks run,
 then no null values exist in required business key columns and all hash keys are valid.
 
 Given the hub is loaded,
-when the hub is compared to **h_[entity]_count**,
+when the hub is compared to source records,
 then the key counts in the hub match the source records.
-
-```yml
-models:
-  - name: h_[entity]
-    tests:
-      - source_count_match:
-          business_key_column: [entity]_hk
-          source_model: h_[entity]_count
-```
 
 **Metadata:**
 - Story ID: [ID]
 - Architect Estimate: [days]
 - Deliverables: [list]
+- Dependencies: [list, if applicable]
 ```
 
 ## Behavior
@@ -107,11 +100,12 @@ Step-by-step instructions for the agent:
 2. **Identify source structure**: If source models are provided, analyze their columns to suggest payload mappings
 3. **Apply DV patterns**: Based on entity type, include appropriate sections:
    - Hub: Always include h_[entity], at minimum two satellites (gemstone/legacy)
+   - Satellite-only: Reference parent hub, include inherited business keys
    - Link: Include driving keys, link hash key, related hub references
    - SAL: Include identity resolution logic, prior system join
-4. **Generate column mapping**: Create source-to-target mapping table based on known patterns
-5. **Write acceptance criteria**: Generate Given/When/Then statements with YAML test blocks
-6. **Add metadata placeholders**: Include Story ID (TBD), estimate, deliverables
+4. **Generate column mapping**: Create source-to-target mapping table with descriptions based on known patterns
+5. **Write acceptance criteria**: Generate Given/When/Then statements (no YAML test blocks)
+6. **Add metadata placeholders**: Include Story ID (TBD), estimate, deliverables, dependencies
 7. **Present for review**: Output complete spec; ask architect to verify and refine
 
 ## Constraints
@@ -119,16 +113,17 @@ Step-by-step instructions for the agent:
 - Do NOT invent source column names - use placeholders or ask if unknown
 - Do NOT skip sections - all sections must be present (use TBD if needed)
 - Do NOT include actual data or PHI examples
+- Do NOT include YAML test blocks - tests are defined separately during implementation
 - ALWAYS use automate_dv macro references (hub, sat, link)
-- ALWAYS include YAML test definitions in acceptance criteria
+- ALWAYS include column_description in mapping tables
 - ALWAYS follow BCI naming conventions (h_, s_, sal_, stg_)
 
 ## Success Criteria
 
 - [ ] All template sections present and populated
 - [ ] Business keys correctly identified
-- [ ] Source-to-target mapping table included
-- [ ] Acceptance criteria include YAML test blocks
+- [ ] Source-to-target mapping table included with descriptions
+- [ ] Acceptance criteria written as Given/When/Then
 - [ ] Follows BCI naming conventions
 - [ ] Architect can hand off to engineer without additional documentation
 
@@ -138,7 +133,7 @@ Step-by-step instructions for the agent:
 |--------------|---------------|-----------------|
 | Missing source model info | User doesn't provide source models | Ask: "Which staging models should I reference?" |
 | Unknown column mappings | Can't infer from inputs | Generate placeholder table; ask user to fill in |
-| Ambiguous entity type | User says "member" without specifying hub/link/sat | Ask: "Is this a new hub with satellites, a link, or a satellite addition?" |
+| Ambiguous entity type | User says "member" without specifying hub/link/sat | Ask: "Is this a new hub with satellites, a link, or a satellite addition to an existing hub?" |
 | Template section missing | Review output against template | Re-run with explicit section checklist |
 
 ## Example Invocation
@@ -154,11 +149,23 @@ Complete specification following the template, with:
 - h_claim_line hub definition
 - s_claim_line_gemstone_facets and s_claim_line_legacy_facets satellites
 - sal_claim_line_facets same-as link (if identity resolution needed)
-- Column mapping table with claim columns
-- Acceptance criteria with test YAML
+- Column mapping table with claim columns and descriptions
+- Acceptance criteria as Given/When/Then statements
+
+**Satellite-only example:**
+> Entity: "member_disability"
+> Type: Satellites only on h_member
+> Business Key: subscriber_id, member_suffix (inherited)
+> Sources: stg_gemstone_facets_hist__dbo_cmc_mehd_handicap, stg_legacy_bcifacets_hist__dbo_cmc_mehd_handicap
+
+**Agent produces:**
+Complete specification with:
+- Parent Hub reference to h_member
+- s_member_disability_gemstone_facets and s_member_disability_legacy_facets satellites
+- Join logic to get member hub key
+- Column mapping table with disability columns and descriptions
 
 ## Related Files
 
 - [Spec Examples](../input/examples/) - Reference specifications
 - [Prompt](../implementation/prompts/spec_generator_prompt.md) - Portable prompt for Amazon Q
-
