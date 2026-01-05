@@ -17,7 +17,7 @@ An agentic workflow to accelerate Data Vault architecture at BCI by transforming
 | [Real-World Process](specifications/01_real_world_process.md) | Current state specification |
 | [Agentic Workflow](specifications/02_agentic_workflow.md) | AI-augmented design |
 | [Agents](agents/README.md) | Agent specifications |
-| [Spec Examples](input/examples/) | Reference specifications for agent design |
+| [Specifications](specs/) | Data Vault specifications (output of workflow) |
 | [Amazon Q Guide](implementation/amazon_q_guide.md) | Practical guide for runtime environment |
 | [Context Sync](sync/CONTEXT_SYNC.md) | **Shareable status file** for BCI ↔ Cursor sync |
 | [Local Context (Cursor)](sync/LOCAL_CONTEXT_CURSOR.md) | Cursor-only context (does NOT sync) |

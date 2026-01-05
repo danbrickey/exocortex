@@ -27,7 +27,7 @@
 
 | Output | Format | Destination | Acceptance Criteria |
 |--------|--------|-------------|---------------------|
-| Complete specification | Markdown | File in `input/examples/` folder | All sections present; matches template; ready for engineer |
+| Complete specification | Markdown | File in `specs/` folder | All sections present; matches template; ready for engineer |
 
 ## Output Template
 
@@ -167,5 +167,5 @@ Complete specification with:
 
 ## Related Files
 
-- [Spec Examples](../input/examples/) - Reference specifications
+- [Specifications](../specs/) - Data Vault specifications
 - [Prompt](../implementation/prompts/spec_generator_prompt.md) - Portable prompt for Amazon Q

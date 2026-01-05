@@ -1,18 +1,19 @@
-# Specification Examples
+# Data Vault Specifications
 
-Reference examples of Data Vault specifications. These examples inform the `@spec-generator` agent design and serve as the quality bar for generated specifications.
+Generated specifications for Data Vault entities. These specs are the output of the `@spec-generator` agent and serve as the source of truth for engineer implementation.
 
 ## Purpose
 
-- Show the target format for specification output
-- Provide patterns for different entity types (hub, link, satellite)
-- Demonstrate the level of detail needed for engineers to implement
+- Document design decisions for Data Vault entities
+- Provide complete specifications for engineers to implement
+- Serve as reference patterns for future entity designs
 
-## Examples
+## Specifications
 
 | File | Entity Type | Key Patterns Shown |
 |------|-------------|-------------------|
 | [spec_member_hub.md](spec_member_hub.md) | Hub + Satellites + Same-As Link | Multi-source staging, column mapping table, SAL identity resolution |
+| [spec_provider_hub.md](spec_provider_hub.md) | Hub + Satellites + Same-As Link | Complex business key logic, organization relationships |
 | [spec_subscriber_satellites.md](spec_subscriber_satellites.md) | Satellites on existing hub | Parent hub reference, inherited business keys |
 | [spec_member_rating_satellites.md](spec_member_rating_satellites.md) | Satellites on existing hub | Multi-table join to get hub key |
 | [spec_member_disability_satellites.md](spec_member_disability_satellites.md) | Satellites on existing hub | Disability tracking with verification history |
@@ -23,7 +24,7 @@ Reference examples of Data Vault specifications. These examples inform the `@spe
 
 ## Specification Template Structure
 
-Extracted from examples - this is the target format for `@spec-generator`:
+This is the target format for `@spec-generator`:
 
 ```markdown
 ## Story [ID]: [Title]
@@ -66,7 +67,7 @@ then [expected result].
 - Dependencies: [list, if applicable]
 ```
 
-## Key Patterns for Agent Design
+## Key Patterns
 
 ### 1. automate_dv Macro Usage
 - Hubs: `automate_dv hub macro`
@@ -79,24 +80,23 @@ When adding satellites to an existing hub:
 - Business keys are inherited from the parent hub
 - Include join logic to get the hub key from staging data
 
-### 3. Identity Resolution (Same-As Links)
+### 3. Join Patterns by Entity Source
+
+| Entity Source | Join Pattern |
+|---------------|--------------|
+| **Member entities** (source has `meme_ck`) | `source.meme_ck = mem.meme_ck` → `mem.sbsb_ck = sbsb.sbsb_ck` |
+| **Subscriber entities** (source has `sbsb_ck`) | `source.sbsb_ck = sbsb.sbsb_ck` → `sbsb.sbsb_ck = mem.meme_ck` |
+
+### 4. Identity Resolution (Same-As Links)
 SAL specs include:
 - Join logic to prior system records
 - Hash key column for the SAL
 - Business key mapping for identity resolution
 
-### 4. Source Column Mapping
+### 5. Source Column Mapping
 - Include `column_description` for clarity
 - Use `...table_name` shorthand for source tables
 - Document business keys, system columns, and payload attributes
-
-## Usage
-
-When designing the `@spec-generator` agent, reference these examples to:
-1. Extract the structural template (above)
-2. Identify required fields and sections
-3. Define acceptance criteria for generated specs
-4. Understand automate_dv conventions
 
 ## Notes
 
