@@ -87,7 +87,7 @@ source as (
 - s_practitioner_gemstone_facets - Descriptive attributes from Gemstone system
 - s_practitioner_legacy_facets - Descriptive attributes from legacy system
 
-**Same-As Links** (using automate_dv link macro):
+**Same-As Link** (using automate_dv link macro):
 
 - sal_practitioner - Same-as link for practitioner identity resolution in the case when business key information is updated in a way that changes the practitioner business key. The initial cases to handle are when there are multiple hub records with these similarities:
   - record has a prac_npi, but there is another record with the same prac.prcp_ssn, prac.prcp_last_name, left(trim(prac.prcp_first_name),1), and prac.prcp_birth_dt (YYYYMMDD)

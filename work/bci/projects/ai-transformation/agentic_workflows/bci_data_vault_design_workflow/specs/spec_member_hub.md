@@ -1,8 +1,8 @@
-## Story EDP035: Raw Vault Member Member: Build Core Member Hub and Satellites
+## Member 360: Build Raw Vault Member Hub and Satellites
 
 **Title:**
 
-**Raw Vault Member: Build Core Member Hub and Satellites**
+**Member 360: Build Raw Vault Member Hub and Satellites**
 
 **Description:**
 
@@ -10,7 +10,30 @@ As a data engineer,
 I want to refactor the member hub and associated satellites in the raw vault,  
 so that we can track member demographic changes over time and support member months and PCP attribution analytics.
 
-**Technical Details:**
+
+**Acceptance Criteria:**
+
+**Given** source data is loaded to staging views,  
+**when** the hub model executes,  
+**then** all unique member business keys are loaded with valid hash keys and load timestamps.
+
+**Given** multiple source records exist for the same member,  
+**when** the satellite models execute,  
+**then** only records with changed attributes create new satellite records with proper effective dating.
+
+**Given** gemstone and legacy facets are loaded,  
+**when** data quality checks run,  
+**then** no null values exist in required business key columns and all hash keys are valid.
+
+**Given** the hub is loaded,  
+**when** the hub is compared to source member records,  
+**then** the key counts in the hub match the source records.
+
+**Given** the same-as link is populated,  
+**when** the link is compared to the source data,
+**then** all member records are linked across source systems with valid hub references.
+
+### Technical Details
 
 - **Entity Name**: member
 - **Source Data**:
@@ -98,27 +121,6 @@ so that we can track member demographic changes over time and support member mon
 | ...cmc_meme_member | edp_start_dt | edp_start_dt |
 | ...cmc_meme_member | edp_record_status | edp_record_status |
 
-**Acceptance Criteria:**
-
-**Given** source data is loaded to staging views,  
-**when** the hub model executes,  
-**then** all unique member business keys are loaded with valid hash keys and load timestamps.
-
-**Given** multiple source records exist for the same member,  
-**when** the satellite models execute,  
-**then** only records with changed attributes create new satellite records with proper effective dating.
-
-**Given** gemstone and legacy facets are loaded,  
-**when** data quality checks run,  
-**then** no null values exist in required business key columns and all hash keys are valid.
-
-**Given** the hub is loaded,  
-**when** the hub is compared to source member records,  
-**then** the key counts in the hub match the source records.
-
-**Given** the same-as link is populated,  
-**when** the link is compared to the source data,
-**then** all member records are linked across source systems with valid hub references.
 
 **Metadata:**
 
