@@ -1,14 +1,14 @@
-## Story EDP035: Raw Vault provider provider: Build Core provider Hub and Satellites
+## Story EDP035: Raw Vault Practitioner: Build Core Practitioner Hub and Satellites
 
 **Title:**
 
-**Raw Vault Provider: Build Core Provider Hub and Satellites**
+**Raw Vault practitioner: Build Core Practitioner Hub and Satellites**
 
 **Description:**
 
 As a data engineer,  
-I want to refactor the provider hub and associated satellites in the raw vault,  
-So that we can track provider changes over time and support provider catalog and PCP attribution analytics.
+I want to refactor the practitioner hub and associated satellites in the raw vault,  
+So that we can track practitioner changes over time and support practitioner catalog and PCP attribution analytics.
 
 **Technical Details:**
 
@@ -20,8 +20,8 @@ So that we can track provider changes over time and support provider catalog and
 
 **Staging Views** (using automate_dv stage macro):
 
-- stg_provider_gemstone_facets - Stage data from cmc_prpr_prov for gemstone facets
-- stg_provider_legacy_facets - Stage data from cmc_prpr_prov for legacy facets
+- stg_practitioner_gemstone_facets - Stage data from cmc_prpr_prov for gemstone facets
+- stg_practitioner_legacy_facets - Stage data from cmc_prpr_prov for legacy facets
 
 - **Staging Join Example (for Rename view)**
 
@@ -43,24 +43,24 @@ source as (
 
 **Hubs** (using automate_dv hub macro):
 
-- h_provider - Hub for provider business key
+- h_practitioner - Hub for practitioner business key
 
 **Satellites** (using automate_dv sat macro):
 
-- s_provider_gemstone_facets - Descriptive attributes from Gemstone system
-- s_provider_legacy_facets - Descriptive attributes from legacy system
+- s_practitioner_gemstone_facets - Descriptive attributes from Gemstone system
+- s_practitioner_legacy_facets - Descriptive attributes from legacy system
 
 **Same-As Links** (using automate_dv link macro):
 
-- sal_provider_facets - Same-as link for provider identity resolution using the crosswalk between Gemstone and Legacy providers. \*\*\_Note\*\*\*: the staging view should have a hash expression for the sal_provider_facets_hk column.
+- sal_practitioner_facets - Same-as link for practitioner identity resolution using the crosswalk between Gemstone and Legacy practitioners. \*\*\_Note\*\*\*: the staging view should have a hash expression for the sal_practitioner_facets_hk column.
 
 **Acceptance Criteria:**
 
 Given source data is loaded to staging views,  
 when the hub model executes,  
-then all unique provider business keys are loaded with valid hash keys and load timestamps.
+then all unique practitioner business keys are loaded with valid hash keys and load timestamps.
 
-Given multiple source records exist for the same provider,  
+Given multiple source records exist for the same practitioner,  
 when the satellite models execute,  
 then only records with changed attributes create new satellite records with proper effective dating.
 
@@ -69,15 +69,15 @@ when data quality checks run,
 then no null values exist in required business key columns and all hash keys are valid.
 
 Given the hub is loaded,  
-when the hub is compared to source provider records,  
+when the hub is compared to source practitioner records,  
 then the key counts in the hub match the source records.
 
 Given the same-as link is populated,  
 when the link is compared to the source data,
-then all provider records are linked across source systems with valid hub references.
+then all practitioner records are linked across source systems with valid hub references.
 
 **Metadata:**
 
 - Story ID: EDP035
 - Estimate: 6 days
-- Deliverables: provider Months, PCP Attribution
+- Deliverables: practitioner Months, PCP Attribution
