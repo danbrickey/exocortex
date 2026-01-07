@@ -16,12 +16,16 @@
 
 | Input | Source | Format | Required |
 |-------|--------|--------|----------|
-| Entity name | Architect | Text (e.g., "member", "provider") | Yes |
-| Entity type | Architect | Hub / Link / Satellite / Combination | Yes |
-| Business key(s) | Architect | Column name(s) | Yes |
-| Source models | Architect or discovery | List of dbt model names | Yes |
+| Entity name | Architect | Text (e.g., "member", "provider") | Yes* |
+| Entity type | Architect | Hub / Link / Satellite / Combination | Yes* |
+| Business key(s) | Architect | Column name(s) | Yes* |
+| Source models | Architect or discovery | List of dbt model names | Yes* |
 | Design notes | Architect | Freeform text | No |
 | Existing model (if refactor) | Codebase | SQL/YAML | No |
+| Existing spec file (for evaluation) | File system | Path to spec file | No** |
+
+*Required for new spec generation, not required for evaluation-only requests
+**Required when user requests evaluation of existing spec (e.g., "Rerun evaluation on spec_member_hub.md")
 
 ## Outputs
 
@@ -97,7 +101,15 @@ then the key counts in the hub match the source records.
 
 Step-by-step instructions for the agent:
 
-1. **Receive inputs**: Collect entity name, type, business keys, and source models from user
+**Mode Detection**: Determine if user is requesting:
+- **New Spec Generation**: User provides entity details to create new spec
+- **Evaluation Only**: User requests evaluation of existing spec file (e.g., "Rerun evaluation on spec_member_hub.md")
+- **Update & Reevaluate**: User has modified existing spec and wants updated evaluation
+
+1. **Receive inputs**: 
+   - **If new spec**: Collect entity name, type, business keys, and source models from user
+   - **If evaluation only**: Read existing spec file from `specs/` folder
+   - **If update & reevaluate**: Read modified spec file and proceed to evaluation steps
 2. **Ask validation questions**: Before generating, ask clarifying questions to ensure completeness:
    - "What is the Domain name for this specification?" (e.g., Provider, Member, Claim)
    - "Are there any complex joins required? If so, which tables need to be joined?"
@@ -112,14 +124,15 @@ Step-by-step instructions for the agent:
    - SAL: Include identity resolution logic, prior system join
 5. **Generate column mapping**: Create source-to-target mapping table with descriptions based on known patterns
 6. **Document join logic**: If complex joins exist (multiple tables, left/right joins), provide complete staging join example
-7. **Validate column mapping completeness**: Ensure all columns referenced in:
+7. **Remove template notes**: Do NOT include instructional notes from template (e.g., "**Note:** List all source models..." or "**Note:** [objects] should match...") - these are for agent guidance only, not for engineers
+8. **Validate column mapping completeness**: Ensure all columns referenced in:
    - Business key expressions
    - Staging join example (if provided)
    - Any columns mentioned in Technical Details
    - Are included in the Source Column Mapping table
-8. **Write acceptance criteria**: Generate Given/When/Then statements (no YAML test blocks)
-9. **Add metadata**: Include deliverables and dependencies (do NOT include architect estimate)
-10. **Run automatic evaluation**: After generating spec, automatically evaluate against the Specification Evaluation Rubric from `specs/spec_template.md`:
+9. **Write acceptance criteria**: Generate Given/When/Then statements (no YAML test blocks)
+10. **Add metadata**: Include deliverables and dependencies (do NOT include architect estimate)
+11. **Run automatic evaluation**: After generating spec, automatically evaluate against the Specification Evaluation Rubric from `specs/spec_template.md`:
     - Score each completeness check item (pass/fail)
     - Score each quality check item (pass/fail)
     - Score each Data Vault 2.0 pattern validation item (pass/fail)
@@ -128,14 +141,56 @@ Step-by-step instructions for the agent:
     - Calculate overall completeness score: (passed checks / total checks) × 100
     - Identify implementation blockers: What would prevent a data engineer or AI from implementing this?
     - Identify pattern violations: Are artifacts appropriately modeled per Data Vault 2.0 best practices?
-11. **Generate evaluation report**: Create a scored evaluation report with:
+12. **Generate evaluation report**: Create a scored evaluation report with:
     - Overall completeness score (percentage)
     - Passed checks (list)
     - Failed checks (list with specific issues)
     - Red flags (critical issues that must be addressed)
     - Implementation blockers (specific gaps that would prevent code generation)
     - Recommendations for improvement
-12. **Present for review**: Output complete spec followed by evaluation report; highlight critical issues; ask architect to address gaps before handoff
+13. **Present for review**: Output complete spec followed by evaluation report; highlight critical issues; ask architect to address gaps before handoff
+
+## Rerunning Evaluation
+
+The agent MUST support rerunning evaluation on existing specifications when requested:
+
+1. **Read existing spec**: Load the specification file from `specs/` folder
+2. **Remove old evaluation**: If an existing evaluation report is present, remove it before running new evaluation
+3. **Run fresh evaluation**: Execute the same evaluation process as step 10-11 above:
+   - Score all rubric items against current spec content
+   - Calculate new completeness score
+   - Identify any new issues that may have been exposed after previous fixes
+   - Compare with previous evaluation if available (note improvements or new issues)
+4. **Generate updated report**: Create new evaluation report with current scores and findings
+5. **Highlight changes**: If rerunning after fixes, explicitly note:
+   - Issues that were resolved
+   - New issues discovered (may have been hidden by previous critical issues)
+   - Score improvements or regressions
+   - Updated recommendations
+
+**When to rerun evaluation:**
+- User explicitly requests: "Rerun evaluation on [spec_file]"
+- User has made changes to spec and wants updated score
+- User wants to verify fixes resolved previous issues
+- User wants to check for additional issues after addressing blockers
+
+**Evaluation Rerun Format:**
+```markdown
+---
+
+## Specification Evaluation Report (Updated)
+
+### Evaluation Date: [timestamp]
+### Previous Score: [X]% (if available)
+### Current Score: [Y]%
+
+**Changes Since Last Evaluation:**
+- [Resolved issues]
+- [New issues discovered]
+- [Score change explanation]
+
+[Rest of evaluation report follows standard format]
+```
 
 ## Constraints
 
@@ -144,6 +199,7 @@ Step-by-step instructions for the agent:
 - Do NOT include actual data or PHI examples
 - Do NOT include YAML test blocks - tests are defined separately during implementation
 - Do NOT include architect estimate in metadata
+- Do NOT include template instructional notes (e.g., "**Note:** List all source models..." or "**Note:** [objects] should match...") - these are for agent guidance only, not for engineers
 - ALWAYS use automate_dv macro references (hub, sat, link)
 - ALWAYS include column_description in mapping tables
 - ALWAYS follow BCI naming conventions (h_, s_, sal_, stg_)
@@ -154,6 +210,9 @@ Step-by-step instructions for the agent:
 - ALWAYS provide scored evaluation report with implementation blockers and pattern violations identified
 - ALWAYS calculate completeness score: (passed checks / total checks) × 100
 - ALWAYS reference Data Vault 2.0 guide (`work/bci/engineering-kb/data-vault-2.0-guide.md`) for pattern validation
+- ALWAYS support rerunning evaluation on existing specs when requested
+- ALWAYS remove old evaluation reports before generating new ones
+- ALWAYS note changes from previous evaluation when rerunning (resolved issues, new issues discovered, score changes)
 
 ## Success Criteria
 
@@ -219,6 +278,33 @@ Step-by-step instructions for the agent:
    - If join logic columns are all in mapping table
    - If parent hub reference is clear
    - Any missing information that would block implementation
+
+**Evaluation-only example:**
+> User: "Rerun evaluation on spec_member_hub.md"
+
+**Agent produces:**
+1. Reads existing spec_member_hub.md file
+2. Removes any existing evaluation report
+3. Runs fresh evaluation against rubric
+4. Generates updated evaluation report with:
+   - Current completeness score
+   - All passed/failed checks
+   - Any new issues discovered
+   - Comparison with previous evaluation (if available)
+   - Updated recommendations
+
+**Update & reevaluate example:**
+> User: "I've fixed the source model names in spec_member_hub.md. Rerun the evaluation."
+
+**Agent produces:**
+1. Reads updated spec_member_hub.md file
+2. Removes existing evaluation report
+3. Runs fresh evaluation
+4. Generates updated report noting:
+   - Previous issues that are now resolved
+   - New issues that may have been exposed
+   - Updated score
+   - Remaining recommendations
 
 ## Evaluation Report Format
 

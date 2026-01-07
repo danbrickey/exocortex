@@ -68,6 +68,8 @@ then all [entity] records are linked across source systems with valid hub refere
 - stg_[entity]_gemstone_facets_rename - Rename columns for gemstone facets
 - stg_[entity]_legacy_facets_rename - Rename columns for legacy facets
 
+<sup>1</sup> See [Source Column Mapping / Payload](#source-column-mapping--payload) table below for column mapping metadata.
+
 **Staging Join Example (for Rename views)**:
 
 ```sql
@@ -100,7 +102,7 @@ source as (
 
 - sal_[entity]_facets - Same-as link for [entity] identity resolution [description of resolution logic]. **Note**: the staging view should have a hash expression for the sal_[entity]_facets_hk column.
 
-**Source Column Mapping / Payload**
+#### Source Column Mapping / Payload
 
 | source_table | source_column | target_column | column_description |
 |--------------|---------------|---------------|---------------------|
