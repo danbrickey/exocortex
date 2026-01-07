@@ -122,17 +122,22 @@ Step-by-step instructions for the agent:
    - Satellite-only: Reference parent hub, include inherited business keys
    - Link: Include driving keys, link hash key, related hub references
    - SAL: Include identity resolution logic, prior system join
-5. **Generate column mapping**: Create source-to-target mapping table with descriptions based on known patterns
-6. **Document join logic**: If complex joins exist (multiple tables, left/right joins), provide complete staging join example
-7. **Remove template notes**: Do NOT include instructional notes from template (e.g., "**Note:** List all source models..." or "**Note:** [objects] should match...") - these are for agent guidance only, not for engineers
-8. **Validate column mapping completeness**: Ensure all columns referenced in:
+5. **Format business key for automate_dv**: 
+   - **For multi-column business keys**: List individual columns/expressions (one per line), NOT a concatenated expression. The automate_dv hub macro accepts a list of business key columns and handles concatenation internally.
+   - **For polymorphic business keys**: Provide the complete case statement or conditional expression showing how the key varies based on field contents.
+   - **For simple business keys**: List the column(s) directly.
+   - **Important**: The Business Key section should show individual columns/expressions. Staging join examples may include both a concatenated expression (for staging view purposes) AND individual columns (for automate_dv), but the Business Key section itself should use the individual columns format.
+6. **Generate column mapping**: Create source-to-target mapping table with descriptions based on known patterns
+7. **Document join logic**: If complex joins exist (multiple tables, left/right joins), provide complete staging join example. Include both concatenated business key expression (if needed for staging) and individual columns (for automate_dv).
+8. **Remove template notes**: Do NOT include instructional notes from template (e.g., "**Note:** List all source models..." or "**Note:** [objects] should match...") - these are for agent guidance only, not for engineers. However, DO include the Business Key formatting note about automate_dv as it provides important context for engineers.
+9. **Validate column mapping completeness**: Ensure all columns referenced in:
    - Business key expressions
    - Staging join example (if provided)
    - Any columns mentioned in Technical Details
    - Are included in the Source Column Mapping table
-9. **Write acceptance criteria**: Generate Given/When/Then statements (no YAML test blocks)
-10. **Add metadata**: Include deliverables and dependencies (do NOT include architect estimate)
-11. **Run automatic evaluation**: After generating spec, automatically evaluate against the Specification Evaluation Rubric from `specs/spec_template.md`:
+10. **Write acceptance criteria**: Generate Given/When/Then statements (no YAML test blocks)
+11. **Add metadata**: Include deliverables and dependencies (do NOT include architect estimate)
+12. **Run automatic evaluation**: After generating spec, automatically evaluate against the Specification Evaluation Rubric from `specs/spec_template.md`:
     - Score each completeness check item (pass/fail)
     - Score each quality check item (pass/fail)
     - Score each Data Vault 2.0 pattern validation item (pass/fail)

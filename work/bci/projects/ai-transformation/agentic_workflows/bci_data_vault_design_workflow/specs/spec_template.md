@@ -46,9 +46,31 @@ then all [entity] records are linked across source systems with valid hub refere
 
 **Type:** [Polymorphic Business Key / Business Key]
 
+**Note:** For automate_dv implementation, business keys should be specified as a list of individual columns/expressions, not as a concatenated expression. The automate_dv hub macro accepts multiple business key columns and handles the concatenation internally.
+
+- **For multi-column business keys**: List each column/expression separately (one per line)
+- **For polymorphic business keys**: Provide the case statement or conditional logic showing how the key varies based on field contents
+- **For simple business keys**: List the column(s) directly
+
 ```sql
--- If polymorphic: include case statement showing how key varies based on field contents
--- If normal: list the business key column(s)
+-- Example: Multi-column business key (for automate_dv)
+'110' plan_code,
+coalesce(nullif(prov.prpr_npi,''),'^^') prov_npi,
+coalesce(nullif(org.prpr_npi,''),'^^') org_npi,
+coalesce(nullif(org.mctn_id,''),'^^') org_tin,
+
+-- Example: Polymorphic business key (case statement)
+case 
+  when coalesce(prac.prcp_npi,'') <> '' 
+    then prac.prcp_npi 
+  when coalesce(prac.prcp_npi,'') = '' and coalesce(prac.prcp_ssn,'') <> ''
+    then prac.prcp_ssn || '|' || prac.prcp_last_name || '|' || left(trim(prac.prcp_first_name),1) || '|' || to_char(prac.prcp_birth_dt, 'YYYYMMDD')
+  else prac.prcp_last_name || '|' || left(trim(prac.prcp_first_name),1) || '|' || to_char(prac.prcp_birth_dt, 'YYYYMMDD')
+end as practitioner_business_key
+
+-- Example: Simple business key
+subscriber_id,
+member_suffix
 ```
 
 #### Source Models
@@ -124,7 +146,7 @@ source as (
 ### Completeness Checks
 
 - [ ] **Title & Description**: Title includes Domain and Entity. Description accurately reflects objects being built (hub/links/satellites).
-- [ ] **Business Key**: Type clearly labeled (Polymorphic vs Business Key). SQL expression provided and complete.
+- [ ] **Business Key**: Type clearly labeled (Polymorphic vs Business Key). SQL expression provided and complete. For multi-column business keys, individual columns/expressions are listed (not concatenated), which is the correct format for automate_dv macros. For polymorphic business keys, the complete case statement/conditional expression is provided.
 - [ ] **Source Models**: All source models listed with full project and model names. Source project specified.
 - [ ] **Rename Views**: All rename views listed. If complex joins exist, staging join example provided.
 - [ ] **Staging Views**: All staging views listed with source table references.
@@ -159,6 +181,7 @@ source as (
 - ⚠️ **Missing Join Example**: Complex joins exist but no example provided
 - ⚠️ **Incomplete Column Mapping**: Columns referenced in join example missing from mapping table
 - ⚠️ **Ambiguous Business Key**: Business key expression unclear or incomplete
+- ⚠️ **Incorrect Business Key Format**: Multi-column business key shown as concatenated expression instead of individual columns (automate_dv expects individual columns for multi-column keys)
 - ⚠️ **Mismatched Objects**: Description says "hub and satellites" but Technical Details only shows satellites
 - ⚠️ **Placeholders Remaining**: Any [placeholder] text still present
 - ⚠️ **Missing Source References**: Source models listed without project or full model path
