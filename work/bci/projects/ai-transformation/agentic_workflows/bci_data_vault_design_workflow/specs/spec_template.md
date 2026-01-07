@@ -51,6 +51,16 @@ then all [entity] records are linked across source systems with valid hub refere
 -- If normal: list the business key column(s)
 ```
 
+#### Source Models
+
+**Source Project:** `enterprise_data_platform`
+
+**Source Models Referenced:**
+- `stg_[source_system]_facets_hist__dbo_[table_name]` - [description]
+- `stg_[source_system]_facets_hist__dbo_[table_name]` - [description]
+
+**Note:** List all source models referenced in the staging join example or mentioned elsewhere in this specification.
+
 #### dbt Models to Build/Refactor
 
 **Rename Views**:
