@@ -129,15 +129,17 @@ Step-by-step instructions for the agent:
    - **Important**: The Business Key section should show individual columns/expressions. Staging join examples may include both a concatenated expression (for staging view purposes) AND individual columns (for automate_dv), but the Business Key section itself should use the individual columns format.
 6. **Generate column mapping**: Create source-to-target mapping table with descriptions based on known patterns
 7. **Document join logic**: If complex joins exist (multiple tables, left/right joins), provide complete staging join example. Include both concatenated business key expression (if needed for staging) and individual columns (for automate_dv).
-8. **Remove template notes**: Do NOT include instructional notes from template (e.g., "**Note:** List all source models..." or "**Note:** [objects] should match...") - these are for agent guidance only, not for engineers. However, DO include the Business Key formatting note about automate_dv as it provides important context for engineers.
-9. **Validate column mapping completeness**: Ensure all columns referenced in:
+   - **Conditional examples**: Since Legacy and Gemstone are instances of the same application code, the join logic is usually identical. Only include a Legacy example if the join logic differs from Gemstone. If the joins are the same, include only the Gemstone example with a note that the Legacy join follows the same pattern (just referencing `stg_legacy_bcifacets_hist__dbo_*` models instead of `stg_gemstone_facets_hist__dbo_*`).
+8. **Remove template notes**: Do NOT include instructional notes from template (e.g., "**Note:** List all source models..." or "**Note:** [objects] should match...") - these are for agent guidance only, not for engineers. However, DO include the Business Key formatting note about automate_dv as it provides important context for engineers. DO include the note about conditional Legacy join examples as it helps engineers understand when to include both examples.
+9. **Handle conditional Legacy example**: If the join logic is identical between Gemstone and Legacy, include only the Gemstone example and remove the bracketed conditional Legacy example section from the template. If the join logic differs, include both examples and remove the bracketed conditional section markers.
+10. **Validate column mapping completeness**: Ensure all columns referenced in:
    - Business key expressions
    - Staging join example (if provided)
    - Any columns mentioned in Technical Details
    - Are included in the Source Column Mapping table
-10. **Write acceptance criteria**: Generate Given/When/Then statements (no YAML test blocks)
-11. **Add metadata**: Include deliverables and dependencies (do NOT include architect estimate)
-12. **Run automatic evaluation**: After generating spec, automatically evaluate against the Specification Evaluation Rubric from `specs/spec_template.md`:
+11. **Write acceptance criteria**: Generate Given/When/Then statements (no YAML test blocks)
+12. **Add metadata**: Include deliverables and dependencies (do NOT include architect estimate)
+13. **Run automatic evaluation**: After generating spec, automatically evaluate against the Specification Evaluation Rubric from `specs/spec_template.md`:
     - Score each completeness check item (pass/fail)
     - Score each quality check item (pass/fail)
     - Score each Data Vault 2.0 pattern validation item (pass/fail)
@@ -146,14 +148,14 @@ Step-by-step instructions for the agent:
     - Calculate overall completeness score: (passed checks / total checks) × 100
     - Identify implementation blockers: What would prevent a data engineer or AI from implementing this?
     - Identify pattern violations: Are artifacts appropriately modeled per Data Vault 2.0 best practices?
-12. **Generate evaluation report**: Create a scored evaluation report with:
+14. **Generate evaluation report**: Create a scored evaluation report with:
     - Overall completeness score (percentage)
     - Passed checks (list)
     - Failed checks (list with specific issues)
     - Red flags (critical issues that must be addressed)
     - Implementation blockers (specific gaps that would prevent code generation)
     - Recommendations for improvement
-13. **Present for review**: Output complete spec followed by evaluation report; highlight critical issues; ask architect to address gaps before handoff
+15. **Present for review**: Output complete spec followed by evaluation report; highlight critical issues; ask architect to address gaps before handoff
 
 ## Rerunning Evaluation
 
@@ -209,6 +211,8 @@ The agent MUST support rerunning evaluation on existing specifications when requ
 - ALWAYS include column_description in mapping tables
 - ALWAYS follow BCI naming conventions (h_, s_, sal_, stg_)
 - ALWAYS provide staging join example if complex joins exist (multiple tables, left/right joins)
+- ALWAYS include only ONE staging join example (Gemstone) if the join logic is identical between Gemstone and Legacy sources
+- ALWAYS include BOTH staging join examples only if the join logic differs between Gemstone and Legacy sources
 - ALWAYS ensure all columns from join examples appear in Source Column Mapping table
 - ALWAYS automatically evaluate completed spec against rubric (do NOT ask user to fill out rubric)
 - ALWAYS validate Data Vault 2.0 patterns (hub appropriateness, satellite vs reference table, link usage)

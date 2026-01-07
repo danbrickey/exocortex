@@ -74,12 +74,7 @@ coalesce(nullif(p_geo.prad_state,''),'^^') provider_state,
 -- Example gemstone join
 source as (
     select
-      -- Polymorphic Business Key Expression
-      '110' || '|' || 
-      coalesce(nullif(prov.prpr_npi,''),'^^') || '|' || 
-      coalesce(nullif(org.prpr_npi,''),'^^') || '|' || 
-      coalesce(nullif(org.mctn_id,''),'^^') || '|' || 
-      coalesce(nullif(p_geo.prad_state,''),'^^') as provider_business_key,
+      -- Business Key columns
       '110' as plan_code,
       coalesce(nullif(prov.prpr_npi,''),'^^') as prov_npi,
       coalesce(nullif(org.prpr_npi,''),'^^') as org_npi,
@@ -95,34 +90,6 @@ source as (
             on org.prpr_id = rel.prer_prpr_id
               and org.prpr_entity = rel.prer_prpr_entity
         left join {{ ref('enterprise_data_platform', 'stg_gemstone_facets_hist__dbo_cmc_prad_address') }} p_geo
-            on prov.prad_type_prim = p_geo.prad_type
-              and prov.prad_id = p_geo.prad_id
-)
-
--- Example legacy join
-source as (
-    select
-      -- Polymorphic Business Key Expression
-      '110' || '|' || 
-      coalesce(nullif(prov.prpr_npi,''),'^^') || '|' || 
-      coalesce(nullif(org.prpr_npi,''),'^^') || '|' || 
-      coalesce(nullif(org.mctn_id,''),'^^') || '|' || 
-      coalesce(nullif(p_geo.prad_state,''),'^^') as provider_business_key,
-      '110' as plan_code,
-      coalesce(nullif(prov.prpr_npi,''),'^^') as prov_npi,
-      coalesce(nullif(org.prpr_npi,''),'^^') as org_npi,
-      coalesce(nullif(org.mctn_id,''),'^^') as org_tin,
-      coalesce(nullif(p_geo.prad_state,''),'^^') as provider_state,
-      prov.*,
-      org.*
-    from {{ ref('enterprise_data_platform', 'stg_legacy_bcifacets_hist__dbo_cmc_prpr_prov') }} prov
-        left join {{ ref('enterprise_data_platform', 'stg_legacy_bcifacets_hist__dbo_cmc_prer_relation') }} rel
-            on prov.prpr_id = rel.prpr_id
-              and prov.prpr_entity = rel.prer_prpr_entity
-        left join {{ ref('enterprise_data_platform', 'stg_legacy_bcifacets_hist__dbo_cmc_prpr_prov') }} org
-            on org.prpr_id = rel.prer_prpr_id
-              and org.prpr_entity = rel.prer_prpr_entity
-        left join {{ ref('enterprise_data_platform', 'stg_legacy_bcifacets_hist__dbo_cmc_prad_address') }} p_geo
             on prov.prad_type_prim = p_geo.prad_type
               and prov.prad_id = p_geo.prad_id
 )

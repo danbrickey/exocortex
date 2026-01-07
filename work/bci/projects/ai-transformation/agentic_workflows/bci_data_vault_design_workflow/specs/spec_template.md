@@ -96,8 +96,10 @@ member_suffix
 
 **Staging Join Example (for Rename views)**:
 
+**Note:** Since Legacy and Gemstone are instances of the same application code, the join logic is usually identical. Only include a Legacy example if the join logic differs from Gemstone. If the joins are the same, include only the Gemstone example below. The Legacy rename view will follow the same pattern, referencing `stg_legacy_bcifacets_hist__dbo_*` models instead of `stg_gemstone_facets_hist__dbo_*`.
+
 ```sql
--- example join for gemstone
+-- Example gemstone join
 source as (
     select
       -- Business Key Expressions
@@ -107,6 +109,20 @@ source as (
     [join logic]
 )
 ```
+
+[If join logic differs between Gemstone and Legacy, include Legacy example here:
+```sql
+-- Example legacy join (only include if join logic differs from Gemstone)
+source as (
+    select
+      -- Business Key Expressions
+      [business_key_columns],
+      [other_columns]
+    from {{ ref('enterprise_data_platform', 'stg_legacy_bcifacets_hist__dbo_[source_table]') }} [alias]
+    [different join logic]
+)
+```
+]
 
 **Staging Views**:
 
@@ -150,7 +166,7 @@ source as (
 - [ ] **Title & Description**: Title includes Domain and Entity. Description accurately reflects objects being built (hub/links/satellites).
 - [ ] **Business Key**: Type clearly labeled (Polymorphic vs Business Key). SQL expression provided and complete. For multi-column business keys, individual columns/expressions are listed (not concatenated), which is the correct format for automate_dv macros. For polymorphic business keys, the complete case statement/conditional expression is provided.
 - [ ] **Source Models**: All source models listed with full project and model names. Source project specified.
-- [ ] **Rename Views**: All rename views listed. If complex joins exist, staging join example provided.
+- [ ] **Rename Views**: All rename views listed. If complex joins exist, staging join example provided. If Gemstone and Legacy joins are identical, only Gemstone example included (Legacy follows same pattern with `stg_legacy_bcifacets_hist__dbo_*` models).
 - [ ] **Staging Views**: All staging views listed with source table references.
 - [ ] **Hubs/Links/Satellites**: All objects match description. Naming conventions followed (h_, s_, sal_).
 - [ ] **Same-As Links**: Resolution logic described. Note about hash expression included if applicable.
@@ -181,6 +197,7 @@ source as (
 ### Red Flags (Must Address Before Handoff)
 
 - ⚠️ **Missing Join Example**: Complex joins exist but no example provided
+- ⚠️ **Duplicate Join Examples**: Both Gemstone and Legacy examples included when join logic is identical (should only include Gemstone example when joins are the same)
 - ⚠️ **Incomplete Column Mapping**: Columns referenced in join example missing from mapping table
 - ⚠️ **Ambiguous Business Key**: Business key expression unclear or incomplete
 - ⚠️ **Incorrect Business Key Format**: Multi-column business key shown as concatenated expression instead of individual columns (automate_dv expects individual columns for multi-column keys)

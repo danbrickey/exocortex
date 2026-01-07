@@ -43,7 +43,7 @@ case
   when coalesce(prac.prcp_npi,'') <> '' 
     then prac.prcp_npi 
   when coalesce(prac.prcp_npi,'') = '' and coalesce(prac.prcp_ssn,'') <> ''
-    then prac.prcp_ssn || '|' || prac.prcp_last_name || '|' || left(trim(prac.prcp_first_name),1) || '|' || to_char(prac.prcp_birth_dt, 'YYYYMMDD')
+    then prac.prcp_ssn || '|' || prac.prcp_last_name
   else prac.prcp_last_name || '|' || left(trim(prac.prcp_first_name),1) || '|' || to_char(prac.prcp_birth_dt, 'YYYYMMDD')
 end as practitioner_business_key
 ```
@@ -75,26 +75,11 @@ source as (
         when coalesce(prac.prcp_npi,'') <> '' 
           then prac.prcp_npi 
         when coalesce(prac.prcp_npi,'') = '' and coalesce(prac.prcp_ssn,'') <> ''
-          then prac.prcp_ssn || '|' || prac.prcp_last_name || '|' || left(trim(prac.prcp_first_name),1) || '|' || to_char(prac.prcp_birth_dt, 'YYYYMMDD')
+          then prac.prcp_ssn || '|' || prac.prcp_last_name
         else prac.prcp_last_name || '|' || left(trim(prac.prcp_first_name),1) || '|' || to_char(prac.prcp_birth_dt, 'YYYYMMDD')
       end as practitioner_business_key,
       prac.*
     from {{ ref('enterprise_data_platform', 'stg_gemstone_facets_hist__dbo_cmc_prcp_comm_prac') }} prac
-    where coalesce(prac.prcp_id, '') <> ''
-)
-
--- Example legacy join
-source as (
-    select 
-      case 
-        when coalesce(prac.prcp_npi,'') <> '' 
-          then prac.prcp_npi 
-        when coalesce(prac.prcp_npi,'') = '' and coalesce(prac.prcp_ssn,'') <> ''
-          then prac.prcp_ssn || '|' || prac.prcp_last_name || '|' || left(trim(prac.prcp_first_name),1) || '|' || to_char(prac.prcp_birth_dt, 'YYYYMMDD')
-        else prac.prcp_last_name || '|' || left(trim(prac.prcp_first_name),1) || '|' || to_char(prac.prcp_birth_dt, 'YYYYMMDD')
-      end as practitioner_business_key,
-      prac.*
-    from {{ ref('enterprise_data_platform', 'stg_legacy_bcifacets_hist__dbo_cmc_prcp_comm_prac') }} prac
     where coalesce(prac.prcp_id, '') <> ''
 )
 ```
