@@ -48,6 +48,8 @@ then all [entity] records are linked across source systems with valid hub refere
 
 **Note:** For automate_dv implementation, business keys should be specified as a list of individual columns/expressions, not as a concatenated expression. The automate_dv hub macro accepts multiple business key columns and handles the concatenation internally.
 
+**Agent Note:** This automate_dv note is for agent guidance only and should NOT appear in the final engineering specification. Engineers already understand how to use automate_dv, so remove this note when generating the spec.
+
 - **For multi-column business keys**: List each column/expression separately (one per line)
 - **For polymorphic business keys**: Provide the case statement or conditional logic showing how the key varies based on field contents
 - **For simple business keys**: List the column(s) directly
