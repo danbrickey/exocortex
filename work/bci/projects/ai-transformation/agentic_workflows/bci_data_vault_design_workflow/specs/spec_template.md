@@ -51,7 +51,7 @@ then all [entity] records are linked across source systems with valid hub refere
 **Agent Note:** This automate_dv note is for agent guidance only and should NOT appear in the final engineering specification. Engineers already understand how to use automate_dv, so remove this note when generating the spec.
 
 - **For multi-column business keys**: List each column/expression separately (one per line)
-- **For polymorphic business keys**: Provide the case statement or conditional logic showing how the key varies based on field contents
+- **For polymorphic business keys**: List the business key name/alias with a note referencing the staging join example where the complete CASE statement is provided (e.g., "- practitioner_business_key NOTE: please see staging join example for the full polymorphic business key expression.")
 - **For simple business keys**: List the column(s) directly
 
 ```sql
@@ -61,14 +61,8 @@ coalesce(nullif(prov.prpr_npi,''),'^^') prov_npi,
 coalesce(nullif(org.prpr_npi,''),'^^') org_npi,
 coalesce(nullif(org.mctn_id,''),'^^') org_tin,
 
--- Example: Polymorphic business key (case statement)
-case 
-  when coalesce(prac.prcp_npi,'') <> '' 
-    then prac.prcp_npi 
-  when coalesce(prac.prcp_npi,'') = '' and coalesce(prac.prcp_ssn,'') <> ''
-    then prac.prcp_ssn || '|' || prac.prcp_last_name || '|' || left(trim(prac.prcp_first_name),1) || '|' || to_char(prac.prcp_birth_dt, 'YYYYMMDD')
-  else prac.prcp_last_name || '|' || left(trim(prac.prcp_first_name),1) || '|' || to_char(prac.prcp_birth_dt, 'YYYYMMDD')
-end as practitioner_business_key
+-- Example: Polymorphic business key (note format - actual CASE statement in staging join example)
+- practitioner_business_key NOTE: please see staging join example for the full polymorphic business key expression.
 
 -- Example: Simple business key
 subscriber_id,
@@ -164,7 +158,7 @@ source as (
 ### Completeness Checks
 
 - [ ] **Title & Description**: Title includes Domain and Entity. Description accurately reflects objects being built (hub/links/satellites).
-- [ ] **Business Key**: Type clearly labeled (Polymorphic vs Business Key). SQL expression provided and complete. For multi-column business keys, individual columns/expressions are listed (not concatenated), which is the correct format for automate_dv macros. For polymorphic business keys, the complete case statement/conditional expression is provided.
+- [ ] **Business Key**: Type clearly labeled (Polymorphic vs Business Key). SQL expression provided and complete. For multi-column business keys, individual columns/expressions are listed (not concatenated), which is the correct format for automate_dv macros. For polymorphic business keys, the business key name/alias is listed with a note referencing the staging join example where the complete CASE statement is provided.
 - [ ] **Source Models**: All source models listed with full project and model names. Source project specified.
 - [ ] **Rename Views**: All rename views listed. If complex joins exist, staging join example provided. If Gemstone and Legacy joins are identical, only Gemstone example included (Legacy follows same pattern with `stg_legacy_bcifacets_hist__dbo_*` models).
 - [ ] **Staging Views**: All staging views listed with source table references.
@@ -201,6 +195,7 @@ source as (
 - ⚠️ **Incomplete Column Mapping**: Columns referenced in join example missing from mapping table
 - ⚠️ **Ambiguous Business Key**: Business key expression unclear or incomplete
 - ⚠️ **Incorrect Business Key Format**: Multi-column business key shown as concatenated expression instead of individual columns (automate_dv expects individual columns for multi-column keys)
+- ⚠️ **Polymorphic Business Key Missing Reference**: Polymorphic business key listed without note referencing staging join example where the CASE statement is provided
 - ⚠️ **Mismatched Objects**: Description says "hub and satellites" but Technical Details only shows satellites
 - ⚠️ **Placeholders Remaining**: Any [placeholder] text still present
 - ⚠️ **Missing Source References**: Source models listed without project or full model path

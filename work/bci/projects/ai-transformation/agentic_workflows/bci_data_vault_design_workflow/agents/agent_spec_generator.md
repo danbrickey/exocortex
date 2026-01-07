@@ -124,9 +124,9 @@ Step-by-step instructions for the agent:
    - SAL: Include identity resolution logic, prior system join
 5. **Format business key for automate_dv**: 
    - **For multi-column business keys**: List individual columns/expressions (one per line), NOT a concatenated expression. The automate_dv hub macro accepts a list of business key columns and handles concatenation internally.
-   - **For polymorphic business keys**: Provide the complete case statement or conditional expression showing how the key varies based on field contents.
+   - **For polymorphic business keys**: List the business key name/alias with a note referencing the staging join example where the complete CASE statement is provided (e.g., "- practitioner_business_key NOTE: please see staging join example for the full polymorphic business key expression."). The complete CASE statement should be in the staging join example, not duplicated in the Business Key section.
    - **For simple business keys**: List the column(s) directly.
-   - **Important**: The Business Key section should show individual columns/expressions. Staging join examples may include both a concatenated expression (for staging view purposes) AND individual columns (for automate_dv), but the Business Key section itself should use the individual columns format.
+   - **Important**: The Business Key section should show individual columns/expressions. For polymorphic business keys, the complete CASE statement appears in the staging join example, and the Business Key section references it with a note.
 6. **Generate column mapping**: Create source-to-target mapping table with descriptions based on known patterns
 7. **Document join logic**: If complex joins exist (multiple tables, left/right joins), provide complete staging join example. Include both concatenated business key expression (if needed for staging) and individual columns (for automate_dv).
    - **Conditional examples**: Since Legacy and Gemstone are instances of the same application code, the join logic is usually identical. Only include a Legacy example if the join logic differs from Gemstone. If the joins are the same, include only the Gemstone example with a note that the Legacy join follows the same pattern (just referencing `stg_legacy_bcifacets_hist__dbo_*` models instead of `stg_gemstone_facets_hist__dbo_*`).
@@ -148,13 +148,14 @@ Step-by-step instructions for the agent:
     - Calculate overall completeness score: (passed checks / total checks) × 100
     - Identify implementation blockers: What would prevent a data engineer or AI from implementing this?
     - Identify pattern violations: Are artifacts appropriately modeled per Data Vault 2.0 best practices?
-14. **Generate evaluation report**: Create a scored evaluation report with:
+14. **Generate evaluation report**: Create a scored evaluation report with sections in this order:
+    - Recommendations for improvement (appears at top, before Overall Completeness Score)
     - Overall completeness score (percentage)
     - Passed checks (list)
     - Failed checks (list with specific issues)
     - Red flags (critical issues that must be addressed)
     - Implementation blockers (specific gaps that would prevent code generation)
-    - Recommendations for improvement
+    - **Important**: Replace `[timestamp]` placeholder with the current date in YYYY-MM-DD format (e.g., "2025-01-28")
 15. **Present for review**: Output complete spec followed by evaluation report; highlight critical issues; ask architect to address gaps before handoff
 
 ## Rerunning Evaluation
@@ -187,7 +188,7 @@ The agent MUST support rerunning evaluation on existing specifications when requ
 
 ## Specification Evaluation Report (Updated)
 
-### Evaluation Date: [timestamp]
+### Evaluation Date: [timestamp - replace with current date in YYYY-MM-DD format]
 ### Previous Score: [X]% (if available)
 ### Current Score: [Y]%
 
@@ -196,8 +197,15 @@ The agent MUST support rerunning evaluation on existing specifications when requ
 - [New issues discovered]
 - [Score change explanation]
 
-[Rest of evaluation report follows standard format]
+### Recommendations
+
+- [Specific actionable recommendation]
+- [Specific actionable recommendation]
+
+[Rest of evaluation report follows standard format - Recommendations section appears at top, before Overall Completeness Score]
 ```
+
+**Note:** When generating evaluation reports, ALWAYS replace `[timestamp]` with the current date in YYYY-MM-DD format. Do NOT use hardcoded dates from previous evaluations.
 
 ## Constraints
 
@@ -222,6 +230,7 @@ The agent MUST support rerunning evaluation on existing specifications when requ
 - ALWAYS support rerunning evaluation on existing specs when requested
 - ALWAYS remove old evaluation reports before generating new ones
 - ALWAYS note changes from previous evaluation when rerunning (resolved issues, new issues discovered, score changes)
+- ALWAYS use the current date in YYYY-MM-DD format for evaluation dates - replace `[timestamp]` placeholder with actual current date, do NOT use hardcoded dates from previous evaluations
 
 ## Success Criteria
 
@@ -319,10 +328,19 @@ The agent MUST support rerunning evaluation on existing specifications when requ
 
 After generating the specification, the agent MUST provide an evaluation report in this format:
 
+**Important:** When generating evaluation reports, ALWAYS include the current date in YYYY-MM-DD format. For initial evaluations, add "### Evaluation Date: [current date]" after the title. For updated evaluations, use the format shown below.
+
 ```markdown
 ---
 
 ## Specification Evaluation Report
+
+### Evaluation Date: [current date in YYYY-MM-DD format]
+
+### Recommendations
+
+- [Specific actionable recommendation]
+- [Specific actionable recommendation]
 
 ### Overall Completeness Score: [X]%
 
@@ -377,11 +395,6 @@ These issues would prevent a data engineer or AI from implementing this specific
 4. **Can an engineer map all columns from the mapping table?** [Yes/No] - [Explanation]
 5. **Can an engineer implement all objects without questions?** [Yes/No] - [Explanation]
 6. **Are acceptance criteria testable for QA?** [Yes/No] - [Explanation]
-
-### Recommendations
-
-- [Specific actionable recommendation]
-- [Specific actionable recommendation]
 
 ### Next Steps
 
