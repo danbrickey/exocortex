@@ -68,69 +68,14 @@ member_suffix
 **Staging Join Example (for Rename views)**:
 
 ```sql
--- Example join to get member hub key for member medicare event satellites
+-- Example gemstone join to get member hub key and medicare event attributes
 source as (
     select
         -- Business Key Expressions
-        sbsb.sbsb_id as subscriber_id,
-        mem.meme_sfx as member_suffix,
+        sbsb.sbsb_id subscriber_id,
+        mem.meme_sfx member_suffix,
         -- Medicare event attributes
-        memd.meme_ck,
-        memd.grgr_ck,
-        memd.memd_event_cd,
-        memd.memd_hcfa_eff_dt,
-        memd.memd_hcfa_term_dt,
-        memd.memd_input_dt,
-        memd.memd_event_eff_dt,
-        memd.memd_event_term_dt,
-        memd.memd_mctr_mcst,
-        memd.memd_mctr_mcct,
-        memd.meme_hicn,
-        memd.bgbg_ck,
-        memd.mrac_cat,
-        memd.memd_ra_prta_fctr,
-        memd.memd_ra_prtb_fctr,
-        memd.memd_sig_dt,
-        memd.memd_elect_type,
-        memd.memd_mctr_pbp,
-        memd.memd_segment_id,
-        memd.memd_ra_prtd_fctr,
-        memd.memd_ra_fctr_type,
-        memd.memd_prem_wh_opt,
-        memd.memd_prtc_prem,
-        memd.memd_prtd_prem,
-        memd.memd_prior_com_ovr,
-        memd.memd_enrl_source,
-        memd.memd_uncov_mos,
-        memd.memd_rx_id,
-        memd.memd_mctr_rx_group,
-        memd.memd_mctr_rxbin,
-        memd.memd_mctr_rxpcn,
-        memd.memd_cob_ind,
-        memd.memd_cob_rx_id,
-        memd.memd_cob_rx_group,
-        memd.memd_cob_rxbin,
-        memd.memd_cob_rxpcn,
-        memd.memd_partd_sbsdy,
-        memd.memd_copay_cat,
-        memd.memd_lics_sbsdy,
-        memd.memd_late_penalty,
-        memd.memd_late_waiv_amt,
-        memd.memd_late_sbsdy,
-        memd.memd_msp_cd,
-        memd.memd_rad_fctr_type,
-        memd.memd_lock_token,
-        memd.atxr_source_id,
-        memd.memd_ic_flag_nvl,
-        memd.memd_ic_sts_nvl,
-        memd.memd_ic_trsn_nvl,
-        memd.memd_pref_lang_nvl,
-        memd.memd_access_fmt_nvl,
-        memd.memd_mctr_srsn_nvl,
-        memd.memd_mctr_erel_nvl,
-        memd.memd_npn_nvl,
-        memd.edp_start_dt,
-        memd.edp_record_status
+        memd.*
     from {{ ref('enterprise_data_platform', 'stg_gemstone_facets_hist__dbo_cmc_memd_mecr_detl') }} memd
     inner join {{ ref('enterprise_data_platform', 'stg_gemstone_facets_hist__dbo_cmc_meme_member') }} mem
         on memd.meme_ck = mem.meme_ck
