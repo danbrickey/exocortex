@@ -48,9 +48,9 @@
 | 26 | Y,N,N,N,N | 3 | Active | Shay | Not Started | raw_layer | cmc_exid_ext_id | member | external_id | | s_external_id_gemstone_facets | s_external_id_legacy_facets | | | sal_person | | | |
 | 27 | Y,N,N,N,N | 1 | Active | Shay | Not Started | raw_layer | cmc_mecb | member | member_cob | | s_member_cob_gemstone_facets | s_member_cob_legacy_facets | | | | | | | |
 | 28 | Y,N,N,N,N | 0 | ~~Canceled~~ | Shay | Not Started | raw_layer | cmc_meda | member | member_additional_info | | s_member_additional_info_gemstone_facets | s_member_additional_info_legacy_facets | | | | | | | |
-| 29 | N,N,N,N,N | 1 | Active | Shay | Pending | raw_layer | cmc_mees_exchange | member | member_subsidy | | s_member_subsidy_gemstone_facets | s_member_subsidy_legacy_facets | | | | | | | |
+| 29 | N,N,N,N,N | 1 | Active | Shay | Delivered | raw_layer | cmc_mees_exchange | member | member_subsidy | | s_member_subsidy_gemstone_facets | s_member_subsidy_legacy_facets | | | | | | | |
 | 30 | N,N,N,N,N | 1 | Active | Shay | Delivered | raw_layer | cmc_mehd | member | member_disability | | s_member_disability_gemstone_facets | s_member_disability_legacy_facets | | | | | | | |
-| 31 | Y,N,N,N,N | 1 | Active | Shay | Pending | raw_layer | cmc_memd | member | member_medicare_event | | s_member_medicare_event_gemstone_facets | s_member_medicare_event_legacy_facets | | | | | | | |
+| 31 | Y,N,N,N,N | 1 | Active | Shay | Delivered | raw_layer | cmc_memd | member | member_medicare_event | | s_member_medicare_event_gemstone_facets | s_member_medicare_event_legacy_facets | | | | | | | |
 | 32 | Y,N,N,N,N | 0 | ~~Canceled~~ | Shay | Not Started | raw_layer | cmc_memd | member | member_medicare_county_code | | s_member_medicare_county_code_gemstone_facets | s_member_medicare_county_code_legacy_facets | | | | | | | |
 | 33 | Y,N,N,N,N | 0 | ~~Canceled~~ | Shay | Not Started | raw_layer | cmc_memd | member | member_medicare_pbp | | s_member_medicare_pbp_gemstone_facets | s_member_medicare_pbp_legacy_facets | | | | | | | |
 | 34 | Y,N,N,N,N | 0 | ~~Canceled~~ | Shay | Not Started | raw_layer | cmc_memd | member | member_medicare_mbi | | s_member_medicare_mbi_gemstone_facets | s_member_medicare_mbi_legacy_facets | | | | | | | |
@@ -103,7 +103,7 @@
 | 81 | N,Y,N,N,N | 5 | Active | Sam | Not Started | raw_vault | various | provider | provider_catalog | | | | | | | | bs_provider_catalog | | |
 | 82 | N,Y,N,N,N | 3 | Active | Sam | Not Started | biz_vault | various | provider | provider_catalog | | | | | | | | | fact_provider_catalog |
 | 83 | N,Y,N,N,N | 6 | Active | Sam | Delivered | raw_layer | cmc_prac | provider | practitioner | h_practitioner | s_practitioner_gemstone_facets | s_practitioner_legacy_facets | | | sal_practitioner_facets | | | |
-| 84 | N,Y,N,Y,N | 1 | Active | Sam | Pending | raw_layer | cmc_prad | provider | provider_address | | s_provider_address_gemstone_facets | s_provider_address_legacy_facets | | | | | | |
+| 84 | N,Y,N,Y,N | 1 | Active | Sam | Delivered | raw_layer | cmc_prad | provider | provider_address | | s_provider_address_gemstone_facets | s_provider_address_legacy_facets | | | | | | |
 | 85 | N,Y,N,Y,N | 0 | ~~Canceled~~ | Sam | Not Started | raw_layer | cmc_prer | provider | provider_affiliation | | s_provider_affiliation_gemstone_facets | s_provider_affiliation_legacy_facets | | | | | | |
 | 86 | N,Y,N,Y,N | 4 | Active | Sam | Delivered | raw_layer | cmc_prpr | provider | provider | h_provider | s_provider_gemstone_facets | s_provider_legacy_facets | | | | | | |
 | 87 | N,Y,N,Y,N | 2 | Active | Sam | Not Started | raw_layer | cmc_prpr | provider | provider_practitioner | | | | l_provider_practitioner | | | | | |
