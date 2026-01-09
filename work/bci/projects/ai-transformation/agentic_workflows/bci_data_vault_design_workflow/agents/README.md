@@ -9,6 +9,7 @@
 |-------|------|----------|--------|---------|
 | [@spec-generator](agent_spec_generator.md) | 4 | 🔴 High | Draft | Generate structured specification from design decision |
 | [@dbt-prompt-builder](agent_dbt_prompt_builder.md) | 6 | 🔴 High | Draft | Generate prompt for dbt Copilot from specification |
+| [@project-manager](agent_project_manager.md) | Ongoing | 🟡 Medium | Draft | Track plan, prioritize work, assess readiness |
 | [@code-evaluator](agent_code_evaluator.md) | 8 | 🟡 Medium | Draft | Compare code against specification |
 | [@diagram-validator](agent_diagram_validator.md) | 3 | 🟢 Low | Planned | Validate diagram matches design intent |
 | [@design-advisor](agent_design_advisor.md) | 2 | 🟢 Low | Planned | Suggest DV structure from source analysis |
