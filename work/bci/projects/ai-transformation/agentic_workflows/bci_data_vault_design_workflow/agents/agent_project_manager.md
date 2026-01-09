@@ -43,6 +43,8 @@ Determine if user is requesting:
 - **Next Story Selection**: "What should I work on next?" or "Show me the next priority"
 - **Readiness Check**: "Is story X ready for spec?" or "Can I start spec for [entity]?"
 - **Plan Status**: "Show me plan status" or "How are we tracking?"
+- **Workload Balance**: "Show workload balance" or "Which team needs more specs?"
+- **Spec Production Analysis**: "How many specs per team?" or "Am I balanced on spec delivery?"
 - **Estimate Update**: "Update story X to Y days" or "Cancel story X"
 - **Work Reassignment**: "Move work from story X to story Y"
 
@@ -66,6 +68,8 @@ When user asks what to work on next:
    - **Initiative balance**: Consider which initiatives need progress
    - **Estimate size**: Prefer smaller stories (1-3 days) for quick wins, larger stories (5-8 days) for focused work
    - **Spec requirement**: Stories marked Spec=Y may need more prep work
+   - **Team balance**: Consider which team has fewer "Delivered" specs (ready for engineers) - prioritize stories for teams that are running low on available work
+   - **Spec status**: Prioritize stories with "Not Started" spec status for teams that need more work queued
 
 4. **Generate recommendation**:
    - Present top 3-5 candidates with rationale
@@ -155,6 +159,7 @@ When user requests plan status:
    - Compare current estimates to original plan
    - Identify any stories that were canceled
    - Note any estimate increases (work moved from canceled stories)
+   - Track spec status changes (Not Started → Pending → Delivered)
 
 3. **Generate status report**:
 ```markdown
@@ -172,6 +177,12 @@ When user requests plan status:
 | raw_layer | [X] | [Y] | [In Progress/Not Started] |
 | raw_vault | [X] | [Y] | [In Progress/Not Started] |
 | biz_vault | [X] | [Y] | [In Progress/Not Started] |
+
+### By Team
+| Team | Active Stories | Est. Days | Not Started | Pending | Delivered |
+|------|---------------|-----------|-------------|---------|-----------|
+| Sam | [X] | [Y] | [A] | [B] | [C] |
+| Shay | [X] | [Y] | [A] | [B] | [C] |
 
 ### By Domain
 | Domain | Active Stories | Est. Days |
@@ -194,6 +205,90 @@ When user requests plan status:
 ### Workload Balance
 - [Analysis of effort distribution]
 - [Recommendations if workload is unbalanced]
+```
+
+### 3a. Workload Balance & Spec Production Analysis
+
+When user requests workload balance or spec production analysis:
+
+1. **Calculate team metrics**:
+   - **Sam Team**: Count stories, sum estimated days, count by Spec Status (Not Started, Pending, Delivered)
+   - **Shay Team**: Count stories, sum estimated days, count by Spec Status (Not Started, Pending, Delivered)
+   - **Available Work**: Stories with "Delivered" status (ready for engineers to pick up)
+   - **In Progress**: Stories with "Pending" status (spec written, awaiting delivery)
+   - **Backlog**: Stories with "Not Started" status (no spec yet)
+
+2. **Calculate spec production rates**:
+   - **Sam**: Delivered specs count, Pending specs count, Not Started count
+   - **Shay**: Delivered specs count, Pending specs count, Not Started count
+   - **Ratio**: Compare Delivered/Pending/Not Started ratios between teams
+
+3. **Identify bottlenecks**:
+   - **Team running low on work**: Fewer than 3-5 "Delivered" specs (may run out soon)
+   - **Team overloaded**: More than 10-15 "Delivered" specs (too many options, may cause confusion)
+   - **Spec production imbalance**: One team has significantly more "Delivered" specs than the other
+
+4. **Generate balance report**:
+```markdown
+## Workload Balance & Spec Production Analysis
+
+### Team Workload Summary
+
+| Team | Total Stories | Est. Days | Not Started | Pending | Delivered | Available Work* |
+|------|---------------|-----------|-------------|---------|-----------|-----------------|
+| Sam | [X] | [Y] | [A] | [B] | [C] | [C] stories |
+| Shay | [X] | [Y] | [A] | [B] | [C] | [C] stories |
+
+*Available Work = Delivered specs (ready for engineers)
+
+### Workload Balance
+- **Sam**: [X]% of total effort ([Y] days)
+- **Shay**: [X]% of total effort ([Y] days)
+- **Difference**: [X] days ([X]% variance)
+- **Status**: ✅ Balanced / ⚠️ Moderate imbalance / ❌ Significant imbalance
+
+### Spec Production Status
+
+#### Sam Team
+- **Delivered** (ready for engineers): [X] stories ([Y] days)
+- **Pending** (spec written, not delivered): [X] stories ([Y] days)
+- **Not Started** (no spec yet): [X] stories ([Y] days)
+- **Next Sprint Capacity**: [Estimate based on Delivered + Pending]
+
+#### Shay Team
+- **Delivered** (ready for engineers): [X] stories ([Y] days)
+- **Pending** (spec written, not delivered): [X] stories ([Y] days)
+- **Not Started** (no spec yet): [X] stories ([Y] days)
+- **Next Sprint Capacity**: [Estimate based on Delivered + Pending]
+
+### Recommendations
+
+#### Spec Production Priority
+[Based on which team has fewer "Delivered" specs]
+
+**Priority Team**: [Sam/Shay]
+- **Reason**: [X] delivered specs vs [Y] for other team
+- **Risk**: [Low/Moderate/High] risk of running out of work in next [1-2] sprints
+- **Action**: Focus on delivering specs for [team] next
+
+#### Suggested Next Specs to Deliver
+1. **Story #[X]** - [Entity] ([Team])
+   - **Status**: Pending → Ready to deliver
+   - **Estimate**: [X] days
+2. **Story #[Y]** - [Entity] ([Team])
+   - **Status**: Not Started → Ready for spec generation
+   - **Estimate**: [X] days
+
+#### Workload Rebalancing Options
+[If significant imbalance exists]
+- Consider reassigning Story #[X] from [Team A] to [Team B]
+- Consider adjusting estimates if one team is overloaded
+- Note: Some entities can be worked on by either team (gray area)
+
+### Notes
+- Estimates are rough guides - actual sizing done by teams
+- Goal: Keep 1-2 sprints worth of "Delivered" specs available per team
+- Monitor weekly to prevent bottlenecks
 ```
 
 ### 4. Estimate Updates & Cancellations
@@ -287,6 +382,9 @@ When user moves work from one story to another:
 - **Maintain quarter totals**: Keep running totals accurate for planning
 - **Respect layer dependencies**: Don't recommend raw_vault before raw_layer is complete
 - **Consider domain balance**: Don't overload one team domain
+- **Balance spec production**: Prioritize specs for teams with fewer "Delivered" stories to prevent bottlenecks
+- **Track available work**: Ensure each team has 1-2 sprints worth of "Delivered" specs available
+- **Flexible team assignment**: Some entities can be worked on by either team (gray area) - consider reassignment if needed for balance
 
 ## Success Criteria
 
@@ -296,6 +394,9 @@ When user moves work from one story to another:
 - [ ] Can update estimates and track reassignments correctly
 - [ ] Preserves canceled stories for historical reference
 - [ ] Maintains accurate quarter workload totals
+- [ ] Tracks workload balance between teams (Sam vs Shay)
+- [ ] Analyzes spec production rates and identifies bottlenecks
+- [ ] Recommends which team needs more specs to maintain balanced work availability
 
 ## Failure Modes & Recovery
 
@@ -383,6 +484,12 @@ Ready to proceed with @spec-generator. This is a core hub with satellites, so en
 | raw_vault | 15 | 56 |
 | biz_vault | 10 | 15 |
 
+### By Team
+| Team | Active Stories | Est. Days | Not Started | Pending | Delivered |
+|------|---------------|-----------|-------------|---------|-----------|
+| Sam | 24 | 97 | 20 | 1 | 3 |
+| Shay | 64 | 120 | 50 | 5 | 9 |
+
 ### Canceled Stories
 - Story #28: member_additional_info (0 days)
 - Story #32-35: member_medicare_* (0 days each)
@@ -390,9 +497,77 @@ Ready to proceed with @spec-generator. This is a core hub with satellites, so en
 - Story #85: provider_affiliation (0 days)
 
 ### Workload Balance
-- Provider Domain: 45 stories, 79 days
-- Member Domain: 45 stories, 164 days
-- **Note**: Member domain has higher effort due to more complex entities
+- **Sam**: 44.7% of total effort (97 days)
+- **Shay**: 55.3% of total effort (120 days)
+- **Difference**: 23 days (10.6% variance)
+- **Status**: ✅ Reasonably balanced
+```
+
+### Example 4: Workload Balance Analysis
+**User**: "Which team needs more specs?"
+
+**Agent Response**:
+```markdown
+## Workload Balance & Spec Production Analysis
+
+### Team Workload Summary
+
+| Team | Total Stories | Est. Days | Not Started | Pending | Delivered | Available Work* |
+|------|---------------|-----------|-------------|---------|-----------|-----------------|
+| Sam | 24 | 97 | 20 | 1 | 3 | 3 stories |
+| Shay | 64 | 120 | 50 | 5 | 9 | 9 stories |
+
+*Available Work = Delivered specs (ready for engineers)
+
+### Workload Balance
+- **Sam**: 44.7% of total effort (97 days)
+- **Shay**: 55.3% of total effort (120 days)
+- **Difference**: 23 days (10.6% variance)
+- **Status**: ✅ Reasonably balanced
+
+### Spec Production Status
+
+#### Sam Team
+- **Delivered** (ready for engineers): 3 stories (16 days)
+- **Pending** (spec written, not delivered): 1 story (1 day)
+- **Not Started** (no spec yet): 20 stories (80 days)
+- **Next Sprint Capacity**: ~4 stories available (17 days if pending is delivered)
+
+#### Shay Team
+- **Delivered** (ready for engineers): 9 stories (15 days)
+- **Pending** (spec written, not delivered): 5 stories (7 days)
+- **Not Started** (no spec yet): 50 stories (98 days)
+- **Next Sprint Capacity**: ~14 stories available (22 days if pending are delivered)
+
+### Recommendations
+
+#### Spec Production Priority
+**Priority Team**: Sam
+- **Reason**: 3 delivered specs vs 9 for Shay team
+- **Risk**: Moderate risk - Sam team may run low on work options in next 1-2 sprints
+- **Action**: Focus on delivering specs for Sam team next
+
+#### Suggested Next Specs to Deliver
+1. **Story #84** - provider_address (Sam)
+   - **Status**: Pending → Ready to deliver
+   - **Estimate**: 1 day
+2. **Story #1** - claim_line (Sam)
+   - **Status**: Not Started → Ready for spec generation
+   - **Estimate**: 8 days
+3. **Story #2** - claim (Sam)
+   - **Status**: Not Started → Ready for spec generation
+   - **Estimate**: 8 days
+
+#### Workload Rebalancing Options
+- Current balance is reasonable (10.6% variance)
+- Consider prioritizing Sam team specs to increase their available work pool
+- Some entities (e.g., member_provider, network_provider) could potentially be reassigned if needed
+
+### Notes
+- Estimates are rough guides - actual sizing done by teams
+- Goal: Keep 1-2 sprints worth of "Delivered" specs available per team
+- Monitor weekly to prevent bottlenecks
+- Shay team has more stories but smaller average size (1.9 days vs Sam's 4.0 days)
 ```
 
 ## Integration with Other Agents
@@ -408,3 +583,7 @@ Ready to proceed with @spec-generator. This is a core hub with satellites, so en
 - Work reassignments help maintain accurate effort tracking
 - Readiness checks prevent starting specs prematurely
 - Next story recommendations consider multiple factors for optimal sequencing
+- **Workload balance tracking**: Estimates are rough guides - actual sizing done by teams. Goal is to prevent bottlenecks, not perfect balance.
+- **Spec production balancing**: Focus on ensuring each team has 1-2 sprints worth of "Delivered" specs available. Prioritize teams with fewer available stories.
+- **Flexible assignments**: Some entities can be worked on by either team - use this flexibility to maintain balance as the quarter progresses.
+- **Velocity prediction**: Track spec delivery rates to predict when releases will happen, adjusting estimates as teams provide actual sizing.
