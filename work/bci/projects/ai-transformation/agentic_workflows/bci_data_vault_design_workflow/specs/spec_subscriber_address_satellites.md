@@ -104,6 +104,7 @@ source as (
         on sbad.sbsb_ck = mem.sbsb_ck
     inner join {{ ref('enterprise_data_platform', 'stg_gemstone_facets_hist__dbo_cmc_sbsb_subsc') }} sbsb
         on mem.sbsb_ck = sbsb.sbsb_ck
+        and sbad.sbad_type IN (sbsb.sbad_type_home, sbsb.sbad_type_mail, sbsb.sbad_type_work)
 )
 ```
 
