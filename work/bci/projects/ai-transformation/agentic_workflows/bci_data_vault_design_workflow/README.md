@@ -98,7 +98,7 @@ An agentic workflow to accelerate Data Vault architecture at BCI by transforming
 
 Copy these files to BCI VSCode:
 1. `implementation/prompts/spec_intake_template.md`
-2. `implementation/prompts/spec_generator_prompt.md`
+2. `implementation/prompts/raw_vault_spec_generator_prompt.md`
 3. `implementation/prompts/dbt_prompt_builder_prompt.md`
 4. `implementation/amazon_q_guide.md`
 5. `sync/CONTEXT_SYNC.md`

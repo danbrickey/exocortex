@@ -1,22 +1,22 @@
-## Member 360: Build Raw Vault subscriber_address Satellites
+## Member 360: Build Raw Vault member_address Satellites
 
 **Title:**
 
-**Member 360: Build Raw Vault subscriber_address Satellites**
+**Member 360: Build Raw Vault member_address Satellites**
 
 **Description:**
 
 As a data engineer,  
-I want to create the subscriber_address satellites in the raw vault,  
-So that we can track subscriber address, phone, fax, and email information changes over time including address lines, city, state, zip, county, country, and contact information for Member Months analytics and geographic analysis.
+I want to create the member_address satellites in the raw vault,  
+So that we can track member address, phone, fax, and email information changes over time including address lines, city, state, zip, county, country, and contact information for Member Months analytics and geographic analysis.
 
 **Acceptance Criteria:**
 
 Given the member hub (h_member) exists with loaded member records,  
-when the subscriber address satellite models execute,  
-then all subscriber address records are loaded with valid member hub hash keys and load timestamps.
+when the member address satellite models execute,  
+then all member address records are loaded with valid member hub hash keys and load timestamps.
 
-Given multiple source records exist for the same subscriber over time,  
+Given multiple source records exist for the same member over time,  
 when the satellite models execute,  
 then only records with changed attributes create new satellite records with proper effective dating.
 
@@ -24,11 +24,11 @@ Given gemstone and legacy facets are loaded,
 when data quality checks run,  
 then no null values exist in required business key columns and all hash keys are valid.
 
-Given the subscriber address satellites are loaded,  
+Given the member address satellites are loaded,  
 when the satellites are compared to the source staging models,  
 then the record counts match.
 
-Given the subscriber address satellites reference the member hub,  
+Given the member address satellites reference the member hub,  
 when referential integrity checks run,  
 then all member_hk values in the satellites exist in h_member.
 
@@ -51,26 +51,26 @@ member_suffix
 **Source Project:** `enterprise_data_platform`
 
 **Source Models Referenced:**
-- `stg_gemstone_facets_hist__dbo_cmc_sbad_addr` - Subscriber address data from Gemstone system
-- `stg_legacy_bcifacets_hist__dbo_cmc_sbad_addr` - Subscriber address data from Legacy system
-- `stg_gemstone_facets_hist__dbo_cmc_meme_member` - Member data from Gemstone system for join to get member hub key
+- `stg_gemstone_facets_hist__dbo_cmc_sbad_addr` - Member address data from Gemstone system
+- `stg_legacy_bcifacets_hist__dbo_cmc_sbad_addr` - Member address data from Legacy system
+- `stg_gemstone_facets_hist__dbo_cmc_meme_member` - Member data from Gemstone system for join to get member hub key and address types
 - `stg_gemstone_facets_hist__dbo_cmc_sbsb_subsc` - Subscriber data from Gemstone system for join to get member hub key
-- `stg_legacy_bcifacets_hist__dbo_cmc_meme_member` - Member data from Legacy system for join to get member hub key
+- `stg_legacy_bcifacets_hist__dbo_cmc_meme_member` - Member data from Legacy system for join to get member hub key and address types
 - `stg_legacy_bcifacets_hist__dbo_cmc_sbsb_subsc` - Subscriber data from Legacy system for join to get member hub key
 
 #### dbt Models to Build/Refactor
 
 **Rename Views**:
 
-- stg_subscriber_address_gemstone_facets_rename - Rename columns for gemstone facets
-- stg_subscriber_address_legacy_facets_rename - Rename columns for legacy facets
+- stg_member_address_gemstone_facets_rename - Rename columns for gemstone facets
+- stg_member_address_legacy_facets_rename - Rename columns for legacy facets
 
 <sup>1</sup> See [Source Column Mapping / Payload](#source-column-mapping--payload) table below for column mapping metadata.
 
 **Staging Join Example (for Rename views)**:
 
 ```sql
--- Example join to get member hub key for subscriber address satellites
+-- Example join to get member hub key for member address satellites
 source as (
     select
         -- Business Key Expressions
@@ -104,20 +104,19 @@ source as (
         on sbad.sbsb_ck = mem.sbsb_ck
     inner join {{ ref('enterprise_data_platform', 'stg_gemstone_facets_hist__dbo_cmc_sbsb_subsc') }} sbsb
         on mem.sbsb_ck = sbsb.sbsb_ck
-    where sbad.sbad_type IN (sbsb.sbad_type_home, sbsb.sbad_type_mail, sbsb.sbad_type_work)
-        and mem.meme_ck = mem.sbsb_ck -- only consider subscriber related address records
+    where sbad.sbad_type IN (mem.sbad_type_home, mem.sbad_type_mail, mem.sbad_type_work)
 )
 ```
 
 **Staging Views**:
 
-- stg_subscriber_address_gemstone_facets - Stage data from cmc_sbad_addr for gemstone facets
-- stg_subscriber_address_legacy_facets - Stage data from cmc_sbad_addr for legacy facets
+- stg_member_address_gemstone_facets - Stage data from cmc_sbad_addr for gemstone facets
+- stg_member_address_legacy_facets - Stage data from cmc_sbad_addr for legacy facets
 
 **Satellites** (using automate_dv sat macro):
 
-- s_subscriber_address_gemstone_facets - Descriptive attributes from Gemstone system
-- s_subscriber_address_legacy_facets - Descriptive attributes from legacy system
+- s_member_address_gemstone_facets - Descriptive attributes from Gemstone system
+- s_member_address_legacy_facets - Descriptive attributes from legacy system
 
 #### Source Column Mapping / Payload
 
@@ -128,19 +127,19 @@ source as (
 | N/A | 'gemstone_facets' / 'legacy_facets' | source | Source System Identifier |
 | N/A | '1' | tenant_id | Tenant Identifier |
 | cmc_sbad_addr | sbsb_ck | subscriber_bk | Subscriber Contrived Key |
-| cmc_sbad_addr | sbad_type | address_type | Subscriber Address Type |
+| cmc_sbad_addr | sbad_type | address_type | Member Address Type |
 | cmc_sbad_addr | grgr_ck | employer_group_bk | Group Contrived Key |
-| cmc_sbad_addr | sbad_addr1 | address_line_1 | Subscriber Address Line 1 |
-| cmc_sbad_addr | sbad_addr2 | address_line_2 | Subscriber Address Line 2 |
-| cmc_sbad_addr | sbad_addr3 | address_line_3 | Subscriber Address Line 3 |
+| cmc_sbad_addr | sbad_addr1 | address_line_1 | Member Address Line 1 |
+| cmc_sbad_addr | sbad_addr2 | address_line_2 | Member Address Line 2 |
+| cmc_sbad_addr | sbad_addr3 | address_line_3 | Member Address Line 3 |
 | cmc_sbad_addr | sbad_city | city | City |
 | cmc_sbad_addr | sbad_state | state | State |
 | cmc_sbad_addr | sbad_zip | zip_code | Zip Code |
 | cmc_sbad_addr | sbad_county | county | County |
 | cmc_sbad_addr | sbad_ctry_cd | country_code | Country Code |
-| cmc_sbad_addr | sbad_phone | phone_number | Subscriber Phone Number |
+| cmc_sbad_addr | sbad_phone | phone_number | Member Phone Number |
 | cmc_sbad_addr | sbad_phone_ext | phone_extension | Phone Extension |
-| cmc_sbad_addr | sbad_fax | fax_number | Subscriber Fax Number |
+| cmc_sbad_addr | sbad_fax | fax_number | Member Fax Number |
 | cmc_sbad_addr | sbad_fax_ext | fax_extension | Fax Extension |
 | cmc_sbad_addr | sbad_email | email | Email Address |
 | cmc_sbad_addr | sbad_city_xlow | city_search_case_insensitive | City search case insensitive |
@@ -164,8 +163,8 @@ source as (
 ### Recommendations
 
 - ✅ Specification is complete and ready for handoff
-- ✅ Consider documenting if legacy facets join logic differs from gemstone (if applicable)
-- ✅ Consider adding note about handling NULL values in business key columns if source data may contain NULLs
+- ✅ Join logic correctly uses member address types (mem.sbad_type_home, mem.sbad_type_mail, mem.sbad_type_work) instead of subscriber address types
+- ✅ Filter correctly removed to include all members, not just subscribers (removed `mem.meme_ck = mem.sbsb_ck` condition)
 
 ### Overall Completeness Score: 95%
 
@@ -174,7 +173,7 @@ source as (
 ### Completeness Checks
 
 **Passed:** 10 / 10
-- ✅ **Title & Description**: Title includes Domain (Member) and Entity (subscriber_address). Description accurately reflects objects being built (satellites only).
+- ✅ **Title & Description**: Title includes Domain (Member) and Entity (member_address). Description accurately reflects objects being built (satellites only).
 - ✅ **Business Key**: Type clearly labeled (Business Key). SQL expression provided with individual columns listed (correct format for automate_dv). Business key inheritance from parent hub clearly documented.
 - ✅ **Source Models**: All source models listed with full project and model names. Source project specified. All models referenced in join example are listed.
 - ✅ **Rename Views**: All rename views listed. Complex joins exist and staging join example provided.
@@ -188,16 +187,16 @@ source as (
 ### Quality Checks
 
 **Passed:** 6 / 6
-- ✅ **Join Logic Documentation**: Staging join example includes multiple tables (cmc_sbad_addr, cmc_meme_member, cmc_sbsb_subsc) and example is provided and complete with join conditions.
+- ✅ **Join Logic Documentation**: Staging join example includes multiple tables (cmc_sbad_addr, cmc_meme_member, cmc_sbsb_subsc) and example is provided and complete with join conditions. WHERE clause correctly uses member address types (mem.sbad_type_home, mem.sbad_type_mail, mem.sbad_type_work) and excludes subscriber-only filter.
 - ✅ **Column Mapping Completeness**: Every column in the staging join example appears in the Source Column Mapping table with correct source_table reference, source_column name, appropriate target_column name, and descriptive column_description.
 - ✅ **No Placeholders**: All [bracketed placeholders] have been replaced with actual values.
-- ✅ **Consistency**: Description objects match Technical Details objects (satellites). Entity name (subscriber_address) used consistently throughout.
+- ✅ **Consistency**: Description objects match Technical Details objects (satellites). Entity name (member_address) used consistently throughout.
 - ✅ **Naming Conventions**: All model names follow BCI conventions (stg_, s_ prefixes).
 - ✅ **Actionability**: An engineer can implement without additional clarification:
   - Source models are identifiable (full paths provided)
   - Business key logic is executable (inherited from parent hub, columns clearly listed)
   - Column mappings are clear (complete mapping table)
-  - Join logic is documented (complete example provided)
+  - Join logic is documented (complete example provided with correct member address type filtering)
 
 ### Data Vault 2.0 Pattern Validation
 
@@ -224,7 +223,7 @@ No implementation blockers identified. The specification contains all informatio
 
 1. ✅ All source models are clearly identified with full paths
 2. ✅ Business key logic is executable (inherited from parent hub, columns listed)
-3. ✅ Staging join example is complete and can be implemented
+3. ✅ Staging join example is complete and can be implemented with correct member address type filtering
 4. ✅ All columns from join example are mapped in Source Column Mapping table
 5. ✅ Parent hub dependency is clearly documented
 6. ✅ Acceptance criteria are testable and specific
@@ -233,11 +232,11 @@ No implementation blockers identified. The specification contains all informatio
 
 1. **Can an engineer identify all source models?** Yes - All source models are listed with full project and model names: `stg_gemstone_facets_hist__dbo_cmc_sbad_addr`, `stg_legacy_bcifacets_hist__dbo_cmc_sbad_addr`, `stg_gemstone_facets_hist__dbo_cmc_meme_member`, `stg_gemstone_facets_hist__dbo_cmc_sbsb_subsc`
 2. **Can an engineer write the business key expression?** Yes - Business key is clearly documented as inherited from h_member with columns `subscriber_id` and `member_suffix` listed individually (correct format for automate_dv)
-3. **Can an engineer build the staging join from the example?** Yes - Complete staging join example provided with all tables, aliases, join conditions, and column selections
+3. **Can an engineer build the staging join from the example?** Yes - Complete staging join example provided with all tables, aliases, join conditions, and column selections. WHERE clause correctly filters using member address types (mem.sbad_type_home, mem.sbad_type_mail, mem.sbad_type_work) and includes all members (no subscriber-only filter)
 4. **Can an engineer map all columns from the Source Column Mapping table?** Yes - Complete mapping table includes all columns from the join example with source_table, source_column, target_column, and column_description
 5. **Can an engineer implement all objects without questions?** Yes - All objects (rename views, staging views, satellites) are clearly defined with naming conventions and source references
 6. **Are acceptance criteria testable for QA?** Yes - All acceptance criteria are specific, testable Given/When/Then statements that reference actual objects and can be validated
 
 ### Next Steps
 
-Specification is ready for handoff to data engineering team. All required information is present, patterns are validated, and no blockers exist.
+Specification is ready for handoff to data engineering team. All required information is present, patterns are validated, and no blockers exist. The specification correctly distinguishes member_address from subscriber_address by using member address types and including all members (not just subscribers).

@@ -7,7 +7,7 @@ This folder contains production-ready prompts for the BCI Data Vault Design Work
 | Step | Prompt | Purpose |
 |------|--------|---------|
 | 1 | [spec_intake_template.md](prompts/spec_intake_template.md) | Fill this out first |
-| 2 | [spec_generator_prompt.md](prompts/spec_generator_prompt.md) | Generate specification |
+| 2 | [raw_vault_spec_generator_prompt.md](prompts/raw_vault_spec_generator_prompt.md) | Generate specification |
 | 3 | [dbt_prompt_builder_prompt.md](prompts/dbt_prompt_builder_prompt.md) | Generate dbt Copilot prompts |
 
 ## Workflow
@@ -21,7 +21,7 @@ This folder contains production-ready prompts for the BCI Data Vault Design Work
                                     ▼
 ┌──────────────────────────────────────────────────────────────────────────┐
 │  STEP 2: Generate Specification (Amazon Q)                               │
-│  └── Paste spec_generator_prompt.md + your filled template               │
+│  └── Paste raw_vault_spec_generator_prompt.md + your filled template      │
 │  └── Output: Complete specification document                             │
 └──────────────────────────────────────────────────────────────────────────┘
                                     │
@@ -52,7 +52,7 @@ This folder contains production-ready prompts for the BCI Data Vault Design Work
 | Prompt | Agent | Priority | Status |
 |--------|-------|----------|--------|
 | [spec_intake_template.md](prompts/spec_intake_template.md) | (template) | 🔴 | ✅ Ready |
-| [spec_generator_prompt.md](prompts/spec_generator_prompt.md) | @spec-generator | 🔴 | ✅ Ready |
+| [raw_vault_spec_generator_prompt.md](prompts/raw_vault_spec_generator_prompt.md) | @spec-generator | 🔴 | ✅ Ready |
 | [dbt_prompt_builder_prompt.md](prompts/dbt_prompt_builder_prompt.md) | @dbt-prompt-builder | 🔴 | ✅ Ready |
 | code_evaluator_prompt.md | @code-evaluator | 🟡 | 📋 Planned |
 
@@ -78,7 +78,7 @@ To use these in the BCI environment:
 
 | Prompt | Current Version | Last Tested | Quality Score |
 |--------|-----------------|-------------|---------------|
-| spec_generator | v1.0 | Not yet | - |
+| raw_vault_spec_generator | v1.0 | Not yet | - |
 | dbt_prompt_builder | v1.0 | Not yet | - |
 
 Update this table as you test and iterate.

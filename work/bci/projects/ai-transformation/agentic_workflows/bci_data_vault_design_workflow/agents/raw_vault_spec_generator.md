@@ -408,4 +408,4 @@ These issues would prevent a data engineer or AI from implementing this specific
 
 - [Specification Template](../specs/spec_template.md) - Complete template with evaluation rubric
 - [Specifications](../specs/) - Data Vault specifications
-- [Prompt](../implementation/prompts/spec_generator_prompt.md) - Portable prompt for Amazon Q
+- [Prompt](../implementation/prompts/raw_vault_spec_generator_prompt.md) - Portable prompt for Amazon Q

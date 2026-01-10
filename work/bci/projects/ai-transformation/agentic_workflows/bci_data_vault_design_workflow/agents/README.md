@@ -7,7 +7,7 @@
 
 | Agent | Step | Priority | Status | Purpose |
 |-------|------|----------|--------|---------|
-| [@spec-generator](agent_spec_generator.md) | 4 | 🔴 High | Draft | Generate structured specification from design decision |
+| [@spec-generator](raw_vault_spec_generator.md) | 4 | 🔴 High | Draft | Generate structured specification from design decision |
 | [@dbt-prompt-builder](agent_dbt_prompt_builder.md) | 6 | 🔴 High | Draft | Generate prompt for dbt Copilot from specification |
 | [@project-manager](agent_project_manager.md) | Ongoing | 🟡 Medium | Draft | Track plan, prioritize work, assess readiness |
 | [@code-evaluator](agent_code_evaluator.md) | 8 | 🟡 Medium | Draft | Compare code against specification |
@@ -57,7 +57,7 @@ All agents are implemented as **portable prompts** for Amazon Q:
 Portable prompts for each agent are stored in:
 ```
 implementation/prompts/
-├── spec_generator_prompt.md
+├── raw_vault_spec_generator_prompt.md
 ├── dbt_prompt_builder_prompt.md
 ├── code_evaluator_prompt.md
 └── ...
